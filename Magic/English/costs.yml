@@ -1,30 +1,30 @@
 costs:
-    sp_amount: $amount 魔法点
-    xp_amount: $amount 经验
-    levels_amount: $amount XP 等级
-    mana_amount: $amount 法力值
-    mana: 法力值
-    xp: 经验
-    levels: 级
-    sp: 魔法点
-    hunger: 能量
-    health: 生命
-    health_amount: $amount 生命
-    hunger_amount: $amount 能量
-    heroes_mana: $amount 法力值
-    currency_singular: 魔法币
-    currency: 魔法币
+    sp_amount: $amount SP
+    xp_amount: $amount XP
+    levels_amount: $amount XP Levels
+    mana_amount: $amount Mana
+    mana: Mana
+    xp: XP
+    levels: Levels
+    sp: Spell Points
+    hunger: Energy
+    health: Health
+    health_amount: $amount Health
+    hunger_amount: $amount Energy
+    heroes_mana: $amount Mana
+    currency_singular: Dollar
+    currency: Dollars
     currency_amount: "$$amount"
 
 currency:
     item_name: "&e$amount &6$type"
-    description: 按下右键存入
-    limit: "a：&6$type&7的上限是&c$amount"
-    deposited: "a:&a已存入 &2$amount &6$type&a, 剩余: &2$balance"
+    description: Right-click to deposit
+    limit: "a:&eThe limit for &6$type &eis &c$amount"
+    deposited: "a:&aDeposited &2$amount &6$type&a, balance: &2$balance"
     earned: "a:&6+&e$earned"
 
 sp:
-    name: "&e$amount &6魔法点"
-    description: 将被你的法杖吸收
-    limit: "a:&7魔法点的上限是&c$amount"
-    deposited: "a:&7已存入&2$amount&7魔法点，剩余：&2$balance"
+    name: "&e$amount &6Spell Points"
+    description: Will be absorbed by your wand
+    limit: "a:&eThe limit for &6Spell Points &eis &c$amount"
+    deposited: "a:&aDeposited &2$amount &6Spell Points&a, balance: &2$balance"
