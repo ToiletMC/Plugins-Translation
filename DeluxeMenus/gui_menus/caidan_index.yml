@@ -1,0 +1,137 @@
+menu_title: '&8魔法海螺'
+size: 54
+open_command:
+- menu
+- cd
+register_command: true
+items:
+  'baffle':
+    material: PURPLE_STAINED_GLASS_PANE
+    slots: 
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 27
+    - 35
+    - 36
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    display_name: '&r'
+  'jichu':
+    material: COMPASS
+    slot: 0
+    display_name: '&f基础'
+  'fly':
+    material: feather
+    slot: 10
+    display_name: '&f切换飞行模式'
+    lore:
+      - ''
+      - '&7剩余可用时间：'
+      - '&7%tempfly_time-days%天%tempfly_time-hours%小时%tempfly_time-minutes%分钟%tempfly_time-seconds%秒'
+    left_click_commands:
+      - '[player] tempfly'
+  'liwu':
+    material: light_blue_shulker_box
+    slot: 37
+    display_name: '&f礼包'
+    lore:
+      - ''
+      - '&7领点小东西 :)'
+    left_click_commands:
+      - '[player] cmi kit'
+  'music':
+    material: jukebox
+    slot: 38
+    display_name: '&f红石音乐'
+    lore:
+      - ''
+      - '&7噜啦啦啦啦啦'
+    left_click_commands:
+      - '[player] music'
+  'warp':
+    material: end_portal_frame
+    slot: 41
+    display_name: '&f传送中心'
+    lore:
+      - ''
+      - '&7你想去哪儿?'
+    left_click_commands:
+      - '[player] cmi warp'
+  'rt':
+    material: TNT
+    slot: 8
+    display_name: '&f小游戏(导弹战争)'
+    lore:
+      - ''
+      - '&7前往炸妈毛毛虫服务器'
+    left_click_commands:
+      - '[player] cmi server nmsl'
+      - '[close]'
+  'huoban':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdlYmNlZjQ2ODNjZGI3MTYzZTk2OWU0ZTIyNjlmMzY3M2E1ZDVlNmI3OGUwNmZhZWU0NWJjZjdjNDljMzk3In19fQ==
+    slot: 42
+    display_name: '&f伙伴'
+    lore:
+      - ''
+      - '&7一个跟着你的小家伙'
+    left_click_commands:
+      - '[player] companions'
+  'shop':
+    material: Chest
+    slot: 39
+    display_name: '&f系统商店'
+    lore:
+      - ''
+      - '&7厕所の店铺'
+    left_click_commands:
+      - '[player] shopgui'
+  'gloshop':
+    material: ender_chest
+    slot: 40
+    display_name: '&f全球商店'
+    lore:
+      - ''
+      - '&7康康今天,'
+      - '&7又有什么好东西qwq'
+    left_click_commands:
+      - '[player] globalchest open 厕所の店'
+  'more':
+    material: DARK_OAK_SIGN
+    slot: 52
+    display_name: '&f更多信息'
+    lore:
+      - "&a城镇帮助： &f/land help"
+      - "&a结婚帮助： &f/marry help"
+      - "&a免费地皮： &f/plot auto"
+      - "&a上个厕所： &f/shit"
+      - "&a魔法帮助： &fmagic.elmakers.com"
+  'shezhi':
+    material: COMPARATOR
+    slot: 51
+    display_name: '&f设置'
+    left_click_commands:
+      - '[openguimenu] caidan_setting'
+  'diamond_ore':
+    material: barrier
+    slot: 53
+    display_name: '&f退出'
+    lore:
+      - ''
+      - '&7单击关闭菜单'
+    left_click_commands:
+      - '[close]'

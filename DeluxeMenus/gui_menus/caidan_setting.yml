@@ -1,0 +1,127 @@
+menu_title: '&8魔法海螺'
+size: 54
+register_command: false
+items:
+  'baffle':
+    material: PURPLE_STAINED_GLASS_PANE
+    slots: 
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 27
+    - 35
+    - 36
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    display_name: '&r'
+  'jichu':
+    material: COMPASS
+    slot: 51
+    display_name: '&f基础'
+    left_click_commands:
+      - '[openguimenu] caidan_index'
+  'liwu':
+    material: ender_pearl
+    slot: 10
+    display_name: '&7(接受/拒绝) 传送'
+    left_click_commands:
+      - '[player] cmi tptoggle'
+  'warp':
+    material: ender_eye
+    slot: 11
+    display_name: '&7(接受/拒绝) 私聊'
+    left_click_commands:
+      - '[player] cmi msgtoggle'
+  'rt':
+    material: observer
+    slot: 12
+    display_name: '&7(开启/关闭) 静默模式'
+    left_click_commands:
+      - '[player] cmi silence'
+  'ddzz':
+    material: TNT
+    slot: 8
+    display_name: '&f小游戏(导弹战争)'
+    lore:
+      - ''
+      - '&7前往炸妈毛毛虫服务器'
+    left_click_commands:
+      - '[player] cmi server nmsl'
+      - '[close]'
+  'huoban':
+    material: gold_ingot
+    slot: 13
+    display_name: '&7(接受/拒绝) 收款'
+    left_click_commands:
+      - '[player] cmi paytoggle'
+  'shop':
+    material: redstone_torch
+    slot: 14
+    display_name: '&7(开启/关闭) @提醒'
+    left_click_commands:
+      - '[player] cmi tagtoggle'
+  'gloshop':
+    material: item_frame
+    slot: 15
+    display_name: '&7(开启/关闭) 指南针Boss栏'
+    left_click_commands:
+      - '[player] cmi togglecompass'
+  '37':
+    material: chest
+    slot: 37
+    display_name: '&7(开启/关闭) 箱子自动整理'
+    view_requirement:
+      requirements:
+        requirement_name:
+          type: has permission
+          permission: chestsort.use
+    left_click_commands:
+      - '[player] chestsort'
+  '38':
+    material: lever
+    slot: 38
+    display_name: '&7设置自动整理快捷键'
+    view_requirement:
+      requirements:
+        requirement_name:
+          type: has permission
+          permission: chestsort.use
+    left_click_commands:
+      - '[player] chestsort hotkeys'
+  'more':
+    material: DARK_OAK_SIGN
+    slot: 52
+    display_name: '&f更多信息'
+    lore:
+      - "&a城镇帮助： &f/land help"
+      - "&a结婚帮助： &f/marry help"
+      - "&a免费地皮： &f/plot auto"
+      - "&a上个厕所： &f/shit"
+      - "&a魔法帮助： &fmagic.elmakers.com"
+  'shezhi':
+    material: COMPARATOR
+    slot: 0
+    display_name: '&f设置'
+  'diamond_ore':
+    material: barrier
+    slot: 53
+    display_name: '&f退出'
+    lore:
+      - ''
+      - '&c单击关闭菜单'
+    left_click_commands:
+      - '[close]'
