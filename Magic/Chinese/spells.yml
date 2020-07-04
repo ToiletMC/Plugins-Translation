@@ -1,19 +1,19 @@
 spells:
     default:
-        fizzle: Your spell fizzled!
-        backfire: Your spell backfired!
-        fail: Something went wrong!
-        insufficient_permission: You don't have permission to use that here.
-        cast_player_message: "a:&d&o$player &r&5cast &3&o$spell &r&5on you!"
-        indirect_player_message: "a:&d&o$player &r&5cast &3&o$spell &r&5on you!"
-        insufficient_resources: Not enough $cost
-        insufficient: "&cRequires &4$cost"
-        cooldown: You must wait $time.
-        cancelled: Your spell was cancelled!
-        entity_required: An entity is required.
-        living_entity_required: A living entity is required.
-        player_required: A player is required.
-        location_required: A location is required.
-        world_required: A world is required.
-        invalid_world: The specified world is not valid.
+        fizzle: "&cee，施法失败了！"
+        backfire: "&c你的魔法适得其反！"
+        fail: "&c出现了一些问题！"
+        insufficient_permission: "&4你不能在这里使用魔法"
+        cast_player_message: "a:&d&o$player &r&5对你施放了 &3&o$spell"
+        indirect_player_message: "a:&d&o$player &r&5对你施放了 &3&o$spell"
+        insufficient_resources: "&4$cost不足"
+        insufficient: "&c需要&4$cost"
+        cooldown: "&c你需要等待$time"
+        cancelled: "&c施法取消！"
+        entity_required: "&c需要一个实体"
+        living_entity_required: "&c需要一个活着的生物"
+        player_required: "&c需要一个活着的玩家"
+        location_required: "&c需要一个地点"
+        world_required: "&c需要一个世界"
+        invalid_world: "指定的世界无效"
         cast_finish: ""
