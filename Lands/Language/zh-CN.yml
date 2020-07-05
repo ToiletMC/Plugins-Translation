@@ -39,16 +39,16 @@
 
 general:
   prefix: '&8[&a城镇&8] '
-  wYes: '&aYes'
-  wNo: '&cNo'
-  none: '&8None'
-  disabled: '&cDisabled'
-  wilderness: '&aWilderness'
-  unlimited: '&aunlimited'
+  wYes: '&a确认'
+  wNo: '&c取消'
+  none: '&8无'
+  disabled: '&c关闭'
+  wilderness: '&a啊！荒野'
+  unlimited: '&a无限制'
   land:
     title:
       land: '&7城镇领袖：&3 %owner%&7.'
-      safezone: '&7你现在很安全.'
+      safezone: '&7安全区域，可以松一口气了'
     default-area: 默认区域
   time:
     days: 天
@@ -77,12 +77,12 @@ general:
     topLand:
       line-1: '&c#&l{place}'
       line-2: '&8<&2 {land} &8>'
-      line-3: '&7by {owner}'
-      line-4: '&7Balance:&3 ${value}'
+      line-3: '&7领主 {owner}'
+      line-4: '&7存款:&3 ${value}'
     noLand:
       line-1: ' '
-      line-2: '&cNo land'
-      line-3: '&cto show.'
+      line-2: '&c没有城镇'
+      line-3: '&c以示.'
       line-4: ' '
   autoAction:
     claim: '&a区块划分'
@@ -94,7 +94,7 @@ general:
     wilderness: '&2▉ '
     top: '&7-<------------<- &6城镇地图 &7->------------>-'
     info:
-      wilderness: ' &2▉ &7= 荒郊野外'
+      wilderness: ' &2▉ &7= 啊！荒野'
       yours: ' &a▉ &7= 属于你'
       trusted: ' &5▉ &7= 属于你朋友'
       others: ' &c▉ &7= 属于其他人'
@@ -130,9 +130,9 @@ general:
         sent: '&8{0}: &c好吧，打不过就投降，支付{1}T向敌人致敬！'
         received: '&8{0}: &7{1} &7投降了，他们支付了{2}T向我们致敬！'
       end:
-        won: '&8{0}: We''ve won the war with {1} kills.'
-        lost: '&8{0}: We''ve lost the war with {1} deaths.'
-        draw: '&8{0}: The war ended in a draw with {1} kills and {2} deaths.'
+        won: '&8{0}: 耶！我们在这场战争中碾碎{1}名敌军'
+        lost: '&8{0}: 哦不，我们在这场战争中痛失{1}名友军，厚葬！'
+        draw: '&8{0}: 战争以平局结束，杀敌{1}名但失去{2}名友军，战争的意义归于何处？'
   wars:
     land-type:
       enemy: '&c敌人'
@@ -200,33 +200,20 @@ help:
       chatspy: '&8/&3Lands chatspy &8[&aland&8] - &7Listen to land chat'
 message:
   world-not-exist: '&c你确定&4{world}&c是一个有效的世界名吗，&7拼错了?'
-  world-invalid: '&cThis is deactivated in this world. &7An administrator needs to
-    add it to the config. World: {world}'
-  feature-disabled: '&cThis feature was disabled by an administrator. &8They need
-    to enable setting {setting} in config, to let you use this feature.'
+  world-invalid: '&c在世界{world}中这未被启用，需要管理员在配置中加入'
+  feature-disabled: '&c此项特性已被管理员禁用，需要管理员在设置中开启'
   current-war: '&7不不不，你的城镇&2{land}&7目前已经卷入了一场战争，&7请在战争结束后重试'
   noaccess:
-    chunk: '&cYou''re not allowed to do this in this chunk &8(&7Land:&2 {land} &7X:
-      {x} &7Z: {z}&8)&c. &8Bypass permission: {bypass}'
-    area: '&cYou''re not allowed to do this in this area &8(&7Area:&6 {area} &7Land:&2
-      {land} &7X: {x} &7Z: {z}&8)&c. &8Bypass permission: {bypass}'
-    land: '&cYou''re not allowed to do this for this land &8(&7Land:&2 {land}&8)&7.
-      &8Bypass permission: {bypass}'
-    land-not-owner: '&cYou''re not allowed to do this for the land&4 {land}&c. &7Select
-      your own land &8(/&3Lands edit &8<&3land&8>) &7or create one &8(/&3Lands create
-      &8<&3name&8>)&7. &8Bypass permission: lands.admin.land_edit'
-    claim: '&cYou can''t claim land here. &7This chunk belongs to another management
-      plugin. Name: {plugin}'
-    place: '&cYou''re not allowed to place blocks here. &7This area belongs to land&2
-      {land}&7.'
-    break: '&cYou''re not allowed to break blocks here. &7This area belongs to land&2
-      {land}&7.'
-    ignite: '&cYou''re not allowed to ignite blocks here. &7This area belongs to land&2
-      {land}&7.'
-    enter: '&cYou''re not allowed to enter the area&4 {area} &cof land&4 {land}&c.
-      &7You were teleported to your previous location.'
-    vehicle: '&cYou''re not allowed to use vehicles here. &7This area belongs to land&2
-      {land}&7.'
+    chunk: '&c你不能在隶属于{land}的区块中这样做&7（X：{x} Z：{z}）'
+    area: '&c你不能在隶属于{land}的区域{area}中这样做 &7（X：{x} Z：{z})'
+    land: '&你不能在城镇{land}中这样做'
+    land-not-owner: '&c你不能在城镇{land}中这样做，请选择你自己的城镇或创建城镇进行'
+    claim: '&c你不能申领这个区块，这个区域神秘魔法{plugin}保护着'
+    place: '&c你不能在此放置方块，这个区域隶属于{land}城镇'
+    break: '&c你不能在此破坏方块，这个区域隶属于{land}城镇'
+    ignite: '&c你不能在此破坏方块，这个区域隶属于{land}城镇'
+    enter: '&c你被隶属于城镇{land}的{area}区域拒之门外，已传送回原位'
+    vehicle: '&c你不能在此乘坐交通工具，这个区域隶属于{land}城镇'
     fly: '&c你不能在{land}飞行'
     edit: '&c你不能编辑{land}'
     banned: '&c你不能进入{land}-{area}，被封锁了？'
@@ -244,8 +231,7 @@ message:
         target: '&c你的目标在{land}不允许PVP，所以就不要打他们了'
         ally: '&c你不能在这里攻击他，因为他是你同一城镇中的一员'
         wilderness: '&c你不能攻击他，因为你在一个和谐的城镇'
-    position: '&cYou''re not allowed to do this for the land&4 {land} &cat your current
-      position. &8Bypass permission: {bypass}'
+    position: '&c你不能在你当前位置对城镇{land}这样做'
   area:
     exists: '&c{land}中已经存在一个区域{area}了，请不要重复'
     not-exist: '&c{land}中好像没有叫{area}的区域啊？'
@@ -259,8 +245,8 @@ message:
       safezone: '#t#&2&l{land}{newline}{title}'
       pvp-warning: '#a#&c进入PVP区域'
     leave:
-      land: '#t#&2&l荒郊野外{newline}&7感受野性'
-      safezone: '#t#&2&l荒郊野外{newline}&7感受野性'
+      land: '#t#&2&l啊！荒野{newline}&7感受野性'
+      safezone: '#t#&2&l啊！荒野{newline}&7感受野性'
     teleport:
       already: '&c你好像已经在传送咯，请等待当前传送结束'
       started: '&7开始传送，传送将在&5{sec}&7秒内完成，请不要到处走'
@@ -268,19 +254,16 @@ message:
       chunk: '#t#&9&l已传送{newline}&7X: {x} Z: {z} 花费:&c {cost}T'
       cancelled-plugins: '&c传送已被取消，可能发生了一些不可告人的事情？'
   claimblock:
-    dropped: '&cSome claimblocks lie on the ground. &7There was no space left in your
-      inventory.'
-    success: '&7You got&3 {blocks} &7claimblock(s). &7Place them in a chunk to claim
-      it.'
-    not-owner: '&cYou''re not allowed use this claimblock. &7It belongs to&3 {owner}&7.'
+    dropped: '&c一些认领方块掉到了地上……你的背包没有空间啦'
+    success: '&7你获得了&3 {blocks} &7个认领方块，放置于区块中以划分区域'
+    not-owner: '&c你不能使用这个认领方块，这是属于&3 {owner}&c的'
   blacklist:
-    untrusted: '&cYou''re not allowed to use this command here. &7You''re not trusted
-      in the area&6 {area} &7of land&2 {land}&7.'
-    general: '&cYou''re not allowed to use this command in claimed lands.'
+    untrusted: '&c你不能在此使用该命令，你还不是{area}于{land}的一员'
+    general: '&c你不能在此区域使用该命令'
   autoAction:
-    stopped: '&cStopped your current auto action. &7Reached max rounds. Name:&3 {name}'
-    started: '&7Successfully started auto action. Name:&3 {name}'
-    removed: '&7Successfully stopped auto action. &7Name:&3 {name}'
+    stopped: '&c停止你当前的自动操作，已达到{name}操作次数上限'
+    started: '&7成功开始自动{name}操作'
+    removed: '&7成功停止自动{name}操作'
   role:
     exists: '&c角色{role}已经存在了，换一个名字呗'
     not-exist: '&c角色{role}好像不存在诶，拼错了？'
@@ -289,36 +272,28 @@ message:
       land: '&c你不能编辑这个玩家，在{land}中角色{role}比你拥有更高的优先级'
       area: '&c你不能编辑这个玩家，在{land}的{area}中角色{role}比你拥有更高的优先级'
     weight:
-      land: '&cYou can''t edit the role&4 {role} &cof land&4 {land}&c. &7The roles
-        priority is higher or equal than yours.'
-      area: '&cYou can''t edit the role&4 {roel} &cof area&4 {area} &8(&7Land:&2 {land}&8)&c.
-        &7The roles priority is higher or equal than yours.'
+      land: '&c你不能编辑在{land}中的角色{role}，这个角色比你拥有更高的优先级'
+      area: '&c你不能编辑隶属于{land}的{area}角色{roel}，这个角色比你拥有更高的优先级'
     delete:
-      owner: '&cYou can''t delete the owner role of your land. &7This role is required.'
-      entry: '&cYou can''t delete the entry role of your land. &7It is required for
-        new players.'
-      visitor: '&cYou can''t delete the visitor role of your land. &7It is required
-        for entering visitors.'
+      owner: '&c你怎能删除领主角色呢！难道想造反/弃位吗？'
+      entry: '&c你不能删除城镇成员角色，新成员的加入需要它'
+      visitor: '&c你不能删除城镇访客角色，难道你不欢迎客人吗？QWQ'
   chat-action:
-    cancelled: '#t#&c&lCancelled{newline}&c&lChat Action'
-    player: '&7Please enter the name of the target player.'
-    land: '&7Please enter the name of the land.'
-    title: '&7Please enter a new title for this land. You can include color codes.'
-    rename: '&7Please enter a new name for this land. Spaces are not allowed.'
-    name: '&7Please enter the name in chat.'
+    cancelled: '#t#&c&l已取消{newline}&c&l聊天发起'
+    player: '&7请键入目标玩家名称'
+    land: '&7请键入城镇名称'
+    title: '&7请键入城镇的新标题（支持颜色代码）'
+    rename: '&7请键入城镇新名称（不允许空格）'
+    name: '&7你想和谁说话呢？'
     area:
-      create: '&7Please enter a name for the new area.'
-      delete: '&7Please enter the name of the area, which you want to delete.'
-      exists: '&cThe area&4 {area} &calready exists in this land &8(&7Land:&2 {land}&8)&c.
-        &7Please choose a different name.'
-      max: '&cYou can''t create more areas for this land. &7You reached your limit
-        of&3 {max} &7areas. Permisssion: lands.areas.NUMBER'
+      create: '&7请键入区域新名称'
+      delete: '&7请键入你要删除的区域名称'
+      exists: '&c区域{area}已经存在城镇{land}中，换个名字呗'
+      max: '&c这个城镇被划分得四分五裂已达{max}个区域的上限，不能再继续了！（除非氪金）'
 command:
   general:
-    no-permission: '&cYou don''t have permission to do this. &8You need permission
-      {permission}.'
-    land-not-exist: '&cThe land&2 {land} &cdoesnt exist. &7There''s no land with this
-      name.'
+    no-permission: '&c除非你有{permission}权限，不然没办法这样做'
+    land-not-exist: '&c城镇{land}不存在诶，嗯，不存在的'
     area-not-exist: '&cArea&4 {area} &cdoes not exist in land&4 {land}&c. &7You can
       create a new area in your land menu in the areas section. &7Typo?'
     land-not-member: '&cYou''re not trusted in land&4 {land}&c. &7Use &8/&3Lands menu
