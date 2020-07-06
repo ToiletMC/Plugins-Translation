@@ -258,7 +258,7 @@ message:
     success: '&7你获得了&3 {blocks} &7个认领方块，放置于区块中以划分区域'
     not-owner: '&c你不能使用这个认领方块，这是属于&3 {owner}&c的'
   blacklist:
-    untrusted: '&c你不能在此使用该命令，你还不是{area}于{land}的一员'
+    untrusted: '&c你不能在此使用该命令，你还不是隶属于城镇{land}的{area}一员'
     general: '&c你不能在此区域使用该命令'
   autoAction:
     stopped: '&c停止你当前的自动操作，已达到{name}操作次数上限'
@@ -294,52 +294,34 @@ command:
   general:
     no-permission: '&c除非你有{permission}权限，不然没办法这样做'
     land-not-exist: '&c城镇{land}不存在诶，嗯，不存在的'
-    area-not-exist: '&cArea&4 {area} &cdoes not exist in land&4 {land}&c. &7You can
-      create a new area in your land menu in the areas section. &7Typo?'
-    land-not-member: '&cYou''re not trusted in land&4 {land}&c. &7Use &8/&3Lands menu
-      &7to see the lands you''re a member of.'
-    no-edit-land: '&cYou haven''t selected your edit land yet. &7Use &8/&3Lands edit
-      &8<&3land&8> &7to select it.'
-    name-exists: '&cThe name&4 {name} &cis already taken by another land or nation.
-      &7You need to choose a different one.'
-    money-cost-bank: '&cYou don''t have enough to pay the cost. &7You need&c ${cost}&7.
-      Deposit some money into your land bank: &8/&3Lands deposit {cost}'
-    money-cost: '&cYou don''t have enough to pay the cost. &7You need&c ${cost}&7.'
-    swear-word: '&cDetected a swear word. &7Please do not use mature language. Word:&c
-      {word}'
-    action-cooldown: '&cYou can''t do this now. &7You need to wait&5 {time}&7.'
-    land-none: '&cYou''re not a member of a land. &7Use &8/&3Lands create &7to create
-      one.'
-    land-no-own: '&cYou don''t own a land. &7Use &8/&3Lands create &7to create one.'
-    world-invalid: '&cYou can''t do this in your current world. &7An administrator
-      needs to add world&3 {world} &7to the config first.'
-    wilderness: '&cThis chunk is wilderness. &7You need to go to a claimed chunk.
-      &7You can use &8/&3Lands menu &7to see your lands.'
-    player-not-exist: '&cThere''s no player with the name&4 {player}&c. &7Typo?'
-    player-offline: '&cThere''s currently no player with the name&4 {player} &conline.
-      &7Typo?'
-    player-self: '&cYou can''t do that with yourself. &7You''re funny. :)'
-    banks-disabled: '&7Banks were disabled by an administrator. &8They can enable
-      it in the config.'
-    land-not-trusted: '&cPlayer&4 {player} &7isn''t part of this land &8(&7Land:&2
-      {land}&8)&7. You need to trust him first using &8/&3Lands trust&7.'
-    area-not-trusted: '&cYou can''t do that here. &7You''re not trusted in this chunk
-      &8(&7X: {x} Z: {z}&8)&7. It belongs to the area&6 {area} &7of land&2 {land}&7.'
-    invalid-number: '&cYour input&4 {input} &cisn''t a number. &7The&3 {argument}
-      &7argument needs to be a number.'
+    area-not-exist: '&c区域{area}在城镇{land}中不存在诶，拼错了么？'
+    land-not-member: '&c你好像还不是城镇{land}所信任的成员诶'
+    no-edit-land: '&c你还没有选择你要编辑的城镇'
+    name-exists: '&c名称{name}已经被其他城镇或联盟抢先一步啦，换一个吧'
+    money-cost-bank: '&c不好意思，你没有足够的钱支付，请用/Lands deposit {cost}存马桶币到城镇银行吧'
+    money-cost: '&c不好意思，你没有足够的钱支付，你需要{cost}马桶币，种点土豆？'
+    swear-word: '&c嘿！不要说脏话，请友善相处'
+    action-cooldown: '&c嘿！你手速太快了，请等待{time}后再执行'
+    land-none: '&c很抱歉，你不是任何城镇的一员'
+    land-no-own: '&c很抱歉，你不是任何城镇的领主，请用/Lands create创建一个吧'
+    world-invalid: '&c你不能在当前世界这样做'
+    wilderness: '&c诶，这个区块好像是荒野，要先圈地呀'
+    player-not-exist: '&c{player}，查无此人，拼错了？'
+    player-offline: '&c当前在线玩家中似乎没有{player}这个人，拼错了？'
+    player-self: '&c大力士不能举起自己:('
+    banks-disabled: '&7银行休业了，询问一下管理员吧'
+    land-not-trusted: '&c抱歉，玩家{player}还不是城镇{land}的一员，需要用/Lands trust先邀请他'
+    area-not-trusted: '&c你不能在此做这个，你不是隶属于城镇{land}的{area}一员'
+    invalid-number: '&c抱歉，你的键入有误，{argument}需要填上数字'
     name:
-      character: '&cYou can''t use invalid characters for the name. &7Please use only
-        letters and numbers. &7Found invalid character:&3 {invalid}'
-      length: '&cThis name is too long. &7Max length is&3 {max} &7characters &8(&7yours:
-        {input}&8)&7. &8This includes color codes.'
-      empty: '&cThis name is invalid. &7You need to enter at least one character other
-        than color codes.'
+      character: '&c不要键入{invalid}这些奇奇怪怪的符号啦，请键入汉字或字母及数字'
+      length: '&c啊这，名字太长了，请尽量缩短一下吧，最多{max}个字符哦'
+      empty: '&c你键入了一个寂寞……请至少键入一个字符'
   help:
-    help: '&7Use &8/&a{cmd} help &7for help.'
-    number: '&cYour input&4 {input} &cisn''t a number. &7The&3 {argument} &7argument
-      needs to be a number.'
-    cmd-not-exist: '&cThis command doesnt exist. &7Command&3 {command} &7is invalid.'
-    no-page: '&cThe page&4 {page} &cdoesnt exist. &7Typo?'
+    help: '&7请使用/{cmd} help寻求帮助'
+    number: '&c抱歉，你的键入有误，{argument}需要填上数字'
+    cmd-not-exist: '&c指令不存在:('
+    no-page: '&c翻不到第{page}页:('
   create:
     land-other: '&cYou''re not allowed to have your own land and be a member of another
       land. &7You need to leave land&2 {land} &7first. &8An administrator can disable
