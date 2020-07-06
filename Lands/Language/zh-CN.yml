@@ -38,7 +38,7 @@
 
 
 general:
-  prefix: '&8[&a城镇&8] '
+  prefix: ''
   wYes: '&a确认'
   wNo: '&c取消'
   none: '&8无'

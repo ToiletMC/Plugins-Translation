@@ -1,7 +1,7 @@
 wand:
-    default_name: Wand
-    upgrade_default_description: Will upgrade your wand.
-    upgrade_item_description: "&eWill be absorbed by your wand"
+    default_name: 法杖
+    upgrade_default_description: 会升级你的法杖.
+    upgrade_item_description: "&e将被你的法杖吸收"
     #spell_item_description: "&eWill be absorbed by your wand"
     spell_item_description: ""
     #brush_item_description: "&eWill be absorbed by your wand"
@@ -17,137 +17,137 @@ wand:
     clone_material_activated: Clone source selected
     replicate_material_activated: Replicate source selected
     erase_modifier_activated: Erase modifier active
-    map_material_name: "Map $id"
-    map_material_name_scaled: "Map $id ($sizex$size)"
+    map_material_name: "地图 $id"
+    map_material_name_scaled: "地图 $id ($sizex$size)"
     map_material_description: Creates pixel art from last held map
     schematic_material_description: Uses $schematic to build.
     building_material_description: Build with $material
-    upgrade_uses: "&aAdds $count Uses"
-    upgrade_uses_singular: "&aAdds $count Use"
-    uses_remaining_brief: "&c$count Uses"
-    uses_remaining_singular: "&c$count Use"
-    uses_remaining: $count Uses Remaining
+    upgrade_uses: '&a增加 $count 使用次数'
+    upgrade_uses_singular: '&a增加 $count 使用次数'
+    uses_remaining_brief: '&c$count次'
+    uses_remaining_singular: '&c$count次'
+    uses_remaining: 剩余$count次
     enchantment_level_1: I
     enchantment_level_2: II
     enchantment_level_3: III
     enchantment_level_4: IV
     enchantment_level_5: V
     enchantment_level_max: X
-    spell_count: Knows $count Spells
-    material_count: Has $count Materials
-    upgrade_spell_count: Adds $count Spells
-    upgrade_material_count: Adds $count Materials
-    mana_max: "&eMana: $amount"
-    mana_amount: "&eMana: $amount"
-    mana_amount_boosted: "&eMana: $amount &f(&b$mana&f)"
-    mana_regeneration: "&eMana Regeneration: $amount/s"
-    mana_per_damage: "&eMana Rage: $amount/HP"
-    mana_regeneration_boosted: "&eMana Regeneration: $amount &f(&b$mana&f)&d/s"
-    mana_boost: "&eMana Boost: $percent%"
-    mana_regeneration_boost: "&eMana Regeneration Boost: $percent%"
-    earn_multiplier: "&6$type Earn Boost: $percent%"
-    block_chance: "&bBlocking $roman"
-    reflect_chance: "&bReflective $roman"
-    cost_reduction: "&6Cost Reduction $roman"
-    consume_reduction: "&6Manifestation"
-    cooldown_reduction: "&6Cooldown Reduction $roman"
-    power: "&6Power $roman"
+    spell_count: "&b学会了$count种魔法"
+    material_count: "&b拥有$count材料"
+    upgrade_spell_count: "&b添加$count魔法"
+    upgrade_material_count: "&b添加$count材料"
+    mana_max: "&b法力值: &3$amount"
+    mana_amount: "&b法力值: &3$amount"
+    mana_amount_boosted: "&b法力值: &3$amount &7(&b$mana&7)"
+    mana_regeneration: "&b法力恢复: &3$amount/秒"
+    mana_per_damage: "&b魔法狂暴: &3$amount/HP"
+    mana_regeneration_boosted: "&b法力恢复: &3$amount &7(&b$mana&7)&b/秒"
+    mana_boost: "&b法力加成: &3$percent%"
+    mana_regeneration_boost: "&b法力恢复加成: &3$percent%"
+    earn_multiplier: "&b$type加成: &3$percent%"
+    block_chance: "&b格挡$roman"
+    reflect_chance: "&b反射 $roman"
+    cost_reduction: "&b减价 $roman"
+    consume_reduction: "&b表现"
+    cooldown_reduction: "&b冷却减少 $roman"
+    power: "&b力量 $roman"
     attributes: "&d$attribute $value"
     property_stack: "+$property"
     property_stack_negative: "&c$property"
     property_value: "$property"
     property_value_negative: "&c$property"
     item_attributes:
-      GENERIC_ATTACK_DAMAGE: "Attack Damage"
+      GENERIC_ATTACK_DAMAGE: "攻击伤害"
     protection:
-      overall: "&2Protection $roman"
-      physical: "&2Physical Protection $roman"
-      projectile: "&2Projectile Protection $roman"
-      fall: "&2Fall Protection $roman"
-      fire: "&2Fire Protection $roman"
-      explosion: "&2Blast Protection $roman"
-      magic: "&2Magical Protection $roman"
-      unknown: "&2$type Protection $roman"
+        overall: '&2保护 $roman'
+        physical: '&2物理保护 $roman'
+        projectile: '&2弹射物保护 $roman'
+        fall: '&2摔落保护 $roman'
+        fire: '&2火焰保护 $roman'
+        explosion: '&2爆炸保护 $roman'
+        magic: '&2魔法保护 $roman'
+        unknown: '&2$type保护 $roman'
     strength:
-      overall: "&2Damage $roman"
-      physical: "&2Physical Damage $roman"
-      projectile: "&2Projectile Damage $roman"
-      fall: "&2Fall Damage $roman"
-      fire: "&2Fire Damage $roman"
-      explosion: "&2Blast Damage $roman"
-      magic: "&2Magical Damage $roman"
-      unknown: "&2$type Damage $roman"
+        overall: '&2伤害 $roman'
+        physical: '&2物理伤害 $roman'
+        projectile: '&2弹射物伤害 $roman'
+        fall: '&2摔落伤害 $roman'
+        fire: '&2火焰伤害 $roman'
+        explosion: '&2爆炸伤害 $roman'
+        magic: '&2魔法伤害 $roman'
+        unknown: '&2$type 伤害 $roman'
     weakness:
-      overall: "&2Weakness $roman"
-      physical: "&2Physical Weakness $roman"
-      projectile: "&2Projectile Weakness $roman"
-      fall: "&2Fall Weakness $roman"
-      fire: "&2Fire Weakness $roman"
-      explosion: "&2Blast Weakness $roman"
-      magic: "&2Magical Weakness $roman"
-      unknown: "&2$type Weakness $roman"
+        overall: '&2虚弱 $roman'
+        physical: '&2物理虚弱 $roman'
+        projectile: '&2弹射物虚弱 $roman'
+        fall: '&2摔落虚弱 $roman'
+        fire: '&2火焰虚弱 $roman'
+        explosion: '&2爆炸虚弱 $roman'
+        magic: '&2魔法虚弱 $roman'
+        unknown: '&2$type虚弱 $roman'
     enchantments:
-        ARROW_DAMAGE: "Arrow Damage"
-        ARROW_FIRE: "Arrow Fire"
-        ARROW_INFINITE: "Infinity"
-        ARROW_KNOCKBACK: "Arrow Knockback"
-        BINDING_CURSE: "Binding Curse"
-        CHANNELING: "Channeling"
-        DAMAGE_ALL: Sharpness
-        DAMAGE_ARTHROPODS: Damage Arthropods
-        DAMAGE_UNDEAD: Damage Undead
-        DEPTH_STRIDER: Depth Strider
-        DIG_SPEED: Dig Speed
-        DURABILITY: Durability
-        FIRE_ASPECT: Fire Aspect
-        FROST_WALKER: Frost Walker
-        IMPALING: Impaling
-        KNOCKBACK: Knockback
-        LOOT_BONUS_BLOCKS: Fortune
-        LOOT_BONUS_MOBS: Looting
-        LOYALTY: Loyalty
-        LUCK: Luck
-        LURE: Lure
-        MENDING: Mending
-        OXYGEN: Oxygen
-        PROTECTION_ENVIRONMENTAL: Environment Protection
-        PROTECTION_EXPLOSIONS: Blast Protection
-        PROTECTION_FALL: Fall Protection
-        PROTECTION_FIRE: Fire Protection
-        PROTECTION_PROJECTILE: Projectile Protection
-        RIPTIDE: Riptide
-        SILK_TOUCH: Silk Touch
-        SWEEPING_EDGE: Sweeping Edge
-        THORNS: Thorns
-        VANISHING_CURSE: Vanishing Curse
-        WATER_WORKER: Water Worker
+        ARROW_DAMAGE: 力量
+        ARROW_FIRE: 火矢
+        ARROW_INFINITE: 无限
+        ARROW_KNOCKBACK: 冲击
+        BINDING_CURSE: 绑定诅咒
+        CHANNELING: 穿刺
+        DAMAGE_ALL: 锋利
+        DAMAGE_ARTHROPODS: 节肢杀手
+        DAMAGE_UNDEAD: 亡灵杀手
+        DEPTH_STRIDER: 深海探索者
+        DIG_SPEED: 效率
+        DURABILITY: 耐久
+        FIRE_ASPECT: 火焰附加
+        FROST_WALKER: 冰霜行者
+        IMPALING: 引雷
+        KNOCKBACK: 击退
+        LOOT_BONUS_BLOCKS: 时运
+        LOOT_BONUS_MOBS: 抢夺
+        LOYALTY: 忠诚
+        LUCK: 幸运
+        LURE: 饵钓
+        MENDING: 经验修补
+        OXYGEN: 水下呼吸
+        PROTECTION_ENVIRONMENTAL: 保护
+        PROTECTION_EXPLOSIONS: 爆炸保护
+        PROTECTION_FALL: 摔落保护
+        PROTECTION_FIRE: 火焰保护
+        PROTECTION_PROJECTILE: 弹射物保护
+        RIPTIDE: 激流
+        SILK_TOUCH: 精准采集
+        SWEEPING_EDGE: 横扫之刃
+        THORNS: 荆棘
+        VANISHING_CURSE: 消失诅咒
+        WATER_WORKER: 水下速掘
     potion_effect: "&b$effect $roman"
-    super_powered: "&3Superpowered"
-    super_protected: "&3Invulnerability"
-    spell_aura: "&bAura: &6$spell"
-    costs_description: Consumes $description
-    active_costs_description: Consumes $description Per Second
-    range_description: "&9Range: &6$range &9meters"
-    owner_description: "&2&o$name's Wand"
-    bound_description: "&3&oBound to $name"
-    unmodifiable: That wand can not be modified
-    player_unmodifiable: $name's wand can not be modified
-    bound_to_other: That wand is not bound to you
-    bound: That wand is bound to $name
-    spell_added: "You have learned the &r&6$name &d&ospell"
-    brush_added: "You have learned the &r&7$name &d&obrush"
-    player_spell_upgraded: "$players's &r&6$name &d&ohas been upgraded to &3$level"
-    spell_upgraded: "&r&6$name &d&ohas been upgraded to &3$level"
-    spell_override_upgraded: "&r&6$name &d&ohas been upgraded"
-    upgraded_property: "&r&dYou have been upgraded to &r&b$name"
-    spell_progression: "&r&6$name &d&ohas progressed to &3$level&d&o/&3$max_level"
-    mana_added: "&r&dYou now have $value mana"
-    hotbar_count: "$amount hotbars"
-    player_upgraded: $name's wand upgraded
-    player_not_upgraded: $name's wand not upgraded
-    player_spells_levelled: "Levelled up $count of $name's spells"
-    player_spells_not_levelled: "Did not level up any of $name's spells"
-    spells_levelled: "Levelled up $count of your spells"
+    super_powered: "&3势不可挡"
+    super_protected: "&3无懈可击"
+    spell_aura: "&b光环: &3$spell"
+    costs_description: "&b需消耗 $description"
+    active_costs_description: "&b每秒消耗 $description"
+    range_description: "&b范围: &3$range 米"
+    owner_description: "&b$name的法杖"
+    bound_description: "&b相随于 $name"
+    unmodifiable: "&c无法修改这根法杖"
+    player_unmodifiable: "&c无法修改$name的法杖"
+    bound_to_other: "&c这根法杖不属于你"
+    bound: "&c这根法杖已经绑定了$name"
+    spell_added: "&7恭喜你学会新魔法：&d$name&7！"
+    brush_added: "&7恭喜你学会新笔刷：&d$name&7！"
+    player_spell_upgraded: "&7$players的$name升级到了$level！"
+    spell_upgraded: "&7$name&7升级到&7$level"
+    spell_override_upgraded: "&7$name&7已升级！"
+    upgraded_property: "&7你已升级为&7$name"
+    spell_progression: "&7$name&7的魔法进度为&c$level&d&7/&c$max_level"
+    mana_added: "&f你现在的法力值为：$value"
+    hotbar_count: "$amount个快捷栏"
+    player_upgraded: $name的法杖升级了
+    player_not_upgraded: $name的法杖未升级
+    player_spells_levelled: "&f$name的魔法提升了$count级"
+    player_spells_not_levelled: "&c$name未升级任何魔法"
+    spells_levelled: "&f已升级你的$count中魔法"
     spells_not_levelled: "Did not level up any of your spells"
     no_wand: You must be holding a wand
     player_no_wand: $name is not holding a wand
@@ -191,31 +191,42 @@ wand:
     player_filled: $name's wand filled
     renamed: Your wand has been renamed
     player_renamed: $name's wand renamed
-    self_destruct: The ancient artifact crumbles in your hands
-    no_permission: "&r&4You may not use that $wand &r&4here."
-    single_spell: Wand of $spell
-    fully_enchanted: "&cYou cannot progress any further &4(for now)"
-    need_more_levels: "You need at least &r&4$levels &d&olevels to enchant"
-    require_more_levels: "You must enchant at a higher level"
-    randomized_lore: What kind of wand will you get?
-    randomized_name: Wand Box
-    upgrade_name: $name Upgrade
+    self_destruct: "&c你手里的远古遗物破碎了"
+    no_permission: "&4你不能在这里使用$wand"
+    single_spell: $spell法杖
+    fully_enchanted: "&c你暂时不能再强化你的法杖了"
+    need_more_levels: "&c你至少需要达到&4$levels&c级才可以附魔"
+    require_more_levels: "&c你必须达到更高的等级才能附魔"
+    randomized_lore: 你将会获得什么样的法杖呢？
+    randomized_name: 魔杖盒子
+    upgrade_name: "&d$name 升级！"
     randomized_description: "&o&2$description"
     description_lore: "&o&a$description"
     path_lore: ""
     #path_lore: "&o$path"
-    hotbar_count_usage: "&ePress $cycle_hotbar while your $wand &eis active to cycle hotbars"
-    inventory_instructions: "&r&eYour $wand &enow has more than one spell. Press $toggle to open/close the spell inventory. Use the hotbar buttons to select a spell."
-    chest_instructions: "&r&eYour $wand &enow has more than one spell. Press $toggle to open/close the spell inventory, click a spell to cast."
-    skills_instructions: "&r&eYour $wand &enow has more than one spell. Press $toggle to open/close the spell inventory, drag a spell to the hotbar to cast."
-    cycle_instructions: "&r&eYour $wand &enow has more than one spell. Press $cycle to cycle between spells."
-    page_instructions: "&r&eYour $wand &enow has more than one page of spells. Click outside the spell inventory to change pages."
-    bound_instructions: "&r&3Your $wand &3is bound to you, and is undroppable."
-    spell_instructions: "&r&bSwing your $wand &bto cast &r&6$spell&d&o. Spells require mana, shown in the XP bar."
-    enchant_instructions: "&r&bUpgrade your $wand &bat an enchanting table to add spells and abilities."
-    brush_instructions: "&r&eMaterial brushes have been added to your $wand&e. Shift+$toggle to select a brush."
-    sp_instructions: "&r&6You have earned some Spell Points! SP's are displayed above your mana bar, and may be spent at an enchanting table to learn new spells. Repeat casts earn fewer SP's, try mixing it up once you have more spells!"
-    earn_instructions: "&r&6You have earned some $currency! This is displayed above your mana bar, and may be spent at an enchanting table to learn new spells. Repeat casts earn less, try mixing it up once you have more spells!"
+    hotbar_count_usage: "&7在激活$wand&7法杖时按$cycle_hotbar来切换快捷栏。"
+    inventory_instructions: "&7你的$wand&7现在拥有多个魔法，按下$toggle
+    来打开或关闭魔法背包，使用快捷栏来选择魔法。"
+    chest_instructions: "&7你的$wand&7现在拥有多个魔法，按下$toggle
+    来打开或关闭魔法背包，点击一个法术来施法。"
+    skills_instructions: "&7你的$wand&7现在拥有多个魔法，按下$toggle
+    来打开或关闭魔法背包，拖拽法术到快捷栏来施法。"
+    cycle_instructions: "&7你的$wand&7现在拥有多个魔法，按下$cycle
+    在魔法之间循环。"
+    page_instructions: "&7你的$wand&7现在拥有多页魔法，
+    点击魔法背包外的地方来翻页。"
+    bound_instructions: "&c你的$wand&c绑定在了你身上，你无法丢弃它。"
+    spell_instructions: "&7使用你的$wand&b来施放$spell，施法需要
+    魔法，法力显示在你的经验条处。"
+    enchant_instructions: "&7使用附魔台来升级你的$wand&7。"
+    brush_instructions: "&7材料笔刷已添加到你的$wand内，使用Shift+$toggle
+    来选择一个笔刷。"
+    sp_instructions: "&7你获得了一些魔法点(SP)！SP显示在
+    你的魔法条上方，你可以手持法杖右击附魔台来学习新的魔法.。
+    重复施法可以获得少许SP。"
+    earn_instructions: "&7你获得了一些$currency！这显示在你的魔法条上方
+    你的魔法条上方，你可以手持法杖右击附魔台来学习新的魔法。
+    重复施法可以获得少许SP。"
     hotbar_changed: ""
     spell_activated: "$spell"
     upgrade_prefix: "&6"
@@ -226,7 +237,7 @@ wand:
     unmodifiable_prefix: "&6"
     spell_prefix: "&6"
     brush_prefix: "&7"
-    chest_inventory_title: "Wand"
+    chest_inventory_title: "法杖"
     # You can use this to show an action bar message whenever the player cycles their hotbar
     #hotbar_changed: "a:Switched hotbars"
     # Messages can also be sent as simple titles with default fade in/out
