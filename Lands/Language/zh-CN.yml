@@ -265,15 +265,15 @@ message:
     started: '&7成功开始自动{name}操作'
     removed: '&7成功停止自动{name}操作'
   role:
-    exists: '&c角色{role}已经存在了，换一个名字呗'
-    not-exist: '&c角色{role}好像不存在诶，拼错了？'
+    exists: '&c{role}角色已经存在了，换一个名字呗'
+    not-exist: '&c{role}角色好像不存在诶，拼错了？'
     max: '&cOh天哪，你最多只能创造{max}个角色&7&m氪个Pro它不香嘛？'
     player:
-      land: '&c你不能编辑这个玩家，在{land}中角色{role}比你拥有更高的优先级'
-      area: '&c你不能编辑这个玩家，在{land}的{area}中角色{role}比你拥有更高的优先级'
+      land: '&c你不能编辑这个玩家，在{land}中{role}角色比你拥有更高的优先级'
+      area: '&c你不能编辑这个玩家，在{land}的{area}中{role}角色比你拥有更高的优先级'
     weight:
-      land: '&c你不能编辑在{land}中的角色{role}，这个角色比你拥有更高的优先级'
-      area: '&c你不能编辑隶属于{land}的{area}角色{roel}，这个角色比你拥有更高的优先级'
+      land: '&c你不能编辑在{land}中的{role}角色，这个角色比你拥有更高的优先级'
+      area: '&c你不能编辑隶属于{land}的{area}角色{role}，这个角色比你拥有更高的优先级'
     delete:
       owner: '&c你怎能删除领主角色呢！难道想造反/弃位吗？'
       entry: '&c你不能删除城镇成员角色，新成员的加入需要它'
