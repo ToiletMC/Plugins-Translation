@@ -247,12 +247,6 @@ message:
     leave:
       land: '#t#&2&l啊！荒野{newline}&7感受野性'
       safezone: '#t#&2&l啊！荒野{newline}&7感受野性'
-    teleport:
-      already: '&c你好像已经在传送咯，请等待当前传送结束'
-      started: '&7开始传送，传送将在&5{sec}&7秒内完成，请不要到处走'
-      cancelled: '&cOh我的天哪. &7传送的时候非要乱动，氪个Pro它不香嘛？'
-      chunk: '#t#&9&l已传送{newline}&7X: {x} Z: {z} 花费:&c {cost}T'
-      cancelled-plugins: '&c传送已被取消，可能发生了一些不可告人的事情？'
   claimblock:
     dropped: '&c一些认领方块掉到了地上……你的背包没有空间啦'
     success: '&7你获得了&3 {blocks} &7个认领方块，放置于区块中以划分区域'
@@ -290,6 +284,19 @@ message:
       delete: '&7请键入你要删除的区域名称'
       exists: '&c区域{area}已经存在城镇{land}中，换个名字呗'
       max: '&c这个城镇被划分得四分五裂已达{max}个区域的上限，不能再继续了！（除非氪金）'
+  teleportation:
+    already: '&cYou can''t start a second teleportation. There''s already a teleportation
+      in progress. &7Please wait until it''s done.'
+    started: '&7Teleportation process started. Teleporting in&5 {sec} &7seconds. Please
+      don''t move.'
+    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while
+      you''re waiting&5 {sec} &7seconds for teleportation.'
+    chunk: '#t#&9&lTeleported{newline}&7X: {x} Z: {z} Cost:&c ${cost}'
+    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check
+      your other plugins. &7This is not a Lands issue.'
+    unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
+    corrected: '&7The original teleport destination was unsafe. &7Your final destination
+      has been corrected to a safe location.'
 command:
   general:
     no-permission: '&c除非你有{permission}权限，不然没办法这样做'
