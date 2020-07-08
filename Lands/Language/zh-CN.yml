@@ -141,7 +141,7 @@ general:
       enemy: '&c敌人 &8| '
       ally: '&a友军 &8| '
   teleportation:
-    bossbar: 请等待，马上就好！
+    bossbar: 请稍后，马上就好！
 help:
   general:
     prefix: '&7用法: '
@@ -204,19 +204,19 @@ message:
   feature-disabled: '&c此项特性已被管理员禁用，需要管理员在设置中开启'
   current-war: '&7不不不，你的城镇&2{land}&7目前已经卷入了一场战争，&7请在战争结束后重试'
   noaccess:
-    chunk: '&c你不能在隶属于{land}的区块中这样做&7（X：{x} Z：{z}）'
-    area: '&c你不能在隶属于{land}的区域{area}中这样做 &7（X：{x} Z：{z})'
+    chunk: '&c你不能在隶属于城镇{land}的区块中这样做&7（X：{x} Z：{z}）'
+    area: '&c你不能在隶属于城镇{land}的子城镇{area}中这样做 &7（X：{x} Z：{z})'
     land: '&c你不能在城镇{land}中这样做'
     land-not-owner: '&c你不能在城镇{land}中这样做，请选择你自己的城镇或创建城镇进行'
-    claim: '&c你不能申领这个区块，这个区域神秘魔法{plugin}保护着'
+    claim: '&c你不能申领这个区块，这个区域神秘魔法保护着'
     place: '&c你不能在此放置方块，这个区域隶属于{land}城镇'
     break: '&c你不能在此破坏方块，这个区域隶属于{land}城镇'
     ignite: '&c你不能在此破坏方块，这个区域隶属于{land}城镇'
-    enter: '&c你被隶属于城镇{land}的{area}区域拒之门外，已传送回原位'
+    enter: '&c你被隶属于城镇{land}的子城镇{area}拒之门外，已传送回原位'
     vehicle: '&c你不能在此乘坐交通工具，这个区域隶属于{land}城镇'
     fly: '&c你不能在{land}飞行'
     edit: '&c你不能编辑{land}'
-    banned: '&c你不能进入{land}-{area}，被封锁了？'
+    banned: '&c你不能进入隶属于城镇{land}的子城镇{area}，被封锁了？'
     teleport: '&c你不能传送到{land}，你不是他们的一员！'
     interact:
       general: '&c{land}的方块不愿意和你互动'
@@ -233,9 +233,9 @@ message:
         wilderness: '&c你不能攻击他，因为你在一个和谐的城镇'
     position: '&c你不能在你当前位置对城镇{land}这样做'
   area:
-    exists: '&c{land}中已经存在一个区域{area}了，请不要重复'
-    not-exist: '&c{land}中好像没有叫{area}的区域啊？'
-    default: '&c你不能在{land}的默认区域{area}中做这个'
+    exists: '&c城镇{land}中已经存在一个名为{area}的子城镇了，请不要重复'
+    not-exist: '&c城镇{land}中好像没有叫{area}的子城镇啊？'
+    default: '&c你不能在城镇{land}的默认子城镇{area}中做这个'
   event:
     fly:
       counter: '#t#&c飞行模式将禁用{newline}&c在 &4{sec} &c秒内'
@@ -252,7 +252,7 @@ message:
     success: '&7你获得了&3 {blocks} &7个认领方块，放置于区块中以划分区域'
     not-owner: '&c你不能使用这个认领方块，这是属于&3 {owner}&c的'
   blacklist:
-    untrusted: '&c你不能在此使用该命令，你还不是隶属于城镇{land}的{area}一员'
+    untrusted: '&c你不能在此使用该命令，你还不是隶属于城镇{land}的子城镇{area}的一员'
     general: '&c你不能在此区域使用该命令'
   autoAction:
     stopped: '&c停止你当前的自动操作，已达到{name}操作次数上限'
@@ -263,11 +263,11 @@ message:
     not-exist: '&c{role}角色好像不存在诶，拼错了？'
     max: '&cOh天哪，你最多只能创造{max}个角色&7&m氪个Pro它不香嘛？'
     player:
-      land: '&c你不能编辑这个玩家，在{land}中{role}角色比你拥有更高的优先级'
-      area: '&c你不能编辑这个玩家，在{land}的{area}中{role}角色比你拥有更高的优先级'
+      land: '&c你不能编辑这个玩家，在城镇{land}中{role}角色比你拥有更高的优先级'
+      area: '&c你不能编辑这个玩家，在城镇{land}的子城镇{area}中{role}角色比你拥有更高的优先级'
     weight:
-      land: '&c你不能编辑在{land}中的{role}角色，这个角色比你拥有更高的优先级'
-      area: '&c你不能编辑隶属于{land}的{area}角色{role}，这个角色比你拥有更高的优先级'
+      land: '&c你不能编辑城镇{land}中的{role}角色，这个角色比你拥有更高的优先级'
+      area: '&c你不能编辑隶属于城镇{land}的子城镇{area}的{role}角色，这个角色比你拥有更高的优先级'
     delete:
       owner: '&c你怎能删除领主角色呢！难道想造反/弃位吗？'
       entry: '&c你不能删除城镇成员角色，新成员的加入需要它'
@@ -280,17 +280,14 @@ message:
     rename: '&7请键入城镇新名称（不允许空格）'
     name: '&7请在聊天框键入名称'
     area:
-      create: '&7请键入区域新名称'
-      delete: '&7请键入你要删除的区域名称'
-      exists: '&c区域{area}已经存在城镇{land}中，换个名字呗'
-      max: '&c这个城镇被划分得四分五裂已达{max}个区域的上限，不能再继续了！（除非氪金）'
+      create: '&7请键入子城镇新名称'
+      delete: '&7请键入你要删除的子城镇名称'
+      exists: '&c子城镇{area}已经存在城镇{land}中，换个名字呗'
+      max: '&c这个城镇被划分得四分五裂，已达{max}个子城镇的上限，不能再继续了！（除非氪金）'
   teleportation:
-    already: '&cYou can''t start a second teleportation. There''s already a teleportation
-      in progress. &7Please wait until it''s done.'
-    started: '&7Teleportation process started. Teleporting in&5 {sec} &7seconds. Please
-      don''t move.'
-    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while
-      you''re waiting&5 {sec} &7seconds for teleportation.'
+    already: '&c你已在传送进程中，请等待动作完成。'
+    started: '&7传送已开始，需要花费&5 {sec} &7秒完成，请不要乱动。'
+    cancelled: '&c啊！传送被取消，说好的不要乱动呢:('
     chunk: '#t#&9&lTeleported{newline}&7X: {x} Z: {z} Cost:&c ${cost}'
     plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check
       your other plugins. &7This is not a Lands issue.'
@@ -301,7 +298,7 @@ command:
   general:
     no-permission: '&c除非你有{permission}权限，不然没办法这样做'
     land-not-exist: '&c城镇{land}不存在诶，嗯，不存在的'
-    area-not-exist: '&c区域{area}在城镇{land}中不存在诶，拼错了么？'
+    area-not-exist: '&c子城镇{area}在城镇{land}中不存在诶，拼错了么？'
     land-not-member: '&c你好像还不是城镇{land}所信任的成员诶'
     no-edit-land: '&c你还没有选择你要编辑的城镇'
     name-exists: '&c名称{name}已经被其他城镇或联盟抢先一步啦，换一个吧'
@@ -318,7 +315,7 @@ command:
     player-self: '&c大力士不能举起自己:('
     banks-disabled: '&7银行休业了，询问一下管理员吧'
     land-not-trusted: '&c抱歉，玩家{player}还不是城镇{land}的一员，需要用/Lands trust先邀请他'
-    area-not-trusted: '&c你不能在此做这个，你不是隶属于城镇{land}的{area}一员'
+    area-not-trusted: '&c你不能在此做这个，你不是隶属于城镇{land}的子城镇{area}的一员'
     invalid-number: '&c抱歉，你的键入有误，{argument}需要填上数字'
     name:
       character: '&c不要键入{invalid}这些奇奇怪怪的符号啦，请键入汉字或字母及数字'
@@ -330,15 +327,10 @@ command:
     cmd-not-exist: '&c指令不存在:('
     no-page: '&c翻不到第{page}页:('
   create:
-    land-other: '&cYou''re not allowed to have your own land and be a member of another
-      land. &7You need to leave land&2 {land} &7first. &8An administrator can disable
-      this in the config: invite-owner'
-    max-own: '&cYou can''t create any more lands. &7You reached your maximum of&3
-      {max} &7own lands. &8Permission: lands.ownlands.NUMBER'
-    success: '&7Successfully created land&2 {land} &7for&c ${cost}&7. You can claim
-      chunks by executing &8/&3Lands claim&7. You can also use /Lands selection to
-      claim a selection. Set land {land} as your edit land for future actions &8(/&3Lands
-      edit&8)&7.'
+    land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先。'
+    max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
+    success: '&7你现在是城镇{land}的领主啦！花费&c{cost}&7马桶币。接下来你可以使用/Lands claim 扩张领地，
+      也可以使用/Lands selection 选择区域进行扩张。'
     broadcast: '&7Land&2 {land} &7was created by&3 {player}&7.'
   rename:
     success: '&7Successfully set the new name&3 {name} &7for this land &8(&7Land:&2
