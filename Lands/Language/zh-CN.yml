@@ -289,8 +289,7 @@ message:
     started: '&7传送已开始，需要花费&5 {sec} &7秒完成，请不要乱动。'
     cancelled: '&c啊！传送被取消，说好的不要乱动呢:('
     chunk: '#t#&9&lTeleported{newline}&7X: {x} Z: {z} Cost:&c ${cost}'
-    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check
-      your other plugins. &7This is not a Lands issue.'
+    plugin: '&c传送被神秘力量打断，但这不是你的问题。'
     unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
     corrected: '&7The original teleport destination was unsafe. &7Your final destination
       has been corrected to a safe location.'
@@ -329,22 +328,17 @@ command:
   create:
     land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先。'
     max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
-    success: '&7你现在是城镇{land}的领主啦！花费&c{cost}&7马桶币。接下来你可以使用/Lands claim 扩张领地，
+    success: '&7你现在是城镇{land}的领主啦！花费{cost}马桶币。接下来你可以使用/Lands claim 扩张领地，
       也可以使用/Lands selection 选择区域进行扩张。'
-    broadcast: '&7Land&2 {land} &7was created by&3 {player}&7.'
+    broadcast: '&7城镇{land}的领主是{player}'
   rename:
-    success: '&7Successfully set the new name&3 {name} &7for this land &8(&7Land:&2
-      {land}&8)&7. You paid&c ${cost}&7.'
+    success: '&7成功为城镇{land}易名为{name}，花费{cost}马桶币'
   edit:
-    success: '&7You entered edit mode for this land &8(&7Land:&2 {land}&8)&7. Next
-      actions, like &8/&3Lands claim &7or &8/&3Lands trust&7, will be executed for
-      this land.'
+    success: '&7你进入城镇编辑模式，接下来如/Lands claim或/Lands trust均会在这片土地生效'
   selection:
-    not-complete: '&cYour selection is not complete. &7Please make sure that both
-      positions are set &8(&bLEFT CLICK &7and &9RIGHT CLICK&8)&7. You can toggle the
-      selection mode by executing &8/&3Lands selection&7.'
-    max: '&cYour selection has too many chunks in it. &7Size:&3 {current} &7Your maximum
-      size is&3 {max} chunks. &8Permission: lands.selection.NUMBER'
+    not-complete: '&c抱歉，你的框选并不完整，请再确认两处锚点正确放置（左击/右击进行放置）。
+      若想退出选择模式，你可以执行/Lands selection退出。'
+    max: '&c你框选的区块过多啦，你框选了{current}个区块而极限为：{max}个'
     enabled: '&7You enabled selection mode. Use &bLEFT CLICK &7on a block to set the
       first position and &9RIGHT CLICK &7to set the second position. After that you
       can apply the selection to these commands: &3Claim&7, &3Assign&7, &3Unclaim&7,
