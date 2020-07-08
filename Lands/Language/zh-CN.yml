@@ -49,7 +49,7 @@ general:
     title:
       land: '&f城镇领袖：&3 %owner%&f.'
       safezone: '&f安全区域，可以松一口气了'
-    default-area: 默认区域
+    default-area: 默认城镇
   time:
     days: 天
     hours: 小时
@@ -235,7 +235,7 @@ message:
   area:
     exists: '&c城镇{land}中已经存在一个名为{area}的子城镇了，请不要重复'
     not-exist: '&c城镇{land}中好像没有叫{area}的子城镇啊？'
-    default: '&c你不能在城镇{land}的默认子城镇{area}中做这个'
+    default: '&c你不能在城镇{land}的默认子城镇中做这个'
   event:
     fly:
       counter: '#t#&c飞行模式将禁用{newline}&c在 &4{sec} &c秒内'
