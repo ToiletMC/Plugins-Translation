@@ -43,7 +43,7 @@ general:
   wNo: '&c取消'
   none: '&8无'
   disabled: '&c关闭'
-  wilderness: '&a啊！荒野'
+  wilderness: '&a荒野'
   unlimited: '&a无限制'
   land:
     title:
@@ -94,7 +94,7 @@ general:
     wilderness: '&2▉ '
     top: '&7-<------------<- &6城镇地图 &7->------------>-'
     info:
-      wilderness: ' &2▉ &7= 啊！荒野'
+      wilderness: ' &2▉ &7= 荒野'
       yours: ' &a▉ &7= 属于你'
       trusted: ' &5▉ &7= 属于你朋友'
       others: ' &c▉ &7= 属于其他人'
@@ -206,7 +206,7 @@ message:
   noaccess:
     chunk: '&c你不能在隶属于{land}的区块中这样做&7（X：{x} Z：{z}）'
     area: '&c你不能在隶属于{land}的区域{area}中这样做 &7（X：{x} Z：{z})'
-    land: '&你不能在城镇{land}中这样做'
+    land: '&c你不能在城镇{land}中这样做'
     land-not-owner: '&c你不能在城镇{land}中这样做，请选择你自己的城镇或创建城镇进行'
     claim: '&c你不能申领这个区块，这个区域神秘魔法{plugin}保护着'
     place: '&c你不能在此放置方块，这个区域隶属于{land}城镇'
@@ -278,7 +278,7 @@ message:
     land: '&7请键入城镇名称'
     title: '&7请键入城镇的新标题（支持颜色代码）'
     rename: '&7请键入城镇新名称（不允许空格）'
-    name: '&7你想和谁说话呢？'
+    name: '&7请在聊天框键入名称'
     area:
       create: '&7请键入区域新名称'
       delete: '&7请键入你要删除的区域名称'
