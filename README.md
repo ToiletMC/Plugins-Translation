@@ -1,4 +1,4 @@
-# Plugins-translation
+# Plugins-Translation
 这些是厕所总部服务器常用插件的语言文件
 
 关于翻译语言文件（一般都是左下角的消息提示，不包括GUI中的内容）
