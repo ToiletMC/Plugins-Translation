@@ -43,7 +43,7 @@ general:
   wNo: '&c取消'
   none: '&8无'
   disabled: '&c关闭'
-  wilderness: '&a荒野'
+  wilderness: '荒野'
   unlimited: '&a无限制'
   land:
     title:
