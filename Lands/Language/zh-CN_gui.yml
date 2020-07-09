@@ -74,28 +74,28 @@
 general:
   wYes: '&aYes'
   wNo: '&cNo'
-  none: '&cNone'
-  now: '&aNow'
-  enabled: '&aEnabled'
-  disabled: '&cDisabled'
-  unlimited: '&aunlimited'
+  none: '&c无'
+  now: '&a现在'
+  enabled: '&a已启用'
+  disabled: '&c已禁用'
+  unlimited: '&a无限'
   previous: '&8previous'
-  offline: '&cOffline'
+  offline: '&c离线'
   role:
-    owner: '&4Owner'
-    admin: '&cAdmin'
-    member: '&eMember'
-    visitor: '&7Visitor'
+    owner: '&4所有者'
+    admin: '&c管理员'
+    member: '&e成员'
+    visitor: '&7游客'
   inbox-filter:
-    all: '&aAll'
-    members: '&eMembers'
-    economy: '&cEconomy'
-    war: '&4War'
+    all: '&a全部邮件'
+    members: '&e关于成员'
+    economy: '&c关于经济'
+    war: '&4关于战争'
   war:
-    defenders: '&aDefenders'
-    attackers: '&cAttackers'
+    defenders: '&a捍卫者'
+    attackers: '&c攻击者'
     name:
-      land: '&2Land '
+      land: '&2城镇 '
 physical-Item:
   claim-block:
     name: '&7Claimblock'
@@ -114,35 +114,32 @@ skull:
     visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
 gui:
   main:
-    title: '&8Main Menu'
+    title: '&0主菜单'
     size: 27
     s:
       lands:
-        name: '&8> &2Lands'
+        name: '&8> &2城镇'
         lore:
-        - '&7View all your lands.'
+        - '&7查看你的城镇'
         - ' '
-        - '&8- &7This includes your own'
-        - '  &7lands and lands, in which'
-        - '  &7you''re just a member.'
+        - '  &7包括你自己的'
+        - '  &7和你所加入的'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         slot: 11
       all-lands:
-        name: '&8> &9All Lands'
+        name: '&8> &b所有城镇'
         lore:
-        - '&7View all created lands'
-        - '&7on this server.'
+        - '&7查看服务器中所有的城镇'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzljODg4MWU0MjkxNWE5ZDI5YmI2MWExNmZiMjZkMDU5OTEzMjA0ZDI2NWRmNWI0MzliM2Q3OTJhY2Q1NiJ9fX0=
         slot: 13
       invites:
-        name: '&8> &6Invites'
+        name: '&8> &6邀请'
         lore:
-        - '&7View all your'
-        - '&7received invites.'
+        - '&7查看你收到的邀请'
         material: WRITABLE_BOOK
         slot: 15
       close:
-        name: '&cClose'
+        name: '&c关闭'
         lore:
         - '&7Close this menu.'
         - ' '
@@ -158,48 +155,46 @@ gui:
         to: 27
     f:
       limitation:
-        name: '&8> &6Your Limitations'
+        name: '&8> &6当前限制'
         lore:
         - ' '
-        - '&7+ Create&3 {ownlands} &7lands.'
+        - '&7+ 最多可以创造&3 {ownlands} &7个城镇.'
         - '  &8lands.ownlands.NUMBER'
-        - '&7+ Claim&3 {chunks} &7chunks per land.'
+        - '&7+ 每个城镇最多&3 {chunks} &7个区块.'
         - '  &8lands.chunks.NUMBER'
-        - '&7+ Support lands, in which you''re trusted,'
-        - '  &7with &3{support-chunks} &7chunks per land.'
+        - '&7+ 在你所属的每个城镇,你可以贡献 &3{support-chunks} &7个区块'
         - '  &8lands.chunks.support.NUMBER'
-        - ' '
-        - '&7+ Join&3 {lands} &7lands.'
+        - '&7+ 最多可以加入&3 {lands} &7个城镇.'
         - '  &8lands.lands.NUMBER'
-        - '&7+ Have&3 {members} &7members per land.'
+        - '&7+ 每个城镇最多&3 {members} &7名成员.'
         - '  &8lands.members.NUMBER'
         material: PLAYER_HEAD
         slot: 17
   player_lands:
-    title: '&8Your Lands'
+    title: '&8你的城镇'
     size: 27
     s: {}
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7返回上一页:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前:&3 {current}'
         material: ARROW
         slot: 21
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7进入下一页:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前:&3 {current}'
         material: ARROW
         slot: 25
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
+        - '&7返回至'
         - '{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
@@ -207,38 +202,32 @@ gui:
       object:
         name: '&2{land}'
         lore:
-        - '&7You''re trusted in this land.'
+        - '&7你是这个城镇的一员.'
         - ' '
-        - '&7Chunks:&3 {chunks} &7/&c {max-chunks}'
+        - '&7区块:&3 {chunks} &7/&c {max-chunks}'
         - ' '
-        - '&9RIGHT CLICK'
-        - '&7View some general'
-        - '&7information about this'
-        - '&7land.'
+        - '&9右键查看城镇信息'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWFiNDNiOGMzZDM0ZjEyNWU1YTNmOGI5MmNkNDNkZmQxNGM2MjQwMmMzMzI5ODQ2MWQ0ZDRkN2NlMmQzYWVhIn19fQ==
         from: 10
         to: 18
       own-land:
         name: '&2{land}'
         lore:
-        - '&7You own this land.'
+        - '&7你拥有这个城镇.'
         - ' '
-        - '&7Chunks:&3 {chunks} &7/&c {max-chunks}'
+        - '&7区域:&3 {chunks} &7/&c {max-chunks}'
         - ' '
-        - '&9RIGHT CLICK'
-        - '&7View some general'
-        - '&7information about this'
-        - '&7land.'
+        - '&9右键查看城镇信息'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         from: 10
         to: 18
       no-land:
-        name: '&cNo Lands yet'
+        name: '&c这里没有任何城镇'
         lore:
-        - '&8- &7To create a land execute:'
-        - '  &8/&3Lands create &8<&3name&8>'
+        - '&8- &7创造自己的城镇:'
+        - '  &8/&3Lands create &8<&3城镇名称&8>'
         - ' '
-        - '&8- &7Let other lands trust you:'
+        - '&8- &7让好朋友邀请你:'
         - '  &8/&3Lands trust {player}'
         material: OAK_SIGN
         from: 10
@@ -257,104 +246,93 @@ gui:
     size: 45
     s:
       information:
-        name: '&6Information'
+        name: '&6城镇信息'
         lore:
-        - '&7Here you can view'
-        - '&7some detailed information'
-        - '&7about your land. This helps'
-        - '&7to keep track of all events'
-        - '&7in your land.'
+        - '&7在这里你可以查看'
+        - '&7一些关于城镇的详细信息'
+        - '&7记录城镇发生的所有事情'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
       trusted-players:
-        name: '&8> &6Trusted Players'
+        name: '&8> &6城镇成员'
         lore:
-        - '&7Get a list of all trusted players,'
-        - '&7no matter in which areas they''re'
-        - '&7trusted.'
+        - '&7查看受信任的成员'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 14
       invites:
-        name: '&8> &6Invites'
+        name: '&8> &6邀请'
         lore:
-        - '&7Revoke dispatched invites'
-        - '&7or just view some information'
-        - '&7about them.'
+        - ' '
+        - '&7撤消已发送的邀请'
+        - '&7或查看一些关于他们的信息'
         material: WRITABLE_BOOK
         slot: 15
       management:
-        name: '&6Management'
+        name: '&8> &6管理'
         lore:
-        - '&7Here you can manage your land.'
-        - '&7You can trust players, assign roles,'
-        - '&7edit land settings or set taxes.'
+        - '&7管理你的城镇.'
+        - '&7你可以信任玩家, 设置角色,'
+        - '&7编辑城镇设置以及税收.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
         slot: 29
       various:
-        name: '&8> &6Name and Enter Message'
+        name: '&8> &6城镇名和进入消息'
         lore:
-        - '&7Edit land name or enter message.'
+        - '&7重命名城镇或更改加入消息'
         material: BEACON
         slot: 35
     f:
       land-settings:
-        name: '&8> &6Land Settings'
+        name: '&8> &6城镇设置'
         lore:
-        - '&7Edit general settings'
-        - '&7of the area&6 {area}&7.'
+        - '&7编辑{area}中的常规设置'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         slot: 31
       roles:
-        name: '&8> &6Roles'
+        name: '&8> &6角色'
         lore:
-        - '&7View roles of the'
-        - '&7area&6 {area}&7.'
+        - '&7查看{area}中的角色'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 32
       taxes:
-        name: '&8> &6Taxes'
+        name: '&8> &6税收'
         lore:
-        - '&7View taxes of the'
-        - '&7area&6 {area}&7.'
+        - '&7查看{area}中的税收'
         material: GOLD_INGOT
         slot: 33
       areas:
-        name: '&8> &6Areas'
+        name: '&8> &6区域'
         lore:
-        - '&7View all areas of this land.'
-        - '&7You also can create new'
-        - '&7areas in this menu.'
+        - '&7查看城镇中的所有区域'
+        - '&7你也可以创建新的区域'
         - ' '
-        - '&7Areas:&3 {areas} &7/&c {max-areas}'
+        - '&7区域:&3 {areas} &7/&c {max-areas}'
         - '&7Claims:&3 {chunks} &7/&c {max-chunks}'
         material: OAK_FENCE
         slot: 13
       inbox:
-        name: '&8> &6Inbox &8(&7{amount}&8)'
+        name: '&8> &6收件箱 &8(&e{amount}&8)'
         lore:
-        - '&7Click to open advanced view.'
         - ' '
-        - '&7Received messages:'
         - '{inbox}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJmM2ZjZGNjZmZkOTYzZTQzMzQ4MTgxMDhlMWU5YWUzYTgwNTY2ZDBkM2QyZDRhYjMwNTFhMmNkODExMzQ4YyJ9fX0=
         slot: 16
       stats:
         name: '&8> &6Statistics'
         lore:
-        - '&7Claims: {0} / {1}'
-        - '&7Members: {2} / {3}'
+        - '&7区块数量: {0} / {1} &7+ 0 &8(&7联盟&8)'
+        - '&7成员数量: {2} / {3}'
         - ' '
-        - '&7Economy'
-        - '&8- &7Land'
-        - '  &7Balance: ${4}'
-        - '  &7Next claim cost: ${5}'
+        - '&7经济'
+        - '&8- &7城镇'
+        - '  &7存款: {4}T'
+        - '  &7申领下一个区块的价格: {5}T'
         - '  &7Upkeep of&c ${6} &7in:'
         - '  &7{7}'
         - ' '
-        - '&8- &4You'
-        - '  &7Balance: ${8}'
-        - '  &7Taxes of&c ${9} &7in:'
-        - '  &7{10}'
+        - '&8- &4你'
+        - '  &7存款: {8}T'
+        - '  &7在{10}内需要支付&c {9}T &7的税'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ==
         slot: 17
       back:
