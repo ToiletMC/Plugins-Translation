@@ -43,7 +43,7 @@ general:
   wNo: '&c取消'
   none: '&8无'
   disabled: '&c关闭'
-  wilderness: '荒野'
+  wilderness: 荒野
   unlimited: '&a无限制'
   land:
     title:
@@ -327,19 +327,17 @@ command:
   create:
     land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先'
     max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
-    success: '&f花费了{cost}马桶币，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地，
-      也可以使用/Lands selection 选择区域进行扩张。'
+    success: '&f花费了{cost}马桶币，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地， 也可以使用/Lands
+      selection 选择区域进行扩张。'
     broadcast: '&f{land}的领主是{player}'
   rename:
     success: '&f成功为{land}易名为{name}，花费{cost}马桶币'
   edit:
     success: '&f你进入城镇编辑模式，接下来如/Lands claim或/Lands trust均会在这片土地生效'
   selection:
-    not-complete: '&c抱歉，你的框选并不完整，请再确认两处锚点正确放置（左击/右击进行放置）。
-      若想退出框选模式，你可以执行/Lands selection退出。'
+    not-complete: '&c抱歉，你的框选并不完整，请再确认两处锚点正确放置（左击/右击进行放置）。 若想退出框选模式，你可以执行/Lands selection退出。'
     max: '&c你框选的区块太多啦，你框选了{current}个区块而极限为{max}个'
-    enabled: '&f你已开启框选模式，左击方块设置第一个锚点，右击设置第二个锚点。
-      在这之后你可以对选区使用以下命令：Claim，Assign，Unclaim，Leave。'
+    enabled: '&f你已开启框选模式，左击方块设置第一个锚点，右击设置第二个锚点。 在这之后你可以对选区使用以下命令：Claim，Assign，Unclaim，Leave。'
     disabled: '#t#&5框选模式{newline}&c已关闭'
     world: '&c两个锚点要在同一个世界，难道你想要扭曲空间吗？'
     pos:
@@ -348,14 +346,23 @@ command:
       one: '#t#&5&l框选模式{newline}&b&l锚点 1 &8-> &f已设置'
       two: '#t#&5&l框选模式{newline}&b&l锚点 2 &8-> &f已设置'
     area:
-      conflicts: '&c发现{conflicts}与已经分配给{areas}的土地有冲突，
-        使用/Lands selection assgin {area} confirm 确认区域覆盖范围。'
+      conflicts: '&c发现{conflicts}与已经分配给{areas}的土地有冲突， 使用/Lands selection assgin {area}
+        confirm 确认区域覆盖范围。'
       assigned: '&fYou successfully assigned&3 {chunks} &fchunks to area&6 {area}
         &8(&fLand:&2 {land}&8)&f.'
     expand:
       enabled: '&fSuccessfully expanded your selection from bottom to the top (to
         all y levels).'
       disabled: '&fYour current selection isn''t any longer expanded to all y levels.'
+    too-far: '&cThe block you''re looking at is too far away. &7Please move closer
+      to it.'
+    complete: |
+      &7Your selection is complete. Following actions can be executed:
+        &8┏
+        &8┃ &7Claim: &8/&3Lands claim
+        &8┃ &7Unclaim: &8/&3Lands unclaim
+        &8┃ &7Assign to sub area: &8/&3Lands assign
+        &8┗
   claim:
     already: '&cYou can''t claim this chunk. &fIt already belongs to land&2 {land}&f.'
     auto-create: '&fTrying to automatically create a land for you, because you have
@@ -570,8 +577,7 @@ command:
       discord: '&a{land} &8| &9Discord &f{player} &8»&f {message}'
   view:
     disabled: '&fYou successfully disabled the current &8/&3Lands view &fvisualization.'
-    permanent: '&fYou successfully started a permanent view visualization. Execute
-      &8/&3Lands view &fagain to disable it.'
+    wilderness: '&7Enabled visualization of claims. &7Your current position is wilderness.'
   taxes:
     none: '&fThere aren''t any upcoming tax payments for you.'
     line:
