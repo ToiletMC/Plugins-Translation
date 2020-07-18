@@ -1,6 +1,7 @@
 # Here you can edit all chat messages
-# GUI strings can be found in <language>_gui.yml
-# If you encounter any issues, contact lands support.
+# GUI items and menus can be found in <language>_gui.yml
+# 
+# If you encounter any issues or have questions, contact plugin support.
 # Plugin page: https://www.spigotmc.org/resources/authors/315463/
 # Discord: https://discord.gg/B4MAJVk
 # 
@@ -14,31 +15,19 @@
 # of a message to title, actionbar or chat.
 # How does it work:
 # 
-# For example we want to print the prefix as a title:
-# Set general.noPerm to: '#t#&cYou''re not allowed to do this.' (Set "#t#" in front of it)
-# This would just print it as a title.
+# For example we want to print a message as a title:
+# Set message to: '#t#Title{newline}Subtitle'(Set "#t#" in front of it; use {newline} to set the subtitle)
 # 
-# You also can set in, stay and out fade timings in seconds:
-# Set for example general.prefix to: '#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
-# This would display this message as a title with
-# a fade in delay of 1 seconds, a stay time with 2 seconds
-# and a fade out delay of 3 seconds.
-# 
-# You also can display it as a actionbar message:
-# Just add "#a#" in front of it.
-# If you want to display it in chat, just don't set any
-# of these in front of it or use "#c#".
-# 
-# Also you can combine these modes:
-# Set for example general.prefix to: '#c#a#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
-# This would print this message as chat, actionbar and an title with an in delay (1 seconds),
-# stay time (2 seconds) and fade out delay (3 seconds)
-# For any questions or issues, please contact us on discord or via pm.
-# --------------------------
+# You also send a message at the actionbar:
+# Set message to: '#c#This is a actionbar message.'
+# (Set #c# in front of it.)
+
 
 
 general:
-  prefix: ''
+  prefix:
+    normal: '&8[&aLands&8] '
+    help: '&8[&aLands&8] &7Usage: '
   wYes: '&a确认'
   wNo: '&c取消'
   none: '&8无'
@@ -134,20 +123,15 @@ general:
         lost: '&8{0}: 哦不，我们在这场战争中痛失{1}名友军，厚葬！'
         draw: '&8{0}: 战争以平局结束，杀敌{1}名但失去{2}名友军，战争的意义归于何处？'
   wars:
-    land-type:
-      enemy: '&c敌人'
-      ally: '&a友军'
     nametag:
       enemy: '&c敌人 &8| '
       ally: '&a友军 &8| '
+    object:
+      enemy: '&cEnemy'
+      ally: '&aAlly'
   teleportation:
     bossbar: 请稍后，马上就好！
 help:
-  general:
-    prefix: '&f用法: '
-    header: '&f------------<- &2城镇帮助 &f页&3 {page} &8/&3 {pages} &f->------------'
-    page: '&f使用 &8/&eLands help {next} &f翻页. <> = 必须的 [] = 可选的'
-    footer: '&f------------<- &2城镇帮助 &f页&3 {page} &8/&3 {pages} &f->------------'
   command:
     help: '&8/&3Lands help &8[&3页码&8] - &f获取帮助'
     edit: '&8/&3Lands edit &8<&3城镇&8> &8- &f进入城镇编辑模式'
@@ -324,6 +308,14 @@ command:
     number: '&c抱歉，你的键入有误，{argument}需要填上数字'
     cmd-not-exist: '&c指令不存在:('
     no-page: '&c翻不到第{page}页:('
+    header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7Click here to navigate to the
+      previous page.[/H][C]lands help {previous}[/C][/T] &2Lands Help &7Page&3 {page}
+      &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7Click here to go to the next page.[/H][C]lands
+      help {next}[/C][/T]'
+    footer: |
+      [NoPrefix]
+      &7Click on the arrows below to navigate.
+      [T]&7----------&6<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]lands help {previous}[/C][/T] &2Lands Help &7Page&3 {page} &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7Click here to go to the next page.[/H][C]lands help {next}[/C][/T]
   create:
     land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先'
     max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
@@ -575,129 +567,44 @@ command:
     format:
       minecraft: '&a{land} &8| {role} &f{player} &8»&f {message}'
       discord: '&a{land} &8| &9Discord &f{player} &8»&f {message}'
+      spy: '[NoPrefix]&8[&cChatSpy&8] &a{land} &8| {role} &7{player} &8»&f {message}'
   view:
     disabled: '&fYou successfully disabled the current &8/&3Lands view &fvisualization.'
     wilderness: '&7Enabled visualization of claims. &7Your current position is wilderness.'
+    info: |
+      [NoPrefix]
+      &7---------<- &5&lLand View &7->---------
+      [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to get more information about this land.[/H][C]lands info {land}[/C][/T]
+      &7Area:&6 {area}
+        &8Chunk &7X: {x} Z: {z}
+        &8Tax:&c ${tax}
+        &8Players: {players}
+      &7---------<- &5&lLand View &r&7->---------
   taxes:
     none: '&fThere aren''t any upcoming tax payments for you.'
-    line:
-      normal: '&8- &f{land}: &c${tax}'
-      change: '&8- &f{land}: {color}${tax} &8(previously: {previous})'
+    upcoming:
+      header: '[NoPrefix]&7---------<- &cUpcoming Taxes &7->---------'
+      entry: '[NoPrefix]&8- &7{land}: &c${tax}'
+      footer: |
+        [NoPrefix]&7You need to pay a total of ${total} in &5{next}&7.
+        &7Balance: ${balance}
+        &7---------<- &cUpcoming Taxes &7->---------
+    changes:
+      header: |
+        [NoPrefix]
+        &7---------<- &4Tax Change &7->---------
+        &cTaxes have been changed in some lands:
+      entry: '[NoPrefix]&8- &7{land}: {color}${tax} &8(previously: {previous})'
+      footer: |
+        [NoPrefix]
+        &7Payment in:&5 {next}
+        &7Balance: ${balance}
+        &8More info: /Lands taxes
+        &7---------<- &4Tax Change &7->---------
   unstuck:
     success: '&fSuccessfully teleported into the nearest unclaimed location.'
 list:
-  views:
-  - '&f---------<- &5&lLand View &f->---------'
-  - '&fLand:&a {land}'
-  - '&fArea:&6 {area}'
-  - '  &8Chunk &fX: {x} Z: {z}'
-  - '  &8Tax:&c ${tax}'
-  - '  &8Players: {players}'
-  - '&f---------<- &5&lLand View &f->---------'
-  taxes:
-    cmd:
-    - '&f---------<- &cUpcoming Taxes &f->---------'
-    - '{lines}'
-    - ' '
-    - '&fYou need to pay a total of ${total} in &5{next}&f.'
-    - '&fBalance: ${balance}'
-    - '&f---------<- &cUpcoming Taxes &f->---------'
-    changes:
-    - '&f---------<- &4Tax Change &f->---------'
-    - '&cTaxes have been changed in some lands:'
-    - ' '
-    - '{lines}'
-    - ' '
-    - '&fPayment in:&5 {next}'
-    - '&fBalance: ${balance}'
-    - '&8More info: /Lands taxes'
-    - '&f---------<- &4Tax Change &f->---------'
   swear-words: []
-  wars:
-    declaration:
-      normal:
-      - ' '
-      - '&6&nWar Declaration:'
-      - ' '
-      - '&fAttacker: {attacker}'
-      - '&fDefender: {defender}'
-      - ' '
-      - '&8- &fThe war will start in'
-      - '  &5~{time}'
-      mutual:
-        defender:
-        - ' '
-        - '&6&nWar Declaration:'
-        - ' '
-        - '&fAttacker: {attacker}'
-        - '&fDefender: {defender}'
-        - ' '
-        - '&fAccept: &8/&3Wars declare {input}'
-        - '&fDeny: &8/&3Wars deny'
-        attacker:
-        - ' '
-        - '&6&nWar Declaration:'
-        - ' '
-        - '&fAttacker: {attacker}'
-        - '&fDefender: {defender}'
-        - ' '
-        - '&cThe defender hasn''t accepted'
-        - '&cthe declaration yet.'
-    current:
-    - ' '
-    - '&6&nCurrent War:'
-    - ' '
-    - '&8- &4Attackers'
-    - '     &fName: {attacker}'
-    - '     &fKills: {att-points}'
-    - '&8- &2Defenders'
-    - '     &fName: {defender}'
-    - '     &fKills: {def-points}'
-    - ' '
-    - '&8- &fThe war will end in'
-    - '  &5~{time}'
-    started:
-      attacker:
-      - ' '
-      - '&cThe War has started:'
-      - ' '
-      - '&fAttacker: {attacker} &8(&fYou&8)'
-      - '&fDefender: {defender}'
-      - ' '
-      - '&8- &fThe war will end in'
-      - '  &5~{time}'
-      defender:
-      - ' '
-      - '&cThe War has started!'
-      - ' '
-      - '&fAttacker: {attacker}'
-      - '&fDefender: {defender} &8(&fYou&8)'
-      - ' '
-      - '&8- &fThe war will end in'
-      - '  &5~{time}'
-    won:
-      attacker:
-      - ' '
-      - '&6The War is over:'
-      - '&fThe attackers &8({team}&8) &fwon.'
-      - ' '
-      - '&8- &fStats'
-      - '  &fAttacker kills:&3 {att-points}'
-      - '  &fDefender kills:&3 {def-points}'
-      - ' '
-      - '&8- &fThe war took'
-      - '  &5~{time}'
-      defender:
-      - ' '
-      - '&6The War is over:'
-      - '&fThe defenders &8({team}&8) &fwon.'
-      - ' '
-      - '&8- &fStats'
-      - '  &fDefender kills:&3 {def-points}'
-      - '  &fAttacker kills:&3 {att-points}'
-      - ' '
-      - '&8- &fThe war took'
-      - '  &5~{time}'
 wars:
   message:
     noaccess:
@@ -708,6 +615,14 @@ wars:
     start:
       broadcast: '&fThe war between {attacker} &fand {defender} &fstarted. It will
         be over in&5 {time}&f.'
+      participants: |
+        &4The War has started:
+
+        &7Attacker: {attacker} &8({team_1}&8)
+        &7Defender: {defender} &8({team_2}&8)
+
+        &7The war will end in:
+        &5~{time}
     end:
       broadcast: '&fThe war between {attacker} &fand {defender} &fended. It took&5
         {time}&f.'
@@ -715,6 +630,16 @@ wars:
         &fto their enemy {enemy}&f.'
       draw: '&fThe war between {attacker} &fand {defender} &fended in a draw. It took&5
         {time}&f.'
+      won: |
+        &aThe War is over:
+        &7The attackers &8({team}&8) &7won.
+
+        &8- &7Stats
+            &7Attacker kills:&3 {att-points}
+            &7Defender kills:&3 {def-points}
+
+        &7The war took:
+        &5~{time}
     war-shield:
       set: '&fThe new war shield for {object} &fwill be active for&5 {time}&f.'
     kill:
@@ -772,6 +697,54 @@ wars:
         deny war declarations for {object}&f.'
       success: '&fYou successfully denied the war declaration for {object} &fagainst
         the enemy {enemy}&f.'
+      attacker: '&cAttackers can''t deny their own war declaration. &7Only the defender
+        can do that.'
     menu:
       mutual: '&cYou can''t open the war menu right now. &fThe war declaration to
         {object} &fhasn''t been accepted yet.'
+    info:
+      war: |
+        &4Current War:
+
+        &8- &7Attacker
+            &7Name: {attacker}
+            &7Kills: {att-points}
+
+        &8- &7Defender
+            &7Name: {defender}
+            &7Kills: {def-points}
+
+        &7The war will end in:
+        &5~{time}
+      declaration:
+        normal: |
+          &4War Declaration:
+
+          &7Attacker: {attacker}
+          &7Defender: {defender}
+
+          &7The war will start in:
+          &5~{time}
+        mutual:
+          defender: |
+            &4War Declaration:
+
+            &7Attacker: {attacker}
+            &7Defender: {defender}
+
+            &7If defenders surrender during war:
+            &7Tribute:&c ${tribute}
+
+            [T]&7Accept: &8/&3Wars declare {input} &8[&8CLICK&8][H]&7Click here to accept the war declaration.[/H][C]Wars declare {input}[/C][/T]
+            [T]&7Deny: &8/&3Wars deny &8[&8CLICK&8][H]&7Click here to deny the war declaration.[/H][C]Wars deny[/C][/T]
+          attacker: |
+            &4War Declaration:
+
+            &7Attacker: {attacker}
+            &7Defender: {defender}
+
+            &7If defenders surrender during war:
+            &7Tribute:&c ${tribute}
+
+            &cThe defender hasn''t accepted
+            &cthe declaration yet.
