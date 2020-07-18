@@ -106,6 +106,13 @@ physical-Item:
     - ' '
     - '&7Owner:&3 {owner}'
     material: GRASS_BLOCK
+  selection:
+    name: '&eClaim Tool'
+    lore:
+    - '&7Use this tool to create a'
+    - '&7selection and claim it:'
+    - '&8/&3Lands claim'
+    material: GOLDEN_HOE
 skull:
   role:
     owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJjMzExYTRmYjljNDkzODliNGY0NThjMjllOTY4MzI0YzU4MjNiOGE5OWVhZGUxNzQ3ODY2Yzk1YjA2NGEifX19
@@ -452,18 +459,6 @@ gui:
         material: ACACIA_FENCE
         from: 10
         to: 27
-      no-area:
-        name: '&cNo Areas created'
-        lore:
-        - '&7This land doesn''t have'
-        - '&7any areas yet.'
-        - ' '
-        - '&8- &7To create a new area'
-        - '  &7click the area add item'
-        - '  &7below.'
-        material: ACACIA_FENCE
-        from: 10
-        to: 27
     a:
       failure_untrusted:
         name: '&4Denied: &cNot trusted'
@@ -673,18 +668,6 @@ gui:
         material: PLAYER_HEAD
         from: 10
         to: 27
-      no-player:
-        name: '&cNo Players trusted'
-        lore:
-        - '&7There aren''t any trusted'
-        - '&7players yet.'
-        - ' '
-        - '&7Click on the trust button'
-        - '&7below, to trust a player'
-        - '&7to this area.'
-        material: OAK_SIGN
-        from: 10
-        to: 27
     a:
       failure_priority:
         name: '&4Failure: &cRole Priority'
@@ -828,10 +811,10 @@ gui:
         name: '&cNo Invites sent'
         lore:
         - '&7Your land hasn''t sent'
-        - '&7any invites.'
+        - '&7any invites yet.'
         - ' '
-        - '&7To invite someone click'
-        - '&7the invite button below.'
+        - '&7You can send invites'
+        - '&7in the members menu.'
         material: OAK_SIGN
         from: 10
         to: 27
@@ -964,11 +947,6 @@ gui:
         - '&7amount of&3 {max} &7roles.'
         - ' '
         - '&8Permission: {permission}'
-      failure_default:
-        name: '&4Failure: &cDefault Role'
-        lore:
-        - '&7You can''t change the priority'
-        - '&7of the default role&3 {role}&7.'
       failure_priority:
         name: '&4Failure: &cRole Priority'
         lore:
@@ -977,6 +955,13 @@ gui:
         - '&7It has a higher priority'
         - '&7than yours or you''re a'
         - '&7member of this role.'
+        - ' '
+        - '&8Bypass: {bypass}'
+      failure_access:
+        name: '&4Failure: &cNot allowed'
+        lore:
+        - '&7You''re not allowed to'
+        - '&7edit roles in this area.'
         - ' '
         - '&8Bypass: {bypass}'
     p:
@@ -1066,6 +1051,13 @@ gui:
         lore:
         - '&7You need to have an item'
         - '&7in your main hand.'
+      failure_access:
+        name: '&4Failure: &cNot allowed'
+        lore:
+        - '&7You''re not allowed to'
+        - '&7edit roles in this area.'
+        - ' '
+        - '&8Bypass: {bypass}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -1487,7 +1479,7 @@ gui:
         - '&8Permission'
         - '&8{permission}'
       failure_noaccess:
-        name: '&4Failure: &cNot Access'
+        name: '&4Failure: &cNo Access'
         lore:
         - '&7You''re not allowed to'
         - '&7edit these settings.'
@@ -1513,68 +1505,6 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 29
         to: 36
-  settings_role_advanced:
-    title: '&8Advanced Settings &7-> {role}'
-    size: 27
-    s: {}
-    f:
-      page_previous:
-        name: '&9Previous Page'
-        lore:
-        - '&7Go to previous page:&9 {previous}'
-        - ' '
-        - '&8- &7Current:&3 {current}'
-        material: ARROW
-        slot: 21
-      page_next:
-        name: '&aNext Page'
-        lore:
-        - '&7Go to next page:&9 {next}'
-        - ' '
-        - '&8- &7Current:&3 {current}'
-        material: ARROW
-        slot: 25
-      back:
-        name: '&cBack'
-        lore:
-        - '&7Go back to'
-        - '{back}&7.'
-        material: RED_STAINED_GLASS_PANE
-        slot: 19
-    l:
-      setting_edit_various:
-        name: '&bEdit various Land Settings'
-        lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
-        - ' '
-        - '&7Allow this role to'
-        - '&7edit various land settings?'
-        - ' '
-        - '&8- &7Please note that they'
-        - '  &7will be able to change the'
-        - '  &7land name and title.'
-        material: NAME_TAG
-        from: 10
-        to: 18
-    a:
-      failure_permission:
-        name: '&4Failure: &cNo permission'
-        lore:
-        - '&7You''re not allowed to'
-        - '&7edit this setting.'
-        - ' '
-        - '&8Permission:'
-        - '&8{permission}'
-    p:
-      placeholder_1:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 1
-        to: 9
-      placeholder_2:
-        material: GRAY_STAINED_GLASS_PANE
-        from: 19
-        to: 27
   area_settings:
     title: '&8{area} &7- &8Land Settings'
     size: 27
@@ -2481,15 +2411,6 @@ gui:
     title: '&8Tribute'
     size: 27
     s:
-      close:
-        name: '&cClose'
-        lore:
-        - '&7Close this menu.'
-        - ' '
-        - '&8- &7You can open it again by'
-        - '  &7executing &8/&3Wars menu&7.'
-        material: RED_STAINED_GLASS_PANE
-        slot: 19
       plus-1:
         name: '&aAdd $1'
         lore:

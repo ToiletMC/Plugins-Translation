@@ -1,6 +1,7 @@
 # Here you can edit all chat messages
-# GUI strings can be found in <language>_gui.yml
-# If you encounter any issues, contact lands support.
+# GUI items and menus can be found in <language>_gui.yml
+# 
+# If you encounter any issues or have questions, contact plugin support.
 # Plugin page: https://www.spigotmc.org/resources/authors/315463/
 # Discord: https://discord.gg/B4MAJVk
 # 
@@ -14,31 +15,19 @@
 # of a message to title, actionbar or chat.
 # How does it work:
 # 
-# For example we want to print the prefix as a title:
-# Set general.noPerm to: '#t#&cYou''re not allowed to do this.' (Set "#t#" in front of it)
-# This would just print it as a title.
+# For example we want to print a message as a title:
+# Set message to: '#t#Title{newline}Subtitle'(Set "#t#" in front of it; use {newline} to set the subtitle)
 # 
-# You also can set in, stay and out fade timings in seconds:
-# Set for example general.prefix to: '#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
-# This would display this message as a title with
-# a fade in delay of 1 seconds, a stay time with 2 seconds
-# and a fade out delay of 3 seconds.
-# 
-# You also can display it as a actionbar message:
-# Just add "#a#" in front of it.
-# If you want to display it in chat, just don't set any
-# of these in front of it or use "#c#".
-# 
-# Also you can combine these modes:
-# Set for example general.prefix to: '#c#a#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
-# This would print this message as chat, actionbar and an title with an in delay (1 seconds),
-# stay time (2 seconds) and fade out delay (3 seconds)
-# For any questions or issues, please contact us on discord or via pm.
-# --------------------------
+# You also send a message at the actionbar:
+# Set message to: '#c#This is a actionbar message.'
+# (Set #c# in front of it.)
+
 
 
 general:
-  prefix: '&8[&aLands&8] '
+  prefix:
+    normal: '&8[&aLands&8] '
+    help: '&8[&aLands&8] &7Usage: '
   wYes: '&aYes'
   wNo: '&cNo'
   none: '&8None'
@@ -85,7 +74,7 @@ general:
       line-3: '&cto show.'
       line-4: ' '
   autoAction:
-    claim: '&aChunk claim'
+    claim: Chunk claim
   map:
     yours: '&a▉ '
     others: '&c▉ '
@@ -137,7 +126,7 @@ general:
         draw: '&8{0}: The war ended in a draw with {1} kills and {2} deaths.'
         lost: '&8{0}: We''ve lost the war with {2} deaths and {1} kills.'
   wars:
-    land-type:
+    object:
       enemy: '&cEnemy'
       ally: '&aAlly'
     nametag:
@@ -146,11 +135,6 @@ general:
   teleportation:
     bossbar: '&7Wait&5 {time} &7Second(s) until Teleportation.'
 help:
-  general:
-    prefix: '&7Usage: '
-    header: '&7------------<- &2Lands Help &7Page&3 {page} &8/&3 {pages} &7->------------'
-    page: '&7Use &8/&eLands help {next} &7for the next page. <> = needed [] = optional'
-    footer: '&7------------<- &2Lands Help &7Page&3 {page} &8/&3 {pages} &7->------------'
   command:
     help: '&8/&3Lands help &8[&3page&8] - &7Get help'
     edit: '&8/&3Lands edit &8<&3land&8> &8- &7Enter edit mode for land'
@@ -164,7 +148,7 @@ help:
     setRole: '&8/&3Lands setRole &8<&3player&8> &8<&3area&8> <&3role&8> - &7Set role'
     accept: '&8/&3Lands accept &8<&3land&8> - &7Accept invite'
     deny: '&8/&3Lands deny &8<&3land&8> - &7Deny invite'
-    view: '&8/&3Lands view &8[&3permanent&8] &8- &7Information about chunk'
+    view: '&8/&3Lands view &8[&3disable&8] &8- &7Information about claims'
     menu: '&8/&3Lands menu &8[&3here&8] &8- &7Open land / area menu'
     setSpawn: '&8/&3Lands setspawn - &7Set landspawn'
     spawn: '&8/&3Lands spawn &8[&3land&8] - &7Teleport to land'
@@ -201,7 +185,7 @@ help:
       reload: '&8/&3Lands reload &8- &7Reload config or messages'
       about: '&8/&3Lands about &8- &7Show information about Lands'
     mod:
-      chatspy: '&8/&3Lands chatspy &8[&aland&8] - &7Listen to land chat'
+      chatspy: '&8/&3Lands chatspy &8[&3land&8] - &7Listen to land chat'
 message:
   world-not-exist: '&cThe world with the name&4 {world} &cdoesn''t exist. &7Typo?'
   world-invalid: '&cThis is deactivated in this world. &7An administrator needs to
@@ -215,8 +199,8 @@ message:
       {x} &7Z: {z}&8)&c. &8Bypass permission: {bypass}'
     area: '&cYou''re not allowed to do this in this area &8(&7Area:&6 {area} &7Land:&2
       {land} &7X: {x} &7Z: {z}&8)&c. &8Bypass permission: {bypass}'
-    land: '&cYou''re not allowed to do this for this land &8(&7Land:&2 {land}&8)&7.
-      &8Bypass permission: {bypass}'
+    land: '&cYou''re not allowed to do this for this land &8(&7Land:&2 {land}&8)&c.
+      &7You can create your own land by executing &8/&3Lands create &8<&3name&8>&7.'
     position: '&cYou''re not allowed to do this for the land&4 {land} &cat your current
       position. &8Bypass permission: {bypass}'
     land-not-owner: '&cYou''re not allowed to do this for the land&4 {land}&c. &7Select
@@ -282,16 +266,19 @@ message:
     leave:
       land: '#t#&2&lWilderness{newline}&7Feel the wild'
       safezone: '#t#&2&lWilderness{newline}&7Feel the wild'
-    teleport:
-      already: '&cYou can''t start a second teleportation, because There''s already
-        a teleportation in progress. &7Please wait until it''s done.'
-      started: '&7Teleportation process started. Teleporting in&5 {sec} &7seconds.
-        Please don''t move.'
-      cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while
-        you''re waiting&5 {sec} &7seconds for teleportation.'
-      chunk: '#t#&9&lTeleported{newline}&7X: {x} Z: {z} Cost:&c ${cost}'
-      cancelled-plugins: '&cTeleportation was cancelled by another plugin. &7Please
-        check your other plugins. &7This is not a Lands issue.'
+  teleportation:
+    already: '&cYou can''t start a second teleportation. There''s already a teleportation
+      in progress. &7Please wait until it''s done.'
+    started: '&7Teleportation process started. Teleporting in&5 {sec} &7seconds. Please
+      don''t move.'
+    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while
+      you''re waiting&5 {sec} &7seconds for teleportation.'
+    chunk: '#t#&9&lTeleported{newline}&7X: {x} Z: {z} Cost:&c ${cost}'
+    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check
+      your other plugins. &7This is not a Lands issue.'
+    unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
+    corrected: '&7The original teleport destination was unsafe. &7Your final destination
+      has been corrected to a safe location.'
   claimblock:
     dropped: '&cSome claimblocks lie on the ground. &7There was no space left in your
       inventory.'
@@ -391,6 +378,14 @@ command:
       empty: '&cThis name is invalid. &7You need to enter at least one character other
         than color codes.'
   help:
+    header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7Click here to navigate to the
+      previous page.[/H][C]lands help {previous}[/C][/T] &2Lands Help &7Page&3 {page}
+      &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7Click here to go to the next page.[/H][C]lands
+      help {next}[/C][/T]'
+    footer: |
+      [NoPrefix]
+      &7Click on the arrows below to navigate.
+      [T]&7----------&6<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]lands help {previous}[/C][/T] &2Lands Help &7Page&3 {page} &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7Click here to go to the next page.[/H][C]lands help {next}[/C][/T]
     help: '&7Use &8/&a{cmd} help &7for help.'
     number: '&cYour input&4 {input} &cisn''t a number. &7The&3 {argument} &7argument
       needs to be a number.'
@@ -420,13 +415,20 @@ command:
       selection mode by executing &8/&3Lands selection&7.'
     max: '&cYour selection has too many chunks in it. &7Size:&3 {current} &7Your maximum
       size is&3 {max} chunks. &8Permission: lands.selection.NUMBER'
+    too-far: '&cThe block you''re looking at is too far away. &7Please move closer
+      to it.'
     enabled: '&7You enabled selection mode. Use &bLEFT CLICK &7on a block to set the
-      first position and &9RIGHT CLICK &7to set the second position. After that you
-      can apply the selection to these commands: &3Claim&7, &3Assign&7, &3Unclaim&7,
-      &3Leave'
+      first position and &9RIGHT CLICK &7to set the second position.'
     disabled: '#t#&5Selection{newline}&cMode disabled'
     world: '&cBoth positions must be in the same world. &7Please set position one
       and position two in the same world.'
+    complete: |
+      &7Your selection is complete. Following actions can be executed:
+        &8┏
+        &8┃ &7Claim: [T]&8/&3Lands claim &8[&8CLICK&8][H]&7Click here to claim this selection.[/H][C]lands claim[/C][/T]
+        &8┃ &7Unclaim: [T]&8/&3Lands unclaim &8[&8CLICK&8][H]&7Click here to unclaim this selection.[/H][C]lands unclaim[/C][/T]
+        &8┃ &7Assign to sub area: [T]&8/&3Lands assign[H]&7Assign this selection to a sub area.[/H][SC]lands assign <area>[/SC][/T]
+        &8┗
     pos:
       warn: '&cWarning: &7This chunk belongs to another management plugin. Name:&3
         {plugin}'
@@ -446,8 +448,8 @@ command:
       disabled: '&7Your current selection isn''t any longer expanded to all y levels.'
   claim:
     already: '&cYou can''t claim this chunk. &7It already belongs to land&2 {land}&7.'
-    auto-create: '&7Trying to automatically create a land for you, because you have
-      none in this world. You can change the name of it by executing &8/&3Lands rename&7.'
+    auto-create: '&7Trying to automatically create a land for you, because you don''t
+      have one. You can change the name of it by executing &8/&3Lands rename&7.'
     auto-create-fail: '&cFailed to auto create a land for you. &7Please read the messages
       above.'
     near-other: '&cThis is too near to land&4 {land}&c. &7You need to move further
@@ -515,18 +517,24 @@ command:
         &cof land&4 {land}&c. &7The invite has been sent&5 {time} &7ago.'
       trusted: '&7The player&3 {player} &7is already trusted in the area&6 {area}
         &7of land&2 {land}&7.'
-      target: '&7Player&3 {player} &7invited you to join the area&6 {area} &7of their
-        land&2 {land}&7. Use &8/&3Lands invites &7to view accept invites.'
       success: '&7Successfully invited player&3 {player} &7to the area&6 {area} &7of
         land&2 {land}&7. They now can accept your invite.'
+      target: |
+        [T]&7Player&3 {player} &7invited you to join the area&6 {area} &7of their land&2 {land}&7.[H]&7Click to open your invites menu.[/H][C]lands invites[/C][/T] &7Taxes:&c ${tax}
+
+          [T]&2Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]lands accept {land}[/C][/T]
+          [T]&cDeny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]lands deny {land}[/C][/T]
     land:
       invited: '&cThe player&4 {player} &cis already invited to the whole land&4 {land}&c.
         &7The invite has been sent&5 {time} &7ago.'
       trusted: '&7The player&3 {player} &7is already trusted in land&2 {land}&7.'
-      target: '&7Player&3 {player} &7invited you to join their land&2 {land}&7. Use
-        &8/&3Lands invites &7to view accept invites.'
       success: '&7Successfully invited player&3 {player} &7to the the whole land&2
         {land}&7. They now can accept your invite.'
+      target: |
+        [T]&7Player&3 {player} &7invited you to join their land&2 {land}&7.[H]&7Click to open your invites menu.[/H][C]lands invites[/C][/T] &7Taxes:&c ${tax}
+
+          [T]&2Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]lands accept {land}[/C][/T]
+          [T]&cDeny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]lands deny {land}[/C][/T]
   untrust:
     area:
       already: '&7The player&3 {player} &7isn''t trusted in the area&6 {area} &8(&7Land:&2
@@ -654,138 +662,46 @@ command:
     no-land: '&cNo land found for land chat. &7Use &8/&3Lands chat toggle &7to deativate
       lands chat.'
     format:
-      minecraft: '&a{land} &8| {role} &7{player} &8»&f {message}'
-      discord: '&a{land} &8| &9Discord &7{player} &8»&f {message}'
+      minecraft: '[NoPrefix]&a{land} &8| {role} &7{player} &8»&f {message}'
+      discord: '[NoPrefix]&a{land} &8| &9Discord &7{player} &8»&f {message}'
+      spy: '[NoPrefix]&8[&cChatSpy&8] &a{land} &8| {role} &7{player} &8»&f {message}'
   view:
     disabled: '&7You successfully disabled the current &8/&3Lands view &7visualization.'
-    permanent: '&7You successfully started a permanent view visualization. Execute
-      &8/&3Lands view &7again to disable it.'
-  taxes:
-    none: '&7There aren''t any upcoming tax payments for you.'
-    line:
-      normal: '&8- &7{land}: &c${tax}'
-      change: '&8- &7{land}: {color}${tax} &8(previously: {previous})'
+    wilderness: '&7Enabled visualization of claims. &7Your current position is wilderness.'
+    info: |
+      [NoPrefix]
+      &7---------<- &5&lLand View &7->---------
+      [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to get more information about this land.[/H][C]lands info {land}[/C][/T]
+      &7Area:&6 {area}
+        &8Chunk &7X: {x} Z: {z}
+        &8Tax:&c ${tax}
+        &8Players: {players}
+      &7---------<- &5&lLand View &r&7->---------
   unstuck:
     success: '&7Successfully teleported into the nearest unclaimed location.'
-list:
-  views:
-  - '&7---------<- &5&lLand View &7->---------'
-  - '&7Land:&a {land}'
-  - '&7Area:&6 {area}'
-  - '  &8Chunk &7X: {x} Z: {z}'
-  - '  &8Tax:&c ${tax}'
-  - '  &8Players: {players}'
-  - '&7---------<- &5&lLand View &7->---------'
   taxes:
-    cmd:
-    - '&7---------<- &cUpcoming Taxes &7->---------'
-    - '{lines}'
-    - ' '
-    - '&7You need to pay a total of ${total} in &5{next}&7.'
-    - '&7Balance: ${balance}'
-    - '&7---------<- &cUpcoming Taxes &7->---------'
+    none: '&7There aren''t any upcoming tax payments for you.'
+    upcoming:
+      header: '[NoPrefix]&7---------<- &cUpcoming Taxes &7->---------'
+      entry: '[NoPrefix]&8- &7{land}: &c${tax}'
+      footer: |
+        [NoPrefix]&7You need to pay a total of ${total} in &5{next}&7.
+        &7Balance: ${balance}
+        &7---------<- &cUpcoming Taxes &7->---------
     changes:
-    - '&7---------<- &4Tax Change &7->---------'
-    - '&cTaxes have been changed in some lands:'
-    - ' '
-    - '{lines}'
-    - ' '
-    - '&7Payment in:&5 {next}'
-    - '&7Balance: ${balance}'
-    - '&8More info: /Lands taxes'
-    - '&7---------<- &4Tax Change &7->---------'
+      header: |
+        [NoPrefix]
+        &7---------<- &4Tax Change &7->---------
+        &cTaxes have been changed in some lands:
+      entry: '[NoPrefix]&8- &7{land}: {color}${tax} &8(previously: {previous})'
+      footer: |
+        [NoPrefix]
+        &7Payment in:&5 {next}
+        &7Balance: ${balance}
+        &8More info: /Lands taxes
+        &7---------<- &4Tax Change &7->---------
+list:
   swear-words: []
-  wars:
-    declaration:
-      normal:
-      - ' '
-      - '&6&nWar Declaration:'
-      - ' '
-      - '&7Attacker: {attacker}'
-      - '&7Defender: {defender}'
-      - ' '
-      - '&8- &7The war will start in'
-      - '  &5~{time}'
-      mutual:
-        defender:
-        - ' '
-        - '&6&nWar Declaration:'
-        - ' '
-        - '&7Attacker: {attacker}'
-        - '&7Defender: {defender}'
-        - ' '
-        - '&7If defenders surrender during war:'
-        - '&7Tribute:&c ${tribute}'
-        - ' '
-        - '&7Accept: &8/&3Wars declare {input}'
-        - '&7Deny: &8/&3Wars deny'
-        attacker:
-        - ' '
-        - '&6&nWar Declaration:'
-        - ' '
-        - '&7Attacker: {attacker}'
-        - '&7Defender: {defender}'
-        - ' '
-        - '&7If defenders surrender during war:'
-        - '&7Tribute:&c ${tribute}'
-        - ' '
-        - '&cThe defender hasn''t accepted'
-        - '&cthe declaration yet.'
-    current:
-    - ' '
-    - '&6&nCurrent War:'
-    - ' '
-    - '&8- &4Attackers'
-    - '     &7Name: {attacker}'
-    - '     &7Kills: {att-points}'
-    - '&8- &2Defenders'
-    - '     &7Name: {defender}'
-    - '     &7Kills: {def-points}'
-    - ' '
-    - '&8- &7The war will end in'
-    - '  &5~{time}'
-    started:
-      attacker:
-      - ' '
-      - '&cThe War has started:'
-      - ' '
-      - '&7Attacker: {attacker} &8(&7You&8)'
-      - '&7Defender: {defender}'
-      - ' '
-      - '&8- &7The war will end in'
-      - '  &5~{time}'
-      defender:
-      - ' '
-      - '&cThe War has started!'
-      - ' '
-      - '&7Attacker: {attacker}'
-      - '&7Defender: {defender} &8(&7You&8)'
-      - ' '
-      - '&8- &7The war will end in'
-      - '  &5~{time}'
-    won:
-      attacker:
-      - ' '
-      - '&6The War is over:'
-      - '&7The attackers &8({team}&8) &7won.'
-      - ' '
-      - '&8- &7Stats'
-      - '  &7Attacker kills:&3 {att-points}'
-      - '  &7Defender kills:&3 {def-points}'
-      - ' '
-      - '&8- &7The war took'
-      - '  &5~{time}'
-      defender:
-      - ' '
-      - '&6The War is over:'
-      - '&7The defenders &8({team}&8) &7won.'
-      - ' '
-      - '&8- &7Stats'
-      - '  &7Defender kills:&3 {def-points}'
-      - '  &7Attacker kills:&3 {att-points}'
-      - ' '
-      - '&8- &7The war took'
-      - '  &5~{time}'
 wars:
   message:
     noaccess:
@@ -796,13 +712,31 @@ wars:
     start:
       broadcast: '&7The war between {attacker} &7and {defender} &7started. It will
         be over in&5 {time}&7.'
+      participants: |
+        &4The War has started:
+
+        &7Attacker: {attacker} &8({team_1}&8)
+        &7Defender: {defender} &8({team_2}&8)
+
+        &7The war will end in:
+        &5~{time}
     end:
       broadcast: '&7The war between {attacker} &7and {defender} &7ended. It took&5
         {time}&7.'
-      draw: '&7The war between {attacker} &7and {defender} &7ended in a draw. It took&5
-        {time}&7.'
       surrender: '{object} &7surrendered. The war ended and they paid&c ${tribute}
         &7to their enemy {enemy}&7.'
+      draw: '&7The war between {attacker} &7and {defender} &7ended in a draw. It took&5
+        {time}&7.'
+      won: |
+        &aThe War is over:
+        &7The attackers &8({team}&8) &7won.
+
+        &8- &7Stats
+            &7Attacker kills:&3 {att-points}
+            &7Defender kills:&3 {def-points}
+
+        &7The war took:
+        &5~{time}
     war-shield:
       set: '&7The new war shield for {object} &7will be active for&5 {time}&7.'
     kill:
@@ -836,15 +770,18 @@ wars:
         confirm this by executing &8/&3Wars declare {input} confirm&7.'
       success: '&7You &8({attacker}&8) &7successfully declared war against {defender}&7.
         War will start in&5 {time}&7.'
-      target: '&7The enemy {attacker} &7declared war against {defender}&7. The war
-        will start in&5 {time}&7.'
+      target: '&7The enemy {attacker} &7declared war against {defender} &8(&7YOU&8)&7.
+        The war will start in&5 {time}&7.'
       mutual:
         success: '&7You &8({attacker}&8) &7successfully sent a war declaration to
           {defender}&7. They need to accept it now. If the defenders surrender during
           war, they will need to pay&c ${tribute} &7to the attackers.'
-        target: '&7The enemy {attacker} &7sent a war declaration against {defender}&7.
-          Use &8/&3Wars declare {input} &7to accept it. If the defenders surrender
-          during war, they will need to pay&c ${tribute} &7to the attackers.'
+        target: |
+          &7The enemy {attacker} &7sent a war declaration against {defender} &8(&7YOU&8)&7.
+          &7If the defenders surrender during war, they will need to pay&c ${tribute} &7to the attackers.
+
+          [T]&7Accept: &8/&3Wars declare {input} &8[&8CLICK&8][H]&7Click here to accept the war declaration.[/H][C]Wars declare {input}[/C][/T]
+          [T]&7Deny: &8/&3Wars deny &8[&8CLICK&8][H]&7Click here to deny the war declaration.[/H][C]Wars deny[/C][/T]
       already:
         attacker: '&cCan''t join another war. &7The current war of {object} &7needs
           to end first.'
@@ -858,6 +795,8 @@ wars:
           more trusted players. &7The required minimum for defenders to receive a
           war declaration is&3 {min} &7players.'
     deny:
+      attacker: '&cAttackers can''t deny their own war declaration. &7Only the defender
+        can do that.'
       ongoing: '&cYou can''t deny the ongoing war against {enemy}&c. &7You can only
         deny war declarations for {object}&7.'
       success: '&7You successfully denied the war declaration for {object} &7against
@@ -865,3 +804,49 @@ wars:
     menu:
       mutual: '&cYou can''t open the war menu right now. &7The war declaration to
         {object} &7hasn''t been accepted yet.'
+    info:
+      war: |
+        &4Current War:
+
+        &8- &7Attacker
+            &7Name: {attacker}
+            &7Kills: {att-points}
+
+        &8- &7Defender
+            &7Name: {defender}
+            &7Kills: {def-points}
+
+        &7The war will end in:
+        &5~{time}
+      declaration:
+        normal: |
+          &4War Declaration:
+
+          &7Attacker: {attacker}
+          &7Defender: {defender}
+
+          &7The war will start in:
+          &5~{time}
+        mutual:
+          defender: |
+            &4War Declaration:
+
+            &7Attacker: {attacker}
+            &7Defender: {defender}
+
+            &7If defenders surrender during war:
+            &7Tribute:&c ${tribute}
+
+            [T]&7Accept: &8/&3Wars declare {input} &8[&8CLICK&8][H]&7Click here to accept the war declaration.[/H][C]Wars declare {input}[/C][/T]
+            [T]&7Deny: &8/&3Wars deny &8[&8CLICK&8][H]&7Click here to deny the war declaration.[/H][C]Wars deny[/C][/T]
+          attacker: |
+            &4War Declaration:
+
+            &7Attacker: {attacker}
+            &7Defender: {defender}
+
+            &7If defenders surrender during war:
+            &7Tribute:&c ${tribute}
+
+            &cThe defender hasn''t accepted
+            &cthe declaration yet.
