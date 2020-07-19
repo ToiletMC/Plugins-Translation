@@ -26,8 +26,8 @@
 
 general:
   prefix:
-    normal: '&8[&aLands&8] '
-    help: '&8[&aLands&8] &7Usage: '
+    normal: ''
+    help: '&7用法: '
   wYes: '&a确认'
   wNo: '&c取消'
   none: '&8无'
