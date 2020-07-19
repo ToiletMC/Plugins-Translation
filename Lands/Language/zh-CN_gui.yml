@@ -368,50 +368,47 @@ gui:
     s: {}
     f:
       create:
-        name: '&aCreate Area'
+        name: '&a新建区域'
         lore:
-        - '&7Create a new area for'
-        - '&7this land.'
+        - '&7创建一个新的区域'
         - ' '
-        - '&7Available:&3 {areas} &8/&c {max}'
+        - '&7剩余:&3 {areas} &8/&c {max}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19
         slot: 32
       delete:
-        name: '&cDelete Area'
+        name: '&c删除区域'
         lore:
-        - '&7Delete a area of'
-        - '&7this land.'
+        - '&7删除一个区域'
+        - ' '
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         slot: 33
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7返回上一页:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7进入下一页:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前:&3 {current}'
         material: ARROW
         slot: 35
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
       object:
         name: '&6{area}'
         lore:
-        - '&7Open the area menu'
-        - '&7for this area.'
+        - '&7打开关于此区域的菜单'
         material: OAK_FENCE
         from: 10
         to: 27
@@ -425,48 +422,42 @@ gui:
         from: 10
         to: 27
       area-setup:
-        name: '&cSetup:&6 {area}'
+        name: '&c等待规划:&6 {area}'
         lore:
-        - '&7You haven''t assigned'
-        - '&7any land to this area yet.'
+        - '&7还没有规划这个区域的范围'
         - ' '
-        - '&7Use &8/&3Lands selection'
-        - '&7to make a selection and then'
+        - '&7使用 &8/&3Lands selection'
+        - '&7建立选区然后输入命令'
         - '&8/&3Lands selection assign {area}'
-        - '&7to assign land to this area.'
+        - '&7以完成区域规划.'
         material: ACACIA_FENCE
         from: 10
         to: 27
       no-area:
-        name: '&cNo Areas created'
+        name: '&c没有任何区域'
         lore:
-        - '&7This land doesn''t have'
-        - '&7any areas yet.'
+        - '&7该城镇还没有区域'
         - ' '
-        - '&8- &7To create a new area'
-        - '  &7click the area add item'
-        - '  &7below.'
+        - '&8- &7创建一个新的区域'
+        - '  &7点击下面的新建区域.'
         material: ACACIA_FENCE
         from: 10
         to: 27
     a:
       failure_untrusted:
-        name: '&4Denied: &cNot trusted'
+        name: '&4被拒绝: &c未被信任'
         lore:
-        - '&cYou''re not allowed to'
-        - '&copen the menu for this area.'
+        - '&c你不能打开该区域的区域菜单'
         - ' '
-        - '&8- &7You need to be trusted'
-        - '  &7in this area.'
-        - '&8- &7Contact the land owner'
-        - '  &7for help.'
+        - '&8- &7你需要被该区域信任'
+        - '&8- &7联系城镇所有者帮助'
       failure_max-areas:
-        name: '&4Failure: &cMax Areas'
+        name: '&4失败: &c区域已满'
         lore:
-        - '&7This land reached their maximum'
-        - '&7amount of&3 {max} &7Areas.'
+        - '&7达到最大区域数量限制'
+        - '&7&3 {max} &7区域.'
         - ' '
-        - '&8Permission: lands.areas.NUMBER'
+        - '&8权限: lands.areas.NUMBER'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -477,16 +468,15 @@ gui:
         from: 29
         to: 36
   land_inbox:
-    title: '&8Inbox'
+    title: '&8收件箱'
     size: 36
     f:
       filter:
-        name: '&8> &6Filter by Type'
+        name: '&8> &6按类型分类'
         lore:
-        - '&7Click here to cycle through'
-        - '&7message types.'
+        - '&7单击此处按类型浏览消息.'
         - ' '
-        - '&7Current:&3 {type}'
+        - '&7当前类型:&3 {type}'
         material: HOPPER
         slot: 32
       page_previous:
