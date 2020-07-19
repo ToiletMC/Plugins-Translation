@@ -343,10 +343,9 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ==
         slot: 17
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 37
     p:
@@ -480,26 +479,25 @@ gui:
         material: HOPPER
         slot: 32
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 35
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7回到{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -508,18 +506,15 @@ gui:
         lore:
         - '{message}'
         - ' '
-        - '&7Click to remove.'
+        - '&7单击删除.'
         material: PAPER
         from: 10
         to: 27
     a:
       failure_owner:
-        name: '&4Failure: &cNo Access'
+        name: '&4失败: &c权限不足'
         lore:
-        - '&7You''re not allowed to'
-        - '&7do this. Only the owner'
-        - '&7of the land is permitted'
-        - '&7to remove messages.'
+        - '&7只有城镇领主可以移除此邮件'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -530,19 +525,18 @@ gui:
         from: 29
         to: 36
   area:
-    title: '&8Area {area}'
+    title: '&8区域 {area}'
     size: 45
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7回到{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 37
     s:
       information:
-        name: '&6Information'
+        name: '&6信息'
         lore:
         - '&7Here you can view'
         - '&7some detailed information'
@@ -552,55 +546,47 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
       trusted-players:
-        name: '&8> &6Trusted Players'
+        name: '&8> &6信任的玩家'
         lore:
-        - '&7Get a list of all players, which'
-        - '&7are trusted in this specific area.'
+        - '&7获取在此特定区域受信任的所有玩家的列表'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 13
       invites:
-        name: '&8> &6Invites'
+        name: '&8> &6发出的邀请'
         lore:
-        - '&7Revoke dispatched invites'
-        - '&7or just view some information'
-        - '&7about them.'
+        - '&7查看或撤销邀请信息'
         - ' '
-        - '&8- &7These invites'
-        - '  &7can trust players'
-        - '  &7in this area.'
+        - '&8- &7这些邀请可以让玩家受信任'
         material: WRITABLE_BOOK
         slot: 14
       management:
-        name: '&6Management'
+        name: '&6管理'
         lore:
-        - '&7Here you can manage this area. You can'
-        - '&7trust players, assign roles, edit land settings'
-        - '&7or set taxes for this area.'
+        - '&7在这里，你可以：'
+        - '&7邀请玩家，编辑角色、税收、设定。'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
         slot: 29
       land-settings:
-        name: '&8> &6Land Settings'
+        name: '&8> &6城镇设定'
         lore:
-        - '&7Here you can edit general'
-        - '&7settings like mob spawning.'
+        - '&7在这里，你可以：'
+        - '&7管理生物的自然生存等。'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         slot: 31
       roles:
-        name: '&8> &6Roles'
+        name: '&8> &6角色'
         lore:
-        - '&7View roles in this area.'
+        - '&7查看区域中的角色'
         - ' '
-        - '&8- &7Global roles are automatically'
-        - '  &7added to this area.'
+        - '&8- &7全局角色将自动添加到该区域.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 32
       taxes:
-        name: '&8> &6Taxes'
+        name: '&8> &6税收'
         lore:
-        - '&7View taxes of this area.'
+        - '&7查看区域中的税收.'
         - ' '
-        - '&8- &7Taxes are calculated'
-        - '  &7per area.'
+        - '&8- &7税额按区域计算.'
         material: GOLD_INGOT
         slot: 33
     p:
@@ -617,30 +603,29 @@ gui:
         from: 30
         to: 30
   area_invites:
-    title: '&8{area} &7- &8Invites'
+    title: '&0{area} &0- 发出的邀请'
     size: 36
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 34
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -720,10 +705,9 @@ gui:
         material: OAK_SIGN
         slot: 16
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     a:
@@ -761,26 +745,25 @@ gui:
         to: 18
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&7Current:&3 {current}'
+        - '&7当前页:&3 {current}'
         material: ARROW
         slot: 21
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&7Current:&3 {current}'
+        - '&7当前页:&3 {current}'
         material: ARROW
         slot: 26
       create:
@@ -852,26 +835,25 @@ gui:
         to: 27
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 35
     p:
@@ -891,24 +873,23 @@ gui:
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 34
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -1287,154 +1268,116 @@ gui:
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 21
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 25
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     l:
       entity_griefing:
-        name: '&6Entity Griefing'
+        name: '&6生物破坏'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow entities to'
-        - '&7grief blocks?'
+        - '&7是否允许生物破坏方块?'
         - ' '
-        - '&7If entity griefing enabled,'
-        - '&7entities will be able to'
-        - '&7destroy your buildings.'
+        - '&8- &c注意: &7启用 → 生物可以破坏方块.'
         material: CREEPER_HEAD
         from: 10
         to: 18
       tnt_griefing:
-        name: '&6TNT Griefing'
+        name: '&6TNT 破坏'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow TNT blocks to'
-        - '&7explode?'
+        - '&7是否允许TNT爆炸破坏方块?'
         - ' '
-        - '&7If tnt griefing enabled,'
-        - '&7players will be able to'
-        - '&7grief your land by using'
-        - '&7tnt cannons.'
+        - '&8- &c注意: &7启用 → 别人可以用TNT破坏你的领地边边'
         material: TNT
         from: 10
         to: 18
       piston_griefing:
-        name: '&6Allow Pistons from Wilderness'
+        name: '&6荒野的活塞推动'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow pistons to grief blocks?'
+        - '&7是否允许荒郊野外的活塞推动?'
         - ' '
-        - '&7If enabled, players can grief'
-        - '&7your land from wilderness by'
-        - '&7using pistons to push blocks'
-        - '&7inside your land.'
+        - '&8- &c注意: &7启用 → 外面的活塞可以推方块到你的城镇'
         material: PISTON
         from: 10
         to: 18
       waterflow_allow:
-        name: '&6Allow Water from Wilderness'
+        name: '&6荒野的水流'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow water from wilderness'
-        - '&7to flow into your land?'
+        - '&7是否允许荒郊野外的水流进入领地?'
         - ' '
-        - '&7If enabled, players can'
-        - '&7grief your land from'
-        - '&7wilderness by using water.'
+        - '&8- &c注意: &7启用 → 外面的水可以流入你的城镇'
         material: WATER_BUCKET
         from: 10
         to: 18
       monster_spawn:
-        name: '&6Monster Spawning'
+        name: '&6怪物的自然生成'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow monsters to'
-        - '&7spawn?'
+        - '&7是否允许怪物的自然产生?'
         - ' '
-        - '&7Spawners are''nt influenced'
-        - '&7by this setting.'
+        - '&8- &c注意: &7刷怪笼不受该设置的影响'
         material: SPAWNER
         from: 10
         to: 18
       animal_spawn:
-        name: '&6Animal Spawning'
+        name: '&6动物的自然生成'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow animals to'
-        - '&7spawn?'
+        - '&7是否允许动物的自然产生?'
         - ' '
-        - '&7Spawners are''nt influenced'
-        - '&7by this setting.'
+        - '&8- &c注意: &7刷怪笼不受该设置的影响.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
         from: 10
         to: 18
     a:
       failure_permission:
-        name: '&4Failure: &cNo Permission'
+        name: '&4失败: &c权限不足'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit this setting.'
-        - ' '
-        - '&8Permission:'
-        - '&8{permission}'
+        - '&7你不能编辑此设定'
       failure_noaccess:
-        name: '&4Failure: &cNo Access'
+        name: '&4失败: &c禁止访问'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit these settings.'
-        - ' '
-        - '&7The land owner needs to'
-        - '&7allow you to do so.'
-        - '&8Setting: {setting}'
-        - ' '
-        - '&8Bypass permission:'
-        - '&8lands.admin.setting_edit_land'
+        - '&7请让城镇的管理员允许你这么做'
+        - '&8设定: {setting}'
       failure_priority:
-        name: '&4Failure: &cRole Priority'
+        name: '&4失败: &c优先级'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit settings of this role.'
-        - '&7It has a higher priority'
-        - '&7than yours or you''re a'
-        - '&7member of this role.'
-        - ' '
-        - '&8Bypass: {bypass}'
+        - '&7此角色比你拥有更高的优先级'
       failure_access:
-        name: '&4Failure: &cNot allowed'
+        name: '&4失败: &c禁止访问'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit roles in this area.'
-        - ' '
-        - '&8Bypass: {bypass}'
+        - '&7请让城镇的管理员允许你这么做'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -1445,73 +1388,66 @@ gui:
         from: 19
         to: 27
   taxes:
-    title: '&8{holder} &7- &8Taxes'
+    title: '&0{holder} &0- 税收'
     size: 27
     s:
       plus-1:
-        name: '&aAdd $1'
+        name: '&a增加 1T'
         lore:
-        - '&7Add $1 to'
-        - '&7tax value.'
+        - '&r'
         material: GLOWSTONE_DUST
         slot: 11
         data:
           value: 1.0
       plus-2:
-        name: '&aAdd $50'
+        name: '&a增加 50T'
         lore:
-        - '&7Add $50 to'
-        - '&7tax value.'
+        - '&r'
         material: GLOWSTONE_DUST
         slot: 12
         data:
           value: 50.0
       plus-3:
-        name: '&aAdd $500'
+        name: '&a增加 500T'
         lore:
-        - '&7Add $500 to'
-        - '&7tax value.'
+        - '&r'
         material: GLOWSTONE_DUST
         slot: 13
         data:
           value: 500.0
       minus-3:
-        name: '&cRemove $500'
+        name: '&c减少 500T'
         lore:
-        - '&7Remove $500 from'
-        - '&7tax value.'
+        - '&r'
         material: REDSTONE
         slot: 15
         data:
           value: 500.0
       minus-2:
-        name: '&cRemove $50'
+        name: '&c减少 50T'
         lore:
-        - '&7Remove $50 from'
-        - '&7tax value.'
+        - '&r'
         material: REDSTONE
         slot: 16
         data:
           value: 50.0
       minus-1:
-        name: '&cRemove $1'
+        name: '&c减少 1T'
         lore:
-        - '&7Remove $1 from'
-        - '&7tax value.'
+        - '&r'
         material: REDSTONE
         slot: 17
         data:
           value: 1.0
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       tax_area:
-        name: '&7Tax:&c ${tax}'
+        name: '&7税:&c {tax}T'
         lore:
         - ' '
         - '&7In&5 {time} &7your land'
@@ -1606,24 +1542,23 @@ gui:
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 34
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -1729,7 +1664,7 @@ gui:
     size: 27
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
         - '&7Go back to'
         - '&e{back}&7.'
@@ -1788,7 +1723,7 @@ gui:
         slot: 9
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
         - '&7Go back to'
         - '&e{back}&7.'
@@ -1855,7 +1790,7 @@ gui:
         lore:
         - '&7Set a new name for your land.'
         - ' '
-        - '&7Current:'
+        - '&7当前页:'
         - '&7{name}'
         material: NAME_TAG
         slot: 12
@@ -1866,7 +1801,7 @@ gui:
         - '&7the land. It appears to players,'
         - '&7which enter your land.'
         - ' '
-        - '&7Current:'
+        - '&7当前页:'
         - '{title}'
         - ' '
         - '&7Available placeholders'
@@ -1878,10 +1813,9 @@ gui:
         material: OAK_SIGN
         slot: 16
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -1904,10 +1838,9 @@ gui:
         slot: 46
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 46
       toggle-allowed:
@@ -1924,17 +1857,17 @@ gui:
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 48
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 52
     l:
@@ -2092,10 +2025,9 @@ gui:
         material: GOLD_INGOT
         slot: 17
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       close:
@@ -2163,26 +2095,25 @@ gui:
     size: 36
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 34
     l:
@@ -2308,10 +2239,9 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ==
         slot: 19
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     a:
@@ -2383,24 +2313,23 @@ gui:
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 35
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     p:
@@ -2430,24 +2359,23 @@ gui:
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 21
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 25
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -2528,7 +2456,7 @@ gui:
         - '&7trust / untrust players'
         - '&7in the whole land.'
         - ' '
-        - '&7Current: {current}'
+        - '&7当前页: {current}'
         material: HOPPER
         slot: 32
       trust:
@@ -2548,26 +2476,25 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         slot: 33
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
         name: '&9Previous Page'
         lore:
-        - '&7Go to previous page:&9 {previous}'
+        - '&7回到上一页面:&9 {previous}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 29
       page_next:
-        name: '&aNext Page'
+        name: '&a下一页'
         lore:
-        - '&7Go to next page:&9 {next}'
+        - '&7前往下一页面:&9 {next}'
         - ' '
-        - '&8- &7Current:&3 {current}'
+        - '&8- &7当前页:&3 {current}'
         material: ARROW
         slot: 35
     p:
@@ -2584,10 +2511,9 @@ gui:
     size: 36
     f:
       back:
-        name: '&cBack'
+        name: '&c返回'
         lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        - '&7返回至{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       icon:
@@ -2601,7 +2527,7 @@ gui:
         name: '&8> &6Rename'
         lore:
         - '&7Rename this role.'
-        - '&7Current: {name}'
+        - '&7当前页: {name}'
         material: NAME_TAG
         slot: 15
       apply:
@@ -2611,7 +2537,7 @@ gui:
         - '&7automatically be added to'
         - '&7new areas with this role?'
         - ' '
-        - '&7Current: {apply}'
+        - '&7当前页: {apply}'
         material: OAK_FENCE
         slot: 24
     s:
