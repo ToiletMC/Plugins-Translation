@@ -319,9 +319,9 @@ command:
   create:
     land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先'
     max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
-    success: '&f花费了{cost}马桶币，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地， 也可以使用/Lands
+    success: '&f花费了{cost}马桶币，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地，也可以使用/Lands
       selection 选择区域进行扩张。'
-    broadcast: '&f{land}的领主是{player}'
+    broadcast: '&f{player}创建了{land}'
   rename:
     success: '&f成功为{land}易名为{name}，花费{cost}马桶币'
   edit:
@@ -340,77 +340,53 @@ command:
     area:
       conflicts: '&c发现{conflicts}与已经分配给{areas}的土地有冲突， 使用/Lands selection assgin {area}
         confirm 确认区域覆盖范围。'
-      assigned: '&fYou successfully assigned&3 {chunks} &fchunks to area&6 {area}
-        &8(&fLand:&2 {land}&8)&f.'
+      assigned: '&f已成功分配{chunks}区块给{area}'
     expand:
-      enabled: '&fSuccessfully expanded your selection from bottom to the top (to
-        all y levels).'
-      disabled: '&fYour current selection isn''t any longer expanded to all y levels.'
-    too-far: '&cThe block you''re looking at is too far away. &7Please move closer
-      to it.'
+      enabled: '&f已成功将你框选的区域扩展到所有Y轴'
+      disabled: '&f你当前框选的区域不再扩展到所有Y轴'
+    too-far: '&c那个方块看起来离你远了点儿，靠近点吧'
     complete: |
-      &7Your selection is complete. Following actions can be executed:
+      &7框选完成，接下来你可以这样做：
         &8┏
-        &8┃ &7Claim: &8/&3Lands claim
-        &8┃ &7Unclaim: &8/&3Lands unclaim
-        &8┃ &7Assign to sub area: &8/&3Lands assign
+        &8┃ &7申领: /Lands claim
+        &8┃ &7释放: /Lands unclaim
+        &8┃ &7分配给区域: /Lands assign
         &8┗
   claim:
-    already: '&cYou can''t claim this chunk. &fIt already belongs to land&2 {land}&f.'
-    auto-create: '&fTrying to automatically create a land for you, because you have
-      none in this world. You can change the name of it by executing &8/&3Lands rename&f.'
-    auto-create-fail: '&cFailed to auto create a land for you. &fPlease read the messages
-      above.'
-    near-other: '&cThis is too near to land&4 {land}&c. &fYou need to move further
-      away from this land. Minimum chunk distance is&3 {distance}&f. &8An administrator
-      can change that in the config.'
-    far-land: '&cYou can''t claim this chunk(s). &fYour claims need to be connected
-      to your land &8(&fLand:&2 {land}&8)&f.'
-    success: '&fSuccessfully claimed this chunk &8(&fLand:&2 {land} &fX: {x} Z: {z}&8)
-      &ffor&c ${cost}&f. Next claim will cost&c ${next}&f.'
-    already-claimed: '&cIn your selection is a chunk that is already claimed and does
-      not belong to your land &8(&fX: {x} Z: {z}&8)&c. &fIt belongs to land&2 {land}&f.'
-    max-chunk: '&cYou can''t claim&4 {chunks} &cmore chunks for this land. &fThe maximum
-      for land&2 {land} &fis&3 {max} &fchunks. &8Permission: lands.chunks.NUMBER'
-    selection: '&fYou successfully claimed&3 {chunks} &fchunks for this land &8(&fLand:&2
-      {land}&8)&f. You paid&c ${cost}&f.'
+    already: '&c你不能申领这个区块，这里已经是{land}的领土了'
+    auto-create: '&f这似乎没人住，已为你自动创建城镇，稍后你可以用/Lands rename更改城镇名称'
+    auto-create-fail: '&c城镇创建失败，请阅上文信息'
+    near-other: '&c这离{land}太近了点儿，走远点再试试吧，至少得离{distance}区块'
+    far-land: '&c你不能申领这个区块，区块需要紧邻{land}才行'
+    success: '&f成功为{land}申领这个区块，花费{cost}马桶币，下次申领将花费{next}马桶币'
+    already-claimed: '&c在你的框选中有一区块是属于{land}的土地，你不能重复申领'
+    max-chunk: '&c不好意思，城镇面积已达上限，你最多只能为你的城镇申领{max}区块'
+    selection: '&f你成功为{land}申领{chunks}区块，花费{cost}马桶币'
   assign:
-    selection: '&cYou need to create a selection first. &fUse &8/&3Lands selection
-      &fto create one. After that try again.'
-    default: '&cYou can''t assign the selection to a default area. &fAreas can be
-      deleted in the areas menu of the land.'
-    size: '&cYour selection is too small. &fThe minimum size is&3 {min} &fblocks and
-      yours is&3 {current}&f.'
-    success: '&fYou successfully resized the area&6 {area} &fof land&2 {land}&f. Changes
-      are visualized.'
+    selection: '&c你需要先框选些什么，使用/Lands selection进入框选模式，框选后再重试吧'
+    default: '&c你不能将所框选的区域分配给默认区域'
+    size: '&c你框选的面积太小了，只有{current}方块，至少要有{min}方块'
+    success: '&f如你所见，你成功调整了{land}的{area}面积'
     conflict:
-      land: '&cYour selection conflicts with land&4 {land}&c. &fPlease adjust your
-        selection.'
-      area: '&cYour selection conflicts with area&4 {area}&c. &fPlease adjust your
-        selection.'
+      land: '&c你的框选和{land}有冲突，请调整当前所选'
+      area: '&c你的框选和{area}有冲突，请调整当前所选'
   leave:
-    owner: '&cYou can''t leave this land. &fAs the owner of a land you can only delete
-      it or transfer the ownership. Use &8/&3Lands delete {land} &fto delete this
-      land.'
+    owner: '&c你不能弃位！作为领主你只能删除城镇或移交领主权力，使用/Lands delete {land}来删除这个城镇'
     land:
-      untrusted: '&fYou aren''t trusted in any areas of land&2 {land}&f.'
-      success: '&fSuccessfully left the whole land&2 {land}&f.'
+      untrusted: '&f你未被{land}所信任'
+      success: '&f成功离开{land}'
     area:
-      untrusted: '&fYou aren''t trusted in area&6 {area} &fof the land&2 {land}&f.'
-      success: '&fSuccessfully left the area&6 {area} &fof the land&2 {land}&f.'
+      untrusted: '&f你未被{land}的{area}所信任'
+      success: '&f成功离开{land}的{area}'
   unclaim:
-    success: '&fSuccessfully unclaimed this chunk &8(&fLand:&2 {land} &fX: {x} Z:
-      {z}&8)&f. You got&a ${back} &fback.'
-    selection: '&fYou successfully unclaimed this selection. Please note that only
-      chunks got unclaimed in which you were the owner.'
+    success: '&f成功释放{land}的区块，赎回{back}马桶币'
+    selection: '&f成功释放所框选土地'
   delete:
-    nation: '&cYou can''t delete your land, because it''s the capital of nation&4
-      {nation}&c. &fYou either need to delete &8(/&3Nations delete&8) &fthe nation
-      or transfer the ownership &8(/&3Nations setCapital&8)&f.'
-    confirm: '&cYou need to confirm this action. &fUse &8/&3Land delete {land} confirm&f.'
-    success: '&fSuccessfully deleted this land &8(&fLand:&2 {land}&8)&f. You got&e
-      ${back} &fback.'
-    broadcast: '&fThe land&2 {land} &fwas deleted by&3 {player}&f.'
+    nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府，
+    但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations setCapital变更首府'
+    confirm: '&c慎行！使用/Land delete {land}确认删除操作'
+    success: '&f成功删除{land}，赎回{back}马桶币'
+    broadcast: '&f{land}已被{player}删除'
   trust:
     own-land: '&cPlayer&4 {player} &ccan''t be invited to join another land. &fThey''re
       not allowed to have their own land and be a member of another land at the same

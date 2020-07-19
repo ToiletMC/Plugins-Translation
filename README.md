@@ -23,4 +23,7 @@
 - Visitor：访客
 - Entry：成员
 - Selection：框选
+- Claim：申领
+- Unclaim：释放
+- Nation：联盟
 
