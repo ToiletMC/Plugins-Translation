@@ -1496,6 +1496,13 @@ gui:
         - '&7than yours.'
         - ' '
         - '&8Bypass: {bypass}'
+      failure_access:
+        name: '&4Failure: &cNot allowed'
+        lore:
+        - '&7You''re not allowed to'
+        - '&7edit roles in this area.'
+        - ' '
+        - '&8Bypass: {bypass}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -1644,6 +1651,33 @@ gui:
         - ' '
         - '&8Bypass permission:'
         - '&8lands.admin.setting_edit_land'
+      failure_priority:
+        name: '&4Failure: &cRole Priority'
+        lore:
+        - '&7You''re not allowed to'
+        - '&7edit settings of this role.'
+        - '&7It has a higher priority'
+        - '&7than yours or you''re a'
+        - '&7member of this role.'
+        - ' '
+        - '&8Bypass: {bypass}'
+      failure_access:
+        name: '&4Failure: &cNot allowed'
+        lore:
+        - '&7You''re not allowed to'
+        - '&7edit roles in this area.'
+        - ' '
+        - '&8Bypass: {bypass}'
+      failure_priority:
+        name: '&4Failure: &cRole Priority'
+        lore:
+        - '&7You''re not allowed to'
+        - '&7edit settings of this role.'
+        - '&7It has a higher priority'
+        - '&7than yours or you''re a'
+        - '&7member of this role.'
+        - ' '
+        - '&8Bypass: {bypass}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
