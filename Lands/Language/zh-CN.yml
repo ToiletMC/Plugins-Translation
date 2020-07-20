@@ -388,32 +388,20 @@ command:
     success: '&f成功删除{land}，赎回{back}马桶币'
     broadcast: '&f{land}已被{player}删除'
   trust:
-    own-land: '&cPlayer&4 {player} &ccan''t be invited to join another land. &fThey''re
-      not allowed to have their own land and be a member of another land at the same
-      time. They need to delete their own land&2 {land} &ffirst.'
-    max-lands: '&fPlayer&3 {player} &fhas already reached the maximum amount of lands.
-      &8Permission: lands.lands.NUMBER'
-    max-members: '&cCouldnt trust player&4 {player} &cin land&4 {land}&c. &fThey reached
-      their maximum of&3 {members} &fmembers in their land.'
-    max: '&cThe player&4 {player} &ccan''t join any more lands. &fThey reached their
-      maximum of&3 {max} &flands to join. &8Permission: lands.lands.NUMBER'
+    own-land: '&c{player}不能被邀请加入其他城镇，他们不允许在拥有城镇的同时加入其他城镇，如需加入需要先删除{land}'
+    max-lands: '&f不好意思，{player}拥有的城镇已达上限'
+    max-members: '{player}不能被{land}所信任，其城镇已达到{members}人口上限'
+    max: '&c{player}不能再加入更多的城镇了，已达{max}可加入城镇上限'
     area:
-      invited: '&cThe player&4 {player} &cis already invited to the area&4 {area}
-        &cof land&4 {land}&c. &fThe invite has been sent&5 {time} &fago.'
-      trusted: '&fThe player&3 {player} &fis already trusted in the area&6 {area}
-        &fof land&2 {land}&f.'
-      target: '&fPlayer&3 {player} &finvited you to join the area&6 {area} &fof their
-        land&2 {land}&f. Use &8/&3Lands invites &fto view accept invites.'
-      success: '&fSuccessfully invited player&3 {player} &fto the area&6 {area} &fof
-        land&2 {land}&f. They now can accept your invite.'
+      invited: '&c{player}已经被{land}的{area}邀请过了，邀请已在{time}前发出'
+      trusted: '&f{player}已经是{land}的{area}一员了'
+      target: '&f{player}邀请你加入{land}的{area}，使用/Lands invites以检视邀约'
+      success: '&f成功向{player}发出{land}的{area}邀请，请等待回应'
     land:
-      invited: '&cThe player&4 {player} &cis already invited to the whole land&4 {land}&c.
-        &fThe invite has been sent&5 {time} &fago.'
-      trusted: '&fThe player&3 {player} &fis already trusted in land&2 {land}&f.'
-      target: '&fPlayer&3 {player} &finvited you to join their land&2 {land}&f. Use
-        &8/&3Lands invites &fto view accept invites.'
-      success: '&fSuccessfully invited player&3 {player} &fto the the whole land&2
-        {land}&f. They now can accept your invite.'
+      invited: '&c{player}已经被{land}邀请过了，邀请已在{time}前发出'
+      trusted: '&f{player}已经是{land}的一员了'
+      target: '&f{player}邀请你加入{land}，使用/Lands invites以检视邀约'
+      success: '&f成功向{player}发出{land}的邀请，请等待回应'
   untrust:
     area:
       already: '&fThe player&3 {player} &fisn''t trusted in the area&6 {area} &8(&fLand:&2
@@ -456,12 +444,11 @@ command:
     area:
       success: '&fSuccessfully accepted invite from land&2 {land} &ffor the area&6
         {area}&f.'
-      broadcast: '&2{land} &8| &fPlayer&3 {player} &fis now a member of the area&6
-        {area} &fin our land.'
+      broadcast: '&2{land} &8｜{player}现在是城镇中{area}的一员了'
     land:
       success: '&fSuccessfully accepted the invite from land&2 {land} &fto be trusted
         in the whole land.'
-      broadcast: '&2{land} &8| &fPlayer&3 {player} &fis now a member of our land.'
+      broadcast: '&2{land} &8｜{player}现在是城镇的一员了'
   setowner:
     max-lands: '&cThe player&4 {player} &cisn''t allowed to own any more lands. &fHe
       already reached his maximum of&3 {max} &fown lands. &8Permission: lands.ownlands.NUMBER'
@@ -559,24 +546,24 @@ command:
   taxes:
     none: '&fThere aren''t any upcoming tax payments for you.'
     upcoming:
-      header: '[NoPrefix]&7---------<- &cUpcoming Taxes &7->---------'
-      entry: '[NoPrefix]&8- &7{land}: &c${tax}'
+      header: '[NoPrefix]&7---------<- &c将要缴纳的税款 &7->---------'
+      entry: '[NoPrefix]&8- &7{land}：&c {tax}马桶币'
       footer: |
-        [NoPrefix]&7You need to pay a total of ${total} in &5{next}&7.
-        &7Balance: ${balance}
-        &7---------<- &cUpcoming Taxes &7->---------
+        [NoPrefix]&7在接下来的{next}里你总共要缴纳{total}马桶币的税款
+        &7余额：{balance}马桶币
+        &7---------<- &c将要缴纳的税款 &7->---------
     changes:
       header: |
         [NoPrefix]
-        &7---------<- &4Tax Change &7->---------
-        &cTaxes have been changed in some lands:
-      entry: '[NoPrefix]&8- &7{land}: {color}${tax} &8(previously: {previous})'
+        &7---------<- &4税收变更 &7->---------
+        &c在一些城镇中税收似乎有了一些变动：
+      entry: '[NoPrefix]&8- &7{land}： {color}${tax} &8(变动前： {previous})'
       footer: |
         [NoPrefix]
-        &7Payment in:&5 {next}
-        &7Balance: ${balance}
-        &8More info: /Lands taxes
-        &7---------<- &4Tax Change &7->---------
+        &7距支付时间：&5 {next}
+        &7余额：{balance}马桶币
+        &8更多信息：/Lands taxes
+        &7---------<- &4税收变更 &7->---------
   unstuck:
     success: '&fSuccessfully teleported into the nearest unclaimed location.'
 list:
