@@ -384,7 +384,7 @@ command:
   delete:
     nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府，
     但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations setCapital变更首府'
-    confirm: '&c慎行！使用/Land delete {land}确认删除操作'
+    confirm: '&c慎行！使用/Land delete {land} confirm确认删除操作'
     success: '&f成功删除{land}，赎回{back}马桶币'
     broadcast: '&f{land}已被{player}删除'
   trust:
@@ -404,70 +404,48 @@ command:
       success: '&f成功向{player}发出{land}的邀请，请等待回应'
   untrust:
     area:
-      already: '&fThe player&3 {player} &fisn''t trusted in the area&6 {area} &8(&fLand:&2
-        {land}&8) &fand hasn''t received a invite.'
-      revoke: '&fSuccessfully revoked the invite for player&3 {player} &fin area&6
-        {area} &8(&fLand:&2 {land}&8)&f. The player isn''t trusted.'
-      success: '&fSuccessfully untrusted player&3 {player} &fin area&6 {area} &8(&fLand:&2
-        {land}&8)&f.'
+      already: '&f{player}并没有被{land}的{area}所信任，也未曾受邀过'
+      revoke: '&f成功撤回对{player}在{land}的{area}邀请，玩家未被信任'
+      success: '&f成功取消{player}在{land}的{area}信任'
     land:
-      already: '&fThe player&3 {player} &fisn''t trusted in any areas of the land&2
-        {land} &fand hasn''t received any invites.'
-      revoke: '&fSuccessfully revoked the invite for player&3 {player} &ffor the whole
-        land&2 {land}&f. The player isn''t trusted in any areas.'
-      success: '&fSuccessfully untrusted player&3 {player} &fin the whole land&2 {land}&f.'
+      already: '&f{player}并没有被{land}所信任，也未曾受邀过'
+      revoke: '&f成功撤回{player}在{land}的邀请，玩家未被信任'
+      success: '&f成功取消{player}在{land}的信任'
   setrole:
-    visitor: '&cYou can''t set the&4 {role} &crole. &fIf you want to untrust this
-      player, please use &8/&3Lands untrust {player} [area]&f.'
+    visitor: '&c不能设置为{role}角色，如果你想取消对其信任，请用/Lands untrust {player} [地点]'
     area:
-      untrusted: '&cThe player&4 {player} &cisn''t trusted in the area&4 {area} &cof
-        land&4 {land}&c. &fPlease trust them first.'
-      success: '&fSuccessfully set role&3 {role} &ffor player&3 {player} &fin the
-        area&6 {area} &fof land&2 {land}&f.'
+      untrusted: '&c{player}还没有被{land}的{area}所信任，请先邀请吧'
+      success: '&f成功将{player}在{land}的{area}设置为{role}角色'
     land:
-      untrusted: '&cThe player&4 {player} &cisn''t trusted in the the land&4 {land}&c.
-        &fPlease trust them first.'
-      success: '&fSuccessfully set role&3 {role} &ffor player&3 {player} &fin areas
-        of land&2 {land}&f, in which they''re trusted.'
+      untrusted: '&c{player}还没有被{land}所信任，请先邀请吧'
+      success: '&f成功将{player}在{land}中设置为{role}角色'
   accept:
-    max: '&cYou can''t be part of any more lands. &fYou reached your maximum of&3
-      {max} &flands. &8Permission: lands.lands.NUMBER'
-    not-exist: '&cYou don''t have an invite from land&4 {land} &cor it expired. &fPlease
-      check your input.'
-    own-land: '&cYou can''t join another land. &fYou''re not allowed to have your
-      own land and be a member of another land at the same time. &fYou need to delete
-      your own land&2 {land} &ffirst.'
-    max-lands: '&cYou can''t join any more lands. &fYou can only have&3 {max} &flands.
-      &8Permission: lands.lands.NUMBER'
-    notification: '&fYou still have&3 {invites} &finvites from other lands. Use &8/&3Land
-      invites &fto get a list of them.'
+    max: '&c你不能再成为更多的城镇的一部分，已达{max}上限'
+    not-exist: '&c并没有收到来自{land}的邀请，也许邀请时效已过或只是键入错误'
+    own-land: '&c你不能加入另一个城镇，你不能在拥有城镇的情况下加入其他城镇，你需要先删除{land}'
+    max-lands: '&c你不能再加入更多的城镇，已达{max}上限'
+    notification: '&f叮咚！你还有{invites}来自其他城镇的邀请待处理，使用/Land invites获悉详情'
     area:
-      success: '&fSuccessfully accepted invite from land&2 {land} &ffor the area&6
-        {area}&f.'
+      success: '&f成功同意来自{land}的{area}邀请'
       broadcast: '&2{land} &8｜{player}现在是城镇中{area}的一员了'
     land:
-      success: '&fSuccessfully accepted the invite from land&2 {land} &fto be trusted
-        in the whole land.'
+      success: '&f成功同意来自{land}的邀请'
       broadcast: '&2{land} &8｜{player}现在是城镇的一员了'
   setowner:
     max-lands: '&cThe player&4 {player} &cisn''t allowed to own any more lands. &fHe
       already reached his maximum of&3 {max} &fown lands. &8Permission: lands.ownlands.NUMBER'
-    confirm: '&cPlease confirm that you want to transfer the ownership of land&2 {land}
-      &cto player&3 {player}&c: &8/&3Lands setowner {player} confirm'
-    success: '&fYou successfully set player&3 {player} &fas the new owner of land&2
-      {land}&f. You paid&c ${cost}&f.'
+    confirm: '&c请确认你要将{land}的领主权力移交至{player}，使用/Lands setowner {player} confirm来确认'
+    success: '&f{player}成为{land}的新领主！设下宴席为此花费{cost}马桶币'
   deny:
-    not-exist: '&cYou don''t have an invite from land&4 {land} &cor it expired. &fTypo?'
-    success: '&fYou successfully denied the invite from land&2 {land}&f.'
+    not-exist: '&c并没有收到来自{land}的邀请，也许邀请时效已过或只是键入错误'
+    success: '&f成功拒绝来自{land}的邀请'
   teleport:
     chunk-not-claimed: '&cThis chunk isn''t claimed &8(&fX: {x} &fZ: {z}&8)&c. &8Bypass
       permission: lands.bypass.wilderness.teleport'
-    not-trusted: '&cYou can''t teleport to there. &fYou''re not trusted in land&2
-      {land}&f.'
+    not-trusted: '&c妈妈没回来谁来也不开，未被{land}信任，传送被拒'
     success: '&fSuccessfully teleported to X:&3 {x} &fZ:&3 {z} &fClaimed: {claimed}'
   setspawn:
-    force-land: '&cYou can only set the land spawn on your land. &fGo to your land&2
-      {land} &ffirst. &8An administrator can change that in the config.'
+    force-land: '&c你只能在自己的城镇中这样做，先前往{land}吧 &8An administrator can change that in the config.'
     successs: '#t#&a&lSpawn set{newline}&f&lCost:&c&l ${cost}'
   spawn:
     not-exist: '&cThere''s no spawn set for land&4 {land}&c. &fSomeone needs to set
