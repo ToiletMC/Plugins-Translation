@@ -699,15 +699,11 @@ gui:
         slot: 19
     a:
       failure_noAccess:
-        name: '&4Denied: &bRevoke Invite'
+        name: '&4错误: &b撤销失败'
         lore:
-        - '&cYou''re not allowed to'
-        - '&crevoke invites in this'
-        - '&carea.'
+        - '&c你不能撤销此区域的邀请'
         - ' '
-        - '&8- &7You need the permission'
-        - '  &7to untrust players in this'
-        - '  &7area.'
+        - '&8- &7请联系城镇或区域管理员'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -720,13 +716,13 @@ gui:
       object:
         name: '&7{role}'
         lore:
-        - '&7Click here to edit this role.'
+        - '&7单击编辑该角色.'
         - ' '
-        - '&bSHIFT + LEFT CLICK'
-        - '&7Higher priority'
+        - '&bSHIFT + 左键'
+        - '&7提升优先级'
         - ' '
-        - '&9SHIFT + RIGHT CLICK'
-        - '&7Lower priority'
+        - '&9SHIFT + 右键'
+        - '&7降低优先级'
         material: PLAYER_HEAD
         from: 10
         to: 18
@@ -738,7 +734,7 @@ gui:
         material: RED_STAINED_GLASS_PANE
         slot: 19
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -754,19 +750,17 @@ gui:
         material: ARROW
         slot: 26
       create:
-        name: '&8> &aCreate Role'
+        name: '&8> &a新建角色'
         lore:
-        - '&7Click here to create a'
-        - '&7new role.'
+        - '&7创造一个新角色'
         - ' '
-        - '&7Available:&3 {roles} &8/&c {max}'
+        - '&7可用角色:&3 {roles} &8/&c {max}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19
         slot: 23
       delete:
-        name: '&cDelete Role'
+        name: '&c删除角色'
         lore:
-        - '&7Delete a role of'
-        - '&7this area.'
+        - '&7删除此区域的一个角色'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         slot: 24
     a:
@@ -828,7 +822,7 @@ gui:
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -858,7 +852,7 @@ gui:
     s: {}
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -1253,7 +1247,7 @@ gui:
     s: {}
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -1527,7 +1521,7 @@ gui:
     s: {}
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -1842,7 +1836,7 @@ gui:
         material: HOPPER
         slot: 50
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -2088,7 +2082,7 @@ gui:
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -2298,7 +2292,7 @@ gui:
         to: 27
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -2344,7 +2338,7 @@ gui:
         to: 18
     f:
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
@@ -2469,7 +2463,7 @@ gui:
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Previous Page'
+        name: '&9上一页'
         lore:
         - '&7回到上一页面:&9 {previous}'
         - ' '
