@@ -79,10 +79,10 @@ general:
   enabled: '&a已启用'
   disabled: '&c已禁用'
   unlimited: '&a无限'
-  previous: '&8previous'
+  previous: '&8上一个'
   offline: '&c离线'
   role:
-    owner: '&4所有者'
+    owner: '&4领主'
     admin: '&c管理员'
     member: '&e成员'
     visitor: '&7游客'
@@ -98,19 +98,17 @@ general:
       land: '&2城镇 '
 physical-Item:
   claim-block:
-    name: '&7Claimblock'
+    name: '&申领区块'
     lore:
-    - '&7You can claim a chunk'
-    - '&7by placing this block'
-    - '&7in the wilderness.'
+    - '&7你可以在荒野放置此方块'
+    - '&7然后申领区块'
     - ' '
-    - '&7Owner:&3 {owner}'
+    - '&7领主:&3 {owner}'
     material: GRASS_BLOCK
   selection:
-    name: '&eClaim Tool'
+    name: '&e申领工具'
     lore:
-    - '&7Use this tool to create a'
-    - '&7selection and claim it:'
+    - '&7使用此工具框选区块并申领：'
     - '&8/&3Lands claim'
     material: GOLDEN_HOE
 skull:
@@ -178,7 +176,7 @@ gui:
         material: PLAYER_HEAD
         slot: 17
   player_lands:
-    title: '&8你的城镇'
+    title: '&0你的城镇'
     size: 27
     s: {}
     f:
@@ -249,7 +247,7 @@ gui:
         from: 19
         to: 27
   land:
-    title: '&8{land}'
+    title: '&0{land}'
     size: 45
     s:
       information:
@@ -362,7 +360,7 @@ gui:
         from: 30
         to: 30
   land_areas:
-    title: '&8Areas'
+    title: '&0区域'
     size: 36
     s: {}
     f:
@@ -467,7 +465,7 @@ gui:
         from: 29
         to: 36
   land_inbox:
-    title: '&8收件箱'
+    title: '&0收件箱'
     size: 36
     f:
       filter:
@@ -525,7 +523,7 @@ gui:
         from: 29
         to: 36
   area:
-    title: '&8区域 {area}'
+    title: '&0区域 {area}'
     size: 45
     f:
       back:
@@ -538,11 +536,8 @@ gui:
       information:
         name: '&6信息'
         lore:
-        - '&7Here you can view'
-        - '&7some detailed information'
-        - '&7about this area. This helps'
-        - '&7to keep track of all things'
-        - '&7in this area.'
+        - '&7在这里，你可以：'
+        - '&7查看区域信息、管理区域。'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
       trusted-players:
@@ -632,34 +627,27 @@ gui:
       object:
         name: '&e{player}'
         lore:
-        - '&7Revoke this invite or'
-        - '&7just view information.'
+        - '&7查看或撤消邀请'
         - ' '
-        - '&7This invite will trust them'
-        - '&7to the area&6 {area}&7.'
+        - '&7此邀请对应该区域：&6 {area}&7'
         material: PLAYER_HEAD
         from: 10
         to: 27
       object_land:
         name: '&e{player}'
         lore:
-        - '&7Revoke this invite or'
-        - '&7just view information.'
+        - '&7查看或撤消邀请'
         - ' '
-        - '&7This invite will trust'
-        - '&7the player to the whole'
-        - '&7land.'
+        - '&7此邀请对应整个城镇'
         material: PLAYER_HEAD
         from: 10
         to: 27
       no-invite:
-        name: '&cNo Invites sent'
+        name: '&c没有任何邀请'
         lore:
-        - '&7Your land hasn''t sent'
-        - '&7any invites.'
+        - '&7你的城镇没有发出任何邀请'
         - ' '
-        - '&7To invite someone click'
-        - '&7the invite button below.'
+        - '&7单击下方按钮发出邀请'
         material: OAK_SIGN
         from: 10
         to: 27
@@ -673,35 +661,34 @@ gui:
         from: 27
         to: 36
   area_invite:
-    title: '&8Invite {player}'
+    title: '&0邀请 {player}'
     size: 27
     s:
       revoke:
-        name: '&8> &cRevoke Invite'
+        name: '&8> &c撤回邀请'
         lore:
-        - '&7Click here to revoke'
-        - '&7this invite.'
+        - '&7单击撤回邀请'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         slot: 12
     f:
       info:
-        name: '&8> &6Information'
+        name: '&8> &6信息'
         lore:
-        - '&7Trusts them to the area'
+        - '&7邀请Ta到该区域'
         - '&6{area}&7.'
         - ' '
-        - '&7Sent:&5 {time}'
-        - '&7Sender: {sender}'
+        - '&7已邀请:&5 {time}'
+        - '&7邀请者: {sender}'
         material: OAK_SIGN
         slot: 16
       info_land:
-        name: '&8> &6Information'
+        name: '&8> &6信息'
         lore:
-        - '&7Trusts them to the whole land'
+        - '&7邀请Ta到整个城镇'
         - '&2{land}&7.'
         - ' '
-        - '&7Sent:&5 {time}'
-        - '&7Sender: {sender}'
+        - '&7已邀请:&5 {time}'
+        - '&7邀请者: {sender}'
         material: OAK_SIGN
         slot: 16
       back:
@@ -727,7 +714,7 @@ gui:
         from: 1
         to: 27
   area_roles:
-    title: '&8{area} &7- &8Roles'
+    title: '&0{area} &7- &8角色'
     size: 27
     l:
       object:
