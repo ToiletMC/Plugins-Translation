@@ -284,8 +284,8 @@ command:
     land-not-member: '&c你好像还不是{land}所信任的成员诶'
     no-edit-land: '&c你还没有选择你要编辑的城镇'
     name-exists: '&c{name}已经被其他城镇或联盟抢先一步啦，换一个吧'
-    money-cost-bank: '&c不好意思，你没有足够的钱支付，请用/Lands deposit {cost}存点马桶币到城镇银行吧'
-    money-cost: '&c不好意思，你没有足够的钱支付，你需要{cost}马桶币，种点土豆？'
+    money-cost-bank: '&c不好意思，你没有足够的钱支付，请用/Lands deposit {cost}存点钱到城镇银行吧'
+    money-cost: '&c不好意思，你没有足够的钱支付，你需要{cost}T，种点土豆？'
     swear-word: '&c嘿！不要说脏话，请友善相处'
     action-cooldown: '&c嘿！你手速太快了，请等待{time}后再执行'
     land-none: '&c很抱歉，你不是任何城镇的一员'
@@ -319,17 +319,18 @@ command:
   create:
     land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先'
     max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
-    success: '&f花费了{cost}马桶币，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地，也可以使用/Lands
+    success: '&f花费了{cost}T，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地，也可以使用/Lands
       selection 选择区域进行扩张。'
     broadcast: '&f{player}创建了{land}'
   rename:
-    success: '&f成功为{land}易名为{name}，花费{cost}马桶币'
+    success: '&f成功为{land}易名为{name}，花费{cost}T'
   edit:
     success: '&f你进入城镇编辑模式，接下来如/Lands claim或/Lands trust均会在这片土地生效'
   selection:
     not-complete: '&c抱歉，你的框选并不完整，请再确认两处锚点正确放置（左击/右击进行放置）。 若想退出框选模式，你可以执行/Lands selection退出。'
     max: '&c你框选的区块太多啦，你框选了{current}个区块而极限为{max}个'
-    enabled: '&f你已开启框选模式，左击方块设置第一个锚点，右击设置第二个锚点。 在这之后你可以对选区使用以下命令：Claim，Assign，Unclaim，Leave。'
+    enabled: '&f你已开启框选模式，左击方块设置第一个锚点，右击设置第二个锚点。
+    在这之后你可以对选区使用以下命令：Claim， Assign， Unclaim， Leave。'
     disabled: '#t#&5框选模式{newline}&c已关闭'
     world: '&c两个锚点要在同一个世界，难道你想要扭曲空间吗？'
     pos:
@@ -358,10 +359,10 @@ command:
     auto-create-fail: '&c城镇创建失败，请阅上文信息'
     near-other: '&c这离{land}太近了点儿，走远点再试试吧，至少得离{distance}区块'
     far-land: '&c你不能申领这个区块，区块需要紧邻{land}才行'
-    success: '&f成功为{land}申领这个区块，花费{cost}马桶币，下次申领将花费{next}马桶币'
+    success: '&f成功为{land}申领这个区块，花费{cost}T，下次申领将花费{next}T'
     already-claimed: '&c在你的框选中有一区块是属于{land}的土地，你不能重复申领'
     max-chunk: '&c不好意思，城镇面积已达上限，你最多只能为你的城镇申领{max}区块'
-    selection: '&f你成功为{land}申领{chunks}区块，花费{cost}马桶币'
+    selection: '&f你成功为{land}申领{chunks}区块，花费{cost}T'
   assign:
     selection: '&c你需要先框选些什么，使用/Lands selection进入框选模式，框选后再重试吧'
     default: '&c你不能将所框选的区域分配给默认区域'
@@ -379,13 +380,13 @@ command:
       untrusted: '&f你未被{land}的{area}所信任'
       success: '&f成功离开{land}的{area}'
   unclaim:
-    success: '&f成功释放{land}的区块，赎回{back}马桶币'
+    success: '&f成功释放{land}的区块，赎回{back}T'
     selection: '&f成功释放所框选土地'
   delete:
     nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府，
     但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations setCapital变更首府'
     confirm: '&c慎行！使用/Land delete {land} confirm确认删除操作'
-    success: '&f成功删除{land}，赎回{back}马桶币'
+    success: '&f成功删除{land}，赎回{back}T'
     broadcast: '&f{land}已被{player}删除'
   trust:
     own-land: '&c{player}不能被邀请加入其他城镇，他们不允许在拥有城镇的同时加入其他城镇，如需加入需要先删除{land}'
@@ -427,15 +428,14 @@ command:
     notification: '&f叮咚！你还有{invites}来自其他城镇的邀请待处理，使用/Land invites获悉详情'
     area:
       success: '&f成功同意来自{land}的{area}邀请'
-      broadcast: '&2{land} &8｜{player}现在是城镇中{area}的一员了'
+      broadcast: '&2{land} &f| {player}现在是城镇中{area}的一员了'
     land:
       success: '&f成功同意来自{land}的邀请'
-      broadcast: '&2{land} &8｜{player}现在是城镇的一员了'
+      broadcast: '&2{land} &f| {player}现在是城镇的一员了'
   setowner:
-    max-lands: '&cThe player&4 {player} &cisn''t allowed to own any more lands. &fHe
-      already reached his maximum of&3 {max} &fown lands. &8Permission: lands.ownlands.NUMBER'
+    max-lands: '&c{player}不能再造日不落帝国神话，他拥有的城镇已达{max}上限'
     confirm: '&c请确认你要将{land}的领主权力移交至{player}，使用/Lands setowner {player} confirm来确认'
-    success: '&f{player}成为{land}的新领主！设下宴席为此花费{cost}马桶币'
+    success: '&f{player}成为{land}的新领主！设下宴席为此花费{cost}T'
   deny:
     not-exist: '&c并没有收到来自{land}的邀请，也许邀请时效已过或只是键入错误'
     success: '&f成功拒绝来自{land}的邀请'
@@ -445,19 +445,15 @@ command:
     not-trusted: '&c妈妈没回来谁来也不开，未被{land}信任，传送被拒'
     success: '&fSuccessfully teleported to X:&3 {x} &fZ:&3 {z} &fClaimed: {claimed}'
   setspawn:
-    force-land: '&c你只能在自己的城镇中这样做，先前往{land}吧 &8An administrator can change that in the config.'
-    successs: '#t#&a&lSpawn set{newline}&f&lCost:&c&l ${cost}'
+    force-land: '&c你只能在自己的城镇中这样做，先前往{land}吧'
+    successs: '#t#&a&l出生点已设置{newline}&f&l花费：&c&l{cost}T'
   spawn:
-    not-exist: '&cThere''s no spawn set for land&4 {land}&c. &fSomeone needs to set
-      it first by executing &8/&3Land setspawn&f.'
-    not-allowed: '&cYou''re not allowed to teleport to the spawn of this land. &fThey
-      need to give you permission to do so &8(&fLand:&2 {land}&8)&f.'
+    not-exist: '&c似乎……{land}还没有出生点，使用/Land setspawn设置一个吧'
+    not-allowed: '&c你不被允许传送至{land}出生点，要有传送权限'
     chunk: '&fLand&2 {land} &fhasn''t set a land spawn &8(&8/&3Lands setspawn&8) &fyet.
       &fTeleported you to the initial claim of this land.'
-    unsafe: '&cYou can''t teleport to this spawn, because it was detected as being
-      unsafe for teleportation. &fTeleporting there might result into dying. They
-      need to adjust the spawn by using &8/&3Lands setspawn&f.'
-    successs: '&fSuccessfully teleported to the spawn of land&2 {land} &fCost:&c ${cost}'
+    unsafe: '&c哎呀，传送点位置似乎不安全，使用/Lands setspawn来调整吧'
+    successs: '&f成功传送至{land}出生点，花费：&c{cost}T'
   wild:
     no-location: '&cCouldnt find a safe location for you that matches the filter in
       config. &8Please adjust your max and min distance settings and set the world
@@ -525,21 +521,21 @@ command:
     none: '&fThere aren''t any upcoming tax payments for you.'
     upcoming:
       header: '[NoPrefix]&7---------<- &c将要缴纳的税款 &7->---------'
-      entry: '[NoPrefix]&8- &7{land}：&c {tax}马桶币'
+      entry: '[NoPrefix]&8- &7{land}：&c {tax}T'
       footer: |
-        [NoPrefix]&7在接下来的{next}里你总共要缴纳{total}马桶币的税款
-        &7余额：{balance}马桶币
+        [NoPrefix]&7在接下来的{next}里你总共要缴纳{total}T的税款
+        &7余额：{balance}T
         &7---------<- &c将要缴纳的税款 &7->---------
     changes:
       header: |
         [NoPrefix]
         &7---------<- &4税收变更 &7->---------
-        &c在一些城镇中税收似乎有了一些变动：
+        &c在一些城镇中税收似乎有了些许变动：
       entry: '[NoPrefix]&8- &7{land}： {color}${tax} &8(变动前： {previous})'
       footer: |
         [NoPrefix]
         &7距支付时间：&5 {next}
-        &7余额：{balance}马桶币
+        &7余额：{balance}T
         &8更多信息：/Lands taxes
         &7---------<- &4税收变更 &7->---------
   unstuck:
@@ -620,8 +616,7 @@ wars:
         target: '&fThe enemy {attacker} &fsent a war declaration against {defender}&f.
           Use &8/&3Wars declare {input} &fto accept it.'
       already:
-        attacker: '&cCan''t join another war. &fThe current war of {object} &fneeds
-          to end first.'
+        attacker: '&c分身乏术！需要先结束{object}之战先'
         defender: '&cYou currently can''t declare war against them. &fThe target {object}
           &fis already engaged in a war.'
       min-players:
