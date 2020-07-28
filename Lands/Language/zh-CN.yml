@@ -21,6 +21,8 @@
 # You also send a message at the actionbar:
 # Set message to: '#c#This is a actionbar message.'
 # (Set #c# in front of it.)
+# 
+# More information: https://github.com/Angeschossen/General/wiki/Messages
 
 
 
@@ -182,6 +184,9 @@ help:
     unstuck: '&8/&3Lands unstuck &8- &fTeleport out of traps'
     mod:
       chatspy: '&8/&3Lands chatspy &8[&aland&8] - &fListen to land chat'
+    claims: '[T]&8/&3Lands claims &8[&3land&8] &8- &7List claims of your land[H]&7This
+      command will show you all /Lands claim''s of your land. &7Click to copy.[/H][SC]lands
+      claims[/SC][/T]'
 message:
   world-not-exist: '&c你确定&4{world}&c是一个有效的世界名吗，&f拼错了?'
   world-invalid: '&c在世界{world}中这未被启用，需要管理员在配置中加入'
@@ -303,11 +308,11 @@ command:
       character: '&c不要键入{invalid}这些奇奇怪怪的符号啦，请键入汉字或字母及数字'
       length: '&c啊这，名字太长了，请尽量缩短一下吧，最多{max}个字符哦'
       empty: '&c你键入了一个寂寞……请至少键入一个字符'
+    number: '&cYour input&4 {input} &cisn''t a number. &7The&3 {argument} &7argument
+      needs to be a number.'
   help:
     help: '&f请使用/{cmd} help寻求帮助'
-    number: '&c抱歉，你的键入有误，{argument}需要填上数字'
     cmd-not-exist: '&c指令不存在:('
-    no-page: '&c翻不到第{page}页:('
     header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7Click here to navigate to the
       previous page.[/H][C]lands help {previous}[/C][/T] &2Lands Help &7Page&3 {page}
       &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7Click here to go to the next page.[/H][C]lands
@@ -319,8 +324,8 @@ command:
   create:
     land-other: '&c作为领主的你不能加入其他城镇，你需要先离开{land}先'
     max-own: '&c你不能继续创建更多的城镇了，已达{max}个城镇上限。氪金吗？'
-    success: '&f花费了{cost}T，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地，也可以使用/Lands
-      selection 选择区域进行扩张。'
+    success: '&f花费了{cost}T，你现在是{land}的领主啦！接下来你可以使用/Lands claim 扩张领地，也可以使用/Lands selection
+      选择区域进行扩张。'
     broadcast: '&f{player}创建了{land}'
   rename:
     success: '&f成功为{land}易名为{name}，花费{cost}T'
@@ -329,8 +334,8 @@ command:
   selection:
     not-complete: '&c抱歉，你的框选并不完整，请再确认两处锚点正确放置（左击/右击进行放置）。 若想退出框选模式，你可以执行/Lands selection退出。'
     max: '&c你框选的区块太多啦，你框选了{current}个区块而极限为{max}个'
-    enabled: '&f你已开启框选模式，左击方块设置第一个锚点，右击设置第二个锚点。
-    在这之后你可以对选区使用以下命令：Claim， Assign， Unclaim， Leave。'
+    enabled: '&f你已开启框选模式，左击方块设置第一个锚点，右击设置第二个锚点。 在这之后你可以对选区使用以下命令：Claim， Assign， Unclaim，
+      Leave。'
     disabled: '#t#&5框选模式{newline}&c已关闭'
     world: '&c两个锚点要在同一个世界，难道你想要扭曲空间吗？'
     pos:
@@ -383,8 +388,8 @@ command:
     success: '&f成功释放{land}的区块，赎回{back}T'
     selection: '&f成功释放所框选土地'
   delete:
-    nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府，
-    但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations setCapital变更首府'
+    nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府， 但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations
+      setCapital变更首府'
     confirm: '&c慎行！使用/Land delete {land} confirm确认删除操作'
     success: '&f成功删除{land}，赎回{back}T'
     broadcast: '&f{land}已被{player}删除'
