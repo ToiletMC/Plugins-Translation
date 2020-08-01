@@ -308,6 +308,8 @@ command:
       character: '&c不要键入{invalid}这些奇奇怪怪的符号啦，请键入汉字或字母及数字'
       length: '&c啊这，名字太长了，请尽量缩短一下吧，最多{max}个字符哦'
       empty: '&c你键入了一个寂寞……请至少键入一个字符'
+      color: '&cYou''re not allowed to use color codes for this name. &7Please remove
+        any color codes from your input.'
     number: '&cYour input&4 {input} &cisn''t a number. &7The&3 {argument} &7argument
       needs to be a number.'
   help:
@@ -386,7 +388,17 @@ command:
       success: '&f成功离开{land}的{area}'
   unclaim:
     success: '&f成功释放{land}的区块，赎回{back}T'
-    selection: '&f成功释放所框选土地'
+    selection:
+      empty: '&cYou did not unclaim any chunks, because they are not claimed or you''re
+        not allowed to unclaim any of them.'
+      connection: '&7You unclaimed {success} / {size} chunks of this selection, &cbut
+        {failed} could not be unclaimed because it would result in other chunks being
+        disconnected from your land.'
+      partly: '&7You successfully unclaimed {success} / {size} chunks of this selection.
+        &8Please note that only chunks, which you''re allowed to unclaim, got unclaimed.'
+      success: '&7You successfully unclaimed all chunks of this selection.'
+    connection: '&cYou can''t unclaim this chunk, because this would cause other chunks
+      to be disconnected from your land. &7Chunk X: {x} Z: {z} would be disconnected.'
   delete:
     nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府， 但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations
       setCapital变更首府'
