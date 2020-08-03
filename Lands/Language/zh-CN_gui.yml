@@ -72,8 +72,8 @@
 
 
 general:
-  wYes: '&aYes'
-  wNo: '&cNo'
+  wYes: '&a✔'
+  wNo: '&c✘'
   none: '&c无'
   now: '&a现在'
   enabled: '&a已启用'
