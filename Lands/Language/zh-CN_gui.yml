@@ -344,7 +344,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 37
     p:
@@ -621,7 +621,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -695,7 +695,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     a:
@@ -731,7 +731,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       page_previous:
@@ -819,7 +819,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
@@ -871,7 +871,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -1266,7 +1266,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     l:
@@ -1276,7 +1276,7 @@ gui:
         - '&7状态: {enabled}'
         - '&7已解锁: {unlocked}'
         - ' '
-        - '&7是否允许生物破坏方块?'
+        - '&7是否允许生物破坏方块？'
         - ' '
         - '&8- &c注意: &7启用 → 生物可以破坏方块.'
         material: CREEPER_HEAD
@@ -1288,7 +1288,7 @@ gui:
         - '&7状态: {enabled}'
         - '&7已解锁: {unlocked}'
         - ' '
-        - '&7是否允许TNT爆炸破坏方块?'
+        - '&7是否允许TNT爆炸破坏方块？'
         - ' '
         - '&8- &c注意: &7启用 → 别人可以用TNT破坏你的领地边边'
         material: TNT
@@ -1300,7 +1300,7 @@ gui:
         - '&7状态: {enabled}'
         - '&7已解锁: {unlocked}'
         - ' '
-        - '&7是否允许荒郊野外的活塞推动?'
+        - '&7是否允许荒郊野外的活塞推动？'
         - ' '
         - '&8- &c注意: &7启用 → 外面的活塞可以推方块到你的城镇'
         material: PISTON
@@ -1312,7 +1312,7 @@ gui:
         - '&7状态: {enabled}'
         - '&7已解锁: {unlocked}'
         - ' '
-        - '&7是否允许荒郊野外的水流进入领地?'
+        - '&7是否允许荒郊野外的水流进入领地？'
         - ' '
         - '&8- &c注意: &7启用 → 外面的水可以流入你的城镇'
         material: WATER_BUCKET
@@ -1324,7 +1324,7 @@ gui:
         - '&7状态: {enabled}'
         - '&7已解锁: {unlocked}'
         - ' '
-        - '&7是否允许怪物的自然产生?'
+        - '&7是否允许怪物的自然产生？'
         - ' '
         - '&8- &c注意: &7刷怪笼不受该设置的影响'
         material: SPAWNER
@@ -1336,34 +1336,33 @@ gui:
         - '&7状态: {enabled}'
         - '&7已解锁: {unlocked}'
         - ' '
-        - '&7是否允许动物的自然产生?'
+        - '&7是否允许动物的自然产生？'
         - ' '
-        - '&8- &c注意: &7刷怪笼不受该设置的影响.'
+        - '&8- &c注意: &7刷怪笼不受该设置的影响'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
         from: 10
         to: 18
       fire_spread:
-        name: '&6Fire Spread'
+        name: '&6火焰蔓延'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow fire to spread'
-        - '&7inside your land?'
+        - '&7是否允许城镇内的火焰四处蔓延?'
         - ' '
-        - '&8Fire from wilderness'
-        - '&8can''t enter your land.'
+        - '&8- &c注意: &7无论如何，荒野的火焰也不能进入城镇'
         material: FLINT_AND_STEEL
         from: 10
         to: 18
       leaf_decay:
-        name: '&6Leaf Decay'
+        name: '&6树叶腐烂'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Should leaves decay'
-        - '&7inside your land?'
+        - '&7是否允许城镇内的树叶腐烂？'
+        - ' '
+        - '&8- &c注意: &7启用 → 树叶会腐烂'
         material: OAK_LEAVES
         from: 10
         to: 18
@@ -1450,7 +1449,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       tax_area:
@@ -1565,7 +1564,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -1815,14 +1814,14 @@ gui:
         - '  &8> &3%owner% &8= &7Land owner'
         - '  &8> &3%player% &8= &7Entering player'
         - ' '
-        - '&9RIGHT CLICK'
+        - '&9右键'
         - '&7Display title: {show}'
         material: OAK_SIGN
         slot: 16
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -1831,7 +1830,7 @@ gui:
         from: 1
         to: 27
   global_lands:
-    title: '&8All Lands'
+    title: '&8全部城镇'
     size: 54
     s:
       close:
@@ -1842,23 +1841,21 @@ gui:
         - '&8- &7You can open it again by'
         - '  &7executing &8/&3Lands list&7.'
         material: RED_STAINED_GLASS_PANE
-        slot: 46
+        slot: 54
     f:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 46
       toggle-allowed:
-        name: '&6Show only public Lands?'
+        name: '&6仅展示公开的城镇？'
         lore:
-        - '&7Show only lands where you''re'
-        - '&7allowed to enter and teleport'
-        - '&7to the land spawn?'
+        - '&7仅显示您可以传送的城镇？'
         - ' '
-        - '&7Click here to toggle this setting.'
-        - '&7Only public: {only-allowed}'
+        - '&7单击此处切换此设置'
+        - '&7筛选器: {only-allowed}'
         material: HOPPER
         slot: 50
       page_previous:
@@ -1881,15 +1878,13 @@ gui:
       object:
         name: '&2{land}'
         lore:
-        - '&bLEFT CLICK'
-        - '&7Teleport to the land spawn'
-        - '&7of this land.'
+        - '&b单击'
+        - '&7传送到城镇'
         - ' '
-        - '&9RIGHT CLICK'
-        - '&7Open the land information'
-        - '&7menu of this land.'
+        - '&9右键'
+        - '&7查看城镇信息'
         - ' '
-        - '&7Title:'
+        - '&7标题:'
         - '&7{title}'
         material: PLAYER_HEAD
         from: 10
@@ -2005,7 +2000,7 @@ gui:
         - '&7pay this value in order'
         - '&7to surrender.'
         - ' '
-        - '&9RIGHT CLICK'
+        - '&9右键'
         - '&7If a attacker wants to'
         - '&7surrender, they''ll need'
         - '&7to pay&c ${tribute-att} &7to'
@@ -2034,7 +2029,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       close:
@@ -2104,7 +2099,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
@@ -2248,7 +2243,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     a:
@@ -2336,7 +2331,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
     p:
@@ -2382,7 +2377,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -2415,10 +2410,10 @@ gui:
         lore:
         - '&7Role: {role}'
         - ' '
-        - '&bLEFT CLICK'
+        - '&b单击'
         - '&7▲ Promote'
         - ' '
-        - '&9RIGHT CLICK'
+        - '&9右键'
         - '&7▼ Demote'
         - ' '
         - '&7More information:'
@@ -2485,7 +2480,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
@@ -2520,7 +2515,7 @@ gui:
       back:
         name: '&c返回'
         lore:
-        - '&7返回至{back}&7.'
+        - '&7&7'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       icon:
