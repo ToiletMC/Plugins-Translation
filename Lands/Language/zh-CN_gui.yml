@@ -124,7 +124,7 @@ gui:
     size: 27
     s:
       lands:
-        name: '&8> &2城镇'
+        name: '&8> &2我的城镇'
         lore:
         - '&7查看你的城镇'
         - ' '
@@ -133,7 +133,7 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         slot: 11
       all-lands:
-        name: '&8> &b所有城镇'
+        name: '&8> &b服务器操作'
         lore:
         - '&7查看服务器中所有的城镇'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzljODg4MWU0MjkxNWE5ZDI5YmI2MWExNmZiMjZkMDU5OTEzMjA0ZDI2NWRmNWI0MzliM2Q3OTJhY2Q1NiJ9fX0=
@@ -147,10 +147,8 @@ gui:
       close:
         name: '&c关闭'
         lore:
-        - '&7Close this menu.'
         - ' '
-        - '&8- &7You can open it again'
-        - '  &7with &8/&3Lands menu&7.'
+        - '&8- &7再次开启使用： &8/&3Lands menu&7'
         material: RED_STAINED_GLASS_PANE
         slot: 9
         enabled: true
@@ -161,19 +159,19 @@ gui:
         to: 27
     f:
       limitation:
-        name: '&8> &6当前限制'
+        name: '&8> &6关于我'
         lore:
         - ' '
         - '&7+ 最多可以创造&3 {ownlands} &7个城镇.'
-        - '  &8lands.ownlands.NUMBER'
+        - ' '
         - '&7+ 每个城镇最多&3 {chunks} &7个区块.'
-        - '  &8lands.chunks.NUMBER'
+        - ' '
         - '&7+ 在你所属的每个城镇,你可以贡献 &3{support-chunks} &7个区块'
-        - '  &8lands.chunks.support.NUMBER'
+        - ' '
         - '&7+ 最多可以加入&3 {lands} &7个城镇.'
-        - '  &8lands.lands.NUMBER'
+        - ' '
         - '&7+ 每个城镇最多&3 {members} &7名成员.'
-        - '  &8lands.members.NUMBER'
+        - ' '
         material: PLAYER_HEAD
         slot: 17
   player_lands:
@@ -1705,10 +1703,8 @@ gui:
       close:
         name: '&cClose'
         lore:
-        - '&7Close this menu.'
         - ' '
-        - '&8- &7You can open it again'
-        - '  &7with &8/&3Lands info&7.'
+        - '&8- &7再次开启使用： &8/&3Lands info'
         material: RED_STAINED_GLASS_PANE
         slot: 9
     f:
@@ -1811,16 +1807,14 @@ gui:
         from: 1
         to: 27
   global_lands:
-    title: '&8全部城镇'
+    title: '&8服务器城镇'
     size: 54
     s:
       close:
         name: '&cClose'
         lore:
-        - '&7Close this menu.'
         - ' '
-        - '&8- &7You can open it again by'
-        - '  &7executing &8/&3Lands list&7.'
+        - '&8- &7再次开启使用： &8/&3Lands list&7'
         material: RED_STAINED_GLASS_PANE
         slot: 46
     f:
@@ -2014,10 +2008,8 @@ gui:
       close:
         name: '&cClose'
         lore:
-        - '&7Close this menu.'
         - ' '
-        - '&8- &7You can open it again by'
-        - '  &7executing &8/&3Wars menu&7.'
+        - '&8- &7再次开启使用： &8/&3Wars menu&7'
         material: RED_STAINED_GLASS_PANE
         slot: 9
       tribute_attacker_mutual:
@@ -2124,10 +2116,8 @@ gui:
       close:
         name: '&cClose'
         lore:
-        - '&7Close this menu.'
         - ' '
-        - '&8- &7You can open it again by'
-        - '  &7executing &8/&3Wars menu&7.'
+        - '&8- &7再次开启使用： &8/&3Wars menu&7'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       plus-1:
@@ -2259,10 +2249,8 @@ gui:
       close:
         name: '&cClose'
         lore:
-        - '&7Close this menu.'
         - ' '
-        - '&8- &7You can open it again'
-        - '  &7with &8/&3Lands admin wilderness&7.'
+        - '&8- &7再次开启使用： &8/&3Lands admin wilderness&7'
         material: RED_STAINED_GLASS_PANE
         slot: 9
         enabled: true
