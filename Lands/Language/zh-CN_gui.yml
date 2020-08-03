@@ -199,9 +199,7 @@ gui:
         slot: 25
       back:
         name: '&c返回'
-        lore:
-        - '&7返回至'
-        - '{back}&7.'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
     l:
@@ -343,8 +341,7 @@ gui:
         slot: 17
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 37
     p:
@@ -398,8 +395,7 @@ gui:
         slot: 35
       back:
         name: '&c返回'
-        lore:
-        - '&7返回至{back}'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -495,8 +491,7 @@ gui:
         slot: 35
       back:
         name: '&c返回'
-        lore:
-        - '&7回到{back}&7.'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -529,8 +524,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7回到{back}&7.'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 37
     s:
@@ -620,8 +614,7 @@ gui:
         slot: 34
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -694,8 +687,7 @@ gui:
         slot: 16
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
     a:
@@ -730,8 +722,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
       page_previous:
@@ -818,8 +809,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
@@ -870,8 +860,7 @@ gui:
         slot: 34
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -1265,8 +1254,7 @@ gui:
         slot: 25
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
     l:
@@ -1448,8 +1436,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
       tax_area:
@@ -1563,8 +1550,7 @@ gui:
         slot: 34
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
@@ -1671,9 +1657,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7Go back to'
-        - '&e{back}&7.'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
       last_seen:
@@ -1730,9 +1714,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7Go back to'
-        - '&e{back}&7.'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
       owner:
@@ -1820,8 +1802,7 @@ gui:
         slot: 16
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -1841,12 +1822,11 @@ gui:
         - '&8- &7You can open it again by'
         - '  &7executing &8/&3Lands list&7.'
         material: RED_STAINED_GLASS_PANE
-        slot: 54
+        slot: 46
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 46
       toggle-allowed:
@@ -2028,8 +2008,7 @@ gui:
         slot: 17
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
       close:
@@ -2098,8 +2077,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
@@ -2242,8 +2220,7 @@ gui:
         slot: 19
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
     a:
@@ -2330,8 +2307,7 @@ gui:
         slot: 35
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     p:
@@ -2376,8 +2352,7 @@ gui:
         slot: 25
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -2479,8 +2454,7 @@ gui:
         slot: 33
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
@@ -2514,8 +2488,7 @@ gui:
     f:
       back:
         name: '&c返回'
-        lore:
-        - '&7&7'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
       icon:
@@ -2644,10 +2617,8 @@ gui:
         material: ARROW
         slot: 34
       back:
-        name: '&cBack'
-        lore:
-        - '&7Go back to'
-        - '{back}&7.'
+        name: '&c返回'
+        lore: []
         material: RED_STAINED_GLASS_PANE
         slot: 28
     l:
