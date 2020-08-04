@@ -476,20 +476,15 @@ command:
       spawn (/setworldspawn).'
     searching: '#t#&6Searching Destination{newline}&eWaiting for Teleportation to
       start..'
-    success: '&fYou were random teleported &8(&fX: {x} Z: {z}&8)&f. You paid&c ${cost}&f.'
+    success: '&f随机传送成功，花费：${cost}T'
   deposit:
-    number: '&fYou need to specify an amount of money. Use &8/&3Lands deposit &8<&3amount&8>
-      &for &8/&3Lands deposit &8<&3land&8> <&3amount&8>&f.'
-    success: '&fYou successfully put&3 ${cost} &fin the land bank. &fNew balance of
-      bank:&3 ${bank} &8(&fLand:&2 {land}&8)'
+    number: '&f错误，你需要声明金额，请使用/Lands deposit &8<&3金额&8>'
+    success: '&f成功在{land}的城镇银行存入{cost}T，现在银行余额为{bank}T'
   withdraw:
-    number: '&fYou need to specify an amount of money. Use &8/&3Lands withdraw &8<&3amount&8>
-      &for &8/&3Lands withdraw &8<&3land&8> <&3amount&8>&f.'
-    balance: '&cThere''s not enough money in the land bank. &fThere''s only&3 ${bank}
-      &favailable. Expected:&3 ${take} &8(&fLand:&2 {land}&8)'
-    success: '&fYou successfully took&3 ${cost} &fout of the land bank. &fNew balance
-      of bank:&3 ${bank} &8(&fLand:&2 {land}&8)'
-  balance: '&fThe balance is&3 ${balance} &8(&fLand:&2 {land}&8)&f.'
+    number: '&f错误，你需要声明金额，请使用/Lands withdraw &8<&3金额&8>'
+    balance: '&c{land}的城镇银行余额不足，仅有{bank}T，不足以满足{take}T需求'
+    success: '&f成功在{land}的城镇银行取出{cost}T，现在银行余额为{bank}T'
+  balance: '&f{land}的城镇资金为{balance}T'
   ban:
     area:
       success: '&fSuccessfully banned player&3 {player} &fthe area&6 {area} &fof land&2
