@@ -388,14 +388,13 @@ command:
   unclaim:
     success: '&f成功释放{land}的区块，赎回{back}T'
     selection:
-      empty: '&cYou did not unclaim any chunks, because they are not claimed or you''re
-        not allowed to unclaim any of them.'
+      empty: '&c你未释放任何区块，可能其并未申领亦或是存在不允释放区块'
       connection: '&7You unclaimed {success} / {size} chunks of this selection, &cbut
         {failed} could not be unclaimed because it would result in other chunks being
         disconnected from your land.'
       partly: '&7You successfully unclaimed {success} / {size} chunks of this selection.
         &8Please note that only chunks, which you''re allowed to unclaim, got unclaimed.'
-      success: '&7You successfully unclaimed all chunks of this selection.'
+      success: '&7成功释放所选区块'
     connection: '&cYou can''t unclaim this chunk, because this would cause other chunks
       to be disconnected from your land. &7Chunk X: {x} Z: {z} would be disconnected.'
   delete:
@@ -487,29 +486,21 @@ command:
   balance: '&f{land}的城镇资金为{balance}T'
   ban:
     area:
-      success: '&fSuccessfully banned player&3 {player} &fthe area&6 {area} &fof land&2
-        {land}&f. They won''t be able to enter it or teleport to the spawn, if it
-        is located in this area.'
-      target: '&cLand&4 {land} &cbanned you from their area&4 {area} &cinside their
-        land. &fYou won''t be able to enter it or teleport to the spawn, if it is
-        located in this area.'
+      success: '&f{player}已被逐出{land}的{area}，禁止其再踏入此区域半步'
+      target: '{land}的{area}已将你放逐，你不再允许踏入这个区域半步'
     land:
-      success: '&fSuccessfully banned player&3 {player} &ffrom the whole land&2 {land}&f.
-        They won''t be able to enter any areas or teleport to the spawn.'
-      target: '&cLand&4 {land} &cbanned you from their whole land&c. &fYou won''t
-        be able to enter any areas of it or teleport to the spawn.'
+      success: '&f{player}已被逐出{land}，禁止其再踏入城镇半步'
+      target: '&c{land}已将你放逐，你不再允许踏入城镇半步'
   unban:
     area:
-      success: '&fSuccessfully unbanned player&3 {player} &ffrom this area &8(&fArea:&6
-        {area} &fLand:&2 {land}&8)&f.'
-      target: '&fLand&2 {land} &funbanned you from their area&6 {area}&f.'
+      success: '&f{player}在{land}的{area}中已解除放逐状态'
+      target: '&f{land}的{area}已解除你的放逐状态，现在可以进进出出啦'
     land:
-      success: '&fSuccessfully unbanned player&3 {player} &ffrom the land&2 {land}&f.'
-      target: '&fLand&2 {land} &funbanned you from their land.'
+      success: '&f{player}在{land}中已解除放逐状态'
+      target: '&f{land}已解除你的放逐状态，现在可以进进出出啦'
   chat:
-    activated: '&fActivated land chat. Send a message in public chat to chat with
-      your land.'
-    deactivated: '&fSuccessfully deactivated land chat.'
+    activated: '&f已开启城镇聊天，和成员们畅聊吧'
+    deactivated: '&f已关闭城镇聊天'
     no-land: '&cNo land found for land chat. &fUse &8/&3Lands chat toggle &fto deativate
       lands chat.'
     format:
@@ -521,15 +512,15 @@ command:
     wilderness: '&7Enabled visualization of claims. &7Your current position is wilderness.'
     info: |
       [NoPrefix]
-      &7---------<- &5&lLand View &7->---------
-      [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to get more information about this land.[/H][C]lands info {land}[/C][/T]
-      &7Area:&6 {area}
-        &8Chunk &7X: {x} Z: {z}
-        &8Tax:&c ${tax}
-        &8Players: {players}
-      &7---------<- &5&lLand View &r&7->---------
+      &7---------<- &5&l城镇公示 &7->---------
+      [T]&7城镇:&a {land} &8[&8CLICK&8][H]&7点击以获得城镇详细信息[/H][C]lands info {land}[/C][/T]
+      &7区域:&6{area}
+        &8区块&7X: {x} Z: {z}
+        &8税收:&c{tax}T
+        &8玩家:{players}
+      &7---------<- &5&l城镇公示 &r&7->---------
   taxes:
-    none: '&fThere aren''t any upcoming tax payments for you.'
+    none: '&f你似乎没有将要缴纳的税款'
     upcoming:
       header: '[NoPrefix]&7---------<- &c将要缴纳的税款 &7->---------'
       entry: '[NoPrefix]&8- &7{land}：&c {tax}T'
@@ -550,7 +541,7 @@ command:
         &8更多信息：/Lands taxes
         &7---------<- &4税收变更 &7->---------
   unstuck:
-    success: '&fSuccessfully teleported into the nearest unclaimed location.'
+    success: '&f成功传送至最近的未申领位置'
 list:
   swear-words: []
 wars:
