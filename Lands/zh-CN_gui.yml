@@ -863,101 +863,101 @@ gui:
         slot: 28
     l:
       block_break:
-        name: '&6Break Blocks'
+        name: '&6破坏方块'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7break blocks?'
+        - '&7是否允许当前角色'
+        - '&7在这里破坏方块?'
         material: IRON_PICKAXE
         from: 10
         to: 27
       block_place:
-        name: '&6Place Blocks'
+        name: '&6放置方块'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7place blocks?'
+        - '&7是否允许当前角色'
+        - '&7在这里放置方块?'
         material: OAK_PLANKS
         from: 10
         to: 27
       block_ignite:
-        name: '&6Block Ignite'
+        name: '&6点燃方块'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7ignite blocks?'
+        - '&7是否允许当前角色'
+        - '&7在这里点燃方块?'
         material: FLINT_AND_STEEL
         from: 10
         to: 27
       interact_general:
-        name: '&6General Interaction'
+        name: '&6交互权限'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7interact?'
+        - '&7是否允许当前角色'
+        - '&7在这里使用音符盒什么的...?'
         material: STRING
         from: 10
         to: 27
       interact_door:
-        name: '&6Open Doors'
+        name: '&6开门'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7open doors?'
+        - '&7是否允许当前角色'
+        - '&7打开在这里的门?'
         material: IRON_DOOR
         from: 10
         to: 27
       interact_container:
-        name: '&6Open Containers'
+        name: '&6开箱'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7open containers?'
+        - '&7是否允许当前角色'
+        - '&7打开这里的容器?'
         material: CHEST
         from: 10
         to: 27
       interact_mechanism:
-        name: '&6Use Redstone'
+        name: '&6使用红石'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7use levers etc.?'
+        - '&7是否允许当前角色'
+        - '&7在这里使用红石?'
         material: REDSTONE
         from: 10
         to: 27
       interact_villager:
-        name: '&6Trade with Villagers'
+        name: '&6村民交易'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7trade with villagers?'
+        - '&7是否允许当前角色'
+        - '&7在你的领地与村民进行交易?'
         material: EMERALD
         from: 10
         to: 27
       attack_player:
-        name: '&6Attack Players'
+        name: '&6攻击玩家'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7attack players?'
+        - '&7是否允许当前角色'
+        - '&7攻击玩家?'
         - ' '
         - '&8- Please note that due combat'
         - '  &7logging it might still be possible'
@@ -972,254 +972,210 @@ gui:
         from: 10
         to: 27
       attack_animal:
-        name: '&6Attack Animals'
+        name: '&6攻击动物'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7attack animals?'
+        - '&7允许当前角色攻击动物吗?'
         material: BOW
         from: 10
         to: 27
       vehicle_use:
-        name: '&6Use Vehicles'
+        name: '&6使用交通工具'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7use vehicles?'
+        - '&7允许当前角色使用交通工具吗?'
         material: MINECART
         from: 10
         to: 27
       fly:
-        name: '&6Fly'
+        name: '&6飞行'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7use &8/&3Fly &7here?'
+        - '&7允许当前角色飞行吗?'
         material: FEATHER
         from: 10
         to: 27
       land_enter:
-        name: '&6Enter this Area'
+        name: '&6进入此地'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7enter this area?'
+        - '&7允许当前角色进入这里吗?'
         material: OAK_FENCE_GATE
         from: 10
         to: 27
       area_assign:
-        name: '&6Assign Areas'
+        name: '&6框选区域'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to create areas'
-        - '&7and assign land to it?'
+        - '&7允许当前角色框选区域并规划城镇吗?'
         material: OAK_FENCE
         from: 10
         to: 27
       player_trust:
-        name: '&6Trust Players'
+        name: '&6邀请玩家'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7trust other players?'
+        - '&7允许当前角色直接邀请其他玩家加入吗?'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         from: 10
         to: 27
       player_setRole:
-        name: '&6Set Roles'
+        name: '&6分配角色'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7set roles for players?'
+        - '&7允许当前角色给其他玩家分配角色吗?'
         - ' '
-        - '&8- &7They won''t be able to'
-        - '  &7edit roles, which have a'
-        - '  &7higher priority than theirs.'
+        - '&8- &7他们无法分配等级比他们高的角色.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmFjNmY3NzVlOGFjZmRmNmUxZGVhYzgwYThkYTFmMzdiM2I0YmE1Y2FhNGEzNTI0OWY5ZWIxNDVjY2Y0M2RhNSJ9fX0=
         from: 10
         to: 27
       player_untrust:
-        name: '&6Untrust Players'
+        name: '&6踢出领地'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7untrust players?'
+        - '&7允许当前角色踢出已加入的玩家?'
         - ' '
-        - '&8- &7They won''t be able'
-        - '  &7to untrust players which'
-        - '  &7have a higher role.'
+        - '&8- &7他们无法踢出比自己等级高的角色'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         from: 10
         to: 27
       setting_edit_land:
-        name: '&6Edit Land Settings'
+        name: '&6允许编辑城镇设置'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7edit land settings?'
+        - '&7允许当前角色编辑城镇设置吗?'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         from: 10
         to: 27
       setting_edit_role:
-        name: '&6Edit Role Settings'
+        name: '&6允许编辑角色设置'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7edit role settings'
-        - '&7and create new roles?'
+        - '&7允许当前角色编辑角色设置吗?'
         - ' '
-        - '&8- &7They won''t be'
-        - '  &7able to edit their'
-        - '  &7own role settings.'
+        - '&8- &7他们不可以编辑自己的角色'
         - ' '
-        - '&8- &7You should only give'
-        - '  &7this permission to'
-        - '  &7very trustworthy players.'
+        - '&8- &7你应该把这个权限只给非常信赖的好朋友'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         from: 10
         to: 27
       war_manage:
-        name: '&6Manage War'
+        name: '&6管理战争'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to be able'
-        - '&7to declare and manage the'
-        - '&7war for your land?'
+        - '&7允许当前角色挑起战争?'
         material: IRON_SWORD
         from: 10
         to: 27
       setting_edit_taxes:
-        name: '&6Edit Taxes'
+        name: '&6编辑税收'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7edit taxes?'
+        - '&7允许当前角色编辑税收吗?'
         - ' '
-        - '&8- &7You should only give'
-        - '  &7this permission to'
-        - '  &7very trustworthy players.'
+        - '&8- &7你应该把这个权限只给非常信赖的好朋友'
         material: GOLD_INGOT
         from: 10
         to: 27
       land_claim:
-        name: '&6Claim Land'
+        name: '&6申领区块'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7claim chunks for this land?'
+        - '&7允许当前角色给城镇申领新的区块吗?'
         material: IRON_SHOVEL
         from: 10
         to: 27
       land_claim_border:
-        name: '&6Claim Land at Border'
+        name: '&6在边界申领区块'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7claim chunks for their'
-        - '&7lands directly at your'
-        - '&7border?'
+        - '&7允许当前角色直接在您的'
+        - '&7边界为他们的城镇申领新区块？'
         material: IRON_BARS
         from: 10
         to: 27
       spawn_set:
-        name: '&6Set Landspawn'
+        name: '&6设置传送点'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7edit the spawnpoint of this land?'
+        - '&7允许当前角色编辑传送点吗?'
         material: ENDER_EYE
         from: 10
         to: 27
       spawn_teleport:
-        name: '&6Teleport to Spawn'
+        name: '&6传送'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7teleport to the spawn?'
+        - '&7允许当前角色传送到这里吗?'
         material: ENDER_PEARL
         from: 10
         to: 27
       balance_withdraw:
-        name: '&6Withdraw Money from Land Bank'
+        name: '&6从领地银行取钱'
         lore:
-        - '&7Status: {enabled}'
-        - '&7Unlocked: {unlocked}'
+        - '&7状态: {enabled}'
+        - '&7已解锁: {unlocked}'
         - ' '
-        - '&7Allow this role to'
-        - '&7withdraw money from'
-        - '&7the land bank?'
+        - '&7允许当前角色从领地银行取钱吗?'
         - ' '
-        - '&8- &7Command:'
+        - '&8- &7命令:'
         - '  &8/&3Lands withdraw'
         material: GOLD_NUGGET
         from: 10
         to: 27
     a:
       failure_permission:
-        name: '&4Failure: &cNo Permission'
+        name: '&4错误: &c没有权限'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit this setting.'
-        - ' '
-        - '&8Permission'
-        - '&8{permission}'
+        - '&7你不能编辑这个设置'
       failure_noaccess:
-        name: '&4Failure: &cNot Access'
+        name: '&4c错误: &c拒绝访问'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit these settings.'
+        - '&7你不能编辑这个设置'
         - ' '
-        - '&7The land owner needs to'
-        - '&7allow you to do so.'
-        - '&8Setting: {setting}'
+        - '&7你需要得到领地主人的允许'
+        - '&8相关信息: {setting}'
       failure_priority:
-        name: '&4Failure: &cRole Priority'
+        name: '&4错误: &c角色越权'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit settings of this role.'
-        - '&7It has a higher priority'
-        - '&7than yours.'
-        - ' '
-        - '&8Bypass: {bypass}'
+        - '&7你不能编辑这个角色'
+        - '&7它的优先级比你大.'
       failure_access:
-        name: '&4Failure: &cNot allowed'
+        name: '&4错误: &c拒绝访问'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit roles in this area.'
-        - ' '
-        - '&8Bypass: {bypass}'
+        - '&7你不能在这里编辑这个设置'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -2480,89 +2436,75 @@ gui:
         material: RED_STAINED_GLASS_PANE
         slot: 28
       icon:
-        name: '&8> &6Icon'
+        name: '&8> &6图标'
         lore:
-        - '&7Click here to change'
-        - '&7this role icon.'
+        - '&7单击改变角色图标'
         material: STONE
         slot: 14
       name:
-        name: '&8> &6Rename'
+        name: '&8> &6重命名'
         lore:
-        - '&7Rename this role.'
-        - '&7当前页: {name}'
+        - '&7重命名此角色'
+        - '&7当前名称: {name}'
         material: NAME_TAG
         slot: 15
       apply:
-        name: '&8> &6Add Members to new Areas'
+        name: '&8> &6自动信任到新区域'
         lore:
-        - '&7Should members of this role'
-        - '&7automatically be added to'
-        - '&7new areas with this role?'
+        - '&7是否自动信任此角色到新区域？'
         - ' '
-        - '&7当前页: {apply}'
+        - '&7当前状态: {apply}'
         material: OAK_FENCE
         slot: 24
     s:
       information:
-        name: '&6Information'
+        name: '&6信息'
         lore:
-        - '&7View some information'
-        - '&7about this role.'
+        - '&7查看有关角色的信息'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
       members:
-        name: '&8> &6Role Members'
+        name: '&8> &6角色成员'
         lore:
-        - '&7View all role members.'
+        - '&7查看拥有此角色的程艳'
         material: PLAYER_HEAD
         slot: 13
       management_info:
-        name: '&6Management'
+        name: '&6管理'
         lore:
-        - '&7Here you can edit'
-        - '&7role settings.'
+        - '&7编辑有关角色的设定'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
         slot: 20
       settings:
-        name: '&8> &6Action Settings'
+        name: '&8> &6行为设定'
         lore:
-        - '&7Toggle base action'
-        - '&7flags for this role, like'
-        - '&7block breaking etc.'
+        - '&7允许或禁止有关行为'
+        - '&7例如： 放置方块'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjM2YjgyMWMxYWZkZDVhNWQxNGUzYjNiZDBhMzIyNjNjOGRmNWRmNWRiNmUxZTg4YmY2NWU5N2IyN2E4NTMwIn19fQ==
         slot: 22
       management:
-        name: '&8> &6Management Settings'
+        name: '&8> &6高级设定'
         lore:
-        - '&7Toggle adimistratoral flags'
-        - '&7for this role, like'
-        - '&7trusting players and claiming.'
+        - '&7允许或禁止高级管理行为'
+        - '&7例如： 审批玩家'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZkOTZlYWM1YTcwMTY4NDM3Y2NmZmFlZTBlN2ZjNWFjNWMwMjJmNDI5ZTNlZDkyOWNkNTE4OTRhMmRkNmQ4In19fQ==
         slot: 23
     a:
       no-item:
-        name: '&cNo Item in Hand'
+        name: '&c找不到物品'
         lore:
-        - '&7You need to have an item'
-        - '&7in your main hand.'
+        - '&7请把物品拿在手中'
       failure_access:
-        name: '&4Failure: &cNot allowed'
+        name: '&4c错误: &c拒绝访问'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit roles in this area.'
+        - '&7你不能编辑这个设置'
         - ' '
-        - '&8Bypass: {bypass}'
+        - '&7你需要得到领地主人的允许'
       failure_priority:
-        name: '&4Failure: &cRole Priority'
+        name: '&4错误: &c角色越权'
         lore:
-        - '&7You''re not allowed to'
-        - '&7edit settings of this role.'
-        - '&7It has a higher priority'
-        - '&7than yours or you''re a'
-        - '&7member of this role.'
-        - ' '
-        - '&8Bypass: {bypass}'
+        - '&7你不能编辑这个角色'
+        - '&7它的权利比你大；或者你只是一个成员'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
