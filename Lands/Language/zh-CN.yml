@@ -315,8 +315,8 @@ command:
   help:
     help: '&f请使用/{cmd} help寻求帮助'
     cmd-not-exist: '&c指令不存在 :('
-    header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7单击此处回到到上一页。[/H][C]lands help {previous}[/C][/T] &2城镇帮助 &7页码&3 {page}
-      &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7单击此处前往下一页。[/H][C]lands
+    header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7单击此处回到到上一页。[/H][C]lands help {previous}[/C][/T]
+      &2城镇帮助 &7页码&3 {page} &8/&3 {pages} [T]&7-&6>>>>&7----------[H]&7单击此处前往下一页。[/H][C]lands
       help {next}[/C][/T]'
     footer: |
       [NoPrefix]
