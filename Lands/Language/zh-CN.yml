@@ -308,10 +308,8 @@ command:
       character: '&c不要键入{invalid}这些奇奇怪怪的符号啦，请键入汉字或字母及数字'
       length: '&c啊这，名字太长了，请尽量缩短一下吧，最多{max}个字符哦'
       empty: '&c你键入了一个寂寞……请至少键入一个字符'
-      color: '&cYou''re not allowed to use color codes for this name. &7Please remove
-        any color codes from your input.'
-    number: '&cYour input&4 {input} &cisn''t a number. &7The&3 {argument} &7argument
-      needs to be a number.'
+      color: '&c你不能在名称中使用颜色代码，请移除'
+    number: '&c抱歉，你的键入有误，{argument}需要填上数字'
   help:
     help: '&f请使用/{cmd} help寻求帮助'
     cmd-not-exist: '&c指令不存在 :('
