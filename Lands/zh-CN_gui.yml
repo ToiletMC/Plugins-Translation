@@ -96,7 +96,7 @@ general:
     attackers: '&c攻击者'
     name:
       land: '&2城镇 '
-  all: '&aAll'
+  all: '&a全部'
 physical-Item:
   claim-block:
     name: '&申领区块'
@@ -2309,7 +2309,7 @@ gui:
         from: 19
         to: 27
   area_players:
-    title: '&8{area} &7- &8Trusted Players'
+    title: '&8{area} &7- &8已加入玩家'
     size: 36
     l:
       object_all:
@@ -2327,16 +2327,16 @@ gui:
       object:
         name: '&e{player}'
         lore:
-        - '&7Role: {role}'
+        - '&7当前角色: {role}'
         - ' '
         - '&b单击'
-        - '&7▲ Promote'
+        - '&7▲ 提升角色'
         - ' '
         - '&9右键'
-        - '&7▼ Demote'
+        - '&7▼ 降级角色'
         - ' '
-        - '&7More information:'
-        - '&7Mouse wheel'
+        - '&7查看更多信息:'
+        - '&7鼠标中键'
         material: PLAYER_HEAD
         from: 10
         to: 27
