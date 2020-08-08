@@ -398,7 +398,10 @@ command:
   delete:
     nation: '&c你不能删除这个城镇，因为这是{nation}联盟的首府， 但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations
       setCapital变更首府'
-    confirm: '&c慎行！使用/Land delete {land} confirm确认删除操作'
+    confirm: |
+      &cPlease click below to confirm this action.
+
+        [T]&aConfirm: &8[CLICK][H]&7Click here to confirm the deletion of land {land}.[/H][C]lands delete {land} confirm[/C][/T]
     success: '&f成功删除{land}，赎回{back}T'
     broadcast: '&f{land}已被{player}删除'
   trust:
