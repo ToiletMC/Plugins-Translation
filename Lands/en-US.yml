@@ -16,7 +16,7 @@
 # How does it work:
 # 
 # For example we want to print a message as a title:
-# Set message to: '#t#Title{newline}Subtitle'(Set "#t#" in front of it; use {newline} to set the subtitle)
+# Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
 # 
 # You also send a message at the actionbar:
 # Set message to: '#c#This is a actionbar message.'
