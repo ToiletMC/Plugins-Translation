@@ -1716,6 +1716,16 @@ gui:
         material: OAK_LEAVES
         from: 10
         to: 18
+      plant_growth:
+        name: '&6Plant Growth'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Should plants be able to grow?'
+        material: VINE
+        from: 10
+        to: 18
     a:
       failure_permission:
         name: '&4Failure: &cNo Permission'
