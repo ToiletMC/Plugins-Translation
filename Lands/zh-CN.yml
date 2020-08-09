@@ -135,55 +135,102 @@ general:
     bossbar: 请稍后，马上就好！
 help:
   command:
-    help: '&8/&3Lands help &8[&3页码&8] - &f获取帮助'
-    edit: '&8/&3Lands edit &8<&3城镇&8> &8- &f进入城镇编辑模式'
-    claim: '&8/&3Lands claim &8[&3区域, auto(自动)&8] - &f购买区块'
-    create: '&8/&3Lands create &8<&3名字&8> - &f创造新的城镇'
-    leave: '&8/&3Lands leave &8[&3城镇&8] &8- &f离开区域或城镇'
-    unclaim: '&8/&3Lands unclaim &8- &f释放区块'
-    delete: '&8/&3Lands delete &8<&3城镇&8> &8- &f解散城镇'
-    trust: '&8/&3Lands trust &8<&3玩家&8> [&3区域&8] - &f邀请新成员'
-    untrust: '&8/&3Lands untrust &8[&3区域&8] - &f踢出成员'
-    setRole: '&8/&3Lands setRole &8<&3玩家&8> &8<&3区域&8> <&3角色&8> - &f分配角色'
-    accept: '&8/&3Lands accept &8<&3城镇&8> - &f接受邀请'
-    deny: '&8/&3Lands deny &8<&3城镇&8> - &f拒绝邀请'
-    view: '&8/&3Lands view &8[&3permanent&8] &8- &f有关区块的信息'
-    menu: '&8/&3Lands menu &8[&3here&8] &8- &f城镇 / 区域菜单'
-    setSpawn: '&8/&3Lands setspawn - &f设置传送点'
-    spawn: '&8/&3Lands spawn &8[&3城镇&8] - &f传送到城镇'
-    wild: '&8/&3Lands wild &8[&3世界&8] &8[&3玩家&8] &8- &f传送到随机位置'
-    top: '&8/&3Lands top &8[&3页码&8] &8- &f展示排名前10的城镇'
-    selection: '&8/&3Lands selection &8[&3assign(分配)&8, &3expand(扩展)&8] &8- &f启用区块选择模式'
-    chat: '&8/&3Lands chat &8[&3创造&8] <&3消息&8> &8- &f城镇聊天'
-    rename: '&8/&3Lands rename &8<&3新名字&8> - &f重命名城镇'
-    teleport: '&8/&3Lands teleport &8[&3世界&8] <&3x&8> <&3z&8> - &f传送到区块'
-    invites: '&8/&3Lands invites &8- &f查看收到的邀请'
-    info: '&8/&3Lands info &8[&3城镇&8] - &f查看关于城镇的信息'
-    player: '&8/&3Lands player &8<&3玩家&8> - &f查看有关玩家的信息'
-    map: '&8/&3Lands map &8- &f查看地图'
-    balance: '&8/&3Lands balance &8[&3城镇&8] - &f查看城镇银行存款'
-    deposit: '&8/&3Lands deposit &8[&3城镇&8] <&3金额&8> - &f存钱'
-    withdraw: '&8/&3Lands withdraw &8[&3城镇&8] <&3金额&8> - &f取钱'
-    list: '&8/&3Lands list &8[&3世界&8] - &f列出所有城镇'
-    assign: '&8/&3Lands assign &8<&3区域&8> - &f将选择的区块分配给区域'
-    setowner: '&8/&3Lands setowner &8<&3玩家&8> - &f所有权转让'
-    ban: '&8/&3Lands ban &8<&3城镇&8> [&3区域&8] - &f封锁玩家'
-    unban: '&8/&3Lands unban &8<&3玩家&8> [&3区域&8] - &f解除封锁'
-    taxes: '&8/&3Lands taxes &8- &f显示所有需要缴纳的税款'
+    help: '&8/&3Lands help &8[&3页码&8] - &f获取帮助[H]&7点击复制[/H][SC]lands
+      help[/SC][/T]'
+    edit: '&8/&3Lands edit &8<&3城镇&8> &8- &f进入城镇编辑模式[H]&7The
+      edit land is used for commands like /Lands claim. &7Click to copy.[/H][SC]lands
+      edit[/SC][/T]'
+    claim: '&8/&3Lands claim &8[&3区域, auto(自动)&8] - &f购买区块[H]&7Claim the chunk
+      at your current position. You can also specify a land to which this claim should
+      go to. &7Click to copy.[/H][SC]lands claim[/SC][/T]'
+    create: '&8/&3Lands create &8<&3名字&8> - &f创造新的城镇[H]&7Click to copy.[/H][SC]lands
+      create[/SC][/T]'
+    leave: '&8/&3Lands leave &8[&3城镇&8] &8- &f离开区域或城镇[H]&7If you
+      don''t specify a land, you''ll leave the area at your current position. &7Click
+      to copy.[/H][SC]lands leave[/SC][/T]'
+    unclaim: '&8/&3Lands unclaim &8- &f释放区块[H]&7This also supports /Lands
+      selection. &7Click to copy.[/H][SC]lands unclaim[/SC][/T]'
+    delete: '&8/&3Lands delete &8<&3城镇&8> &8- &f解散城镇[H]&7Click to copy.[/H][SC]lands
+      delete[/SC][/T]'
+    trust: '&8/&3Lands trust &8<&3玩家&8> [&3区域&8] - &f邀请新成员[H]&7Use
+      * as the area name to trust the player to the whole land. &7Click to copy.[/H][SC]lands
+      trust[/SC][/T]'
+    untrust: '&8/&3Lands untrust &8[&3区域&8] - &f踢出成员[H]&7Use * as the
+      area name to untrust the player from the whole land. &7Click to copy.[/H][SC]lands
+      untrust[/SC][/T]'
+    setRole: '&8/&3Lands setRole &8<&3玩家&8> &8<&3区域&8> <&3角色&8> - &f分配角色[H]&7Click to copy.[/H][SC]lands setrole[/SC][/T]'
+    accept: '&8/&3Lands accept &8<&3城镇&8> - &f接受邀请[H]&7You can view
+      all received invites by executing /Lands invites. &7Click to copy.[/H][SC]lands
+      accept[/SC][/T]'
+    deny: '&8/&3Lands deny &8<&3城镇&8> - &f拒绝邀请[H]&7Click to copy.[/H][SC]lands
+      deny[/SC][/T]'
+    view: '&8/&3Lands view &8[&3permanent&8] &8- &f有关区块的信息[H]&7This
+      command will visualize nearby claims too. &7Click to copy.[/H][SC]lands view[/SC][/T]'
+    menu: '&8/&3Lands menu &8[&3here&8] &8- &f城镇 / 区域菜单[H]&7Click to
+      copy.[/H][SC]lands menu[/SC][/T]'
+    setSpawn: '&8/&3Lands setspawn - &f设置传送点[H]&7Click to copy.[/H][SC]lands
+      setspawn[/SC][/T]'
+    spawn: '&8/&3Lands spawn &8[&3城镇&8] - &f传送到城镇[H]&7Click to copy.[/H][SC]lands
+      spawn[/SC][/T]'
+    wild: '&8/&3Lands wild &8[&3世界&8] &8[&3玩家&8] &8- &f传送到随机位置[H]&7Click to copy.[/H][SC]lands wild[/SC][/T]'
+    top: '&8/&3Lands top &8[&3页码&8] &8- &f展示排名前10的城镇[H]&7Click to copy.[/H][SC]lands
+      top[/SC][/T]'
+    selection: '&8/&3Lands selection &8[&3assign(分配)&8, &3expand(扩展)&8] &8- &f启用区块选择模式[H]&7Click to copy.[/H][SC]lands selection[/SC][/T]'
+    chat: '&8/&3Lands chat &8[&3创造&8] <&3消息&8> &8- &f城镇聊天[H]&7Click
+      to copy.[/H][SC]lands chat[/SC][/T]'
+    rename: '&8/&3Lands rename &8<&3新名字&8> - &f重命名城镇[H]&7Click to copy.[/H][SC]lands
+      rename[/SC][/T]'
+    teleport: '&8/&3Lands teleport &8[&3世界&8] <&3x&8> <&3z&8> - &f传送到区块[H]&7Click to copy.[/H][SC]lands teleport[/SC][/T]'
+    invites: '&8/&3Lands invites &8- &f查看收到的邀请[H]&7Click to copy.[/H][SC]lands
+      invites[/SC][/T]'
+    info: '&8/&3Lands info &8[&3城镇&8] - &f查看关于城镇的信息[H]&7Click
+      to copy.[/H][SC]lands info[/SC][/T]'
+    player: '&8/&3Lands player &8<&3玩家&8> - &f查看有关玩家的信息[H]&7Click
+      to copy.[/H][SC]lands player[/SC][/T]'
+    map: '&8/&3Lands map &8- &f查看地图[H]&7Click to copy.[/H][SC]lands map[/SC][/T]'
+    balance: '&8/&3Lands balance &8[&3城镇&8] - &f查看城镇银行存款[H]&7Click to copy.[/H][SC]lands
+      balance[/SC][/T]'
+    deposit: '&8/&3Lands deposit &8[&3城镇&8] <&3金额&8> - &f存钱[H]&7Click
+      to copy.[/H][SC]lands deposit[/SC][/T]'
+    withdraw: '&8/&3Lands withdraw &8[&3城镇&8] <&3金额&8> - &f取钱[H]&7Click
+      to copy.[/H][SC]lands withdraw[/SC][/T]'
+    list: '&8/&3Lands list &8[&3世界&8] - &f列出所有城镇[H]&7Click to copy.[/H][SC]lands
+      list[/SC][/T]'
+    assign: '&8/&3Lands assign &8<&3区域&8> - &f将选择的区块分配给区域[H]&7Click
+      to copy.[/H][SC]lands assign[/SC][/T]'
+    setowner: '&8/&3Lands setowner &8<&3玩家&8> - &f所有权转让[H]&7Click
+      to copy.[/H][SC]lands setowner[/SC][/T]'
+    ban: '&8/&3Lands ban &8<&3城镇&8> [&3区域&8] - &f封锁玩家[H]&7Click to
+      copy.[/H][SC]lands ban[/SC][/T]'
+    unban: '&8/&3Lands unban &8<&3玩家&8> [&3区域&8] - &f解除封锁[H]&7Click
+      to copy.[/H][SC]lands unban[/SC][/T]'
+    taxes: '&8/&3Lands taxes &8- &f显示所有需要缴纳的税款[H]&7Click to copy.[/H][SC]lands
+      taxes[/SC][/T]'
     wars:
-      declare: '&8/&3Wars declare &8<&3land or nation&8> - &f宣战'
-      info: '&8/&3Wars info - &f查看当前或即将到来的战争'
-      menu: '&8/&3Wars menu &8- &f打开战争菜单'
-      deny: '&8/&3Wars deny &8- &f拒绝宣战邀请'
+      declare: '&8/&3Wars declare &8<&3land or nation&8> - &f宣战[H]&7Click
+        to copy.[/H][SC]lands unstuck[/SC][/T]'
+      info: '&8/&3Wars info - &f查看当前或即将到来的战争[H]&7Click to copy.[/H][SC]lands
+        unstuck[/SC][/T]'
+      menu: '&8/&3Wars menu &8- &f打开战争菜单[H]&7Click to copy.[/H][SC]lands
+        unstuck[/SC][/T]'
+      deny: '&8/&3Wars deny &8- &f拒绝宣战邀请[H]&7Click to copy.[/H][SC]lands
+        unstuck[/SC][/T]'
     admin:
-      admin: '&8/&3Lands admin &8<&3子命令&8> &8- &f管理员命令'
-      debug: '&8/&3Lands debug &8- &f显示加载的数据统计'
-      safezone: '&8/&3Lands safezone &8- &f配置安全区？'
-      reload: '&8/&3Lands reload &8- &f重载配置文件'
-      about: '&8/&3Lands about &8- &f显示有关插件的更多信息'
-    unstuck: '&8/&3Lands unstuck &8- &fTeleport out of traps'
+      admin: '&8/&3Lands admin &8<&3子命令&8> &8- &f管理员命令[H]&7Click
+        to copy.[/H][SC]lands admin[/SC][/T]'
+      debug: '&8/&3Lands debug &8- &f显示加载的数据统计[H]&7Click to copy.[/H][SC]lands
+        debug[/SC][/T]'
+      safezone: '&8/&3Lands safezone &8- &f配置安全区？[H]&7Click to copy.[/H][SC]lands
+        safezone[/SC][/T]'
+      reload: '&8/&3Lands reload &8- &f重载配置文件[H]&7Click to copy.[/H][SC]lands
+        reload[/SC][/T]'
+      about: '&8/&3Lands about &8- &f显示有关插件的更多信息[H]&7Click to
+        copy.[/H][SC]lands about[/SC][/T]'
+    unstuck: '&8/&3Lands unstuck &8- &fTeleport out of traps[H]&7In case you got
+      stuck in a land. &7Click to copy.[/H][SC]lands unstuck[/SC][/T]'
     mod:
-      chatspy: '&8/&3Lands chatspy &8[&aland&8] - &fListen to land chat'
+      chatspy: '&8/&3Lands chatspy &8[&aland&8] - &fListen to land chat[H]&7Click
+        to copy.[/H][SC]lands chatspy[/SC][/T]'
     claims: '[T]&8/&3Lands claims &8[&3land&8] &8- &7List claims of your land[H]&7This
       command will show you all /Lands claim''s of your land. &7Click to copy.[/H][SC]lands
       claims[/SC][/T]'
@@ -353,9 +400,9 @@ command:
     complete: |
       &7框选完成，接下来你可以这样做：
         &8┏
-        &8┃ &7申领: /Lands claim
-        &8┃ &7释放: /Lands unclaim
-        &8┃ &7分配给区域: /Lands assign
+        &8┃ &7申领: [T]&8/&3Lands claim &8[&8CLICK&8][H]&7Click here to claim this selection.[/H][C]lands claim[/C][/T]
+        &8┃ &7释放: [T]&8/&3Lands unclaim &8[&8CLICK&8][H]&7Click here to unclaim this selection.[/H][C]lands unclaim[/C][/T]
+        &8┃ &7分配给区域: [T]&8/&3Lands assign[H]&7Assign this selection to a sub area.[/H][SC]lands assign <area>[/SC][/T]
         &8┗
   claim:
     already: '&c你不能申领这个区块，这里已经是{land}的领土了'
@@ -412,12 +459,20 @@ command:
     area:
       invited: '&c{player}已经被{land}的{area}邀请过了，邀请已在{time}前发出'
       trusted: '&f{player}已经是{land}的{area}一员了'
-      target: '&f{player}邀请你加入{land}的{area}，使用/Lands invites以检视邀约'
+      target: |
+        [T]&7Player&3 {player} &7invited you to join the area&6 {area} &7of their land&2 {land}&7.[H]&7Click to open your invites menu.[/H][C]lands invites[/C][/T] &7Taxes:&c ${tax}
+
+          [T]&2Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]lands accept {land}[/C][/T]
+          [T]&cDeny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]lands deny {land}[/C][/T]
       success: '&f成功向{player}发出{land}的{area}邀请，请等待回应'
     land:
       invited: '&c{player}已经被{land}邀请过了，邀请已在{time}前发出'
       trusted: '&f{player}已经是{land}的一员了'
-      target: '&f{player}邀请你加入{land}，使用/Lands invites以检视邀约'
+      target: |
+        [T]&7Player&3 {player} &7invited you to join their land&2 {land}&7.[H]&7Click to open your invites menu.[/H][C]lands invites[/C][/T] &7Taxes:&c ${tax}
+
+          [T]&2Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]lands accept {land}[/C][/T]
+          [T]&cDeny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]lands deny {land}[/C][/T]
       success: '&f成功向{player}发出{land}的邀请，请等待回应'
   untrust:
     area:
@@ -514,7 +569,7 @@ command:
     info: |
       [NoPrefix]
       &7---------<- &5&l城镇公示 &7->---------
-      [T]&7城镇:&a {land} &8[&8CLICK&8][H]&7点击以获得城镇详细信息[/H][C]lands info {land}[/C][/T]
+      [T]&7城镇:&a {land} &8[&8点击&8][H]&7点击以获得城镇详细信息[/H][C]lands info {land}[/C][/T]
       &7区域:&6{area}
         &8区块&7X: {x} Z: {z}
         &8税收:&c{tax}T
@@ -616,8 +671,12 @@ wars:
       mutual:
         success: '&fYou &8({attacker}&8) &fsuccessfully sent a war declaration to
           {defender}&f. They need to accept it now.'
-        target: '&fThe enemy {attacker} &fsent a war declaration against {defender}&f.
-          Use &8/&3Wars declare {input} &fto accept it.'
+        target: |
+          &7The enemy {attacker} &7sent a war declaration against {defender} &8(&7YOU&8)&7.
+          &7If the defenders surrender during war, they will need to pay&c ${tribute} &7to the attackers.
+
+          [T]&7Accept: &8/&3Wars declare {input} &8[&8CLICK&8][H]&7Click here to accept the war declaration.[/H][C]Wars declare {input}[/C][/T]
+          [T]&7Deny: &8/&3Wars deny &8[&8CLICK&8][H]&7Click here to deny the war declaration.[/H][C]Wars deny[/C][/T]
       already:
         attacker: '&c分身乏术！需要先结束{object}之战先'
         defender: '&cYou currently can''t declare war against them. &fThe target {object}
