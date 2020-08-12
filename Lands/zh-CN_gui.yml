@@ -425,16 +425,6 @@ gui:
         material: ACACIA_FENCE
         from: 10
         to: 27
-      no-area:
-        name: '&c没有任何区域'
-        lore:
-        - '&7该城镇还没有区域'
-        - ' '
-        - '&8- &7创建一个新的区域'
-        - '  &7点击下面的新建区域.'
-        material: ACACIA_FENCE
-        from: 10
-        to: 27
     a:
       failure_untrusted:
         name: '&4被拒绝: &c未被信任'
@@ -761,11 +751,6 @@ gui:
         - '&7amount of&3 {max} &7roles.'
         - ' '
         - '&8Permission: chestprotect.roles.NUMBER'
-      failure_default:
-        name: '&4Failure: &cDefault Role'
-        lore:
-        - '&7You can''t change the priority'
-        - '&7of the default role&3 {role}&7.'
       failure_priority:
         name: '&4Failure: &cRole Priority'
         lore:
@@ -1160,13 +1145,6 @@ gui:
         name: '&4错误: &c没有权限'
         lore:
         - '&7你不能编辑这个设置'
-      failure_noaccess:
-        name: '&4c错误: &c拒绝访问'
-        lore:
-        - '&7你不能编辑这个设置'
-        - ' '
-        - '&7你需要得到领地主人的允许'
-        - '&8相关信息: {setting}'
       failure_priority:
         name: '&4错误: &c角色越权'
         lore:
@@ -1308,16 +1286,21 @@ gui:
         material: OAK_LEAVES
         from: 10
         to: 18
+      plant_growth:
+        name: '&6Plant Growth'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Should plants be able to grow?'
+        material: VINE
+        from: 10
+        to: 18
     a:
       failure_permission:
         name: '&4失败: &c权限不足'
         lore:
         - '&7你不能编辑此设定'
-      failure_noaccess:
-        name: '&4失败: &c禁止访问'
-        lore:
-        - '&7请让城镇的管理员允许你这么做'
-        - '&8设定: {setting}'
       failure_priority:
         name: '&4失败: &c优先级'
         lore:
@@ -2069,13 +2052,6 @@ gui:
     title: '&8Tribute'
     size: 27
     s:
-      close:
-        name: '&cClose'
-        lore:
-        - ' '
-        - '&8- &7再次开启使用： &8/&3Wars menu&7'
-        material: RED_STAINED_GLASS_PANE
-        slot: 19
       plus-1:
         name: '&aAdd $1'
         lore:
