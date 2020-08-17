@@ -1,31 +1,31 @@
 T: ZH
 VER: 1.1
-prefix: '&8[&e邮件&8]&r'
+prefix: '&e邮件 &7>'
 mail-types:
   message: 讯息
   item: 物品
   sound: 声音
   location: 位置
 postoffice:
-  add: '@prefix &e已添加了邮局'
-  removed: '@prefix &e已删除了邮局'
-  cleared: '@prefix &e已删除所有邮局'
-  no-po-here: '@prefix &e这里没有邮局'
-  bad-material: '@prefix &e不能使用 minecraft:air 作为物品'
+  add: '@prefix &7已添加了邮局'
+  removed: '@prefix &7已删除了邮局'
+  cleared: '@prefix &7已删除所有邮局'
+  no-po-here: '@prefix &7这里没有邮局'
+  bad-material: '@prefix &7不能使用 minecraft:air 作为物品'
 postoffice-help:
   - '&8[&eMailMe&8]'
   - '&8- &e/postoffice add <send/read> &7- 在眼前位置添加邮局'
   - '&8- &e/postoffice remove &7- 在眼前位置删除邮局'
   - '&8- &e/postoffice removeall &7- 删除所有邮局'
 cmd:
-  lang-change: '@prefix &e语言已更新!'
-  notify-change: '@prefix &e通知设置已更新!'
-  mail-unread: '@prefix &e您有未读邮件!'
-  invalid-preset-key: '@prefix &e预设键无效! 检查您的config.yml是否为有效值'
-  vault-insufficient-funds: '@prefix &e不充足的资金!'
-  unknown-player: '@prefix &e未知的玩家或玩家从未进入过服务器!'
+  lang-change: '@prefix &7语言已更新!'
+  notify-change: '@prefix &7通知设置已更新!'
+  mail-unread: '@prefix &7您有未读邮件!'
+  invalid-preset-key: '@prefix &7预设键无效! 检查您的config.yml是否为有效值'
+  vault-insufficient-funds: '@prefix &7不充足的资金!'
+  unknown-player: '@prefix &7未知的玩家或玩家从未进入过服务器!'
 vault: '@prefix &f已扣减金钱 @amount'
-hologram-format: '&e&l@name&e Mailbox'
+hologram-format: '&e@name &e的邮箱'
 text:
   format:
     - '&8<    &e邮件    &8>'
@@ -38,10 +38,10 @@ text:
   next-page: '&e下一页 >>>'
   next-page-hover: '&c点击前往下一页!'
 notify:
-  received: '@prefix &e您收到了一些由 %s 发出的邮件'
-  sent: '@prefix &e您发出邮件至 %s'
+  received: '@prefix &7您收到了一些由 %s 发出的邮件'
+  sent: '@prefix &7您发出邮件至 %s'
   sent-multiple: 多个收件人
-  could-not-send: '@prefix &c警告! &e无法将邮件发送到%s. 您最近已发送邮件. 请稍后再试.'
+  could-not-send: '@prefix &c警告! &7无法将邮件发送到%s. 您最近已发送邮件. 请稍后再试.'
 mail:
   message: '@prefix 您想说些什么?'
   sound-input: '@prefix 您想播放什么声音? 在这里找到有效的声音: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
@@ -56,17 +56,17 @@ mailbox:
   could-not-find-remove: '@prefix 眼前没有合适的邮箱'
 help:
   - '&8[&eMailMe&8]'
-  - '&e/mailme lang <language> &7更改语言'
-  - '&e/mailme notify <true/false> &7切换通知设置'
-  - '&e/mailme read &7阅读您的邮件'
-  - '&e/mailme send &7发送邮件'
-  - '&e/mailme text &7以文字形式阅读邮件'
-  - '&e/mailme mailbox <set/remove>'
-  - '&e/mailme defaultMB &7设置默认邮箱!'
-  - '&e/mailme admin send <all/playername> [Preset-ID] &7发送默认邮件.'
-  - '&e/mailme admin preset <id-to-set> &7设置管理员发送的预设'
+  - '&7/mailme lang <language> &7更改语言'
+  - '&7/mailme notify <true/false> &7切换通知设置'
+  - '&7/mailme read &7阅读您的邮件'
+  - '&7/mailme send &7发送邮件'
+  - '&7/mailme text &7以文字形式阅读邮件'
+  - '&7/mailme mailbox <set/remove>'
+  - '&7/mailme defaultMB &7设置默认邮箱!'
+  - '&7/mailme admin send <all/playername> [Preset-ID] &7发送默认邮件.'
+  - '&7/mailme admin preset <id-to-set> &7设置管理员发送的预设'
 gui:
-  choose-type-title: MailMe
+  choose-type-title: 选择邮件类型
   read-title: 阅读邮件
   choose-player-title: 选择收件人
   item-input-title: 输入要发送的物品
