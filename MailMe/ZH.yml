@@ -22,7 +22,7 @@ cmd:
   notify-change: '@prefix &7通知设置已更新!'
   mail-unread: '@prefix &7您有未读邮件!'
   invalid-preset-key: '@prefix &7预设键无效! 检查您的config.yml是否为有效值'
-  vault-insufficient-funds: '@prefix &7不充足的资金!'
+  vault-insufficient-funds: '@prefix &7资金不足!'
   unknown-player: '@prefix &7未知的玩家或玩家从未进入过服务器!'
 vault: '@prefix &f已扣减金钱 @amount'
 hologram-format: '&e@name &e的邮箱'
@@ -38,10 +38,10 @@ text:
   next-page: '&e下一页 >>>'
   next-page-hover: '&c点击前往下一页!'
 notify:
-  received: '@prefix &7您收到了一些由 %s 发出的邮件'
+  received: '@prefix &7您收到了一封由 %s 发出的邮件'
   sent: '@prefix &7您发出邮件至 %s'
   sent-multiple: 多个收件人
-  could-not-send: '@prefix &c警告! &7无法将邮件发送到%s. 您最近已发送邮件. 请稍后再试.'
+  could-not-send: '@prefix &c警告! &7无法将邮件发送到%s. 您最近已发送邮件，请稍后再试。'
 mail:
   message: '@prefix 您想说些什么?'
   sound-input: '@prefix 您想播放什么声音? 在这里找到有效的声音: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
