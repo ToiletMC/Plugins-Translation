@@ -1,0 +1,261 @@
+T: ZH
+VER: 1.1
+prefix: '&8[&e邮件&8]&r'
+mail-types:
+  message: 讯息
+  item: 物品
+  sound: 声音
+  location: 位置
+postoffice:
+  add: '@prefix &e已添加了邮局'
+  removed: '@prefix &e已删除了邮局'
+  cleared: '@prefix &e已删除所有邮局'
+  no-po-here: '@prefix &e这裡没有邮局'
+  bad-material: '@prefix &e不能使用 minecraft:air 作为物品'
+postoffice-help:
+- '&8[&eMailMe&8]'
+- '&8- &e/postoffice add <send/read> &7- 在眼前位置添加邮局'
+- '&8- &e/postoffice remove &7- 在眼前位置删除邮局'
+- '&8- &e/postoffice removeall &7- 删除所有邮局'
+cmd:
+  lang-change: '@prefix &e语言已更新!'
+  notify-change: '@prefix &e通知设置已更新!'
+  mail-unread: '@prefix &e您有未读邮件!'
+  invalid-preset-key: '@prefix &e预设键无效! 检查您的config.yml是否为有效值'
+  vault-insufficient-funds: '@prefix &e不充足的资金!'
+  unknown-player: '@prefix &e未知的玩家或玩家从未进入过伺服!'
+vault: '@prefix &f已扣减金钱 @amount'
+hologram-format: '&e&l@name&e Mailbox'
+text:
+  format:
+  - '&8<    &e邮件    &8>'
+  - '&7发件人: &b%sender%'
+  - '&7收件时间: &b%time%'
+  - '&7内容: %contents%'
+  hover: '&c点击回覆!'
+  prev-page: '&e<<< 上一页'
+  prev-page-hover: '&c点击返回上一页!'
+  next-page: '&e下一页 >>>'
+  next-page-hover: '&c点击前往下一页!'
+notify:
+  received: '@prefix &e您收到了一些由 %s 发出的邮件'
+  sent: '@prefix &e您发出邮件至 %s'
+  sent-multiple: 多个收件人
+  could-not-send: '@prefix &c警告! &e无法将邮件发送到%s. 您最近已发送邮件. 请稍后再试.'
+mail:
+  message: '@prefix 您想说些什麽?'
+  sound-input: '@prefix 您想播放什麽声音? 在这裡找到有效的声音: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
+  no-space: '@prefix 你已没有空间了!'
+  unknown: 未知
+  anonymous: 匿名
+  server: 伺服器
+mailbox:
+  not-chest: '@prefix 您的邮箱不能是这个物品!'
+  mailbox-set: '@prefix 您的邮箱已设置!'
+  mailbox-removed: '@prefix 您的邮箱已被删除!'
+  could-not-find-remove: '@prefix 眼前没有合适的邮箱'
+help:
+- '&8[&eMailMe&8]'
+- '&e/mailme lang <language> &7更改语言'
+- '&e/mailme notify <true/false> &7切换通知设置'
+- '&e/mailme read &7阅读您的邮件'
+- '&e/mailme send &7发送邮件'
+- '&e/mailme text &7以文字形式阅读邮件'
+- '&e/mailme mailbox <set/remove>'
+- '&e/mailme defaultMB &7设置默认邮箱!'
+- '&e/mailme admin send <all/playername> [Preset-ID] &7发送默认邮件.'
+- '&e/mailme admin preset <id-to-set> &7设置管理员发送的预设'
+gui:
+  choose-type-title: MailMe
+  read-title: 阅读邮件
+  choose-player-title: 选择收件人
+  item-input-title: 输入要发送的物品
+  choose-icon-title: 选择图标
+  search: 输入您要查找的玩家名称
+  filler:
+    title: ''
+    material: BLACK_STAINED_GLASS_PANE
+    amount: 1
+    custom-model-data: 0
+    glow: false
+    lore:
+    - ''
+  send:
+    title: '&b发送邮件'
+    material: FEATHER
+    amount: 1
+    glow: true
+    lore:
+    - '&7点击这个'
+    - '&7将打开邮件製作选单'
+    custom-model-data: 0
+  mail:
+    title: '&7来自: &b@sender'
+    lore:
+    - ''
+    - '&7收件时间: &b@time'
+    - '&7邮件类型: &b@type'
+    - '&7阅读: &b@read'
+    - ''
+    - '&b专家提示: &7点击接收邮件!'
+  back-button:
+    title: '&8[&e上一页&8]'
+    material: REDSTONE_TORCH
+    amount: 1
+    lore:
+    - '&7点击进入'
+    - '&7上一页!'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  forward-button:
+    title: '&8[&e下一页&8]'
+    material: REDSTONE_TORCH
+    amount: 1
+    lore:
+    - '&7点击进入'
+    - '&7下一页!'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  exit-button:
+    title: '&8[&e退出页面&8]'
+    material: BARRIER
+    amount: 1
+    lore:
+    - '&7点击关闭'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  search-button:
+    title: '&8[&e搜寻&8]'
+    material: BOOK
+    amount: 1
+    lore:
+    - '&7点击搜寻玩家!'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  no-results:
+    title: '&c甚麽都没有 :('
+    material: GLASS_BOTTLE
+    amount: 1
+    lore:
+    - '&7尝试使用其他条件进行搜索'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  choose:
+    send-anonymously:
+      title: '&a匿名发送'
+      material: EMERALD
+      amount: 1
+      lore:
+      - '&7点击这个'
+      - '&7匿名发送邮件!'
+      custom-model-data: 0
+    message:
+      title: '&8[&e留言邮件&8]'
+      material: PAPER
+      amount: 1
+      lore:
+      - '&7点击这个'
+      - '&7发送留言邮件!'
+      glow: true
+      skull-texture: ''
+      custom-model-data: 0
+    item:
+      title: '&8[&e物品邮件&8]'
+      material: PAPER
+      amount: 1
+      lore:
+      - '&7点击这个'
+      - '&7发送物品邮件!'
+      glow: true
+      skull-texture: ''
+      custom-model-data: 0
+    sound:
+      title: '&8[&e声音邮件&8]'
+      material: PAPER
+      amount: 1
+      lore:
+      - '&7点击这个'
+      - '&7发送声音邮件!'
+      glow: true
+      skull-texture: ''
+      custom-model-data: 0
+    location:
+      title: '&8[&e位置邮件&8]'
+      material: PAPER
+      amount: 1
+      lore:
+      - '&7点击这个'
+      - '&7发送位置邮件!'
+      glow: true
+      skull-texture: ''
+      custom-model-data: 0
+  icon-custom:
+    title: '&8[&c自製&8]'
+    material: YELLOW_STAINED_GLASS_PANE
+    amount: 1
+    lore:
+    - '&7点击背包中的物品来'
+    - '&7设定图标(物品不会消失)'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  remove-filter:
+    title: '&8[&d取消过滤器&8]'
+    material: IRON_BARS
+    amount: 1
+    lore:
+    - '&7点击取消过滤器!'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  loading:
+    title: '&c载入中...'
+    material: SKELETON_SKULL
+    amount: 1
+    lore:
+    - ''
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  continue:
+    title: '&8[&e继续 >&8]'
+    material: EMERALD_BLOCK
+    amount: 1
+    lore:
+    - '&7点击这个'
+    - '&7前往下一页!'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  text-button:
+    title: '&8[&e阅读文字&8]'
+    material: MAP
+    amount: 1
+    lore:
+    - '&7点击这个'
+    - '&7为邮件转为文字形式'
+    glow: true
+    skull-texture: ''
+    custom-model-data: 0
+  read-mail:
+    title: '&e邮件'
+    lore:
+    - '&7点击这个'
+    - '&7接收邮件'
+  are-you-sure:
+    title: '&a确定?'
+    material: EMERALD_BLOCK
+    amount: 1
+    glow: true
+    lore:
+    - '&7右键多一次'
+    - '&7删除此邮件'
+    - ''
+    - '&7左键取消'
+    - '&7删除此邮件'
+    custom-model-data: 0
