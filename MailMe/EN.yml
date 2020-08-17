@@ -1,0 +1,272 @@
+T: EN
+VER: 1.1
+prefix: '&8[&eMailMe&8]&r'
+mail-types:
+  message: Message
+  item: Items
+  sound: Sound
+  location: Location
+postoffice-help:
+- '&8[&eMailMe&8]'
+- '&8- &e/postoffice add <send/read> &7- Adds a postoffice at location you''re looking
+  at. Specify type > Read / Send'
+- '&8- &e/postoffice remove &7- Removes postoffice at location you''re looking at'
+- '&8- &e/postoffice removeall &7- Removes all postoffices'
+postoffice:
+  add: '@prefix &ePost office added at location!'
+  removed: '@prefix &ePost office removed at location!'
+  cleared: '@prefix &eAll post offices removed!'
+  no-po-here: '@prefix &eThere is no post office at this location!'
+  bad-material: '@prefix &eMaterial cannot be AIR!'
+cmd:
+  lang-change: '@prefix &eLanguage changed!'
+  notify-change: '@prefix &eNotification Settings updated!'
+  mail-unread: '@prefix &eYou have unread mail!'
+  invalid-preset-key: '@prefix &eInvalid preset key! Check your config.yml for valid
+    values'
+  vault-insufficient-funds: '@prefix &eInsufficient funds!'
+  unknown-player: '@prefix &eUnknown player or player hasn''t joined before!'
+vault: '@prefix &6@amount &ewas removed from your balance!'
+hologram-format: '&e&l@name&e Mailbox'
+text:
+  format:
+  - '&8<    &eMail    &8>'
+  - '&7Mail From: &b%sender%'
+  - '&7Received at: &b%time%'
+  - '&7Contents: %contents%'
+  hover: '&cClick to Reply!'
+  prev-page: '&e<<< Previous Page'
+  prev-page-hover: '&cClick for the previous page!'
+  next-page: '&eNext Page >>>'
+  next-page-hover: '&cClick for the next page!'
+notify:
+  received: '@prefix &eYou received some mail from %s'
+  sent: '@prefix &eYou sent some mail to %s'
+  sent-multiple: Multiple Recipients
+  could-not-send: '@prefix &cWarning! &eCould not send mail to %s. You have recently
+    sent mail. Please try again later.'
+mail:
+  message: '@prefix What would you like the message to say?'
+  sound-input: '@prefix What sound would you like to play? Find valid sounds here:
+    https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
+  no-space: '@prefix You have no space in your inventory to claim this!'
+  unknown: Unknown
+  anonymous: Anonymous
+  server: Server
+mailbox:
+  not-chest: '@prefix Your mailbox cannot be this item!'
+  mailbox-set: '@prefix Your mailbox has been set!'
+  mailbox-removed: '@prefix Mailbox has been removed!'
+  could-not-find-remove: '@prefix There is no mailbox matching the position you''re
+    looking at.'
+help:
+- '&8[&eMailMe&8]'
+- '&e/mailme lang <language> &7Switches Language'
+- '&e/mailme notify <true/false> &7Switches notification settings'
+- '&e/mailme read &7Read your mail'
+- '&e/mailme send &7Send your mail'
+- '&e/mailme text &7Read mail as text'
+- '&e/mailme mailbox <set/remove>'
+- '&e/mailme defaultMB &7Sets default mailbox!'
+- '&e/mailme admin send <all/playername> [Preset-ID] &7Send a default mail.'
+- '&e/mailme admin preset <id-to-set> &7Sets a preset for admin sending'
+gui:
+  choose-type-title: MailMe
+  read-title: Read Mail
+  choose-player-title: Choose Recipients
+  item-input-title: Input Items to send
+  choose-icon-title: Choose Icon
+  filler:
+    title: ''
+    material: BLACK_STAINED_GLASS_PANE
+    amount: 1
+    custom-model-data: 0
+    glow: false
+    lore:
+    - ''
+  search: Write the name of the player you'd like to find
+  send:
+    title: '&bSend Mail'
+    material: FEATHER
+    amount: 1
+    custom-model-data: 0
+    glow: true
+    lore:
+    - '&7Clicking this'
+    - '&7will open up the mail builder'
+    - '&7menu!'
+  mail:
+    title: '&7From: &b@sender'
+    lore:
+    - ''
+    - '&7Received at: &b@time'
+    - '&7Mail Type: &b@type'
+    - '&7Read: &b@read'
+    - ''
+    - '&bPro Tip: &7Click to receive mail!'
+  back-button:
+    title: '&8[&ePrevious Page&8]'
+    material: REDSTONE_TORCH
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to go to'
+    - '&7the previous page!'
+    glow: true
+    skull-texture: ''
+  forward-button:
+    title: '&8[&eNext Page&8]'
+    material: REDSTONE_TORCH
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to go to'
+    - '&7the next page!'
+    glow: true
+    skull-texture: ''
+  exit-button:
+    title: '&8[&eExit Page&8]'
+    material: BARRIER
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to close'
+    - '&7the gui!'
+    glow: true
+    skull-texture: ''
+  search-button:
+    title: '&8[&eSearch&8]'
+    material: BOOK
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to search by'
+    - '&7player name!'
+    glow: true
+    skull-texture: ''
+  no-results:
+    title: '&cNo Results :('
+    material: GLASS_BOTTLE
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Try searching with a'
+    - '&7different criteria'
+    glow: true
+    skull-texture: ''
+  choose:
+    send-anonymously:
+      title: '&aSend anonymously'
+      material: EMERALD
+      amount: 1
+      custom-model-data: 0
+      lore:
+      - '&7Click this to'
+      - '&7send your mail without any'
+      - '&7trace of who sent it!'
+    message:
+      title: '&8[&eMessage Mail&8]'
+      material: PAPER
+      amount: 1
+      custom-model-data: 0
+      lore:
+      - '&7Click to send someone'
+      - '&7a message mail!'
+      glow: true
+      skull-texture: ''
+    item:
+      title: '&8[&eItem Mail&8]'
+      material: PAPER
+      amount: 1
+      custom-model-data: 0
+      lore:
+      - '&7Click to send someone'
+      - '&7an item mail!'
+      glow: true
+      skull-texture: ''
+    sound:
+      title: '&8[&eSound Mail&8]'
+      material: PAPER
+      amount: 1
+      custom-model-data: 0
+      lore:
+      - '&7Click to send someone'
+      - '&7a sound mail!'
+      glow: true
+      skull-texture: ''
+    location:
+      title: '&8[&eLocation Mail&8]'
+      material: PAPER
+      amount: 1
+      custom-model-data: 0
+      lore:
+      - '&7Click to send someone'
+      - '&7a location mail!'
+      glow: true
+      skull-texture: ''
+  icon-custom:
+    title: '&8[&cCustom&8]'
+    material: YELLOW_STAINED_GLASS_PANE
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click with item to have as icon'
+    - '&7You won''t lose this item.'
+    glow: true
+    skull-texture: ''
+  remove-filter:
+    title: '&8[&dRemove Filter&8]'
+    material: IRON_BARS
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to remove any filters'
+    - '&7on the menu!'
+    glow: true
+    skull-texture: ''
+  loading:
+    title: '&cLoading...'
+    material: SKELETON_SKULL
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - ''
+    glow: true
+    skull-texture: ''
+  continue:
+    title: '&8[&eContinue >&8]'
+    material: EMERALD_BLOCK
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to continue to'
+    - '&7The next page!'
+    glow: true
+    skull-texture: ''
+  text-button:
+    title: '&8[&eRead as Text&8]'
+    material: MAP
+    amount: 1
+    custom-model-data: 0
+    lore:
+    - '&7Click to'
+    - '&7read your mail as text'
+    glow: true
+    skull-texture: ''
+  read-mail:
+    title: '&eMail'
+    lore:
+    - '&7Click to'
+    - '&7receive the mail'
+  are-you-sure:
+    title: '&aAre you sure?'
+    material: EMERALD_BLOCK
+    amount: 1
+    custom-model-data: 0
+    glow: true
+    lore:
+    - '&7Right clicking again will'
+    - '&7Delete this mail'
+    - ''
+    - '&7Alternatively, left click this to'
+    - '&7Cancel the operation'
