@@ -97,7 +97,7 @@ gui:
       - '&7邮件类型: &b@type'
       - '&7阅读: &b@read'
       - ''
-      - '&b专家提示: &7点击接收邮件!'
+      - '&b温馨提示: &7点击接收邮件!'
   back-button:
     title: '&8[&e上一页&8]'
     material: REDSTONE_TORCH
@@ -137,7 +137,7 @@ gui:
     skull-texture: ''
     custom-model-data: 0
   no-results:
-    title: '&c甚么都没有 :('
+    title: '&c空空如也 :('
     material: GLASS_BOTTLE
     amount: 1
     lore:
@@ -253,7 +253,7 @@ gui:
     amount: 1
     glow: true
     lore:
-      - '&7右键多一次'
+      - '&7再次右键'
       - '&7删除此邮件'
       - ''
       - '&7左键取消'
