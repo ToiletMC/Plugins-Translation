@@ -320,7 +320,7 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJmM2ZjZGNjZmZkOTYzZTQzMzQ4MTgxMDhlMWU5YWUzYTgwNTY2ZDBkM2QyZDRhYjMwNTFhMmNkODExMzQ4YyJ9fX0=
         slot: 16
       stats:
-        name: '&8> &6Statistics'
+        name: '&8> &6统计信息'
         lore:
         - '&7区块数量: {0} / {1} &7+ 0 &8(&7联盟&8)'
         - '&7成员数量: {2} / {3}'
@@ -407,9 +407,8 @@ gui:
       object_default:
         name: '&6{area}'
         lore:
-        - '&7This is the default area.'
-        - '&7All new claims will be'
-        - '&7assigned to this area.'
+        - '&7这是城镇的默认区域，'
+        - '&7申领区块会让默认区域变大。'
         material: DARK_OAK_FENCE
         from: 10
         to: 27
@@ -438,8 +437,6 @@ gui:
         lore:
         - '&7达到最大区域数量限制'
         - '&7&3 {max} &7区域.'
-        - ' '
-        - '&8权限: lands.areas.NUMBER'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -745,29 +742,23 @@ gui:
         slot: 24
     a:
       failure_max-roles:
-        name: '&4Failure: &cMax Roles'
+        name: '&4失败: &cMax Roles'
         lore:
         - '&7This protection reached the maximum'
         - '&7amount of&3 {max} &7roles.'
-        - ' '
-        - '&8Permission: chestprotect.roles.NUMBER'
       failure_priority:
-        name: '&4Failure: &cRole Priority'
+        name: '&4失败: &cRole Priority'
         lore:
         - '&7You''re not allowed to'
         - '&7edit settings of this role.'
         - '&7It has a higher priority'
         - '&7than yours or you''re a'
         - '&7member of this role.'
-        - ' '
-        - '&8Bypass: {bypass}'
       failure_access:
-        name: '&4Failure: &cNot allowed'
+        name: '&4失败: &cNot allowed'
         lore:
         - '&7You''re not allowed to'
         - '&7edit roles in this area.'
-        - ' '
-        - '&8Bypass: {bypass}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -778,7 +769,7 @@ gui:
         from: 19
         to: 27
   role_players:
-    title: '&8{role} &7- &8Players'
+    title: '&0{role} &0- 玩家'
     size: 36
     l:
       object:
@@ -821,7 +812,7 @@ gui:
         from: 29
         to: 36
   role_settings:
-    title: '&8{role} &7- &8Settings'
+    title: '&0{role} &0- 设定'
     size: 36
     s: {}
     f:
@@ -1164,7 +1155,7 @@ gui:
         from: 29
         to: 36
   area_settings:
-    title: '&8{area} &7- &8Land Settings'
+    title: '&0{area} &0- 城镇设定'
     size: 27
     s: {}
     f:
@@ -1425,7 +1416,7 @@ gui:
         from: 1
         to: 27
   action-confirm:
-    title: '&8Please confirm this Action'
+    title: '&0请确认此操作'
     size: 27
     s:
       info:
@@ -1465,7 +1456,7 @@ gui:
         from: 19
         to: 27
   player_invites:
-    title: '&8Received Invites'
+    title: '&0收到的邀请'
     size: 36
     s: {}
     f:
@@ -1500,13 +1491,11 @@ gui:
         from: 10
         to: 27
       no-invite:
-        name: '&cNo Invites received'
+        name: '&c没有收到任何邀请'
         lore:
-        - '&7There aren''t any'
-        - '&7received invites yet.'
+        - '&7这里没有任何邀请 :('
         - ' '
-        - '&8- &7Players can invite'
-        - '  &7you by executing:'
+        - '&8- &7让您的朋友邀请您：'
         - '  &8/&3Lands trust {player}'
         material: OAK_SIGN
         from: 10
@@ -1521,7 +1510,7 @@ gui:
         from: 27
         to: 36
   player_invite:
-    title: '&8Invite {land}'
+    title: '&0邀请 {land}'
     size: 27
     f:
       info:
@@ -1589,7 +1578,7 @@ gui:
         from: 1
         to: 27
   player_info:
-    title: '&8Player {player}'
+    title: '&0玩家 {player}'
     size: 27
     f:
       back:
@@ -1636,7 +1625,7 @@ gui:
         from: 1
         to: 27
   land_info:
-    title: '&8Land {land}'
+    title: '&0城镇 {land}'
     size: 27
     s:
       close:
@@ -1693,7 +1682,7 @@ gui:
         from: 1
         to: 27
   land_various:
-    title: Various Settings
+    title: '&0各种设定'
     size: 27
     a:
       failure_noaccess:
@@ -1849,7 +1838,7 @@ gui:
         from: 36
         to: 54
   war-state:
-    title: '&8War'
+    title: '&0战争'
     size: 27
     f:
       attackers:
@@ -2003,7 +1992,7 @@ gui:
         from: 1
         to: 27
   war_lands:
-    title: '&8{type}'
+    title: '&0{type}'
     size: 36
     f:
       back:
@@ -2049,7 +2038,7 @@ gui:
         from: 29
         to: 36
   war-declaration_tribute:
-    title: '&8Tribute'
+    title: '&0Tribute'
     size: 27
     s:
       plus-1:
@@ -2160,7 +2149,7 @@ gui:
         from: 1
         to: 27
   admin_wilderness:
-    title: '&8Wilderness Settings'
+    title: '&0荒野设定'
     size: 9
     s:
       player-settings:
@@ -2192,7 +2181,7 @@ gui:
         from: 1
         to: 9
   admin_wilderness_player-settings:
-    title: '&8Player Settings'
+    title: '&0玩家设定'
     size: 36
     l:
       object:
@@ -2240,7 +2229,7 @@ gui:
         from: 27
         to: 36
   admin_wilderness_land-settings:
-    title: '&8Land Settings'
+    title: '&0城镇设定'
     size: 27
     l:
       object:
@@ -2285,7 +2274,7 @@ gui:
         from: 19
         to: 27
   area_players:
-    title: '&8{area} &7- &8已加入玩家'
+    title: '&0{area} &0- 已加入玩家'
     size: 36
     l:
       object_all:
@@ -2403,7 +2392,7 @@ gui:
         from: 29
         to: 36
   role:
-    title: '&8{role}'
+    title: '&0{role}'
     size: 36
     f:
       back:
@@ -2495,12 +2484,12 @@ gui:
         from: 21
         to: 21
   land_claims:
-    title: '&7{land} - Claims'
+    title: '&0{land} - 占领的区块'
     size: 36
     s: {}
     f:
       toggle:
-        name: '&7World:&3 {world}'
+        name: '&7世界:&3 {world}'
         lore:
         - '&7Click here to toggle'
         - '&7the world.'
