@@ -293,8 +293,8 @@ message:
     not-exist: '&c{role}角色好像不存在诶，拼错了？'
     max: '&cOh天哪，您最多只能创造{max}个角色&f&m氪个Pro它不香嘛？'
     player:
-      land: '&c您不能编辑这个玩家，身为{role}角色的他在{land}中比您拥有更高的优先级'
-      area: '&c您不能编辑这个玩家，身为{role}角色的他在{land}的{area}中比您拥有更高的优先级'
+      land: '&c您不能编辑这个玩家，身为{role}&c角色的他在{land}中比您拥有更高的优先级'
+      area: '&c您不能编辑这个玩家，身为{role}&c角色的他在{land}的{area}中比您拥有更高的优先级'
     weight:
       land: '&c您不能编辑{land}中的{role}角色，这个角色比您拥有更高的优先级'
       area: '&c您不能编辑{land}的{area}中的{role}角色，这个角色比您拥有更高的优先级'
