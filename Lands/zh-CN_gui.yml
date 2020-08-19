@@ -437,6 +437,12 @@ gui:
         lore:
         - '&7达到最大区域数量限制'
         - '&7&3 {max} &7区域.'
+      failure_rental:
+        name: '&4Failure: &cRental'
+        lore:
+        - '&7You can''t edit this area'
+        - '&7while it is rented/sold.'
+        - '&7Tenant:&3 {player}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -577,6 +583,13 @@ gui:
         material: BLUE_STAINED_GLASS_PANE
         from: 30
         to: 30
+    a:
+      failure_rental:
+        name: '&4Failure: &cRental'
+        lore:
+        - '&7You can''t set taxes for this'
+        - '&7area while it is rented/sold.'
+        - '&7Tenant:&3 {player}'
   area_invites:
     title: '&0{area} &0- 发出的邀请'
     size: 36
