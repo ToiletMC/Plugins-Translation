@@ -45,7 +45,7 @@ notify:
 mail:
   message: '@prefix 您想说些什么?'
   sound-input: '@prefix 您想播放什么声音? 在这里找到有效的声音: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
-  no-space: '@prefix 你已没有空间了!'
+  no-space: '@prefix 背包没有空间了!'
   unknown: 未知
   anonymous: 匿名
   server: 服务器
@@ -199,7 +199,7 @@ gui:
     material: YELLOW_STAINED_GLASS_PANE
     amount: 1
     lore:
-      - '&7点击背包中的物品来'
+      - '&7将背包中的物品拖到此处'
       - '&7设定图标(物品不会消失)'
     glow: true
     skull-texture: ''
