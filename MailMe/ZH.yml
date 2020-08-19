@@ -13,39 +13,39 @@ postoffice:
   no-po-here: '@prefix &7这里没有邮局'
   bad-material: '@prefix &7不能使用 minecraft:air 作为物品'
 postoffice-help:
-  - '&8[&eMailMe&8]'
-  - '&8- &e/postoffice add <send/read> &7- 在眼前位置添加邮局'
-  - '&8- &e/postoffice remove &7- 在眼前位置删除邮局'
-  - '&8- &e/postoffice removeall &7- 删除所有邮局'
+- '&8[&eMailMe&8]'
+- '&8- &e/postoffice add <send/read> &7- 在眼前位置添加邮局'
+- '&8- &e/postoffice remove &7- 在眼前位置删除邮局'
+- '&8- &e/postoffice removeall &7- 删除所有邮局'
 cmd:
   lang-change: '@prefix &7语言已更新!'
   notify-change: '@prefix &7通知设置已更新!'
   mail-unread: '@prefix &7您有未读邮件!'
   invalid-preset-key: '@prefix &7预设键无效! 检查您的config.yml是否为有效值'
-  vault-insufficient-funds: '@prefix &7资金不足!'
+  vault-insufficient-funds: '@prefix &7不充足的资金!'
   unknown-player: '@prefix &7未知的玩家或玩家从未进入过服务器!'
 vault: '@prefix &f已扣减金钱 @amount'
 hologram-format: '&e@name &e的邮箱'
 text:
   format:
-    - '&8<    &e邮件    &8>'
-    - '&7发件人: &b%sender%'
-    - '&7收件时间: &b%time%'
-    - '&7内容: %contents%'
+  - '&8<    &e邮件    &8>'
+  - '&7发件人: &b%sender%'
+  - '&7收件时间: &b%time%'
+  - '&7内容: %contents%'
   hover: '&c点击回复!'
   prev-page: '&e<<< 上一页'
   prev-page-hover: '&c点击返回上一页!'
   next-page: '&e下一页 >>>'
   next-page-hover: '&c点击前往下一页!'
 notify:
-  received: '@prefix &7您收到了一封由 %s 发出的邮件'
+  received: '@prefix &7您收到了一些由 %s 发出的邮件'
   sent: '@prefix &7您发出邮件至 %s'
   sent-multiple: 多个收件人
-  could-not-send: '@prefix &c警告! &7无法将邮件发送到%s. 您最近已发送邮件，请稍后再试。'
+  could-not-send: '@prefix &c警告! &7无法将邮件发送到%s. 您最近已发送邮件. 请稍后再试.'
 mail:
   message: '@prefix 您想说些什么?'
   sound-input: '@prefix 您想播放什么声音? 在这里找到有效的声音: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
-  no-space: '@prefix 背包没有空间了!'
+  no-space: '@prefix 你已没有空间了!'
   unknown: 未知
   anonymous: 匿名
   server: 服务器
@@ -55,16 +55,16 @@ mailbox:
   mailbox-removed: '@prefix 您的邮箱已被删除!'
   could-not-find-remove: '@prefix 眼前没有合适的邮箱'
 help:
-  - '&8[&eMailMe&8]'
-  - '&7/mailme lang <language> &7更改语言'
-  - '&7/mailme notify <true/false> &7切换通知设置'
-  - '&7/mailme read &7阅读您的邮件'
-  - '&7/mailme send &7发送邮件'
-  - '&7/mailme text &7以文字形式阅读邮件'
-  - '&7/mailme mailbox <set/remove>'
-  - '&7/mailme defaultMB &7设置默认邮箱!'
-  - '&7/mailme admin send <all/playername> [Preset-ID] &7发送默认邮件.'
-  - '&7/mailme admin preset <id-to-set> &7设置管理员发送的预设'
+- '&8[&eMailMe&8]'
+- '&7/mailme lang <language> &7更改语言'
+- '&7/mailme notify <true/false> &7切换通知设置'
+- '&7/mailme read &7阅读您的邮件'
+- '&7/mailme send &7发送邮件'
+- '&7/mailme text &7以文字形式阅读邮件'
+- '&7/mailme mailbox <set/remove>'
+- '&7/mailme defaultMB &7设置默认邮箱!'
+- '&7/mailme admin send <all/playername> [Preset-ID] &7发送默认邮件.'
+- '&7/mailme admin preset <id-to-set> &7设置管理员发送的预设'
 gui:
   choose-type-title: 选择邮件类型
   read-title: 阅读邮件
@@ -79,32 +79,32 @@ gui:
     custom-model-data: 0
     glow: false
     lore:
-      - ''
+    - ''
   send:
     title: '&b发送邮件'
     material: FEATHER
     amount: 1
     glow: true
     lore:
-      - '&7点击这个'
-      - '&7将打开邮件制作选单'
+    - '&7点击这个'
+    - '&7将打开邮件制作选单'
     custom-model-data: 0
   mail:
     title: '&7来自: &b@sender'
     lore:
-      - ''
-      - '&7收件时间: &b@time'
-      - '&7邮件类型: &b@type'
-      - '&7阅读: &b@read'
-      - ''
-      - '&b温馨提示: &7点击接收邮件!'
+    - ''
+    - '&7收件时间: &b@time'
+    - '&7邮件类型: &b@type'
+    - '&7阅读: &b@read'
+    - ''
+    - '&b温馨提示: &7点击接收邮件!'
   back-button:
     title: '&8[&e上一页&8]'
     material: REDSTONE_TORCH
     amount: 1
     lore:
-      - '&7点击进入'
-      - '&7上一页!'
+    - '&7点击进入'
+    - '&7上一页!'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -113,8 +113,8 @@ gui:
     material: REDSTONE_TORCH
     amount: 1
     lore:
-      - '&7点击进入'
-      - '&7下一页!'
+    - '&7点击进入'
+    - '&7下一页!'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -123,7 +123,7 @@ gui:
     material: BARRIER
     amount: 1
     lore:
-      - '&7点击关闭'
+    - '&7点击关闭'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -132,7 +132,7 @@ gui:
     material: BOOK
     amount: 1
     lore:
-      - '&7点击搜寻玩家!'
+    - '&7点击搜寻玩家!'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -141,7 +141,7 @@ gui:
     material: GLASS_BOTTLE
     amount: 1
     lore:
-      - '&7尝试使用其他条件进行搜索'
+    - '&7尝试使用其他条件进行搜索'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -151,16 +151,16 @@ gui:
       material: EMERALD
       amount: 1
       lore:
-        - '&7点击这个'
-        - '&7匿名发送邮件!'
+      - '&7点击这个'
+      - '&7匿名发送邮件!'
       custom-model-data: 0
     message:
       title: '&8[&e留言邮件&8]'
       material: PAPER
       amount: 1
       lore:
-        - '&7点击这个'
-        - '&7发送留言邮件!'
+      - '&7点击这个'
+      - '&7发送留言邮件!'
       glow: true
       skull-texture: ''
       custom-model-data: 0
@@ -169,8 +169,8 @@ gui:
       material: PAPER
       amount: 1
       lore:
-        - '&7点击这个'
-        - '&7发送物品邮件!'
+      - '&7点击这个'
+      - '&7发送物品邮件!'
       glow: true
       skull-texture: ''
       custom-model-data: 0
@@ -179,8 +179,8 @@ gui:
       material: PAPER
       amount: 1
       lore:
-        - '&7点击这个'
-        - '&7发送声音邮件!'
+      - '&7点击这个'
+      - '&7发送声音邮件!'
       glow: true
       skull-texture: ''
       custom-model-data: 0
@@ -189,8 +189,8 @@ gui:
       material: PAPER
       amount: 1
       lore:
-        - '&7点击这个'
-        - '&7发送位置邮件!'
+      - '&7点击这个'
+      - '&7发送位置邮件!'
       glow: true
       skull-texture: ''
       custom-model-data: 0
@@ -199,8 +199,8 @@ gui:
     material: YELLOW_STAINED_GLASS_PANE
     amount: 1
     lore:
-      - '&7将背包中的物品拖到此处'
-      - '&7设定图标(物品不会消失)'
+    - '&7点击背包中的物品来'
+    - '&7设定图标(物品不会消失)'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -209,7 +209,7 @@ gui:
     material: IRON_BARS
     amount: 1
     lore:
-      - '&7点击取消过滤器!'
+    - '&7点击取消过滤器!'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -218,7 +218,7 @@ gui:
     material: SKELETON_SKULL
     amount: 1
     lore:
-      - ''
+    - ''
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -227,8 +227,8 @@ gui:
     material: EMERALD_BLOCK
     amount: 1
     lore:
-      - '&7点击这个'
-      - '&7前往下一页!'
+    - '&7点击这个'
+    - '&7前往下一页!'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -237,25 +237,25 @@ gui:
     material: MAP
     amount: 1
     lore:
-      - '&7点击这个'
-      - '&7为邮件转为文字形式'
+    - '&7点击这个'
+    - '&7为邮件转为文字形式'
     glow: true
     skull-texture: ''
     custom-model-data: 0
   read-mail:
     title: '&e邮件'
     lore:
-      - '&7点击这个'
-      - '&7接收邮件'
+    - '&7点击这个'
+    - '&7接收邮件'
   are-you-sure:
     title: '&a确定?'
     material: EMERALD_BLOCK
     amount: 1
     glow: true
     lore:
-      - '&7再次右键'
-      - '&7删除此邮件'
-      - ''
-      - '&7左键取消'
-      - '&7删除此邮件'
+    - '&7再次右键'
+    - '&7删除此邮件'
+    - ''
+    - '&7左键取消'
+    - '&7删除此邮件'
     custom-model-data: 0

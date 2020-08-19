@@ -101,7 +101,7 @@ physical-Item:
   claim-block:
     name: '&申领区块'
     lore:
-    - '&7你可以在荒野放置此方块'
+    - '&7您可以在荒野放置此方块'
     - '&7然后申领区块'
     - ' '
     - '&7领主:&3 {owner}'
@@ -126,10 +126,10 @@ gui:
       lands:
         name: '&8> &2我的城镇'
         lore:
-        - '&7查看你的城镇'
+        - '&7查看您的城镇'
         - ' '
-        - '  &7包括你自己的'
-        - '  &7和你所加入的'
+        - '  &7包括您自己的'
+        - '  &7和您所加入的'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         slot: 11
       all-lands:
@@ -141,7 +141,7 @@ gui:
       invites:
         name: '&8> &6邀请'
         lore:
-        - '&7查看你收到的邀请'
+        - '&7查看您收到的邀请'
         material: WRITABLE_BOOK
         slot: 15
       close:
@@ -166,7 +166,7 @@ gui:
         - ' '
         - '&7+ 每个城镇最多&3 {chunks} &7个区块.'
         - ' '
-        - '&7+ 在你所属的每个城镇,你可以贡献 &3{support-chunks} &7个区块'
+        - '&7+ 在您所属的每个城镇,您可以贡献 &3{support-chunks} &7个区块'
         - ' '
         - '&7+ 最多可以加入&3 {lands} &7个城镇.'
         - ' '
@@ -175,7 +175,7 @@ gui:
         material: PLAYER_HEAD
         slot: 17
   player_lands:
-    title: '&0你的城镇'
+    title: '&0您的城镇'
     size: 27
     s: {}
     f:
@@ -204,7 +204,7 @@ gui:
       object:
         name: '&2{land}'
         lore:
-        - '&7你是这个城镇的一员.'
+        - '&7您是这个城镇的一员.'
         - ' '
         - '&7区块:&3 {chunks} &7/&c {max-chunks}'
         - ' '
@@ -215,7 +215,7 @@ gui:
       own-land:
         name: '&2{land}'
         lore:
-        - '&7你拥有这个城镇.'
+        - '&7您拥有这个城镇.'
         - ' '
         - '&7区域:&3 {chunks} &7/&c {max-chunks}'
         - ' '
@@ -229,7 +229,7 @@ gui:
         - '&8- &7创造自己的城镇:'
         - '  &8/&3Lands create &8<&3城镇名称&8>'
         - ' '
-        - '&8- &7让好朋友邀请你:'
+        - '&8- &7让好朋友邀请您:'
         - '  &8/&3Lands trust {player}'
         material: OAK_SIGN
         from: 10
@@ -250,7 +250,7 @@ gui:
       information:
         name: '&6城镇信息'
         lore:
-        - '&7在这里你可以查看'
+        - '&7在这里您可以查看'
         - '&7一些关于城镇的详细信息'
         - '&7记录城镇发生的所有事情'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
@@ -272,8 +272,8 @@ gui:
       management:
         name: '&8> &6管理'
         lore:
-        - '&7管理你的城镇.'
-        - '&7你可以信任玩家, 设置角色,'
+        - '&7管理您的城镇.'
+        - '&7您可以信任玩家, 设置角色,'
         - '&7编辑城镇设置以及税收.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
         slot: 29
@@ -306,7 +306,7 @@ gui:
         name: '&8> &6区域'
         lore:
         - '&7查看城镇中的所有区域'
-        - '&7你也可以创建新的区域'
+        - '&7您也可以创建新的区域'
         - ' '
         - '&7区域:&3 {areas} &7/&c {max-areas}'
         - '&7Claims:&3 {chunks} &7/&c {max-chunks}'
@@ -320,7 +320,7 @@ gui:
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJmM2ZjZGNjZmZkOTYzZTQzMzQ4MTgxMDhlMWU5YWUzYTgwNTY2ZDBkM2QyZDRhYjMwNTFhMmNkODExMzQ4YyJ9fX0=
         slot: 16
       stats:
-        name: '&8> &6Statistics'
+        name: '&8> &6统计信息'
         lore:
         - '&7区块数量: {0} / {1} &7+ 0 &8(&7联盟&8)'
         - '&7成员数量: {2} / {3}'
@@ -332,7 +332,7 @@ gui:
         - '  &7Upkeep of&c ${6} &7in:'
         - '  &7{7}'
         - ' '
-        - '&8- &4你'
+        - '&8- &4您'
         - '  &7存款: {8}T'
         - '  &7在{10}内需要支付&c {9}T &7的税'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ==
@@ -407,9 +407,8 @@ gui:
       object_default:
         name: '&6{area}'
         lore:
-        - '&7This is the default area.'
-        - '&7All new claims will be'
-        - '&7assigned to this area.'
+        - '&7这是城镇的默认区域，'
+        - '&7申领区块会让默认区域变大。'
         material: DARK_OAK_FENCE
         from: 10
         to: 27
@@ -429,17 +428,21 @@ gui:
       failure_untrusted:
         name: '&4被拒绝: &c未被信任'
         lore:
-        - '&c你不能打开该区域的区域菜单'
+        - '&c您不能打开该区域的区域菜单'
         - ' '
-        - '&8- &7你需要被该区域信任'
+        - '&8- &7您需要被该区域信任'
         - '&8- &7联系城镇所有者帮助'
       failure_max-areas:
         name: '&4失败: &c区域已满'
         lore:
         - '&7达到最大区域数量限制'
         - '&7&3 {max} &7区域.'
-        - ' '
-        - '&8权限: lands.areas.NUMBER'
+      failure_rental:
+        name: '&4Failure: &cRental'
+        lore:
+        - '&7You can''t edit this area'
+        - '&7while it is rented/sold.'
+        - '&7Tenant:&3 {player}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -519,7 +522,7 @@ gui:
       information:
         name: '&6信息'
         lore:
-        - '&7在这里，你可以：'
+        - '&7在这里，您可以：'
         - '&7查看区域信息、管理区域。'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
@@ -540,14 +543,14 @@ gui:
       management:
         name: '&6管理'
         lore:
-        - '&7在这里，你可以：'
+        - '&7在这里，您可以：'
         - '&7邀请玩家，编辑角色、税收、设定。'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
         slot: 29
       land-settings:
         name: '&8> &6城镇设定'
         lore:
-        - '&7在这里，你可以：'
+        - '&7在这里，您可以：'
         - '&7管理生物的自然生存等。'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
         slot: 31
@@ -580,6 +583,13 @@ gui:
         material: BLUE_STAINED_GLASS_PANE
         from: 30
         to: 30
+    a:
+      failure_rental:
+        name: '&4Failure: &cRental'
+        lore:
+        - '&7You can''t set taxes for this'
+        - '&7area while it is rented/sold.'
+        - '&7Tenant:&3 {player}'
   area_invites:
     title: '&0{area} &0- 发出的邀请'
     size: 36
@@ -627,9 +637,9 @@ gui:
       no-invite:
         name: '&c没有任何邀请'
         lore:
-        - '&7你的城镇没有发出任何邀请'
+        - '&7您的城镇没有发出任何邀请'
         - ' '
-        - '&7单击下方按钮发出邀请'
+        - '&7您可以在成员菜单中发出邀请'
         material: OAK_SIGN
         from: 10
         to: 27
@@ -682,7 +692,7 @@ gui:
       failure_noAccess:
         name: '&4错误: &b撤销失败'
         lore:
-        - '&c你不能撤销此区域的邀请'
+        - '&c您不能撤销此区域的邀请'
         - ' '
         - '&8- &7请联系城镇或区域管理员'
     p:
@@ -745,29 +755,23 @@ gui:
         slot: 24
     a:
       failure_max-roles:
-        name: '&4Failure: &cMax Roles'
+        name: '&4失败: &cMax Roles'
         lore:
         - '&7This protection reached the maximum'
         - '&7amount of&3 {max} &7roles.'
-        - ' '
-        - '&8Permission: chestprotect.roles.NUMBER'
       failure_priority:
-        name: '&4Failure: &cRole Priority'
+        name: '&4失败: &cRole Priority'
         lore:
         - '&7You''re not allowed to'
         - '&7edit settings of this role.'
         - '&7It has a higher priority'
         - '&7than yours or you''re a'
         - '&7member of this role.'
-        - ' '
-        - '&8Bypass: {bypass}'
       failure_access:
-        name: '&4Failure: &cNot allowed'
+        name: '&4失败: &cNot allowed'
         lore:
         - '&7You''re not allowed to'
         - '&7edit roles in this area.'
-        - ' '
-        - '&8Bypass: {bypass}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -778,7 +782,7 @@ gui:
         from: 19
         to: 27
   role_players:
-    title: '&8{role} &7- &8Players'
+    title: '&0{role} &0- 玩家'
     size: 36
     l:
       object:
@@ -821,7 +825,7 @@ gui:
         from: 29
         to: 36
   role_settings:
-    title: '&8{role} &7- &8Settings'
+    title: '&0{role} &0- 设定'
     size: 36
     s: {}
     f:
@@ -931,7 +935,7 @@ gui:
         - '&7已解锁: {unlocked}'
         - ' '
         - '&7是否允许当前角色'
-        - '&7在你的领地与村民进行交易?'
+        - '&7在您的领地与村民进行交易?'
         material: EMERALD
         from: 10
         to: 27
@@ -1060,7 +1064,7 @@ gui:
         - ' '
         - '&8- &7他们不可以编辑自己的角色'
         - ' '
-        - '&8- &7你应该把这个权限只给非常信赖的好朋友'
+        - '&8- &7您应该把这个权限只给非常信赖的好朋友'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         from: 10
         to: 27
@@ -1082,7 +1086,7 @@ gui:
         - ' '
         - '&7允许当前角色编辑税收吗?'
         - ' '
-        - '&8- &7你应该把这个权限只给非常信赖的好朋友'
+        - '&8- &7您应该把这个权限只给非常信赖的好朋友'
         material: GOLD_INGOT
         from: 10
         to: 27
@@ -1144,16 +1148,16 @@ gui:
       failure_permission:
         name: '&4错误: &c没有权限'
         lore:
-        - '&7你不能编辑这个设置'
+        - '&7您不能编辑这个设置'
       failure_priority:
         name: '&4错误: &c角色越权'
         lore:
-        - '&7你不能编辑这个角色'
-        - '&7它的优先级比你大.'
+        - '&7您不能编辑这个角色'
+        - '&7它的优先级比您大.'
       failure_access:
         name: '&4错误: &c拒绝访问'
         lore:
-        - '&7你不能在这里编辑这个设置'
+        - '&7您不能在这里编辑这个设置'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -1164,7 +1168,7 @@ gui:
         from: 29
         to: 36
   area_settings:
-    title: '&8{area} &7- &8Land Settings'
+    title: '&0{area} &0- 城镇设定'
     size: 27
     s: {}
     f:
@@ -1210,7 +1214,7 @@ gui:
         - ' '
         - '&7是否允许TNT爆炸破坏方块？'
         - ' '
-        - '&8- &c注意: &7启用 → 别人可以用TNT破坏你的领地边边'
+        - '&8- &c注意: &7启用 → 别人可以用TNT破坏您的领地边边'
         material: TNT
         from: 10
         to: 18
@@ -1222,7 +1226,7 @@ gui:
         - ' '
         - '&7是否允许荒郊野外的活塞推动？'
         - ' '
-        - '&8- &c注意: &7启用 → 外面的活塞可以推方块到你的城镇'
+        - '&8- &c注意: &7启用 → 外面的活塞可以推方块到您的城镇'
         material: PISTON
         from: 10
         to: 18
@@ -1234,7 +1238,7 @@ gui:
         - ' '
         - '&7是否允许荒郊野外的水流进入领地？'
         - ' '
-        - '&8- &c注意: &7启用 → 外面的水可以流入你的城镇'
+        - '&8- &c注意: &7启用 → 外面的水可以流入您的城镇'
         material: WATER_BUCKET
         from: 10
         to: 18
@@ -1300,15 +1304,15 @@ gui:
       failure_permission:
         name: '&4失败: &c权限不足'
         lore:
-        - '&7你不能编辑此设定'
+        - '&7您不能编辑此设定'
       failure_priority:
         name: '&4失败: &c优先级'
         lore:
-        - '&7此角色比你拥有更高的优先级'
+        - '&7此角色比您拥有更高的优先级'
       failure_access:
         name: '&4失败: &c禁止访问'
         lore:
-        - '&7请让城镇的管理员允许你这么做'
+        - '&7请让城镇的管理员允许您这么做'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -1425,7 +1429,7 @@ gui:
         from: 1
         to: 27
   action-confirm:
-    title: '&8Please confirm this Action'
+    title: '&0请确认此操作'
     size: 27
     s:
       info:
@@ -1465,7 +1469,7 @@ gui:
         from: 19
         to: 27
   player_invites:
-    title: '&8Received Invites'
+    title: '&0收到的邀请'
     size: 36
     s: {}
     f:
@@ -1500,13 +1504,11 @@ gui:
         from: 10
         to: 27
       no-invite:
-        name: '&cNo Invites received'
+        name: '&c没有收到任何邀请'
         lore:
-        - '&7There aren''t any'
-        - '&7received invites yet.'
+        - '&7这里没有任何邀请 :('
         - ' '
-        - '&8- &7Players can invite'
-        - '  &7you by executing:'
+        - '&8- &7让您的朋友邀请您：'
         - '  &8/&3Lands trust {player}'
         material: OAK_SIGN
         from: 10
@@ -1521,7 +1523,7 @@ gui:
         from: 27
         to: 36
   player_invite:
-    title: '&8Invite {land}'
+    title: '&0邀请 {land}'
     size: 27
     f:
       info:
@@ -1589,7 +1591,7 @@ gui:
         from: 1
         to: 27
   player_info:
-    title: '&8Player {player}'
+    title: '&0玩家 {player}'
     size: 27
     f:
       back:
@@ -1636,7 +1638,7 @@ gui:
         from: 1
         to: 27
   land_info:
-    title: '&8Land {land}'
+    title: '&0城镇 {land}'
     size: 27
     s:
       close:
@@ -1693,7 +1695,7 @@ gui:
         from: 1
         to: 27
   land_various:
-    title: Various Settings
+    title: '&0各种设定'
     size: 27
     a:
       failure_noaccess:
@@ -1849,7 +1851,7 @@ gui:
         from: 36
         to: 54
   war-state:
-    title: '&8War'
+    title: '&0战争'
     size: 27
     f:
       attackers:
@@ -2003,7 +2005,7 @@ gui:
         from: 1
         to: 27
   war_lands:
-    title: '&8{type}'
+    title: '&0{type}'
     size: 36
     f:
       back:
@@ -2049,7 +2051,7 @@ gui:
         from: 29
         to: 36
   war-declaration_tribute:
-    title: '&8Tribute'
+    title: '&0Tribute'
     size: 27
     s:
       plus-1:
@@ -2160,7 +2162,7 @@ gui:
         from: 1
         to: 27
   admin_wilderness:
-    title: '&8Wilderness Settings'
+    title: '&0荒野设定'
     size: 9
     s:
       player-settings:
@@ -2192,7 +2194,7 @@ gui:
         from: 1
         to: 9
   admin_wilderness_player-settings:
-    title: '&8Player Settings'
+    title: '&0玩家设定'
     size: 36
     l:
       object:
@@ -2240,7 +2242,7 @@ gui:
         from: 27
         to: 36
   admin_wilderness_land-settings:
-    title: '&8Land Settings'
+    title: '&0城镇设定'
     size: 27
     l:
       object:
@@ -2285,7 +2287,7 @@ gui:
         from: 19
         to: 27
   area_players:
-    title: '&8{area} &7- &8已加入玩家'
+    title: '&0{area} &0- 已加入玩家'
     size: 36
     l:
       object_all:
@@ -2357,19 +2359,20 @@ gui:
         material: HOPPER
         slot: 32
       trust:
-        name: '&8> &aTrust Player'
+        name: '&8> &a邀请新成员'
         lore:
-        - '&7Click here to trust'
-        - '&7a player in this area.'
+        - '&7点击邀请请玩家到此处'
         - ' '
-        - '&7Available:&3 {players} &8/&c {max}'
+        - '&7成员数量:&3 {players} &8/&c {max}'
+        - ' '
+        - '&7拥有一个庞大的组织？'
+        - '&7&lPro可以享受无限制的成员上限！'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         slot: 31
       untrust:
-        name: '&8> &cUntrust Player'
+        name: '&8> &c把成员扫地出门'
         lore:
-        - '&7Click here to untrust'
-        - '&7a player from this area.'
+        - '&7点击这里把成员赶出去'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
         slot: 33
       back:
@@ -2403,7 +2406,7 @@ gui:
         from: 29
         to: 36
   role:
-    title: '&8{role}'
+    title: '&0{role}'
     size: 36
     f:
       back:
@@ -2473,14 +2476,14 @@ gui:
       failure_access:
         name: '&4c错误: &c拒绝访问'
         lore:
-        - '&7你不能编辑这个设置'
+        - '&7您不能编辑这个设置'
         - ' '
-        - '&7你需要得到领地主人的允许'
+        - '&7您需要得到领地主人的允许'
       failure_priority:
         name: '&4错误: &c角色越权'
         lore:
-        - '&7你不能编辑这个角色'
-        - '&7它的权利比你大；或者你只是一个成员'
+        - '&7您不能编辑这个角色'
+        - '&7它的权利比您大；或者您只是一个成员'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -2495,12 +2498,12 @@ gui:
         from: 21
         to: 21
   land_claims:
-    title: '&7{land} - Claims'
+    title: '&0{land} - 占领的区块'
     size: 36
     s: {}
     f:
       toggle:
-        name: '&7World:&3 {world}'
+        name: '&7世界:&3 {world}'
         lore:
         - '&7Click here to toggle'
         - '&7the world.'
