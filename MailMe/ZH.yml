@@ -24,7 +24,7 @@ cmd:
   invalid-preset-key: '@prefix &7预设键无效! 检查您的config.yml是否为有效值'
   vault-insufficient-funds: '@prefix &7不充足的资金!'
   unknown-player: '@prefix &7未知的玩家或玩家从未进入过服务器!'
-vault: '@prefix &f已扣减金钱 @amount'
+vault: '@prefix &c发送邮件花费 @amount 马桶币'
 hologram-format: '&e@name &e的邮箱'
 text:
   format:
@@ -39,13 +39,13 @@ text:
   next-page-hover: '&c点击前往下一页!'
 notify:
   received: '@prefix &7您收到了一些由 %s 发出的邮件'
-  sent: '@prefix &7您发出邮件至 %s'
+  sent: '@prefix &7您的邮件已发送至 %s'
   sent-multiple: 多个收件人
   could-not-send: '@prefix &c警告! &7无法将邮件发送到%s. 您最近已发送邮件. 请稍后再试.'
 mail:
   message: '@prefix 您想说些什么?'
-  sound-input: '@prefix 您想播放什么声音? 在这里找到有效的声音: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
-  no-space: '@prefix 你已没有空间了!'
+  sound-input: '@prefix 您想播放什么声音? 在这里找到有效的声音(输入cancel可以取消发送): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html'
+  no-space: '@prefix 背包没有空间了!'
   unknown: 未知
   anonymous: 匿名
   server: 服务器
@@ -73,13 +73,12 @@ gui:
   choose-icon-title: 选择图标
   search: 输入您要查找的玩家名称
   filler:
-    title: ''
+    title: '&r'
     material: BLACK_STAINED_GLASS_PANE
     amount: 1
     custom-model-data: 0
     glow: false
-    lore:
-    - ''
+    lore: []
   send:
     title: '&b发送邮件'
     material: FEATHER
@@ -99,40 +98,36 @@ gui:
     - ''
     - '&b温馨提示: &7点击接收邮件!'
   back-button:
-    title: '&8[&e上一页&8]'
+    title: '&e上一页'
     material: REDSTONE_TORCH
     amount: 1
-    lore:
-    - '&7点击进入'
-    - '&7上一页!'
+    lore: []
     glow: true
     skull-texture: ''
     custom-model-data: 0
   forward-button:
-    title: '&8[&e下一页&8]'
+    title: '&e下一页'
     material: REDSTONE_TORCH
     amount: 1
-    lore:
-    - '&7点击进入'
-    - '&7下一页!'
+    lore: []
     glow: true
     skull-texture: ''
     custom-model-data: 0
   exit-button:
-    title: '&8[&e退出页面&8]'
+    title: '&c关闭页面'
     material: BARRIER
     amount: 1
-    lore:
-    - '&7点击关闭'
+    lore: []
     glow: true
     skull-texture: ''
     custom-model-data: 0
   search-button:
-    title: '&8[&e搜寻&8]'
+    title: '&e搜索'
     material: BOOK
     amount: 1
     lore:
-    - '&7点击搜寻玩家!'
+    - '&7列出的玩家里没有你要找的?'
+    - '&7点击搜寻指定玩家!'
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -140,8 +135,7 @@ gui:
     title: '&c空空如也 :('
     material: GLASS_BOTTLE
     amount: 1
-    lore:
-    - '&7尝试使用其他条件进行搜索'
+    lore: []
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -151,65 +145,56 @@ gui:
       material: EMERALD
       amount: 1
       lore:
-      - '&7点击这个'
-      - '&7匿名发送邮件!'
+      - '&7无效果 → 不匿'
+      - '&7有附魔 → 匿名'
       custom-model-data: 0
     message:
-      title: '&8[&e留言邮件&8]'
-      material: PAPER
+      title: '&7留言邮件'
+      material: PLAYER_HEAD
       amount: 1
-      lore:
-      - '&7点击这个'
-      - '&7发送留言邮件!'
+      lore: []
       glow: true
-      skull-texture: ''
+      skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzhjYjk4OWVmMjljNzM0ZmUwNWE5NWJmYTE1YWYwOGFiYmI2NGExNzNlYTMyZjBmNmYwNmQ2ZTM0ZjliZDM4In19fQ==
       custom-model-data: 0
     item:
-      title: '&8[&e物品邮件&8]'
-      material: PAPER
+      title: '&7物品邮件'
+      material: PLAYER_HEAD
       amount: 1
-      lore:
-      - '&7点击这个'
-      - '&7发送物品邮件!'
+      lore: []
       glow: true
-      skull-texture: ''
+      skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk5ZjNjNzliNWJmOGYzZmZmMjRmZjFhNWU5MWFjNmU1MmQ5MzYwZWU0YjQ4ODcyN2E3MDA4ZjdlMTk1MTRhNSJ9fX0=
       custom-model-data: 0
     sound:
-      title: '&8[&e声音邮件&8]'
-      material: PAPER
+      title: '&7♪声音邮件'
+      material: PLAYER_HEAD
       amount: 1
-      lore:
-      - '&7点击这个'
-      - '&7发送声音邮件!'
+      lore: []
       glow: true
-      skull-texture: ''
+      skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTYyMGI4MmNmMTFlM2MxMzcxY2M1MWViOWUzMTJkZTcyYTZhNjI2NjQ0OTRlZDJjYjcxODFiMWJkZmJjOTI3OCJ9fX0=
       custom-model-data: 0
     location:
-      title: '&8[&e位置邮件&8]'
-      material: PAPER
+      title: '&7位置邮件'
+      material: PLAYER_HEAD
       amount: 1
-      lore:
-      - '&7点击这个'
-      - '&7发送位置邮件!'
+      lore: []
       glow: true
-      skull-texture: ''
+      skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTYzMTVlMzgwNTQ1Yjk5ZWU5YzhkMWIyMTdjZGUyZDg4ODRhZTg3M2UwMDc0NGUwZDA1ZDc2NjNmNDE4ODJjZiJ9fX0=
       custom-model-data: 0
   icon-custom:
-    title: '&8[&c自制&8]'
+    title: '&c自定义图标'
     material: YELLOW_STAINED_GLASS_PANE
     amount: 1
     lore:
-    - '&7点击背包中的物品来'
-    - '&7设定图标(物品不会消失)'
+    - '&7把物品放到这里来设定图标'
+    - '&7(物品数量也会记忆,但物品不会消失)'
     glow: true
     skull-texture: ''
     custom-model-data: 0
   remove-filter:
-    title: '&8[&d取消过滤器&8]'
+    title: '&d关闭过滤器'
     material: IRON_BARS
     amount: 1
-    lore:
-    - '&7点击取消过滤器!'
+    lore: []
     glow: true
     skull-texture: ''
     custom-model-data: 0
@@ -223,39 +208,33 @@ gui:
     skull-texture: ''
     custom-model-data: 0
   continue:
-    title: '&8[&e继续 >&8]'
+    title: '&e继续 >'
     material: EMERALD_BLOCK
     amount: 1
-    lore:
-    - '&7点击这个'
-    - '&7前往下一页!'
+    lore: []
     glow: true
     skull-texture: ''
     custom-model-data: 0
   text-button:
-    title: '&8[&e阅读文字&8]'
+    title: '&e阅读文字'
     material: MAP
     amount: 1
     lore:
-    - '&7点击这个'
-    - '&7为邮件转为文字形式'
+    - '&7邮件转文字'
     glow: true
     skull-texture: ''
     custom-model-data: 0
   read-mail:
     title: '&e邮件'
     lore:
-    - '&7点击这个'
-    - '&7接收邮件'
+    - '&7点击确认为已读'
   are-you-sure:
-    title: '&a确定?'
+    title: '&c确定删除邮件?'
     material: EMERALD_BLOCK
     amount: 1
     glow: true
     lore:
-    - '&7再次右键'
-    - '&7删除此邮件'
+    - '&7右键确定'
     - ''
     - '&7左键取消'
-    - '&7删除此邮件'
     custom-model-data: 0
