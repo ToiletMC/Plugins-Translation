@@ -75,6 +75,32 @@ general:
       line-2: '&c没有城镇'
       line-3: '&c以示.'
       line-4: ' '
+    rent:
+      line-2: '&6Rent {area}'
+      line-3: '&c${cost} &8/ &5{time}'
+      line-4: '&8Max: {max}'
+    sell:
+      area:
+        line-2: '&aBuy'
+        line-3: '&7Area&6 {area}'
+        line-4: '&c${cost}'
+      land:
+        line-2: '&aBuy'
+        line-3: '&7Land&2 {land}'
+        line-4: '&c${cost}'
+    rented:
+      line-2: '&7Area&6 {area}'
+      line-3: '&7{player}'
+      line-4: '&5{time} &7left'
+    sold:
+      area:
+        line-2: '&7Area&6 {area}'
+        line-3: '&aSold &7to'
+        line-4: '&7{player}'
+      land:
+        line-2: '&7Land&2 {land}'
+        line-3: '&aSold &7to'
+        line-4: '&7{player}'
   autoAction:
     claim: '&a区块划分'
   map:
@@ -228,6 +254,9 @@ help:
     claims: '[T]&8/&3Lands claims &8[&3land&8] &8- &7List claims of your land[H]&7This
       command will show you all /Lands claim''s of your land. &7Click to copy.[/H][SC]lands
       claims[/SC][/T]'
+    rent: '[T]&8/&3Lands rent &8<&3cancel | info | remove&8> &8- &7Manage rental[H]&7With
+      this command you can manage your rent at your current position. &7Click to copy.[/H][SC]lands
+      rent[/SC][/T]'
 message:
   world-not-exist: '&c您确定&4{world}&c是一个有效的世界名吗，&f拼错了?'
   world-invalid: '&c在世界{world}中这未被启用，需要管理员在配置中加入'
@@ -434,8 +463,12 @@ command:
       partly: '&7You successfully unclaimed {success} / {size} chunks of this selection.
         &8Please note that only chunks, which you''re allowed to unclaim, got unclaimed.'
       success: '&7成功释放所选区块'
+      rental: '&cYou can''t unclaim this selection&7, because it contains the rented/sold
+        area&6 {area} &7of land&2 {land}&7. Tenant:&3 {player}'
     connection: '&cYou can''t unclaim this chunk, because this would cause other chunks
       to be disconnected from your land. &7Chunk X: {x} Z: {z} would be disconnected.'
+    rental: '&cYou can''t unclaim this chunk&7, because it contains the rented/sold
+      area&6 {area}&7. Tenant:&3 {player}'
   delete:
     nation: '&c您不能删除这个城镇，因为这是{nation}联盟的首府， 但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations
       setCapital变更首府'
@@ -479,9 +512,6 @@ command:
       success: '&f成功取消{player}在{land}的信任'
   setrole:
     visitor: '&c不能设置为{role}角色，如果您想取消对其信任，请用/Lands untrust {player} [地点]'
-    area:
-      untrusted: '&c{player}还没有被{land}的{area}所信任，请先邀请吧'
-      success: '&f成功将{player}在{land}的{area}设置为{role}角色'
     land:
       untrusted: '&c{player}还没有被{land}所信任，请先邀请吧'
       success: '&f成功将{player}在{land}中设置为{role}角色'
@@ -569,6 +599,14 @@ command:
         &8税收:&c{tax}T
         &8玩家:{players}
       &7---------<- &5&l城镇公示 &r&7->---------
+    area: |
+      [NoPrefix]
+      &7---------<- &5&lArea View &7->---------
+      [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to get more information about this land.[/H][C]lands info {land}[/C][/T]
+      &7Area:&6 {area}
+        &8Tax:&c ${tax}
+        &8Players:&7 {players}
+      &7---------<- &5&lArea View &r&7->---------
   taxes:
     none: '&f您似乎没有将要缴纳的税款'
     upcoming:
@@ -592,6 +630,95 @@ command:
         &7---------<- &4税收变更 &7->---------
   unstuck:
     success: '&f成功传送至最近的未申领位置'
+  rent:
+    edit: '&cYou currently can''t edit area&4 {area} &cof land&4 {land}&7, because
+      it''s rented/sold to player&3 {player}&7.'
+    tenant: '&cYou haven''t rented the area at your current position. &7Area&6 {area}
+      &7of land&2 {land} &7is not rented by you.'
+    none: '&cThe area&4 {area} &cof land&4 {land} &cat your current position is not
+      rented by anyone.'
+    status: '&cThe area&4 {area} &cof land&4 {land} &cat your current position is
+      not set for rent or sale.'
+    set:
+      land: '&cYou can''t set the whole land&4 {land} &cfor rent. &7You can either
+        create sub areas to set it for rent or you sell (line = sell) it completely.'
+      already: '&cYou currently can''t set this area for rent again. &7The area&6
+        {area} &7is currently being rented by&3 {player}&7. It will expire in&5 {time}&7.'
+      sold: '&cYou can''t set a area, which has been sold, for rent. &7The area&6
+        {area} &7has been bought by player&3 {player}&7.'
+      success: '&7You set area&6 {area} &7for rent. The tenant will pay&c ${cost}
+        &7each&5 {time}&7.'
+      invalid: |
+        &7Your line format is invalid (line: {line})
+         &81. line:&7 Lands
+         &82. line:&7 rent
+         &83. line:&7 TIME maxTime (not required)
+         &84. line:&7 costs (example: 5 = $5)
+      info: |
+        [NoPrefix]
+        &7---------<- &5&lRent Info &7->---------
+        [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
+         &7Area:&6 {area}
+         &7Cost:&c ${cost} &7each {time}
+         &8Max time: {max}
+        &7---------<- &5&lRent Info &r&7->---------
+    rent:
+      trusted: '&cYou can''t rent area&4 {area} &cof land&4 {land}&c. &7You''re already
+        trusted in this area.'
+      max: '&cYou can''t add any more time to your rental. &7The owner of land&2 {land}
+        &7configured a maximum of&5 {max} &7in total.'
+      add: '&7You added&5 {add} &7to your rental of area&6 {area} &7for&c ${cost}&7.
+        It will expire in&5 {time}&7.'
+      success: '&7You rented area&6 {area} &7of land&2 {land} &7for&c ${cost}&7. It
+        will expire in&5 {time}&7.'
+      info: |
+        [NoPrefix]
+        &7---------<- &5&lRented Info &7->---------
+        [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
+         &7Area:&6 {area}
+         &7Tenant: {player}
+         &7Time left:&5 {left}
+         &8Rent: ${cost} each {time}
+        &7---------<- &5&lRented Info &r&7->---------
+    cancel:
+      success: '&7You cancelled the rental of area&6 {area}&7. You no longer have
+        access to this area.'
+    remove:
+      success:
+        land: '&7Land&2 {land} &7is no longer able to be purchased.'
+        area: '&7Area&6 {area} &7of land&2 {land} &7is no longer able to be rented
+          or purchased. &7Current tenants will stay until their rent expires.'
+  sell:
+    sell:
+      rented: '&cYou can''t sell a area, which is being rented by a player. &7The
+        area&6 {area} &7is currently being rented by&3 {player}&7. It will expire
+        in&5 {time}&7.'
+      success:
+        area: '&7You set area&6 {area} &7for sale. Cost:&c ${cost}'
+        land: '&7You set the whole land&2 {land} &7for sale. Cost:&c ${cost}'
+      invalid: |
+        &7Your line format is invalid (line: {line})
+         &81. line:&7 Lands
+         &82. line:&7 sell
+         &83. line:&7 costs (example: 5 = $5)
+    buy:
+      success:
+        area: '&7You bought area&6 {area} &7of land&2 {land} &7for&c ${cost}&7.'
+        land: '&7You bought the land&2 {land} &7for&c ${cost}&7.'
+      info:
+        area: |
+          [NoPrefix]
+          &7---------<- &5&lArea Buy &7->---------
+          [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
+           &7Area:&6 {area}
+           &7Cost:&c ${cost}
+          &7---------<- &5&lArea Buy &r&7->---------
+        land: |
+          [NoPrefix]
+          &7---------<- &5&lLand Buy &7->---------
+          [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this land.[/H][C]lands view[/C][/T]
+          &7Cost:&c ${cost}
+          &7---------<- &5&lLand Buy &r&7->---------
 list:
   swear-words: []
 wars:
