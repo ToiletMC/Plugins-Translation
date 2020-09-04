@@ -515,6 +515,11 @@ command:
     land:
       untrusted: '&c{player}还没有被{land}所信任，请先邀请吧'
       success: '&f成功将{player}在{land}中设置为{role}角色'
+    area:
+      untrusted: '&cThe player&4 {player} &cisn''t trusted in the area&4 {area} &cof
+        land&4 {land}&c. &7Please trust them first.'
+      success: '&7Successfully set role&3 {role} &7for player&3 {player} &7in the
+        area&6 {area} &7of land&2 {land}&7.'
   accept:
     max: '&c您不能再成为更多的城镇的一部分，已达{max}上限'
     not-exist: '&c并没有收到来自{land}的邀请，也许邀请时效已过或只是键入错误'
