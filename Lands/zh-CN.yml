@@ -506,6 +506,9 @@ command:
       already: '&f{player}并没有被{land}的{area}所信任，也未曾受邀过'
       revoke: '&f成功撤回对{player}在{land}的{area}邀请，玩家未被信任'
       success: '&f成功取消{player}在{land}的{area}信任'
+      rental: '&cYou can''t untrust the tenant&4 {player} &cof area&4 {area}&c. &7To
+        remove the area for rental, use &8/&3Lands rent remove &7while standing on
+        the area.'
     land:
       already: '&f{player}并没有被{land}所信任，也未曾受邀过'
       revoke: '&f成功撤回{player}在{land}的邀请，玩家未被信任'
