@@ -109,14 +109,21 @@ general:
     friendly: '&5▉ '
     current-location: '&e▉ '
     wilderness: '&2▉ '
-    top: '&f-<------------<- &6城镇地图 &f->------------>-'
     info:
       wilderness: ' &2▉ &f= 荒野'
       yours: ' &a▉ &f= 属于您'
       trusted: ' &5▉ &f= 属于您朋友'
       others: ' &c▉ &f= 属于其他人'
       position: ' &e▉ &f= 脚下的位置'
-    bottom: '&f-<------------<- &6城镇地图 &f->------------>-'
+    hover:
+      wilderness: '&7This chunk is wilderness. Click to claim it.'
+      yours: '&7This land is owned by you. Click to show information about land&3
+        {land}&7.'
+      trusted: '&7You''re trusted in this land. Click to show information about land&3
+        {land}&7.'
+      others: '&7You''re not trusted in this land. Click to show information about
+        land&3 {land}&7.'
+      position: '&7This is your current position.'
   inbox:
     general:
       created: '&8{0}: &f城镇已创建'
@@ -159,6 +166,12 @@ general:
       ally: '&aAlly'
   teleportation:
     bossbar: 请稍后，马上就好！
+  area:
+    description:
+      default: '&7This is the default area. New claims will belong to this area.'
+      sub: '&7This is a sub area, which can have special flags and members.'
+      rented: '&7This area is rented by player {player}.'
+      sold: '&7This area is sold to player {player}.'
 help:
   command:
     help: '[T]&8/&3Lands help &8[&3页码&8] - &f获取帮助[H]&7点击复制[/H][SC]lands help[/SC][/T]'
@@ -379,6 +392,8 @@ command:
       length: '&c啊这，名字太长了，请尽量缩短一下吧，最多{max}个字符哦'
       empty: '&c您键入了一个寂寞……请至少键入一个字符'
       color: '&c您不能在名称中使用颜色代码，请移除'
+      number: '&cYou''re not allowed to use numbers for this name. &7Please use only
+        letters. Found number:&3 {invalid}'
     number: '&c抱歉，您的键入有误，{argument}需要填上数字'
   help:
     help: '&f请使用/{cmd} help寻求帮助'
@@ -688,6 +703,8 @@ command:
          &7Time left:&5 {left}
          &8Rent: ${cost} each {time}
         &7---------<- &5&lRented Info &r&7->---------
+      expire: '&cYou can''t add any more time to your rental of area&4 {area}&c. &7The
+        land&2 {land} &7removed it for rental. It will expire in&5 {time}&7.'
     cancel:
       success: '&7You cancelled the rental of area&6 {area}&7. You no longer have
         access to this area.'
@@ -727,6 +744,9 @@ command:
           [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this land.[/H][C]lands view[/C][/T]
           &7Cost:&c ${cost}
           &7---------<- &5&lLand Buy &r&7->---------
+  map:
+    header: '&7-<------------<- &6Lands Map &7->------------>-[newline]'
+    footer: '[newline]&7-<------------<- &6Lands Map &7->------------>-'
 list:
   swear-words: []
 wars:

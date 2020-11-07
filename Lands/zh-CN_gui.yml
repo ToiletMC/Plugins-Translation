@@ -118,6 +118,9 @@ skull:
     admin: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UzZmVhODhlMmI4NWNjZGZiMWIzODcyOTgyZWFlMTY0ODlhODRjNjgxYmQ5ZmU0ZmU5YmM4YmNjMmU1In19fQ==
     member: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFhZGZkZjA3MTE3NWFkYWQ2NDRmZTRiM2E5NzMxYWM2YThmYTQ3NTExNjJlODEzOGM4OTlmYmFhNWZmMGI5In19fQ==
     visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+  area:
+    default: DARK_OAK_FENCE
+    sub: OAK_FENCE
 gui:
   main:
     title: '&0主菜单'
@@ -404,14 +407,6 @@ gui:
         material: OAK_FENCE
         from: 10
         to: 27
-      object_default:
-        name: '&6{area}'
-        lore:
-        - '&7这是城镇的默认区域，'
-        - '&7申领区块会让默认区域变大。'
-        material: DARK_OAK_FENCE
-        from: 10
-        to: 27
       area-setup:
         name: '&c等待规划:&6 {area}'
         lore:
@@ -570,6 +565,13 @@ gui:
         - '&8- &7税额按区域计算.'
         material: GOLD_INGOT
         slot: 33
+      various:
+        name: '&8> &6Various Settings'
+        lore:
+        - '&7Edit the area name'
+        - '&7and description.'
+        material: BEACON
+        slot: 35
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -590,6 +592,14 @@ gui:
         - '&7You can''t set taxes for this'
         - '&7area while it is rented/sold.'
         - '&7Tenant:&3 {player}'
+      failure_access:
+        name: '&4Failure: &cNot allowed'
+        lore:
+        - '&7You''re not allowed to do this'
+        - '&7in this area.'
+        - ' '
+        - '&8Flag: {flag}'
+        - '&8Bypass: {bypass}'
   area_invites:
     title: '&0{area} &0- 发出的邀请'
     size: 36
@@ -1142,6 +1152,32 @@ gui:
         - '&8- &7命令:'
         - '  &8/&3Lands withdraw'
         material: GOLD_NUGGET
+        from: 10
+        to: 27
+      item_pickup:
+        name: '&6Pickup Items'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to pickup'
+        - '&7items on the ground?'
+        material: HOPPER
+        from: 10
+        to: 27
+      player_ban:
+        name: '&6Manage Bans'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to'
+        - '&7ban or unban players?'
+        - ' '
+        - '&8- &7They won''t be able'
+        - '  &7to ban players which'
+        - '  &7have a higher role.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
         from: 10
         to: 27
     a:
@@ -2555,3 +2591,54 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 29
         to: 36
+  area_various:
+    title: Various Settings
+    size: 27
+    f:
+      name:
+        name: '&8> &6Name'
+        lore:
+        - '&7Rename this area.'
+        - ' '
+        - '&7Current:'
+        - '{name}'
+        material: NAME_TAG
+        slot: 11
+      description:
+        name: '&8> &6Description'
+        lore:
+        - '&7Change the description of'
+        - '&7this area.'
+        - ' '
+        - '&7Current:'
+        - '{description}'
+        material: OAK_SIGN
+        slot: 14
+      icon:
+        name: '&8> &6Icon'
+        lore:
+        - '&7Change the icon of'
+        - '&7this area.'
+        - ' '
+        - '&7This helps you to search'
+        - '&7area in the areas menu.'
+        material: OAK_FENCE
+        slot: 17
+      back:
+        name: '&cBack'
+        lore:
+        - '&7Go back to'
+        - '{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    a:
+      no-item:
+        name: '&cNo Item in Hand'
+        lore:
+        - '&7You need to have an item'
+        - '&7in your main hand.'
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
