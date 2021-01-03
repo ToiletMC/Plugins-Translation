@@ -19,8 +19,8 @@
 # Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
 # 
 # You also send a message at the actionbar:
-# Set message to: '#c#This is a actionbar message.'
-# (Set #c# in front of it.)
+# Set message to: '#a#This is a actionbar message.'
+# (Set #a# in front of it.)
 # 
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
@@ -326,6 +326,8 @@ message:
   blacklist:
     untrusted: '&c您不能在此使用该命令，您还不是{land}的{area}中的一员'
     general: '&c您不能在此区域使用该命令'
+    war: '&cYou''re not allowed to use this command while you''re engaged in a war.
+      &8Bypass permission: {permission}'
   autoAction:
     stopped: '&c停止您当前的自动操作，已达到{name}操作次数上限'
     started: '&f成功开始自动{name}操作'
@@ -452,6 +454,9 @@ command:
     already-claimed: '&c在您的框选中有一区块是属于{land}的土地，您不能重复申领'
     max-chunk: '&c不好意思，城镇面积已达上限，您最多只能为您的城镇申领{max}区块'
     selection: '&f您成功为{land}申领{chunks}区块，花费{cost}T'
+    initial-world: '&cFor land&4 {land} &cyou can only claim in its initial land creation
+      world&4 {world}&c. &7You may want to create another land for the world you''re
+      currently in ({current}): &8/&3Lands create &8<&3name&8>'
   assign:
     selection: '&c您需要先框选些什么，使用/Lands selection进入框选模式，框选后再重试吧'
     default: '&c您不能将所框选的区域分配给默认区域'
@@ -564,14 +569,14 @@ command:
     success: '&fSuccessfully teleported to X:&3 {x} &fZ:&3 {z} &fClaimed: {claimed}'
   setspawn:
     force-land: '&c您只能在自己的城镇中这样做，先前往{land}吧'
-    successs: '#t#&a&l出生点已设置{newline}&f&l花费：&c&l{cost}T'
+    success: '#t#&7Spawnpoint set[newline]&7Cost:&c ${cost}'
   spawn:
     not-exist: '&c似乎……{land}还没有出生点，使用/Land setspawn设置一个吧'
     not-allowed: '&c您不被允许传送至{land}出生点，要有传送权限'
     chunk: '&fLand&2 {land} &fhasn''t set a land spawn &8(&8/&3Lands setspawn&8) &fyet.
       &fTeleported you to the initial claim of this land.'
     unsafe: '&c哎呀，传送点位置似乎不安全，使用/Lands setspawn来调整吧'
-    successs: '&f成功传送至{land}出生点，花费：&c{cost}T'
+    success: '&7Successfully teleported to the spawn of land&2 {land} &7Cost:&c ${cost}'
   wild:
     no-location: '&cCouldnt find a safe location for you that matches the filter in
       config. &8Please adjust your max and min distance settings and set the world
@@ -709,10 +714,17 @@ command:
       success: '&7You cancelled the rental of area&6 {area}&7. You no longer have
         access to this area.'
     remove:
-      success:
-        land: '&7Land&2 {land} &7is no longer able to be purchased.'
-        area: '&7Area&6 {area} &7of land&2 {land} &7is no longer able to be rented
-          or purchased. &7Current tenants will stay until their rent expires.'
+      offer:
+        success:
+          land: '&7Land&2 {land} &7is no longer able to be purchased.'
+          area: '&7Area&6 {area} &7of land&2 {land} &7is no longer able to be rented
+            or purchased.'
+      tenant:
+        success: '&7You removed the tenant&3 {player} &7from area&6 {area} &7of land&2
+          {land} &7and payed&c {cost}$ &7as compensation.'
+    confirm: |
+      &cPlease confirm that you want to pay&4 {cost}$ &cas compensation to the tenant&4 {player} &cin order to remove him:
+        [T]&aConfirm: &8[CLICK][H]&7Click here to confirm this action and payment.[/H][C]lands rent removetenant confirm[/C][/T]
   sell:
     sell:
       rented: '&cYou can''t sell a area, which is being rented by a player. &7The
@@ -744,6 +756,13 @@ command:
           [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this land.[/H][C]lands view[/C][/T]
           &7Cost:&c ${cost}
           &7---------<- &5&lLand Buy &r&7->---------
+    sold: |
+      [NoPrefix]
+      &7---------<- &5&lArea Sold &7->---------
+      [T]&7Land:&a {land} &8[&8CLICK&8][H]&7Click here to visualize this area.[/H][C]lands view here[/C][/T]
+       &7Area:&6 {area}
+       &7Sold to&3 {player} &7for&c ${cost}&7.
+      &7---------<- &5&lArea Sold &7->---------
   map:
     header: '&7-<------------<- &6Lands Map &7->------------>-[newline]'
     footer: '[newline]&7-<------------<- &6Lands Map &7->------------>-'

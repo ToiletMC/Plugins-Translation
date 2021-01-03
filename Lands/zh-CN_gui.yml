@@ -358,6 +358,24 @@ gui:
         material: BLUE_STAINED_GLASS_PANE
         from: 30
         to: 30
+    a:
+      failure_teleport_permission:
+        name: '&4Denied: &cPermission'
+        lore:
+        - '&cYou''re not allowed to'
+        - '&cteleport to any land spawn.'
+        - ' '
+        - '&8Permission:'
+        - '&8{permission}'
+      failure_no-spawn:
+        name: '&4Failure: &cNo Spawn set'
+        lore:
+        - '&7This land has no spawn'
+        - '&7set yet. They need to'
+        - '&7set a land spawn first:'
+        - ' '
+        - '&7Execute &8/&3Lands setspawn'
+        - '&7to set the lands spawn.'
   land_areas:
     title: '&0区域'
     size: 36
@@ -1178,6 +1196,21 @@ gui:
         - '  &7to ban players which'
         - '  &7have a higher role.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
+        from: 10
+        to: 27
+      attack_monsters:
+        name: '&6Attack Monsters'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to'
+        - '&7attack monsters?'
+        - ' '
+        - '&8- &7If disabled, monsters'
+        - '  &7won''t be able to'
+        - '  &7attack them too.'
+        material: BOW
         from: 10
         to: 27
     a:
