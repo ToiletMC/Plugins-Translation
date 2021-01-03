@@ -82,11 +82,6 @@ general:
   previous: '&8previous'
   offline: '&cOffline'
   all: '&aAll'
-  role:
-    owner: '&4Owner'
-    admin: '&cAdmin'
-    member: '&eMember'
-    visitor: '&7Visitor'
   inbox-filter:
     members: '&eMembers'
     economy: '&cEconomy'
@@ -114,11 +109,9 @@ physical-Item:
     - '&8/&3Lands claim'
     material: GOLDEN_HOE
 skull:
-  role:
-    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJjMzExYTRmYjljNDkzODliNGY0NThjMjllOTY4MzI0YzU4MjNiOGE5OWVhZGUxNzQ3ODY2Yzk1YjA2NGEifX19
-    admin: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UzZmVhODhlMmI4NWNjZGZiMWIzODcyOTgyZWFlMTY0ODlhODRjNjgxYmQ5ZmU0ZmU5YmM4YmNjMmU1In19fQ==
-    member: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFhZGZkZjA3MTE3NWFkYWQ2NDRmZTRiM2E5NzMxYWM2YThmYTQ3NTExNjJlODEzOGM4OTlmYmFhNWZmMGI5In19fQ==
-    visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+  area:
+    default: DARK_OAK_FENCE
+    sub: OAK_FENCE
 gui:
   main:
     title: '&8Main Menu'
@@ -266,11 +259,14 @@ gui:
       information:
         name: '&6Information'
         lore:
-        - '&7Here you can view'
+        - '&7In this line you can view'
         - '&7some detailed information'
         - '&7about your land. This helps'
         - '&7to keep track of all events'
         - '&7in your land.'
+        - ' '
+        - '&7Click this item to teleport to'
+        - '&7the spawn.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
       trusted-players:
@@ -292,15 +288,19 @@ gui:
       management:
         name: '&6Management'
         lore:
-        - '&7Here you can manage your land.'
+        - '&7In this line you can manage your land.'
         - '&7You can trust players, assign roles,'
         - '&7edit land settings or set taxes.'
+        - ' '
+        - '&7Click this item to teleport to'
+        - '&7the spawn.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
         slot: 29
       various:
-        name: '&8> &6Name and Enter Message'
+        name: '&8> &6Cosmetical Settings'
         lore:
-        - '&7Edit land name or enter message.'
+        - '&7Edit the land name'
+        - '&7and enter message.'
         material: BEACON
         slot: 35
     f:
@@ -348,6 +348,7 @@ gui:
       stats:
         name: '&8> &6Statistics'
         lore:
+        - '&7Location: {11}, x={12}, z={13}'
         - '&7Claims: {0} / {1}'
         - '&7Members: {2} / {3}'
         - ' '
@@ -371,6 +372,24 @@ gui:
         - '{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 37
+    a:
+      failure_teleport_permission:
+        name: '&4Denied: &cPermission'
+        lore:
+        - '&cYou''re not allowed to'
+        - '&cteleport to any land spawn.'
+        - ' '
+        - '&8Permission:'
+        - '&8{permission}'
+      failure_no-spawn:
+        name: '&4Failure: &cNo Spawn set'
+        lore:
+        - '&7This land has no spawn'
+        - '&7set yet. They need to'
+        - '&7set a land spawn first:'
+        - ' '
+        - '&7Execute &8/&3Lands setspawn'
+        - '&7to set the lands spawn.'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -432,18 +451,12 @@ gui:
       object:
         name: '&6{area}'
         lore:
-        - '&7Open the area menu'
-        - '&7for this area.'
+        - '&7Open the menu for'
+        - '&7this area.'
+        - ' '
+        - '&7Description:'
+        - '{description}'
         material: OAK_FENCE
-        from: 10
-        to: 27
-      object_default:
-        name: '&6{area}'
-        lore:
-        - '&7This is the default area.'
-        - '&7All new claims will be'
-        - '&7assigned to this area.'
-        material: DARK_OAK_FENCE
         from: 10
         to: 27
       area-setup:
@@ -460,6 +473,12 @@ gui:
         from: 10
         to: 27
     a:
+      failure_rental:
+        name: '&4Failure: &cRental'
+        lore:
+        - '&7You can''t edit this area'
+        - '&7while it is rented/sold.'
+        - '&7Tenant:&3 {player}'
       failure_untrusted:
         name: '&4Denied: &cNot trusted'
         lore:
@@ -679,10 +698,32 @@ gui:
         lore:
         - '&7View taxes of this area.'
         - ' '
-        - '&7Taxes are calculated'
+        - '&7Taxes are collected'
         - '&7per area.'
         material: GOLD_INGOT
         slot: 33
+      various:
+        name: '&8> &6Various Settings'
+        lore:
+        - '&7Edit the area name'
+        - '&7and description.'
+        material: BEACON
+        slot: 35
+    a:
+      failure_rental:
+        name: '&4Failure: &cRental'
+        lore:
+        - '&7You can''t set taxes for this'
+        - '&7area while it is rented/sold.'
+        - '&7Tenant:&3 {player}'
+      failure_access:
+        name: '&4Failure: &cNot allowed'
+        lore:
+        - '&7You''re not allowed to do this'
+        - '&7in this area.'
+        - ' '
+        - '&8Flag: {flag}'
+        - '&8Bypass: {bypass}'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -1100,7 +1141,7 @@ gui:
       management:
         name: '&8> &6Management Settings'
         lore:
-        - '&7Toggle adimistratoral flags'
+        - '&7Toggle administrator flags'
         - '&7for this role, like'
         - '&7trusting players and claiming.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZkOTZlYWM1YTcwMTY4NDM3Y2NmZmFlZTBlN2ZjNWFjNWMwMjJmNDI5ZTNlZDkyOWNkNTE4OTRhMmRkNmQ4In19fQ==
@@ -1335,6 +1376,21 @@ gui:
         material: BOW
         from: 10
         to: 27
+      attack_monsters:
+        name: '&6Attack Monsters'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to'
+        - '&7attack monsters?'
+        - ' '
+        - '&8- &7If disabled, monsters'
+        - '  &7won''t be able to'
+        - '  &7attack them too.'
+        material: BOW
+        from: 10
+        to: 27
       vehicle_use:
         name: '&6Use Vehicles'
         lore:
@@ -1366,6 +1422,17 @@ gui:
         - '&7Allow this role to'
         - '&7enter this area?'
         material: OAK_FENCE_GATE
+        from: 10
+        to: 27
+      item_pickup:
+        name: '&6Pickup Items'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to pickup'
+        - '&7items on the ground?'
+        material: HOPPER
         from: 10
         to: 27
       area_assign:
@@ -1418,6 +1485,21 @@ gui:
         - '  &7to untrust players which'
         - '  &7have a higher role.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+        from: 10
+        to: 27
+      player_ban:
+        name: '&6Manage Bans'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to'
+        - '&7ban or unban players?'
+        - ' '
+        - '&8- &7They won''t be able'
+        - '  &7to ban players which'
+        - '  &7have a higher role.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
         from: 10
         to: 27
       setting_edit_land:
@@ -2171,7 +2253,7 @@ gui:
         - '&7Current:'
         - '&7{name}'
         material: NAME_TAG
-        slot: 4
+        slot: 3
       titles:
         name: '&8> &6Enter Message'
         lore:
@@ -2196,12 +2278,63 @@ gui:
         - '&7Go back to'
         - '{back}&7.'
         material: RED_STAINED_GLASS_PANE
-        slot: 0
+        slot: 1
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
         to: 9
+  area_various:
+    title: Various Settings
+    size: 27
+    f:
+      name:
+        name: '&8> &6Name'
+        lore:
+        - '&7Rename this area.'
+        - ' '
+        - '&7Current:'
+        - '{name}'
+        material: NAME_TAG
+        slot: 11
+      description:
+        name: '&8> &6Description'
+        lore:
+        - '&7Change the description of'
+        - '&7this area.'
+        - ' '
+        - '&7Current:'
+        - '{description}'
+        material: OAK_SIGN
+        slot: 14
+      icon:
+        name: '&8> &6Icon'
+        lore:
+        - '&7Change the icon of'
+        - '&7this area.'
+        - ' '
+        - '&7This helps you to search'
+        - '&7area in the areas menu.'
+        material: OAK_FENCE
+        slot: 17
+      back:
+        name: '&cBack'
+        lore:
+        - '&7Go back to'
+        - '{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    a:
+      no-item:
+        name: '&cNo Item in Hand'
+        lore:
+        - '&7You need to have an item'
+        - '&7in your main hand.'
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
   global_lands:
     title: '&8All Lands'
     size: 54
@@ -2283,16 +2416,16 @@ gui:
         name: '&4Denied: &cPermission'
         lore:
         - '&cYou''re not allowed to'
-        - '&cteleport to this land spawn.'
+        - '&cteleport to any land spawn.'
         - ' '
         - '&8Permission:'
         - '&8{permission}'
       failure_no-spawn:
         name: '&4Failure: &cNo Spawn set'
         lore:
-        - '&cThis land has no spawn'
-        - '&cset yet. They need to'
-        - '&cset a land spawn first.'
+        - '&7This land has no spawn'
+        - '&7set yet. They need to'
+        - '&7set a land spawn first.'
         - ' '
         - '&8- &7They can execute'
         - '  &8/&3Lands setspawn &7to'
