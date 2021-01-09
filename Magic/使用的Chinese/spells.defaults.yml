@@ -2984,6 +2984,7 @@ camera:
   costs:
     paper: 1
 capture:
+  enabled: false
   icon: turtle_egg{CustomModelData:18001}
   icon_disabled: turtle_egg{CustomModelData:18002}
   legacy_icon: spell_icon:251
