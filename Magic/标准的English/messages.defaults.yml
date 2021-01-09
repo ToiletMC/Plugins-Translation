@@ -355,19 +355,19 @@ resource_pack:
     t:&3Please Wait
     &bsending resource pack
 controls:
-  drop: Drop (Q)
-  right_click: Right-Click
-  left_click: Left-Click
-  swap: Swap (F)
+  drop: 丢弃 (Q)
+  right_click: 左键
+  left_click: 右键
+  swap: 切换 (F)
 skillapi:
-  required_skill: '&cRequired Skill: &4$skill'
-  required_class: '&cRequired Class: &4$class'
+  required_skill: '&c前置技能: &4$skill'
+  required_class: '&c前置职业: &4$class'
 damage_types:
-  explosion: Explosion
-  fall: Fall
-  fire: Fire
-  physical: Physical
-  projectile: Projectile
+  explosion: 爆炸
+  fall: 摔落
+  fire: 火焰
+  physical: 物理
+  projectile: 弹射物
 npc:
   dialog: '&7[$speaker&7]&8: &f$line'
   insufficient: '&cCosts $cost'
@@ -378,7 +378,7 @@ path:
     t:&r&b*** &r&5$path &b***
     &5Advanced
 requirements:
-  unknown: '&cNot Allowed'
+  unknown: '&c禁止使用'
   property_requirement: '&r&cRequires: &6$property &cof &4$value'
   property_max: '&r&cYour &6$property &cis maxed out'
   property_min: '&r&cYour &6$property &cmust be greater than &4$value'
@@ -494,313 +494,311 @@ spells:
     invalid_world: The specified world is not valid.
     cast_finish: ''
   admission:
-    name: Admission
-    description: Opens the target door
-    cast: Let me in!
+    name: 开门
+    description: 打开目标处的门
+    cast: 芝麻开门!
   admission|2:
-    upgrade_description: Now opens iron doors
+    upgrade_description: 现在可以打开铁门了
   collapse:
-    name: Collapse
-    description: Collapse a spherical area of blocks
-    cast_finish: Collapsed $count blocks
-    upgrade_description: Increased radius, breaks more types of blocks
+    name: 崩塌
+    description: 使圆形范围内的方块崩塌
+    cast_finish: $count块方块坍塌了
+    upgrade_description: 增加范围,可破坏更多类型的方块
   sparkle:
     name: Sparkle
     description: Gives you a random effect, bad or good
   secure:
-    name: Secure
-    description: Secures containers
-    usage: Aim up and cast for a replacement key, sneak-cast to unlock
-    cast: Container is now locked- you must hold your key to unlock it!
-    acquire: Lock changed!
-    already: That is already locked
-    alternate_up: You summon a replacement key
-    alternate_sneak: Container unlocked
+    name: 保险
+    description: 给容器上锁
+    usage: 往上瞄准获得备用钥匙, 潜行施法以解锁
+    cast: 容器已上锁,请用钥匙开锁!
+    acquire: 已换锁!
+    already: 已上锁
+    alternate_up: 你召唤了一把备用钥匙
+    alternate_sneak: 已解锁
     key_name: '&6&k$uuid'
-    key_name_alternate: '&6$name''s &eKey'
+    key_name_alternate: '&6$name的&e钥匙'
     key_description: |-
-      &6$name's &eKey
-      Needed to open your locked containers
-    fail: You can't lock that!
-    upgrade_description: Now locks furnaces and other containers
+      &6$name的&e钥匙
+      用于打开上锁的容器
+    fail: 你不能给那个东西上锁!
+    upgrade_description: 现在可以锁住熔炉和其他容器
   lockpick:
-    name: Lockpick
-    description: Unlocks locked containers
-    cast: Open Sesame!
-    fail: You can't unlock that!
+    name: 撬锁工具
+    description: 解锁上锁的容器
+    cast: 芝麻开门!
+    fail: 撬锁失败!
   snoop:
-    name: Snoop
-    description: Peek inside of a chest
-    cast: Let's see what's in there
-    no_target: You must target a chest
+    name: 窥探
+    description: 偷窥箱子里有什么宝贝
+    cast: 让我康康这里面有什么宝贝
+    no_target: 你必须看着一个箱子
   anvil:
-    name: Anvil
-    description: Spawn an anvil
-    cast: So heavy!
+    name: 牛顿之力
+    description: 召唤铁砧
+    cast: 好重啊!
   silence:
-    name: Silence
-    description: Prevent your target from casting spells
-    cast: You silence $target
+    name: 沉默
+    description: 禁止目标施法
+    cast: 你沉默了$target
   curse:
-    name: Curse
-    description: Slows down and weakens the target
-    cast: You curse $target
-    upgrade_description: Now confuses as well
+    name: 诅咒
+    description: 减缓并虚弱目标
+    cast: 你诅咒了$target
+    upgrade_description: 现在会使目标反胃
   broom:
-    name: Broom Skill
-    cast: Your broom springs to life!
-    deactivate: Your broom quiets down.
-    crash: CRASH!
-    fail: Not enough room to take off!
-    creative_fail: You can't use broomsticks in creative mode!
-    cursed: You are too stunned to fly!
-    upgrade_description: Increased flight duration and improved handling
-    nospace: '&cFind a clear space to mount your broom'
-    reactivate: Reactivating your broomstick
+    name: 飞天扫帚
+    cast: 你的扫帚焕发出气息!
+    deactivate: 你的扫帚平静下来了.
+    crash: 扫帚坏了!
+    fail: 起飞空间不足!
+    creative_fail: 你不能在创造模式使用!
+    cursed: 你吓得不敢飞了!
+    upgrade_description: 增加持续时间、速度和掌控力
+    nospace: '&c请寻找一个空旷的地方起飞'
+    reactivate: 重新激活飞天扫帚
   superbroom:
-    name: SuperBroom
-    cast: Your wand springs to life!
-    deactivate: Your wand quiets down.
-    crash: CRASH!
-    fail: Not enough room to take off!
+    name: 超级扫帚
+    cast: 你的扫帚焕发出了神秘的气息!
+    deactivate: 你的扫帚平静下来了.
+    crash: 扫帚坏了!
+    fail: 空间太小了,起飞失败!
     reactivate: Reactivating your flying enchantment
   boon:
-    name: Boon
-    description: Makes you temporarily superpowered
-    cast_self: You give yourself a boon
-    cast: You give $target a boon
+    name: 风骑手的狂涌
+    description: 让你拥有风骑手一般的速度
+    cast_self: 你让你自己变得像风骑手一样
+    cast: 你让 $target 变得像风骑手一样
   boon|2:
-    upgrade_description: Gives a jump boost
+    upgrade_description: 获得跳跃提升效果
   boon|3:
-    upgrade_description: Increases speed effect
+    upgrade_description: 增加速度效果
   boon|4:
-    upgrade_description: Adds night vision
+    upgrade_description: 获得夜视效果
   blessing:
-    name: Blessing
-    description: Bless a large area of followers
-    cast: You bless the area
+    name: 祝福
+    description: 治愈区域里的追随者
+    cast: 你祝福了这片区域
   holylight:
-    name: Holy Light
-    description: Heal players in the area, harm mobs
-    cast: You shine the Holy Light
+    name: 圣光
+    description: 治愈区域内的玩家,对有害生物造成伤害
+    cast: 你让圣光照耀了大地
   mount:
-    name: Mount
-    description: Mount your target
-    cast: You mount $target
+    name: 骑乘
+    description: 骑乘你的目标
+    cast: 你骑上了$target
   horse:
-    name: Horse
-    description: Summon and mount a horse
-    cast: Giddyup!
-    nospace: '&cFind a clear space for your horse'
+    name: 马
+    description: 召唤一匹马并骑马
+    cast: 斗气化马!
+    nospace: '&c空间不足'
   tame:
-    name: Tame
-    description: Tame your target
-    cast: You tame $target
+    name: 驯服
+    description: 驯服目标
+    cast: 你驯服了$target
   platform:
-    name: Platform
-    description: Create a platform in front of you
-    cast_finish: Filled $count blocks with $material
+    name: 平台
+    description: 创造一片平台
+    cast_finish: 已填充$count块$material
   platform|2:
-    upgrade_description: Increased size
+    upgrade_description: 增加大小
   platform|4:
-    upgrade_description: Now builds with your brush
+    upgrade_description: 现在使用笔刷建造
   reflect:
-    name: Reflect
-    description: Reflect spells cast against you
-    upgrade_description: Increased size and reflectivity
+    name: 法术反弹
+    description: 反弹魔法
+    upgrade_description: 增加大小和反弹力
   shell:
-    name: Shell
-    description: Create a reflective shell
-    upgrade_description: Increased durability and reflectivity
+    name: 法术盾牌
+    description: 创造可以反射魔法的法术盾牌
+    upgrade_description: 增加耐久度和反射力
   tag:
-    name: Tag
-    description: Leave a sign with your name
-    usage: Requires and consumes one sign item!
-    fail: Sign placement failed!
-    cast: You leave a tag
-    cast_player: You send $target a message
-    cast_give: Have some signs!
-    cast_player_message: '&5You hear a mysterious voice from &c&o$player &r&5... it
-      says ... Hi!'
+    name: 立牌
+    description: 留下一块写有你的名字的告示牌
+    usage: 需要消耗一块告示牌!
+    fail: 放置告示牌失败!
+    cast: 你放置了一块牌子
+    cast_player: 你给$target发送了一条消息
+    cast_give: 来些告示牌吧!
+    cast_player_message: '&5你听到了&c&o$player&r&5的声音...
+      他说：“你好！”'
     sign_message: was here
   flashbang:
-    name: Flash Bang
-    description: Toss a ball of light and fury
-    cast_player_message: a:You were hit by $player's flash bang
+    name: 闪光弹
+    description: 发射闪光弹
+    cast_player_message: a:你被$player的闪光弹眩晕了
   singularity:
-    name: Singularity
-    description: Create a black hole
-    cast_player_message: a:You got sucked into a black hole
+    name: 奇点
+    description: 创造黑洞
+    cast_player_message: a:你被吸入了黑洞
   arrow:
-    name: Arrow
-    description: Fire a magic arrow
-    upgrade_description: Increased damage and accuracy
+    name: 魔法弓箭
+    description: 发射魔法弓箭
+    upgrade_description: 增加伤害和精准度
   arrow_light:
-    name: Light Arrow
-    description: Fire an arrow of pure light
-    cast_player_message: a:$player shot a $spell at you
+    name: 光箭
+    description: 发射光箭
+    cast_player_message: a:$player对你发射了$spell
   arrow_bomb:
-    name: Bomb Arrow
-    description: Fire an exploding arrow
-    cast_player_message: a:$player shot a $spell at you
+    name: 爆破箭
+    description: 发射爆破箭
+    cast_player_message: a:$player对你发射了$spell
   arrow_poison:
-    name: Poison Arrow
-    description: Fire a arrow that bursts into a poison cloud
-    cast_player_message: a:$player shot a $spell at you
+    name: 毒箭
+    description: 发射能够形成毒雾的弓箭
+    cast_player_message: a:$player对你发射了$spell
   arrow_regular:
-    name: Normal Arrow
-    description: Fire a normal arrow
-    cast_player_message: a:$player shot a $spell at you
+    name: 普通弓箭
+    description: 发射普通弓箭
+    cast_player_message: a:$player对你发射了$spell
   arrow_blink:
-    name: Blink Arrow
-    description: Teleport to the location where your arrow lands
-    cast_player_message: a:$player shot a $spell at you
+    name: 闪烁弓箭
+    description: 传送到箭落地处
+    cast_player_message: a:$player对你发射了$spell
   arrow_fire:
-    name: Fire Arrow
-    description: Lights a fire where it lands
-    cast_player_message: a:$player shot a $spell at you
+    name: 火焰弓箭
+    description: 发射火焰弓箭
+    cast_player_message: a:$player对你发射了$spell
   arrow_ice:
-    name: Ice Arrow
-    description: Freeze the area where it lands
-    cast_player_message: a:$player shot an $spell at you
+    name: 寒冰箭
+    description: 冻结目标区域
+    cast_player_message: a:$player对你发射了$spell
   arrow_shock:
-    name: Shock Arrow
-    description: Electrify the target
-    cast_player_message: a:$player shot a $spell at you
+    name: 颤栗箭
+    description: 使目标颤栗
+    cast_player_message: a:$player对你发射了$spell
   arrow_grapple:
-    name: Grapple Arrow
-    description: Shoot an arrow which pulls you towards it
-    cast_player_message: a:$player shot a $spell at you
+    name: 抓钩箭
+    description: 将你拉到目标处
+    cast_player_message: a:$player对你发射了$spell
   toss:
-    name: Toss
-    description: Toss a block
-    fail: One of your blocks fizzled
-    cast: You toss a block
+    name: 投掷
+    description: 投掷方块
+    fail: 施法失败
+    cast: 你投掷出了一块方块
   volley:
-    name: Volley
-    description: Toss a bunch of blocks
-    fail: One of your blocks fizzled
-    cast: You toss some blocks
+    name: 方块齐掷
+    description: 投掷一些方块
+    fail: 施法失败
+    cast: 你扔出了一些方块
   sniper:
-    name: Sniper
-    description: Fire a super fast arrow
+    name: 狙击
+    description: 发射超越光速的弓箭
   pull:
-    name: Pull
-    description: Pull things toward you
-    alternate: Gimme!
-    cast: Yoink!
+    name: 给我康康
+    description: 你很好奇眼前的东西，并拉过来康了康
+    alternate: 过来吧!
+    cast: 嗖!
   grab:
-    name: Grab
-    description: Pull items toward you
-    cast: Yoink!
+    name: 拉
+    description: 将你前面的物品拉过来
+    cast: 撕撕撕
   permafrost:
-    name: PermaFrost
-    description: Make it permanently snowy!
-    cast_finish: Permafrosted $count blocks
+    name: 极寒
+    description: 下雪吧!
+    cast_finish: 冻结$count块方块
   permamelt:
-    name: PermaMelt
-    description: Raise the temperature
-    cast_finish: Permamelted $count blocks
+    name: 永焰
+    description: 升温
+    cast_finish: 永久融化$count块方块
   frost:
-    name: Frost
-    description: Freeze water and create snow
-    cast_finish: Frosted $count blocks
-    upgrade_description: Larger radius, increased slow duration
+    name: 霜寒
+    description: 化水为雪
+    cast_finish: 已冻结$count块方块
+    upgrade_description: 更大的范围,增加减速的持续时间
   harden:
-    name: Harden
-    description: Make the target blocks stronger
-    cast: Hardened $count blocks
+    name: 铜墙
+    description: 使目标方块更加坚硬
+    cast: 加固$count块方块
   harden|2:
-    upgrade_description: Now converts to obsidian
+    upgrade_description: 现在转换为黑曜石
   disarm:
-    name: Disarm
-    description: Disarm your opponent
-    cast: You disarm your target
-    cast_self: You disarm yourself
-    upgrade_description: Descreased chance of backfire and fizzle
+    name: 缴械
+    description: 缴械目标
+    cast: 你缴械了目标
+    cast_self: 你缴械了自己
+    upgrade_description: 降低失败率
   disarm|3:
-    upgrade_description: No chance of backfire and fizzle
+    upgrade_description: 百分百成功
   heal:
-    name: Heal
-    description: Heal yourself or others
-    usage: Can be interrupted by damage!
-    cast: You heal $target
-    cast_self: You heal yourself
-    upgrade_description: Cooldown decreased
+    name: 治疗
+    description: 治疗你自己或其他人
+    usage: 会被伤害打断!
+    cast: 你治疗了$target
+    cast_self: 你治疗了自己
+    upgrade_description: 降低冷却
   healing:
-    name: Healing
-    description: Heal everyone around you
-    cast: You heal $target
+    name: 甘霖
+    description: 治疗附近的任何人
+    cast: 你治疗了$target
   cure:
-    name: Cure
-    description: Remove negative effects
-    cast: You cure $target
-    cast_self: You cure yourself
-    upgrade_description: Now cures hunger
+    name: 香丹清
+    description: 吃下一颗香丹清，解除负面效果
+    cast: 你喂 $target 吃下了香丹清
+    cast_self: 你吃下了香丹清
+    upgrade_description: 现在可以解除饥饿效果
   cure|2:
-    upgrade_description: Now removes wither and weakness
+    upgrade_description: 现在可以解除凋零和虚弱效果
   cure|3:
-    upgrade_description: Now negates Silence
+    upgrade_description: 现在可解除沉默效果
   cure|4:
-    upgrade_description: Now cures hunger
+    upgrade_description: 现在可以解除饥饿效果
   cure|5:
-    upgrade_description: Now cures zombie villagers
+    upgrade_description: 现在可以治愈僵尸村民
   music:
-    name: Music
-    description: Play some tunes
-    cast_player: You play some music for $name
-    cast_self: You play some music
+    name: 音乐
+    description: 播放音乐
+    cast_player: 你给$name播放了音乐
+    cast_self: 你播放了一些音乐
   airstrike:
-    name: Air Strike
-    description: Take out a nearby entity
-    cast_player_message: a:&d&o$player &r&5called in an air strike on you
+    name: 空中支援
+    description: 干掉附近的实体
+    cast_player_message: a:&d&o$player &r&5召唤了空中支援
   supergather:
-    name: SuperGather
-    description: Capture players and teleport them
-    usage: Aim down to cycle targets, up to teleport to them
-    cast_to_player: Teleporting you to $target
-    cast_entity: Teleporting $target to your target
-    cast_player_message: a:&d&o$player &r&5folded space
-    target_selected: You captured $target
-    cancel: Released target
+    name: 大召唤术
+    description: 传送到所有玩家到你身边
+    usage: 往下瞄准循环玩家,往上传送玩家
+    cast_to_player: 已将您传送到$target
+    cast_entity: 已传送$target
+    cast_player_message: a:&d&o$player&r&5折叠了空间
+    target_selected: 你选择了$target
+    cancel: 已释放目标
   icbm:
     name: ICBM
-    description: Cast an exploding fireball
-    cast: Look out!
+    description: 发射洲际导弹
+    cast: 小心!
   neutron:
-    name: Neutron Bomb
-    description: Damage and stun all entities in a wide radius
-    cast: Kill all the things!
-    upgrade_description: Increased radius
+    name: 中子弹
+    description: 伤害并眩晕附近的所有实体
+    cast: 毁天灭地!
+    upgrade_description: 增加范围
   shuriken:
-    name: Shuriken
-    description: Throw a bouncing projectile
-    upgrade_description: Increased damage
+    name: 手里剑
+    description: 扔出手里剑
+    upgrade_description: 增加伤害
   wave:
-    name: Wave
-    description: Unleash a concussive wave
-    upgrade_description: Increased size and force
+    name: 震荡波
+    description: 发出震荡波
+    upgrade_description: 增加大小和强度
   weather:
-    name: Weather
-    description: Change the weather
-    cast: You stir up a storm
-    alternate: You calm the storm
+    name: 天气之子
+    description: 改变天气
+    cast: 你召唤了风暴
+    alternate: 你平息了风暴
   fling:
-    name: Fling
-    description: Sends you flying in the target direction
-    upgrade_description: |-
-      Increased speed, reduced cooldown
-      &7Sneak-cast for a smaller jump
+    name: 腾跃
+    description: 使你飞向目标
+    upgrade_description: 增加速度, 减少冷却
   leap:
-    name: Leap
-    description: Take a big leap
+    name: 飞跃
+    description: 飞跃
     cast: Whee!
   torch:
-    name: Torch
-    description: Creates a torch or glowstone
-    no_target: Can't put a torch there
-    cast: Flame on!
-    upgrade_description: Reduced cooldown
+    name: 火把
+    description: 创造火把或荧石
+    no_target: 无法在那里放置火把
+    cast: 驱散黑暗吧!
+    upgrade_description: 减少冷却
   monster:
     name: Monster
     description: Call a monster to your side
