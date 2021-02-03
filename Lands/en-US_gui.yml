@@ -91,6 +91,7 @@ general:
     attackers: '&cAttackers'
     name:
       land: '&2Land '
+      nation: '&9Nation '
 physical-Item:
   claim-block:
     name: '&7Claimblock'
@@ -253,7 +254,7 @@ gui:
         from: 19
         to: 27
   land:
-    title: '&8{land}'
+    title: '&8{level} {land}'
     size: 45
     s:
       information:
@@ -269,12 +270,16 @@ gui:
         - '&7the spawn.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
-      trusted-players:
+      trusted:
         name: '&8> &6Trusted Players'
         lore:
         - '&7Get a list of all trusted players,'
         - '&7no matter in which areas they''re'
         - '&7trusted.'
+        - ' '
+        - '&bSHIFT + LEFT CLICK'
+        - '&7Manage banned players'
+        - '&7of the whole land.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 14
       invites:
@@ -345,24 +350,30 @@ gui:
         - '{inbox}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJmM2ZjZGNjZmZkOTYzZTQzMzQ4MTgxMDhlMWU5YWUzYTgwNTY2ZDBkM2QyZDRhYjMwNTFhMmNkODExMzQ4YyJ9fX0=
         slot: 16
-      stats:
+      stat:
         name: '&8> &6Statistics'
         lore:
-        - '&7Location: {11}, x={12}, z={13}'
-        - '&7Claims: {0} / {1}'
-        - '&7Members: {2} / {3}'
+        - '&7Location: {0}, x={1}, z={2}'
+        - ' '
+        - '&7Nation: {3}'
+        - '&7Claims: {4} / {5} &7+ {6} (nation)'
+        - '&7Members: {7} / {8}'
+        - ' '
+        - '&7{level}'
+        - '&7Next: {level_next} &8({members_next} members)'
+        - '&7Click for more information.'
         - ' '
         - '&7Economy'
         - '&8- &7Land'
-        - '  &7Balance: ${4}'
-        - '  &7Next claim cost: ${5}'
-        - '  &7Upkeep of&c ${6} &7in:'
-        - '  &7{7}'
+        - '  &7Balance: ${9}'
+        - '  &7Next claim cost: ${10}'
+        - '  &7Upkeep of&c ${11} &7in:'
+        - '  &7{12}'
         - ' '
         - '&8- &4You'
-        - '  &7Balance: ${8}'
-        - '  &7Taxes of&c ${9} &7in:'
-        - '  &7{10}'
+        - '  &7Balance: ${13}'
+        - '  &7Taxes of&c ${14} &7in:'
+        - '  &7{15}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ==
         slot: 17
       back:
@@ -565,7 +576,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 29
         to: 36
-  land_inbox:
+  inbox:
     title: '&8Inbox'
     size: 36
     f:
@@ -615,10 +626,9 @@ gui:
       failure_owner:
         name: '&4Failure: &cNo Access'
         lore:
-        - '&7You''re not allowed to'
-        - '&7do this. Only the owner'
-        - '&7of the land is permitted'
-        - '&7to remove messages.'
+        - '&7You''re not allowed to do this.'
+        - '&7Only the owner is permitted to'
+        - '&7remove messages.'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -650,11 +660,15 @@ gui:
         - '&7in this area.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
         slot: 11
-      trusted-players:
+      trusted:
         name: '&8> &6Trusted Players'
         lore:
         - '&7Get a list of all players, which'
         - '&7are trusted in this specific area.'
+        - ' '
+        - '&bSHIFT + LEFT CLICK'
+        - '&7Manage banned players'
+        - '&7of this area.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 13
       invites:
@@ -798,7 +812,7 @@ gui:
         lore:
         - '&7Display only players'
         - '&7which are trusted in'
-        - '&7this area&6 {area}&7?'
+        - '&7this area &8(&6{area}&8)&7?'
         - ' '
         - '&7If disabled: Displays'
         - '&7players of the whole land.'
@@ -824,6 +838,99 @@ gui:
         - '&7Click here to untrust'
         - '&7a player from this area.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+        slot: 33
+      back:
+        name: '&cBack'
+        lore:
+        - '&7Go back to'
+        - '{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+        - '&7Go to previous page:&9 {previous}'
+        - ' '
+        - '&8- &7Current:&3 {current}'
+        material: ARROW
+        slot: 29
+      page_next:
+        name: '&aNext Page'
+        lore:
+        - '&7Go to next page:&9 {next}'
+        - ' '
+        - '&8- &7Current:&3 {current}'
+        material: ARROW
+        slot: 35
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
+  area_banned:
+    title: '&8{area} &7- &8Banned Players'
+    size: 36
+    l:
+      object_all:
+        name: '&e{player}'
+        lore:
+        - '&7Banned in these areas:'
+        - '{areas}'
+        - ' '
+        - '&7Middle click:'
+        - '&7Get more information.'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+      object:
+        name: '&e{player}'
+        lore:
+        - '&7The player is banned'
+        - '&7in this area.'
+        - ' '
+        - '&7Middle click:'
+        - '&7Get more information.'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+    f:
+      toggle:
+        name: '&8> &6View only Area'
+        lore:
+        - '&7Display only players'
+        - '&7which are banned in'
+        - '&7this area &8(&6{area}&8)&7?'
+        - ' '
+        - '&7If disabled: Displays'
+        - '&7bans of the whole land.'
+        - '&7Also it allows you to'
+        - '&7ban / unban players'
+        - '&7in the whole land.'
+        - ' '
+        - '&7Current: {current}'
+        material: HOPPER
+        slot: 32
+      ban:
+        name: '&8> &cBan Player'
+        lore:
+        - '&7Click here to ban'
+        - '&7a player in this area.'
+        - ' '
+        - '&7Banned players won''t'
+        - '&7be able to enter or'
+        - '&7teleport into it.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+        slot: 31
+      unban:
+        name: '&8> &aUnban Player'
+        lore:
+        - '&7Click here to unban'
+        - '&7a player from this area.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         slot: 33
       back:
         name: '&cBack'
@@ -1435,6 +1542,19 @@ gui:
         material: HOPPER
         from: 10
         to: 27
+      ender_pearl:
+        name: '&6Use Ender Pearls'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Allow this role to'
+        - '&7teleport inside your land'
+        - '&7by using ender pearls'
+        - '&7and chorus fruits?'
+        material: ENDER_PEARL
+        from: 10
+        to: 27
       area_assign:
         name: '&6Assign Areas'
         lore:
@@ -1585,7 +1705,7 @@ gui:
         from: 10
         to: 27
       spawn_set:
-        name: '&6Set Landspawn'
+        name: '&6Set Spawn'
         lore:
         - '&7Status: {enabled}'
         - '&7Unlocked: {unlocked}'
@@ -1603,7 +1723,7 @@ gui:
         - ' '
         - '&7Allow this role to'
         - '&7teleport to the spawn?'
-        material: ENDER_PEARL
+        material: ENDER_EYE
         from: 10
         to: 27
       balance_withdraw:
@@ -1658,7 +1778,7 @@ gui:
         to: 36
   area_settings:
     title: '&8{area} &7- &8Land Settings'
-    size: 27
+    size: 36
     s: {}
     f:
       page_previous:
@@ -1668,7 +1788,7 @@ gui:
         - ' '
         - '&8- &7Current:&3 {current}'
         material: ARROW
-        slot: 21
+        slot: 30
       page_next:
         name: '&aNext Page'
         lore:
@@ -1676,14 +1796,14 @@ gui:
         - ' '
         - '&8- &7Current:&3 {current}'
         material: ARROW
-        slot: 25
+        slot: 34
       back:
         name: '&cBack'
         lore:
         - '&7Go back to'
         - '{back}&7.'
         material: RED_STAINED_GLASS_PANE
-        slot: 19
+        slot: 28
     l:
       entity_griefing:
         name: '&6Entity Griefing'
@@ -1699,7 +1819,7 @@ gui:
         - '&8buildings.'
         material: CREEPER_HEAD
         from: 10
-        to: 18
+        to: 27
       tnt_griefing:
         name: '&6TNT Block Damage'
         lore:
@@ -1714,7 +1834,7 @@ gui:
         - '&8land to grief it.'
         material: TNT
         from: 10
-        to: 18
+        to: 27
       piston_griefing:
         name: '&6Pistons from Wilderness'
         lore:
@@ -1729,7 +1849,7 @@ gui:
         - '&8by using pistons from wilderness.'
         material: PISTON
         from: 10
-        to: 18
+        to: 27
       waterflow_allow:
         name: '&6Water from Wilderness'
         lore:
@@ -1744,7 +1864,7 @@ gui:
         - '&8your land from wilderness.'
         material: WATER_BUCKET
         from: 10
-        to: 18
+        to: 27
       monster_spawn:
         name: '&6Monster Spawning'
         lore:
@@ -1758,7 +1878,7 @@ gui:
         - '&8by this setting.'
         material: SPAWNER
         from: 10
-        to: 18
+        to: 27
       animal_spawn:
         name: '&6Animal Spawning'
         lore:
@@ -1772,7 +1892,7 @@ gui:
         - '&8by this setting.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
         from: 10
-        to: 18
+        to: 27
       fire_spread:
         name: '&6Fire Spread'
         lore:
@@ -1786,7 +1906,7 @@ gui:
         - '&8can''t enter your land.'
         material: FLINT_AND_STEEL
         from: 10
-        to: 18
+        to: 27
       leaf_decay:
         name: '&6Leaf Decay'
         lore:
@@ -1797,7 +1917,7 @@ gui:
         - '&7inside your land?'
         material: OAK_LEAVES
         from: 10
-        to: 18
+        to: 27
       plant_growth:
         name: '&6Plant Growth'
         lore:
@@ -1807,7 +1927,17 @@ gui:
         - '&7Should plants be able to grow?'
         material: VINE
         from: 10
-        to: 18
+        to: 27
+      snow_melt:
+        name: '&6Snow Melt'
+        lore:
+        - '&7Status: {enabled}'
+        - '&7Unlocked: {unlocked}'
+        - ' '
+        - '&7Should snow and ice melt?'
+        material: SNOWBALL
+        from: 10
+        to: 27
     a:
       failure_permission:
         name: '&4Failure: &cNo Permission'
@@ -1841,8 +1971,8 @@ gui:
         to: 9
       placeholder_2:
         material: GRAY_STAINED_GLASS_PANE
-        from: 19
-        to: 27
+        from: 27
+        to: 36
   taxes:
     title: '&8{holder} &7- &8Taxes'
     size: 27
@@ -1915,11 +2045,24 @@ gui:
         - ' '
         - '&7In&5 {time} &7your land'
         - '&7will receive&a ${revenue} &7as taxes'
-        - '&7from the trusted members in area.'
+        - '&7from the trusted members in this area.'
         - ' '
         - '&8- &7Players are paying'
         - '  &7only taxes for areas,'
         - '  &7in which they''re trusted.'
+        material: GOLD_INGOT
+        slot: 14
+      tax_nation:
+        name: '&7Tax:&c ${tax}'
+        lore:
+        - ' '
+        - '&7In&5 {time} &7your nation'
+        - '&7will receive&a ${revenue} &7as taxes'
+        - '&7from the lands in this nation.'
+        - ' '
+        - '&7This value sets the tax'
+        - '&7per chunk. So bigger lands'
+        - '&7will need to pay more.'
         material: GOLD_INGOT
         slot: 14
     a:
@@ -2169,7 +2312,7 @@ gui:
         from: 1
         to: 27
   land_info:
-    title: '&8Land {land}'
+    title: '&8{land}'
     size: 27
     s:
       close:
@@ -2180,7 +2323,7 @@ gui:
         - '&8- &7You can open it again'
         - '  &7with &8/&3Lands info&7.'
         material: RED_STAINED_GLASS_PANE
-        slot: 9
+        slot: 19
     f:
       back:
         name: '&cBack'
@@ -2189,14 +2332,11 @@ gui:
         - '&e{back}&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
-      owner:
-        name: '&4Owner&3 {player}'
+      created:
+        name: '&8> &6Created'
         lore:
-        - '&7They''re the owner of'
-        - '&7this land. Contact'
-        - '&7them, if you have any'
-        - '&7questions.'
-        material: PLAYER_HEAD
+        - '&5{date}'
+        material: CLOCK
         slot: 11
       players:
         name: '&8> &6Players &8(&7{amount}&8)'
@@ -2205,16 +2345,25 @@ gui:
         - '&e{players}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
         slot: 13
-      created:
-        name: '&8> &6Created'
+      level:
+        name: '&8> &6Level'
         lore:
-        - '&5{date}'
-        material: CLOCK
+        - '&7These values are only active'
+        - '&7if the land isn''t a member of'
+        - '&7any nation.'
+        - ' '
+        - '&7{level}'
+        - '&7{upkeep}% upkeep cost'
+        - '&7{chunks} chunks'
+        - ' '
+        - '&7Next: {level_next}'
+        - '&c{upkeep_next}% upkeep cost'
+        - '&a{chunks_next} claims'
+        material: BEACON
         slot: 15
       war:
         name: '&8> &6War Stats'
         lore:
-        - ' '
         - '&7Won:&7 {won}'
         - '&7Lost:&7 {lost}'
         - '  &7WLR:&3 {wlr}'
@@ -2254,18 +2403,19 @@ gui:
         - '&7{name}'
         material: NAME_TAG
         slot: 3
-      titles:
+      title:
         name: '&8> &6Enter Message'
         lore:
-        - '&7Change the enter message of'
-        - '&7the land. It appears to players,'
+        - '&7This message appears to players,'
         - '&7which enter your land.'
         - ' '
         - '&7Current:'
         - '{title}'
         - ' '
         - '&7Available placeholders'
-        - '  &8> &3%owner% &8= &7Land owner'
+        - '  &8> &3%owner% &8= &7Owner'
+        - '  &8> &3%level% &8= &7Level'
+        - '  &8> &3%nation% &8= &7Nation'
         - '  &8> &3%player% &8= &7Entering player'
         - ' '
         - '&9RIGHT CLICK'
@@ -2456,9 +2606,8 @@ gui:
         - '&7View all attacking lands'
         - '&7of this war.'
         - ' '
-        - '&8- &7Information'
-        - '  &7Name: {attacker}'
-        - '  &7Players: {players}'
+        - '&8- &7{attacker}'
+        - '  &7Total players: {players}'
         - ' '
         - '  &7Kills: {kills}'
         - '  &7Deaths: {deaths}'
@@ -2470,9 +2619,8 @@ gui:
         - '&7View all defending lands'
         - '&7of this war.'
         - ' '
-        - '&8- &7Information'
-        - '  &7Name: {defender}'
-        - '  &7Players: {players}'
+        - '&8- &7{defender}'
+        - '  &7Total players: {players}'
         - ' '
         - '  &7Kills: {kills}'
         - '  &7Deaths: {deaths}'
@@ -2634,7 +2782,7 @@ gui:
         - '&7Open the land information'
         - '&7menu of this land.'
         - ' '
-        - '&7Total players:&3 {players}'
+        - '&7Total players: {players}'
         - '&7Title: {title}'
         material: PLAYER_HEAD
         from: 10
@@ -2761,6 +2909,213 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
         to: 27
+  nation:
+    title: '&8{level} {nation}'
+    size: 36
+    f:
+      back:
+        name: '&cBack'
+        lore:
+        - '&7Go back to'
+        - '&e{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      close:
+        name: '&cClose'
+        lore:
+        - '&7Close this menu.'
+        - ' '
+        - '&8- &7You can open it again'
+        - '  &7with &8/&3Nation menu&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+      war:
+        name: '&8> &cCurrent War'
+        lore:
+        - '&7Get some information'
+        - '&7about the current war.'
+        - ' '
+        - '&7Show information about:'
+        - '&8- &7The enemy nation'
+        - '&8- &7Reward price'
+        material: IRON_SWORD
+        slot: 15
+      no-war:
+        name: '&8> &aPeaceful'
+        lore:
+        - '&7Your nation isn''t engaged'
+        - '&7in any war. Everything is'
+        - '&7peaceful.'
+        material: WOODEN_SWORD
+        slot: 15
+      inbox:
+        name: '&8> &6Inbox &8(&7{amount}&8)'
+        lore:
+        - '&7Click to open advanced view.'
+        - ' '
+        - '&7Received messages:'
+        - '{inbox}'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJmM2ZjZGNjZmZkOTYzZTQzMzQ4MTgxMDhlMWU5YWUzYTgwNTY2ZDBkM2QyZDRhYjMwNTFhMmNkODExMzQ4YyJ9fX0=
+        slot: 16
+      stats:
+        name: '&8> &6Statistics'
+        lore:
+        - '&7Total members: {0}'
+        - ' '
+        - '&7Level'
+        - '&7Current: {1}'
+        - ' &7{2} claims for each land'
+        - ' '
+        - '&7Next: {3} &7({4} members)'
+        - ' &a{5} claims for each land'
+        - ' '
+        - '&7Economy'
+        - '&8- &7Nation'
+        - '  &7Balance: ${6}'
+        - '  &7Nation pays&c ${7} &7upkeep'
+        - '  &7in {8}.'
+        - ' '
+        - '&8- &4Your land &8({9})'
+        - '  &7Upkeep of&c ${10} &7to the'
+        - '  &7nation in {11}.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ==
+        slot: 17
+    s:
+      information:
+        name: '&6Information'
+        lore:
+        - '&7Here you can view'
+        - '&7some detailed information'
+        - '&7about your nation. This helps'
+        - '&7to keep track of all events'
+        - '&7in your nation.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzU3NDcwMTBkODRhYTU2NDgzYjc1ZjYyNDNkOTRmMzRjNTM0NjAzNTg0YjJjYzY4YTQ1YmYzNjU4NDAxMDVmZCJ9fX0=
+        slot: 11
+      lands:
+        name: '&8> &6Lands'
+        lore:
+        - '&7View all lands, which are'
+        - '&7a member in this nation'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0=
+        slot: 13
+      spawn:
+        name: '&8> &6Spawn'
+        lore:
+        - '&7Click here to teleport'
+        - '&7to the capitals spawn.'
+        material: ENDER_PEARL
+        slot: 14
+      management:
+        name: '&6Management'
+        lore:
+        - '&7Here you can manage your nation.'
+        - '&7You can setup nation taxes,'
+        - '&7edit land settings or set taxes.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0=
+        slot: 20
+      taxes:
+        name: '&8> &6Taxes'
+        lore:
+        - '&7Configure taxes for'
+        - '&7lands of your nation.'
+        material: GOLD_INGOT
+        slot: 22
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 36
+      placeholder_2:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 12
+        to: 12
+      placeholder_3:
+        material: BLUE_STAINED_GLASS_PANE
+        from: 21
+        to: 21
+  nation_lands:
+    title: '&8Nation Members'
+    size: 36
+    f:
+      back:
+        name: '&cBack'
+        lore:
+        - '&7Go back to'
+        - '{back}&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+        - '&7Go to previous page:&9 {previous}'
+        - ' '
+        - '&8- &7Current:&3 {current}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&aNext Page'
+        lore:
+        - '&7Go to next page:&9 {next}'
+        - ' '
+        - '&8- &7Current:&3 {current}'
+        material: ARROW
+        slot: 35
+      trust:
+        name: '&8> &aInvite Land'
+        lore:
+        - '&7Click here to trust'
+        - '&7a land to join your nation.'
+        - ' '
+        - '&7Available:&3 {lands} &8/&c {max}'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+        slot: 32
+      untrust:
+        name: '&8> &cUntrust Land'
+        lore:
+        - '&7Click here to untrust'
+        - '&7a land from your nation.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+        slot: 33
+    l:
+      object:
+        name: '&2{level} {land}'
+        lore:
+        - '&7Open the land information'
+        - '&7menu of this land.'
+        - ' '
+        - '&9RIGHT CLICK'
+        - '&7Get more information'
+        - '&7about this land.'
+        - ' '
+        - '&8- &7Title:'
+        - '  &7{title}'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+      capital:
+        name: '&4Capital {land}'
+        lore:
+        - '&7Open the land information'
+        - '&7menu of this land.'
+        - ' '
+        - '&9RIGHT CLICK'
+        - '&7Get more information'
+        - '&7about this land.'
+        - ' '
+        - '&8- &7Title:'
+        - '  &7{title}'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
   admin_wilderness:
     title: '&8Wilderness Settings'
     size: 9

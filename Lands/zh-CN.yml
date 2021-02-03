@@ -134,8 +134,11 @@ general:
     economy:
       upkeep:
         warning: '&8{0}: &c保护费支付失败: {1}T'
-        unclaimed: '&8{0}: &c由于无法支付保护费 {1}T，上一个购买的区块 (X: {2} Z: {3}) 已被回收'
         paid: '&8{0}: &f支付保护费: {1}T'
+        nation: '&8{0}: &7Nation {1} failed to pay the upkeep of ${2} and has been
+          deleted.'
+        unclaim: '&8{0}: &cCouldn''t pay the complete upkeep cost of ${1}. The last
+          {2} claimed chunk(s) were unclaimed.'
       bank:
         withdraw: '&8{0}: &c{1} 取出了 {2}T -> 银行存款 = {3}T'
         deposit: '&8{0}: &f{1} 存入了 {2}T -> 银行存款 = {3}T'
@@ -157,6 +160,21 @@ general:
         won: '&8{0}: 耶！我们在这场战争中碾碎{1}名敌军'
         lost: '&8{0}: 哦不，我们在这场战争中痛失{1}名友军，厚葬！'
         draw: '&8{0}: 战争以平局结束，杀敌{1}名但失去{2}名友军，战争的意义归于何处？'
+    nation:
+      general:
+        created: '&8{0}: &7Nation created.'
+      member:
+        join: '&8{0}: &7Land {1} joined.'
+        leave: '&8{0}: &7Land {1} left.'
+      economy:
+        upkeep:
+          warning: '&8{0}: &cCouldn''t pay upkeep cost: ${1}'
+          paid: '&8{0}: &7Paid upkeep cost: ${1}'
+        taxes:
+          warning: '&8{0}: &cLand {1} couldn''t pay taxes.'
+          untrusted: '&8{0}: &cLand {1} couldn''t pay taxes. They were removed.'
+          received: '&8{0}: &7Received total of ${1} taxes from lands -> balance =
+            ${2}'
   wars:
     nametag:
       enemy: '&c敌人 &8| '
@@ -270,6 +288,24 @@ help:
     rent: '[T]&8/&3Lands rent &8<&3cancel | info | remove&8> &8- &7Manage rental[H]&7With
       this command you can manage your rent at your current position. &7Click to copy.[/H][SC]lands
       rent[/SC][/T]'
+    nations:
+      trust: '[T]&8/&3Nations trust &8<&3land&8> - &7Invite land[H]&7Click to copy.[/H][SC]nations
+        trust[/SC][/T]'
+      untrust: '[T]&8/&3Nations untrust &8<&3land&8> - &7Remove land[H]&7Click to
+        copy.[/H][SC]nations untrust[/SC][/T]'
+      accept: '[T]&8/&3Nations accept &8<&3nation&8> - &7Accept invite[H]&7Click to
+        copy.[/H][SC]nations accept[/SC][/T]'
+      deny: '[T]&8/&3Nations deny &8<&3nation&8> - &7Deny invite[H]&7Click to copy.[/H][SC]nations
+        deny[/SC][/T]'
+      menu: '[T]&8/&3Nations menu &8- &7Menu[H]&7Click to copy.[/H][SC]nations menu[/SC][/T]'
+      create: '[T]&8/&3Nations create &8[&3name&8] - &7Create nation[H]&7Click to
+        copy.[/H][SC]nations create[/SC][/T]'
+      delete: '[T]&8/&3Nations delete &8<&3nation&8> &8- &7Delete nation[H]&7Click
+        to copy.[/H][SC]nations delete[/SC][/T]'
+      leave: '[T]&8/&3Nations leave &8- &7Leave nation[H]&7Click to copy.[/H][SC]nations
+        leave[/SC][/T]'
+      spawn: '[T]&8/&3Nations spawn &8- &7Capital spawn[H]&7Click to copy.[/H][SC]nations
+        spawn[/SC][/T]'
 message:
   world-not-exist: '&c您确定&4{world}&c是一个有效的世界名吗，&f拼错了?'
   world-invalid: '&c在世界{world}中这未被启用，需要管理员在配置中加入'
@@ -289,7 +325,6 @@ message:
     fly: '&c您不能在{land}飞行'
     edit: '&c您不能编辑{land}'
     banned: '&c您不能进入{land}的{area}，被封锁了？'
-    teleport: '&c您不能传送到{land}，您不是他们的一员！'
     interact:
       general: '&c{land}的方块不愿意和您互动'
       door: '&c您不能在{land}开门'
@@ -304,6 +339,10 @@ message:
         ally: '&c您不能在这里攻击他，因为他是您同一城镇中的一员'
         wilderness: '&c您不能攻击他，因为您在一个和谐的城镇'
     position: '&c您不能在您当前位置对{land}这样做'
+    ender_pearl: '&cYou''re not allowed to use this item to teleport into the area&6
+      {area} &7of land&4 {land}&c.'
+    spawn: '&cYou''re not allowed to teleport to the spawn of land&4 {land}&c. &7They
+      can adjust their role settings to allow teleportation to their spawn for you.'
   area:
     exists: '&c{land}中已经存在一个名为{area}的区域了，请不要重复'
     not-exist: '&c{land}中好像没有叫{area}的区域啊？'
@@ -343,9 +382,10 @@ message:
       land: '&c您不能编辑{land}中的{role}角色，这个角色比您拥有更高的优先级'
       area: '&c您不能编辑{land}的{area}中的{role}角色，这个角色比您拥有更高的优先级'
     delete:
-      owner: '&c您怎能删除领主角色呢！难道想造反/弃位吗？'
       entry: '&c您不能删除城镇成员角色，新成员的加入需要它'
       visitor: '&c您不能删除城镇访客角色，难道您不欢迎客人吗？QWQ'
+      role: '&cYou can''t delete the role&4 {role} &cof your land. &7This role is
+        required.'
   chat-action:
     cancelled: '#t#&c&l已取消{newline}&c&l键入动作'
     player: '&f请键入目标玩家名称'
@@ -366,6 +406,8 @@ message:
     plugin: '&c传送被神秘力量打断，但这不是您的问题。'
     unsafe: '&c传送已取消,目的地不安全。'
     corrected: '&f原始传送点不安全，传送移位到安全位置。'
+    cmd: '&cYou can''t use any commands while beeing teleported. &7Please wait another&5
+      {sec} seconds &7until the teleportation has been finished.'
 command:
   general:
     no-permission: '&c除非您有{permission}权限，不然没办法这样做'
@@ -378,7 +420,6 @@ command:
     money-cost: '&c不好意思，您没有足够的钱支付，您需要{cost}T，种点土豆？'
     swear-word: '&c嘿！不要说脏话，请友善相处'
     action-cooldown: '&c嘿！您手速太快了，请等待{time}后再执行'
-    land-none: '&c很抱歉，您不是任何城镇的一员'
     land-no-own: '&c很抱歉，您不是任何城镇的领主，请用/Lands create创建一个吧'
     world-invalid: '&c您不能在当前世界这样做'
     wilderness: '&c诶，这个区块好像是荒野，要先圈地呀'
@@ -397,6 +438,11 @@ command:
       number: '&cYou''re not allowed to use numbers for this name. &7Please use only
         letters. Found number:&3 {invalid}'
     number: '&c抱歉，您的键入有误，{argument}需要填上数字'
+    none: |
+      &cYou're not a member of any land.
+
+        &7Any land can invite you: &8/&3Lands trust
+        [T]&7Create your own land: &8/&3Lands create[H]&7Click to copy.[/H][SC]lands create[/SC][/T]
   help:
     help: '&f请使用/{cmd} help寻求帮助'
     cmd-not-exist: '&c指令不存在 :('
@@ -477,18 +523,20 @@ command:
     success: '&f成功释放{land}的区块，赎回{back}T'
     selection:
       empty: '&c您未释放任何区块，可能其并未申领亦或是存在不允释放区块'
-      connection: '&7You unclaimed {success} / {size} chunks of this selection, &cbut
-        {failed} could not be unclaimed because it would result in other chunks being
-        disconnected from your land.'
       partly: '&7You successfully unclaimed {success} / {size} chunks of this selection.
         &8Please note that only chunks, which you''re allowed to unclaim, got unclaimed.'
       success: '&7成功释放所选区块'
       rental: '&cYou can''t unclaim this selection&7, because it contains the rented/sold
         area&6 {area} &7of land&2 {land}&7. Tenant:&3 {player}'
-    connection: '&cYou can''t unclaim this chunk, because this would cause other chunks
-      to be disconnected from your land. &7Chunk X: {x} Z: {z} would be disconnected.'
+      split: '&7You unclaimed {success} / {size} chunks of this selection, &cbut {failed}
+        could not be unclaimed because it would result in your land beeing split up
+        into parts &8(a admin can disable this in config)&7. Parts that would split
+        up are now visualized. You got&c ${back} &7back.'
     rental: '&cYou can''t unclaim this chunk&7, because it contains the rented/sold
       area&6 {area}&7. Tenant:&3 {player}'
+    split: '&cYou can''t unclaim this chunk, because this would cause your land to
+      split up into parts &8(a admin can disable this in config)&7. Parts that would
+      split up are now visualized.'
   delete:
     nation: '&c您不能删除这个城镇，因为这是{nation}联盟的首府， 但如果执意如此可以使用/Nations delete删除联盟，也可使用/Nations
       setCapital变更首府'
@@ -771,10 +819,10 @@ list:
 wars:
   message:
     noaccess:
-      action: '&cYou''re not allowed to do this in the war of this land. &8Flag: {flag}
-        &8Bypass permission: {bypass}'
       pillage: '&cYou can''t pillage a land while no defenders are online. &fPlease
         wait until a minimum of&3 {defenders} &fdefenders join.'
+      general: '&cYou''re not allowed to do this in the land&4 {land}&c. &7You''re
+        currently engaged in a war against this land.'
     start:
       broadcast: '&fThe war between {attacker} &fand {defender} &fstarted. It will
         be over in&5 {time}&f.'
@@ -914,3 +962,63 @@ wars:
 
             &cThe defender hasn''t accepted
             &cthe declaration yet.
+nations:
+  message:
+    current-war: '&cYou can''t do this right now. &7Your nation&9 {nation} &7is currently
+      engaged in a war. &7Please try again after the war is over.'
+  command:
+    general:
+      not-exist: '&cThe nation&9 {nation} &cdoesn''t exist. &7There''s no nation with
+        this name.'
+      none: |
+        &cYour land&4 {land} &cisn't part of any nation.
+
+          &7Any nation can invite your land: &8/&3Nations trust
+          [T]&7Create your own nation: &8/&3Nations create[H]&7Click to copy.[/H][SC]nations create[/SC][/T]
+      noaccess: '&cYou''re not allowed to do this for nation&4 {nation}&c. &8Flag:
+        {flag} &8Bypass: {bypass}'
+    create:
+      already: '&cYour land&4 {land} &cis already part of the nation&4 {nation}&c.
+        &7Your land needs to leave it first by executing &8/&3Nations leave&7.'
+      success: '&7You successfully created the nation&9 {nation} &7with the land&2
+        {land} &7as the capital. [T]&7Click here to open the menu.[H]&7Open the menu.[/H][C]nations
+        menu[/C][/T]'
+    trust:
+      already: '&cThe land&4 {land} &cis already part of the nation&4 {nation}&c.
+        &7They need to leave it first by using &8/&3Nations leave&7.'
+      success: '&7You successfully invited land&2 {land} &7to join your nation&9 {nation}&7.
+        They can accept the invite by executing &8/&3Nations accept {nation}&7.'
+      added: '&7You successfully added your land&2 {land} &7as a member of your nation&9
+        {nation}&7.'
+    accept:
+      war: '&cYou can''t join this nation right now. &7Nation&9 {nation} &7is currently
+        engaged in a war. Their war will be over in&5 {time}&7.'
+      none: '&cYour land&4 {land} &cdidn''t receive any invite from nation&9 {nation}&c.
+        &7They can invite your land by executing &8/&3Nations trust&7.'
+      already: '&cYour land&4 {land} &cis already part of nation&4 {nation}&c. &7You
+        need to leave it first by executing &8/&3Nations leave&7.'
+      success: '&7You successfully accepted the invite and joined nation&9 {nation}&7.'
+    deny:
+      success: '&7You successfully denied the invite from nation&9 {nation}&7.'
+    untrust:
+      capital: '&cYou can''t remove this land. &7Land&2 {land} &7is the capital of
+        nation&9 {nation}&7.'
+      success: '&7You successfully removed land&2 {land} &7from nation&9 {nation}&7.'
+    delete:
+      war: '&cYou currently can''t delete your nation. &7Nation&9 {nation} &7is currently
+        engaged in a war.'
+      confirm: |
+        &cPlease confirm that you want to delete nation&4 {nation}&c.
+          [T]&7Confirm: &8[CLICK][H]&7Click here to confirm the deletion of nation&9 {nation}&7.[/H][C]nations delete {nation} confirm[/C][/T]
+      success: '&7Successfully deleted this nation &8(&7Nation:&2 {nation}&8)&7.'
+    leave:
+      capital: '&cYour land&4 {land} &ccan''t leave nation&4 {nation}&c, because the
+        land is the capital of this nation. &7To delete your nation, execute &8/&3Nations
+        delete&7.'
+      war: '&cYou can''t leave this nation right now. &7Nation&9 {nation} &7is currently
+        engaged in a war. Your war will be over in&5 {time}&7.'
+      success: '&7You successfully left nation&9 {nation} &7with land&2 {land}&7.'
+      confirm: |
+        &7Please confirm that you want to leave nation&9 {nation} &7with land&2 {land}&7.
+
+          [T]&7Confirm: &8[CLICK][H]&7Click here to confirm this action.[/H][C]nations leave confirm[/C][/T]
