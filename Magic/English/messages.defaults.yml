@@ -51,11 +51,11 @@ attributes:
     name: Maximum Mana
     description: The player's mana limit
 commands:
-  no_permission: '&c无法执行此命令'
+  no_permission: '&cYou are not allowed to use that command.'
   in_game: '&cThis command may only be used in-game.'
   unknown_command: '&cUnknown command: &f$command'
   mconfig:
-    write_failed: '&c无法写入文件 $file'
+    write_failed: '&cCould not write to file $file'
     example:
       usage: '&cUsage: /mconfig example [$actions]'
       list:
@@ -108,17 +108,17 @@ commands:
           &bCleared base example.&f
           &r&bUse &g/mconfig example remove all&b if you have added examples you want to remove
     disable:
-      usage: "&c用法: /mconfig disable [$types] [key]"
-      nokey: "&c类型无效: $type, 可用参数: $options"
-      success: "已禁用 $type $key, 使用 '/magic load' 应用即将发生的更改"
+      usage: '&cUsage: /mconfig disable [$options] [key]'
+      nokey: '&cInvalid type: $type, options: $options'
+      success: '&bDisabled &3$type.$key&b, use &f/magic load &bto apply pending changes'
     enable:
-      usage: "&c用法: /mconfig enable [$types] [key]"
-      nokey: "&c类型无效: $type, 可用参数: $options"
-      success: "已启用 $type $key, 使用 '/magic load' 应用即将发生的更改"
+      usage: '&cUsage: /mconfig enable [$options] [key]'
+      nokey: '&cInvalid type: $type, options: $options'
+      success: '&bEnabled &3$type.$key&b, use &f/magic load &bto apply pending changes'
     configure:
-      usage: "&c用法: /mconfig configure [$types] [key] [property] [value]"
-      nokey: "&c类型无效: $type, 可用参数: $options"
-      success: "已变更 $type $key, 使用 '/magic load' 应用即将发生的更改"
+      usage: '&cUsage: /mconfig configure [$options] [key] [property] [value]'
+      nokey: '&cInvalid type: $type, options: $options'
+      success: '&bChanged &3$type.$key&b, use &f/magic load &bto apply pending changes'
     reset:
       usage: '&cUsage: /mconfig reset [$options] [key] '
       nokey: '&cInvalid type: $type, options: $options'
@@ -158,15 +158,16 @@ commands:
       new_item: '&3Creating new &2$type.&b$item'
       edit_item: '&3Editing &2$type.&b$item'
   modifier:
-    usage: "使用: /mage modifier <add|remove> <modifier> [duration]"
+    usage: 'Use: /mage modifier <add|remove> <modifier> [duration]'
     add:
-      success: "&7添加了修饰符$name到$player"
-      success_duration: "&7为$player添加$duration修饰符$name"
-      fail: "&c无法添加修饰符$name给$player, 可能已经有了"
-      invalid: "&c无效的持续时间: $input"
+      success: Added modifier &3$name &fto &6$player
+      success_duration: Added modifier &3$name &fto &6$player &ffor $duration
+      fail: '&cCould not add modifier &3$name &fto &6$player, &fmay already have it'
+      invalid: '&cInvalid duration: &4$input'
     remove:
-      success: "&f已从$player移除修饰符$name"
-      fail: "&c无法从$player身上移除修饰符$name, 可能没有"
+      success: Removed modifier &3$name &ffrom &6$player
+      fail: '&cCould not remove modifier &3$name &ffrom &6$player, &fmay not have
+        it'
   getrp:
     auto: You will now receive the resource pack automatically at login
     manual: RP preference cleared, you will be prompted again at next login.
@@ -182,35 +183,40 @@ commands:
       Use &6/getrp default&f to change back.
     noauto: Use &6/getrp auto &fto get this pack automatically at login
     default: RP preference set back to default
+    disabled: This command has been disabled because this server has a resource pack
+      configured in server.properties
 costs:
-  sp_amount: $amount 魔法点
-  xp_amount: $amount 经验
-  levels_amount: $amount XP 等级
-  mana_amount: $amount 法力值
-  mana: 法力值
-  xp: 经验
-  levels: 级
-  sp: 魔法点数
+  sp_amount: $amount SP
+  xp_amount: $amount XP
+  levels_amount: $amount XP Levels
+  mana_amount: $amount Mana
+  mana: Mana
+  xp: XP
+  levels: Levels
+  sp: Spell Points
   sp_short: SP
-  hunger: 能量
-  health: 生命
-  health_amount: $amount 生命
-  hunger_amount: $amount 能量
-  heroes_mana: $amount 法力值
-  currency_singular: 魔法币
-  currency: 魔法币
-  currency_amount: "$$amount"
+  hunger: Energy
+  health: Health
+  health_amount: $amount Health
+  hunger_amount: $amount Energy
+  heroes_mana: $amount Mana
+  currency_singular: Dollar
+  currency: Dollars
+  currency_amount: $$amount
 currency:
-  item_name: "&e$amount &6$type"
-  description: 按下右键存入
-  limit: "a：&6$type&7的上限是&c$amount"
-  deposited: "a:&a已存入 &2$amount &6$type&a, 剩余: &2$balance"
-  earned: "a:&6+&e$earned"
+  item_name: '&e$amount &6$type'
+  description: Right-click to deposit
+  limit: a:&eThe limit for &6$type &eis &c$amount
+  deposited: 'a:&aDeposited &2$amount &6$type&a, balance: &2$balance'
+  earned: a:&6+&e$earned
 sp:
-  name: "&e$amount &6魔法点"
-  description: 将被你的法杖吸收
-  limit: "a:&7魔法点的上限是&c$amount"
-  deposited: "a:&7已存入&2$amount&7魔法点，剩余：&2$balance"
+  name: '&e$amount &6Spell Points'
+  description: Right-click to earn spell points
+  limit: a:&eThe limit for &6Spell Points &eis &c$amount
+  deposited: 'a:&aDeposited &2$amount &6Spell Points&a, balance: &2$balance'
+dynmap:
+  spells_markerset: Spell Casts
+  wands_markerset: Wands
 examples:
   instructions_header: |-
     &8 ----------------------------------------------------
@@ -226,41 +232,42 @@ examples:
       &8|   &fCheck for new crafting recipes, or use &6/mgive wand &r
       &8|   &fUse &6/mgive uberwand &ffor an OP testing wand &r
 item:
-  duplicated: "&c你的物品已被复制"
-  destroyed: "&c你的物品已被摧毁"
-  cleaned: "&c你的魔法物品已被摧毁"
-  no_item: "&4你必须手持物品！"
-  renamed: "&c你的物品已被重命名"
-  rename_clear: "&c你的物品自定义名称已被清理"
-  flag_added: "&f已将$flag标志添加到你的物品上"
-  flag_removed: "&c已从你的物品上删除$flag标志"
-  no_flags: "&c这件物品没有任何标志"
-  no_flag: "&c这件物品没有$flag标志"
-  lore_added: "&7已添加lore: $lore"
-  lore_removed: "&c已删除lore: $lore"
-  no_lore: "&c这件物品没有lore"
-  not_unbreakable: "&c这件物品没有无法破坏"
-  already_unbreakable: "&c这件物品已经无法破坏"
-  add_unbreakable: "&f这件物品现在无法破坏"
-  remove_unbreakable: "&f这件物品不再无法破坏"
-  not_unplaceable: "&c这件物品没有不可放置"
-  already_unplaceable: "&c这件物品已经不可放置"
-  add_unplaceable: "&c这件物品现在不可放置"
-  remove_unplaceable: "&c这件物品不再不可放置"
-  no_enchants: "&c这件物品没有任何附魔"
-  no_enchant: "&c这件物品没有$enchant附魔"
-  enchant_removed: "&c已从这件物品移除$enchant附魔"
-  enchant_added: "&c这件物品现在新增$enchant附魔"
-  enchant_not_added: "&c$enchant附魔没能添加到你的物品"
-  enchant_unsafe: "&4你不能添加不安全的附魔"
-  no_attribute: "&c这件物品没有$attribute属性"
-  attribute_removed: "&c已删除物品上的$attribute属性"
-  attribute_added: "&c在$slot处给你的物品加上$attribute属性，数值：$value ($operation)"
-  attribute_not_added: "&c无法给你的物品设置$attribute属性"
-  skull: "&7你的书现在变成头颅了"
-  skull_no_book: "&c你必须手持一本写有头颅数据的成书"
-  skull_invalid_book: "&c那本书没有头颅数据! 请在
-  'Textures.Value'处粘帖数据, 数据一般是以 == 结尾的随机字符"
+  duplicated: Your item has been duplicated
+  destroyed: Your item has been destroyed
+  cleaned: Your item has been cleaned of all Magic data
+  no_item: You must be holding an item!
+  renamed: Your item has been renamed
+  rename_clear: Removed the custom name from your item
+  flag_added: Added the $flag flag to your item
+  flag_removed: Removed the $flag flag from your item
+  no_flags: That item has no flags
+  no_flag: That item does not have the $flag flag
+  lore_added: 'Added lore: $lore'
+  lore_removed: 'Removed lore: $lore'
+  no_lore: That item has no lore
+  not_unbreakable: That item is not unbreakable
+  already_unbreakable: That item is already unbreakable
+  add_unbreakable: That item is now unbreakable
+  remove_unbreakable: That item is no longer unbreakable
+  not_unplaceable: That item is not unplaceable
+  already_unplaceable: That item is already unplaceable
+  add_unplaceable: That item is now unplaceable
+  remove_unplaceable: That item is no longer unplaceable
+  no_enchants: This item has no enchantments
+  no_enchant: That item does not have the $enchant enchantment
+  enchant_removed: Removed the $enchant enchantment from your item
+  enchant_added: Added the $enchant enchantment to your item
+  enchant_not_added: Did not add the $enchant enchantment to your item
+  enchant_unsafe: You do not have permission to add unsafe enchantments
+  no_attribute: That item does not have the $attribute attribute
+  attribute_removed: Removed the $attribute attribute from your item
+  attribute_added: Set the $attribute attribute on your item to $value for $slot ($operation)
+  attribute_not_added: Could not set the $attribute attribute on your item
+  skull: Your book has been turned into a skull
+  skull_no_book: You must hold a written book with skull data in it
+  skull_invalid_book: That book does not have skull data in it! Paste in just the
+    text in 'Textures.Value', it is a long string of random characters normally ending
+    in ==
 logs:
   notify_errors: '&7[Magic] &bThere have been &c$errors errors &bin the past &3$time&b,
     please check logs!'
@@ -353,40 +360,41 @@ resource_pack:
     t:&3Please Wait
     &bsending resource pack
 controls:
-  drop: 丢弃 (Q)
-  right_click: 左键
-  left_click: 右键
-  swap: 切换 (F)
+  drop: Drop (Q)
+  right_click: Right-Click
+  left_click: Left-Click
+  swap: Swap (F)
 skillapi:
-  required_skill: '&c前置技能: &4$skill'
-  required_class: '&c前置职业: &4$class'
+  required_skill: '&cRequired Skill: &4$skill'
+  required_class: '&cRequired Class: &4$class'
 damage_types:
-  explosion: 爆炸
-  fall: 摔落
-  fire: 火焰
-  physical: 物理
-  projectile: 弹射物
+  explosion: Explosion
+  fall: Fall
+  fire: Fire
+  physical: Physical
+  projectile: Projectile
 npc:
   dialog: '&7[$speaker&7]&8: &f$line'
   insufficient: '&cCosts $cost'
   deducted: '&cTook $cost'
   no_permission: '&r&4You may not interact with me!'
+numbers: {}
 path:
   level_up: |-
     t:&r&b*** &r&5$path &b***
     &5Advanced
 requirements:
-  unknown: '&c禁止使用'
-  property_requirement: "&r&c需要： &6$property &cof &4$value"
-  property_max: "&r&c你的 &6$property &c已经溢出了！"
-  property_min: "&r&c你的 &6$property &c必须大于&4$value"
-  no_wand: "&c你必须手持一根法杖!"
-  no_template: "&c你不能用$wand&c学习魔法。"
-  no_path: "&c你不能在这里学习魔法。"
-  no_class: "&c你必须先成为一名$class"
-  no_required_path: "&c你必须至少达到$path&r!"
-  no_path_exact: "&c你必须先成为$path&r!"
-  no_path_end: "&c你必须先准备好成为$path&r!"
+  unknown: '&cNot Allowed'
+  property_requirement: '&r&cRequires: &6$property &cof &4$value'
+  property_max: '&r&cYour &6$property &cis maxed out'
+  property_min: '&r&cYour &6$property &cmust be greater than &4$value'
+  no_wand: '&cYou must be holding a wand!'
+  no_template: '&cYou may not learn with that $wand&c.'
+  no_path: '&cYou may not learn here.'
+  no_class: '&cYou must be a $class'
+  no_required_path: '&cYou must be at least $path&r!'
+  no_path_exact: '&cYou must be at $path&r!'
+  no_path_end: '&cYou must be ready to advance from $path&r!'
   no_weather: The weather is not right for that
   light: Light Level
   time: Time of Day
@@ -449,6 +457,9 @@ shops:
   attribute_max: You can not increase $attribute any further
   attribute_min: You can not decrease $attribute any further
   full: Your inventory is full!
+  nostock: Sorry, that item is out of stock!
+  paid: '&7$owner thanks you for your business!'
+  invalid_item: '&cUnknown or Invalid Item'
 spell:
   category: ''
   brush: Uses Material Brushes
@@ -483,7 +494,8 @@ spells:
     insufficient: '&cRequires &4$cost'
     cooldown: You must wait $time.
     cancelled: Your spell was cancelled!
-    cancel: a:&cCancelled &6$spell
+    cancel: ''
+    cancel_selection: a:&cCancelled &6$spell
     entity_required: An entity is required.
     living_entity_required: A living entity is required.
     player_required: A player is required.
@@ -492,311 +504,314 @@ spells:
     invalid_world: The specified world is not valid.
     cast_finish: ''
   admission:
-    name: 开门
-    description: 打开目标处的门
-    cast: 芝麻开门!
+    name: Admission
+    description: Opens the target door
+    cast: Let me in!
   admission|2:
-    upgrade_description: 现在可以打开铁门了
+    upgrade_description: Now opens iron doors
   collapse:
-    name: 崩塌
-    description: 使圆形范围内的方块崩塌
-    cast_finish: $count块方块坍塌了
-    upgrade_description: 增加范围,可破坏更多类型的方块
+    name: Collapse
+    description: Collapse a spherical area of blocks
+    cast_finish: Collapsed $count blocks
+    upgrade_description: Increased radius, breaks more types of blocks
   sparkle:
     name: Sparkle
     description: Gives you a random effect, bad or good
   secure:
-    name: 保险
-    description: 给容器上锁
-    usage: 往上瞄准获得备用钥匙, 潜行施法以解锁
-    cast: 容器已上锁,请用钥匙开锁!
-    acquire: 已换锁!
-    already: 已上锁
-    alternate_up: 你召唤了一把备用钥匙
-    alternate_sneak: 已解锁
+    name: Secure
+    description: Secures containers
+    usage: Aim up and cast for a replacement key, sneak-cast to unlock
+    cast: Container is now locked- you must hold your key to unlock it!
+    acquire: Lock changed!
+    already_key: You already have a key
+    already: That is already locked
+    alternate_up: You summon a replacement key
+    alternate_sneak: Container unlocked
     key_name: '&6&k$uuid'
-    key_name_alternate: '&6$name的&e钥匙'
+    key_name_alternate: '&6$name''s &eKey'
     key_description: |-
-      &6$name的&e钥匙
-      用于打开上锁的容器
-    fail: 你不能给那个东西上锁!
-    upgrade_description: 现在可以锁住熔炉和其他容器
+      &6$name's &eKey
+      Needed to open your locked containers
+    fail: You can't lock that!
+    upgrade_description: Now locks furnaces and other containers
   lockpick:
-    name: 撬锁工具
-    description: 解锁上锁的容器
-    cast: 芝麻开门!
-    fail: 撬锁失败!
+    name: Lockpick
+    description: Unlocks locked containers
+    cast: Open Sesame!
+    fail: You can't unlock that!
   snoop:
-    name: 窥探
-    description: 偷窥箱子里有什么宝贝
-    cast: 让我康康这里面有什么宝贝
-    no_target: 你必须看着一个箱子
+    name: Snoop
+    description: Peek inside of a chest
+    cast: Let's see what's in there
+    no_target: You must target a chest
   anvil:
-    name: 牛顿之力
-    description: 召唤铁砧
-    cast: 好重啊!
+    name: Anvil
+    description: Spawn an anvil
+    cast: So heavy!
   silence:
-    name: 沉默
-    description: 禁止目标施法
-    cast: 你沉默了$target
+    name: Silence
+    description: Prevent your target from casting spells
+    cast: You silence $target
   curse:
-    name: 诅咒
-    description: 减缓并虚弱目标
-    cast: 你诅咒了$target
-    upgrade_description: 现在会使目标反胃
+    name: Curse
+    description: Slows down and weakens the target
+    cast: You curse $target
+    upgrade_description: Now confuses as well
   broom:
-    name: 飞天扫帚
-    cast: 你的扫帚焕发出气息!
-    deactivate: 你的扫帚平静下来了.
-    crash: 扫帚坏了!
-    fail: 起飞空间不足!
-    creative_fail: 你不能在创造模式使用!
-    cursed: 你吓得不敢飞了!
-    upgrade_description: 增加持续时间、速度和掌控力
-    nospace: '&c请寻找一个空旷的地方起飞'
-    reactivate: 重新激活飞天扫帚
+    name: Broom Skill
+    cast: Your broom springs to life!
+    deactivate: Your broom quiets down.
+    crash: CRASH!
+    fail: Not enough room to take off!
+    creative_fail: You can't use broomsticks in creative mode!
+    cursed: You are too stunned to fly!
+    upgrade_description: Increased flight duration and improved handling
+    nospace: '&cFind a clear space to mount your broom'
+    reactivate: Reactivating your broomstick
   superbroom:
-    name: 超级扫帚
-    cast: 你的扫帚焕发出了神秘的气息!
-    deactivate: 你的扫帚平静下来了.
-    crash: 扫帚坏了!
-    fail: 空间太小了,起飞失败!
+    name: SuperBroom
+    cast: Your wand springs to life!
+    deactivate: Your wand quiets down.
+    crash: CRASH!
+    fail: Not enough room to take off!
     reactivate: Reactivating your flying enchantment
   boon:
-    name: 风骑手的狂涌
-    description: 让你拥有风骑手一般的速度
-    cast_self: 你让你自己变得像风骑手一样
-    cast: 你让 $target 变得像风骑手一样
+    name: Boon
+    description: Makes you temporarily superpowered
+    cast_self: You give yourself a boon
+    cast: You give $target a boon
   boon|2:
-    upgrade_description: 获得跳跃提升效果
+    upgrade_description: Gives a jump boost
   boon|3:
-    upgrade_description: 增加速度效果
+    upgrade_description: Increases speed effect
   boon|4:
-    upgrade_description: 获得夜视效果
+    upgrade_description: Adds night vision
   blessing:
-    name: 祝福
-    description: 治愈区域里的追随者
-    cast: 你祝福了这片区域
+    name: Blessing
+    description: Bless a large area of followers
+    cast: You bless the area
   holylight:
-    name: 圣光
-    description: 治愈区域内的玩家,对有害生物造成伤害
-    cast: 你让圣光照耀了大地
+    name: Holy Light
+    description: Heal players in the area, harm mobs
+    cast: You shine the Holy Light
   mount:
-    name: 骑乘
-    description: 骑乘你的目标
-    cast: 你骑上了$target
+    name: Mount
+    description: Mount your target
+    cast: You mount $target
   horse:
-    name: 马
-    description: 召唤一匹马并骑马
-    cast: 斗气化马!
-    nospace: '&c空间不足'
+    name: Horse
+    description: Summon and mount a horse
+    cast: Giddyup!
+    nospace: '&cFind a clear space for your horse'
   tame:
-    name: 驯服
-    description: 驯服目标
-    cast: 你驯服了$target
+    name: Tame
+    description: Tame your target
+    cast: You tame $target
   platform:
-    name: 平台
-    description: 创造一片平台
-    cast_finish: 已填充$count块$material
+    name: Platform
+    description: Create a platform in front of you
+    cast_finish: Filled $count blocks with $material
   platform|2:
-    upgrade_description: 增加大小
+    upgrade_description: Increased size
   platform|4:
-    upgrade_description: 现在使用笔刷建造
+    upgrade_description: Now builds with your brush
   reflect:
-    name: 法术反弹
-    description: 反弹魔法
-    upgrade_description: 增加大小和反弹力
+    name: Reflect
+    description: Reflect spells cast against you
+    upgrade_description: Increased size and reflectivity
   shell:
-    name: 法术盾牌
-    description: 创造可以反射魔法的法术盾牌
-    upgrade_description: 增加耐久度和反射力
+    name: Shell
+    description: Create a reflective shell
+    upgrade_description: Increased durability and reflectivity
   tag:
-    name: 立牌
-    description: 留下一块写有你的名字的告示牌
-    usage: 需要消耗一块告示牌!
-    fail: 放置告示牌失败!
-    cast: 你放置了一块牌子
-    cast_player: 你给$target发送了一条消息
-    cast_give: 来些告示牌吧!
-    cast_player_message: '&5你听到了&c&o$player&r&5的声音...
-      他说：“你好！”'
+    name: Tag
+    description: Leave a sign with your name
+    usage: Requires and consumes one sign item!
+    fail: Sign placement failed!
+    cast: You leave a tag
+    cast_player: You send $target a message
+    cast_give: Have some signs!
+    cast_player_message: '&5You hear a mysterious voice from &c&o$player &r&5... it
+      says ... Hi!'
     sign_message: was here
   flashbang:
-    name: 闪光弹
-    description: 发射闪光弹
-    cast_player_message: a:你被$player的闪光弹眩晕了
+    name: Flash Bang
+    description: Toss a ball of light and fury
+    cast_player_message: a:You were hit by $player's flash bang
   singularity:
-    name: 奇点
-    description: 创造黑洞
-    cast_player_message: a:你被吸入了黑洞
+    name: Singularity
+    description: Create a black hole
+    cast_player_message: a:You got sucked into a black hole
   arrow:
-    name: 魔法弓箭
-    description: 发射魔法弓箭
-    upgrade_description: 增加伤害和精准度
+    name: Arrow
+    description: Fire a magic arrow
+    upgrade_description: Increased damage and accuracy
   arrow_light:
-    name: 光箭
-    description: 发射光箭
-    cast_player_message: a:$player对你发射了$spell
+    name: Light Arrow
+    description: Fire an arrow of pure light
+    cast_player_message: a:$player shot a $spell at you
   arrow_bomb:
-    name: 爆破箭
-    description: 发射爆破箭
-    cast_player_message: a:$player对你发射了$spell
+    name: Bomb Arrow
+    description: Fire an exploding arrow
+    cast_player_message: a:$player shot a $spell at you
   arrow_poison:
-    name: 毒箭
-    description: 发射能够形成毒雾的弓箭
-    cast_player_message: a:$player对你发射了$spell
+    name: Poison Arrow
+    description: Fire a arrow that bursts into a poison cloud
+    cast_player_message: a:$player shot a $spell at you
   arrow_regular:
-    name: 普通弓箭
-    description: 发射普通弓箭
-    cast_player_message: a:$player对你发射了$spell
+    name: Normal Arrow
+    description: Fire a normal arrow
+    cast_player_message: a:$player shot a $spell at you
   arrow_blink:
-    name: 闪烁弓箭
-    description: 传送到箭落地处
-    cast_player_message: a:$player对你发射了$spell
+    name: Blink Arrow
+    description: Teleport to the location where your arrow lands
+    cast_player_message: a:$player shot a $spell at you
   arrow_fire:
-    name: 火焰弓箭
-    description: 发射火焰弓箭
-    cast_player_message: a:$player对你发射了$spell
+    name: Fire Arrow
+    description: Lights a fire where it lands
+    cast_player_message: a:$player shot a $spell at you
   arrow_ice:
-    name: 寒冰箭
-    description: 冻结目标区域
-    cast_player_message: a:$player对你发射了$spell
+    name: Ice Arrow
+    description: Freeze the area where it lands
+    cast_player_message: a:$player shot an $spell at you
   arrow_shock:
-    name: 颤栗箭
-    description: 使目标颤栗
-    cast_player_message: a:$player对你发射了$spell
+    name: Shock Arrow
+    description: Electrify the target
+    cast_player_message: a:$player shot a $spell at you
   arrow_grapple:
-    name: 抓钩箭
-    description: 将你拉到目标处
-    cast_player_message: a:$player对你发射了$spell
+    name: Grapple Arrow
+    description: Shoot an arrow which pulls you towards it
+    cast_player_message: a:$player shot a $spell at you
   toss:
-    name: 投掷
-    description: 投掷方块
-    fail: 施法失败
-    cast: 你投掷出了一块方块
+    name: Toss
+    description: Toss a block
+    fail: One of your blocks fizzled
+    cast: You toss a block
   volley:
-    name: 方块齐掷
-    description: 投掷一些方块
-    fail: 施法失败
-    cast: 你扔出了一些方块
+    name: Volley
+    description: Toss a bunch of blocks
+    fail: One of your blocks fizzled
+    cast: You toss some blocks
   sniper:
-    name: 狙击
-    description: 发射超越光速的弓箭
+    name: Sniper
+    description: Fire a super fast arrow
   pull:
-    name: 给我康康
-    description: 你很好奇眼前的东西，并拉过来康了康
-    alternate: 过来吧!
-    cast: 嗖!
+    name: Pull
+    description: Pull things toward you
+    alternate: Gimme!
+    cast: Yoink!
   grab:
-    name: 拉
-    description: 将你前面的物品拉过来
-    cast: 撕撕撕
+    name: Grab
+    description: Pull items toward you
+    cast: Yoink!
   permafrost:
-    name: 极寒
-    description: 下雪吧!
-    cast_finish: 冻结$count块方块
+    name: PermaFrost
+    description: Make it permanently snowy!
+    cast_finish: Permafrosted $count blocks
   permamelt:
-    name: 永焰
-    description: 升温
-    cast_finish: 永久融化$count块方块
+    name: PermaMelt
+    description: Raise the temperature
+    cast_finish: Permamelted $count blocks
   frost:
-    name: 霜寒
-    description: 化水为雪
-    cast_finish: 已冻结$count块方块
-    upgrade_description: 更大的范围,增加减速的持续时间
+    name: Frost
+    description: Freeze water and create snow
+    cast_finish: Frosted $count blocks
+    upgrade_description: Larger radius, increased slow duration
   harden:
-    name: 铜墙
-    description: 使目标方块更加坚硬
-    cast: 加固$count块方块
+    name: Harden
+    description: Make the target blocks stronger
+    cast: Hardened $count blocks
   harden|2:
-    upgrade_description: 现在转换为黑曜石
+    upgrade_description: Now converts to obsidian
   disarm:
-    name: 缴械
-    description: 缴械目标
-    cast: 你缴械了目标
-    cast_self: 你缴械了自己
-    upgrade_description: 降低失败率
+    name: Disarm
+    description: Disarm your opponent
+    cast: You disarm your target
+    cast_self: You disarm yourself
+    upgrade_description: Descreased chance of backfire and fizzle
   disarm|3:
-    upgrade_description: 百分百成功
+    upgrade_description: No chance of backfire and fizzle
   heal:
-    name: 治疗
-    description: 治疗你自己或其他人
-    usage: 会被伤害打断!
-    cast: 你治疗了$target
-    cast_self: 你治疗了自己
-    upgrade_description: 降低冷却
+    name: Heal
+    description: Heal yourself or others
+    usage: Can be interrupted by damage!
+    cast: You heal $target
+    cast_self: You heal yourself
+    upgrade_description: Cooldown decreased
   healing:
-    name: 甘霖
-    description: 治疗附近的任何人
-    cast: 你治疗了$target
+    name: Healing
+    description: Heal everyone around you
+    cast: You heal $target
   cure:
-    name: 香丹清
-    description: 吃下一颗香丹清，解除负面效果
-    cast: 你喂 $target 吃下了香丹清
-    cast_self: 你吃下了香丹清
-    upgrade_description: 现在可以解除饥饿效果
+    name: Cure
+    description: Remove negative effects
+    cast: You cure $target
+    cast_self: You cure yourself
+    upgrade_description: Now cures hunger
   cure|2:
-    upgrade_description: 现在可以解除凋零和虚弱效果
+    upgrade_description: Now removes wither and weakness
   cure|3:
-    upgrade_description: 现在可解除沉默效果
+    upgrade_description: Now negates Silence
   cure|4:
-    upgrade_description: 现在可以解除饥饿效果
+    upgrade_description: Now cures hunger
   cure|5:
-    upgrade_description: 现在可以治愈僵尸村民
+    upgrade_description: Now cures zombie villagers
   music:
-    name: 音乐
-    description: 播放音乐
-    cast_player: 你给$name播放了音乐
-    cast_self: 你播放了一些音乐
+    name: Music
+    description: Play some tunes
+    cast_player: You play some music for $name
+    cast_self: You play some music
   airstrike:
-    name: 空中支援
-    description: 干掉附近的实体
-    cast_player_message: a:&d&o$player &r&5召唤了空中支援
+    name: Air Strike
+    description: Take out a nearby entity
+    cast_player_message: a:&d&o$player &r&5called in an air strike on you
   supergather:
-    name: 大召唤术
-    description: 传送到所有玩家到你身边
-    usage: 往下瞄准循环玩家,往上传送玩家
-    cast_to_player: 已将您传送到$target
-    cast_entity: 已传送$target
-    cast_player_message: a:&d&o$player&r&5折叠了空间
-    target_selected: 你选择了$target
-    cancel: 已释放目标
+    name: SuperGather
+    description: Capture players and teleport them
+    usage: Aim down to cycle targets, up to teleport to them
+    cast_to_player: Teleporting you to $target
+    cast_entity: Teleporting $target to your target
+    cast_player_message: a:&d&o$player &r&5folded space
+    target_selected: You captured $target
+    cancel: Released target
   icbm:
     name: ICBM
-    description: 发射洲际导弹
-    cast: 小心!
+    description: Cast an exploding fireball
+    cast: Look out!
   neutron:
-    name: 中子弹
-    description: 伤害并眩晕附近的所有实体
-    cast: 毁天灭地!
-    upgrade_description: 增加范围
+    name: Neutron Bomb
+    description: Damage and stun all entities in a wide radius
+    cast: Kill all the things!
+    upgrade_description: Increased radius
   shuriken:
-    name: 手里剑
-    description: 扔出手里剑
-    upgrade_description: 增加伤害
+    name: Shuriken
+    description: Throw a bouncing projectile
+    upgrade_description: Increased damage
   wave:
-    name: 震荡波
-    description: 发出震荡波
-    upgrade_description: 增加大小和强度
+    name: Wave
+    description: Unleash a concussive wave
+    upgrade_description: Increased size and force
   weather:
-    name: 天气之子
-    description: 改变天气
-    cast: 你召唤了风暴
-    alternate: 你平息了风暴
+    name: Weather
+    description: Change the weather
+    cast: You stir up a storm
+    alternate: You calm the storm
   fling:
-    name: 腾跃
-    description: 使你飞向目标
-    upgrade_description: 增加速度, 减少冷却
+    name: Fling
+    description: Sends you flying in the target direction
+    upgrade_description: |-
+      Increased speed, reduced cooldown
+      &7Sneak-cast for a smaller jump
   leap:
-    name: 飞跃
-    description: 飞跃
+    name: Leap
+    description: Take a big leap
     cast: Whee!
   torch:
-    name: 火把
-    description: 创造火把或荧石
-    no_target: 无法在那里放置火把
-    cast: 驱散黑暗吧!
-    upgrade_description: 减少冷却
+    name: Torch
+    description: Creates a torch or glowstone
+    no_target: Can't put a torch there
+    cast: Flame on!
+    upgrade_description: Reduced cooldown
   monster:
     name: Monster
     description: Call a monster to your side
@@ -1198,7 +1213,7 @@ spells:
   gather:
     name: Gather
     description: Teleport you to other players
-    usage: Aim down and cast to send friend requests
+    usage: Aim down and cast to manage friends
     alternate_down_no_target: '&4No one is around'
     no_target: |2-
 
@@ -1216,6 +1231,11 @@ spells:
     friend_request_title: '@tn wants to be friends'
     reject: '@pn said no ;('
     send_request_title: Send Friend Request
+    add_friend_name: Send Friend Requests
+    remove_friend_name: Unfriend
+    remove_friend_title: Unfriend
+    cast_remove_friend: '&bYou have unfriended &5$name'
+    title_remove_friend: $name
   recall_death:
     name: Recall to Last Death
     description: Takes you directly to the last place you died
@@ -1304,8 +1324,7 @@ spells:
     cooldown: ''
   warpmenu:
     name: Warp Menu
-    description: Essentially identical to Recall, can be used in NPCs or command blocks
-      so players don't get cast credit for Recall when using a warp menu
+    description: Teleport directly to a variety of locations
   levitate:
     name: Levitate
     description: Levitate yourself up into the air
@@ -1527,7 +1546,9 @@ spells:
     description: Shows progress in upgrading your current spells
     fail: You must be holding a wand!
     upgrade_name_change: '&r&4Upgrades: &r$name'
-    level_requirement: '&r&cRequires: &6$path'
+    level_requirement: |-
+      &r&cRequires: &6$path
+      &r&7Collect all spells to rank up
     cast_requirement: '&r&cCasts: &6$current&f/&e$required'
     tags_requirement: '&r&cRequires: &6$tags'
     confirm_title: Change to $item
@@ -1937,6 +1958,24 @@ spells:
     name: Critical
     description: A chance to deal some extra damage
     upgrade_description: Improved chances of critical
+  bring:
+    name: Bring
+    description: Teleport other players to you
+    title: 'Teleport to You:'
+  goto:
+    name: Goto
+    description: Teleport yourself to another player
+    title: 'Teleport To:'
+  feed:
+    name: Feed
+    description: Feed and slightly heal any player
+    usage: Gives 16 bread
+    title: 'Feed and Heal:'
+  manageshop:
+    name: Manage Shop
+    description: Configures a player shop
+    moved: Set shop chest location
+    teleported: Moved your shopkeeper and updated their name
 time:
   wait_seconds: another $seconds seconds
   wait_minutes: another $minutes minutes
@@ -2195,6 +2234,9 @@ wand:
   enchant_instructions: |-
     &8| &7> &fEarn &6Spell Points &fby casting spells
     &8| &7> &fLearn new spells by using &6SP &fat an &eenchanting table
+  path_instructions: |-
+    &8| &7> &fCollect all of the &a$path &fspells
+    &8| &7> &fto rank up to &a$nextpath &fand earn more &6mana
   page_instructions: |-
     &8| &7> &eYour &a$wand&8 &fhas more than one page of spells
     &8| &7> &6Click &foutside the inventory window to change pages
@@ -2452,6 +2494,9 @@ wands:
   haloeffects:
     name: Halo Effects
     description: A personalized halo
+  butterflyeffects:
+    name: Butterfly Effects
+    description: It gives you wiiiiiiiings
   student_upgrade:
     name: Student Upgrade
     description: Upgrade to Student level
@@ -2668,6 +2713,20 @@ wands:
     spell_aura: ''
   iceskates:
     name: Ice Skates
+  admintool:
+    name: Admin Tool
+    description: A variety of useful tools for mods and admins
+  shoptoken:
+    name: Shop Token
+    description: Creates a shop that you can manage
+  shoptool:
+    name: $npc_name
+    lore:
+    - 'Manage your shop:'
+    - '&7Aim at a chest to set shop inventory'
+    - '&8Otherwise, &3update shop name and'
+    - '&3Teleport your shopkeeper to your current location'
+    - '&8Use an anvil to rename your shop tool'
 automata:
   awaken: '&c&o$name &r&5has awakened'
   default_name: Automaton
