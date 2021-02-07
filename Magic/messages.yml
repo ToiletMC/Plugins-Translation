@@ -450,7 +450,7 @@ spell:
   level_description: $level级
   progress_description: '&6进度: &b$level&6/&3$max_level'
   quick_cast: '&2快捷施法'
-  earns: '&2获得&6$earns'
+  earns: '&2获得 &6$earns'
   description_lore: '&b$description'
   level_lore: '&6$level'
   toggle: '&a开启或关闭'
@@ -549,10 +549,10 @@ spells:
     fail: 空间太小了,起飞失败!
     reactivate: 重新使用你的扫帚
   boon:
-    name: 坚不可摧
-    description: 使你暂时无敌
-    cast_self: 你感觉你无敌了
-    cast: 你使$target坚不可摧
+    name: 风骑手的狂涌
+    description: 让你拥有风骑手一般的速度
+    cast_self: 你让自己变得像风骑手一样
+    cast: 你让 $target 变得像风骑手一样
   boon|2:
     upgrade_description: 获得跳跃提升效果
   boon|3:
@@ -716,17 +716,17 @@ spells:
     description: 治疗附近的任何人
     cast: 你治疗了$target
   cure:
-    name: 治愈
+    name: 香丹清
     description: 移除负面效果
     cast: 你治愈了$target
     cast_self: 你治愈了自己
-    upgrade_description: 现在治愈饥饿效果
+    upgrade_description: 现在可以治愈饥饿效果
   cure|2:
-    upgrade_description: 现在治愈凋零和虚弱效果
+    upgrade_description: 现在可以治愈凋零和虚弱效果
   cure|3:
-    upgrade_description: 现在可治愈沉默效果
+    upgrade_description: 现在可以治愈沉默效果
   cure|4:
-    upgrade_description: 现在治愈饥饿效果
+    upgrade_description: 现在可以治愈饥饿效果
   cure|5:
     upgrade_description: 现在可以治愈僵尸村民
   music:
@@ -1173,7 +1173,7 @@ spells:
     cast: 我抓到你了!
     cast_entity: 你捉住了$target
   grow:
-    n name: 成长
+    name: 成长
     description: 使特定实体长大
     cast: 成长吧!
     cast_entity: 你使 $target 成长了
@@ -2002,8 +2002,8 @@ wand:
   property_value: $property
   property_value_negative: '&c$property'
   upgrade_slot: '&6Goes in slot&7: &3$slot'
-  slots_header: '&6Upgrades&7:'
-  empty_slot: ' &8- &7(&2Empty &6$slot &2slot&7)'
+  slots_header: '&6升级&7:'
+  empty_slot: ' &8- &7(&2空的 &6$slot &2插槽&7)'
   slotted: ' &8- &7$slotted'
   item_attributes:
     GENERIC_ATTACK_DAMAGE: 攻击伤害
@@ -2078,8 +2078,8 @@ wand:
   super_powered: '&3势不可挡'
   super_protected: '&3无懈可击'
   spell_aura: '&b光环: &6$spell'
-  costs_description: 需消耗$description
-  active_costs_description: 每秒消耗$description
+  costs_description: 需消耗 $description
+  active_costs_description: 每秒消耗 $description
   range_description: '&9范围: &6$range &9米'
   owner_description: '&2&o$name的法杖'
   bound_description: '&3&o主人：$name'
@@ -2273,21 +2273,21 @@ wands:
     upgrade_slot: '&3$slot'
     upgrade_item_description: 扫帚向下以提高其速度
   broomstick:
-    name: 扫帚
+    name: 飞天扫帚
     description: |-
-      &r&b使用 你的扫帚在空中飞舞
-      &b向下时加速
+      &r&b使用你的扫帚在空中飞翔
+      &b俯冲加速
     enchant_instructions: ''
     wand_instructions_header: |-
       &8 ----------------------------------------------------
       &8|
-      &8|   &b&l扫帚说明
+      &8|   &b&l飞天扫帚
       &8|
     spell_instructions: |-
-      &8| &7> &fu让你的扫帚在空中飞翔！
-      &8| &7> &f向下加速，但不要飞太久！
-      &8| &7> &f使用，您的&6扫帚技能&f将提高，保持练习！
-    bound_instructions: '&8| &7> &f$wand 时绑定的'
+      &8| &7> &f使用你的扫帚在空中飞翔！
+      &8| &7> &f俯冲可以加速，但不要飞太久！
+      &8| &7> &f你的 &6扫帚熟练度 &f将在使用时提高，继续练习吧！
+    bound_instructions: '&8| &7> &f你的 &a$wand &f现在跟随于你'
   spellbook:
     name: 魔法书
     description: $path &rSpellbook
@@ -2561,8 +2561,8 @@ wands:
     name: 空
     description: 用于从零开始创建游戏内项目
   talisman:
-    name: 魔法护符
-    description: 手持护符时获得额外的魔法
+    name: 魔法球
+    description: 手持魔法球时获得额外的魔法点数加成
   magicheart:
     name: 魔法核心
     description: 用于制作魔法物品
@@ -2593,7 +2593,7 @@ wands:
   appearance_bow1:
     name: 埃及弓外观
   appearance_bow2:
-    name: Skinny Bow外观
+    name: Skinny Bow 外观
   appearance_longbow:
     name: 长弓外观
   appearance_spire:
@@ -2606,8 +2606,8 @@ wands:
     name:  宝珠魔杖外观
     description: 魔杖充满了强大的球体
   appearance_magma:
-    name: 岩浆员工外观
-    description: 含纯原浆精华员工
+    name: 岩浆棒外观
+    description: 包含岩浆精华的魔法棒
   appearance_valk:
     name: 武神之剑外观
   appearance_whitedagger:
